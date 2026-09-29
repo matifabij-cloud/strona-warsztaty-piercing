@@ -42,9 +42,14 @@ const features = [
                 </div>
                 <div class="ticket__option-side">
                   {o.price && <p class="ticket__price">{o.price}</p>}
-                  {tickets.status === 'sprzedaz' && (o.url || tickets.url) && (
-                    <a class="btn btn--small btn--primary" href={o.url || tickets.url} target="_blank" rel="noopener noreferrer">
-                      {t('tickets.buy')}
+                  {(o.url || (tickets.status === 'sprzedaz' && tickets.url)) && (
+                    <a
+                      class="btn btn--small btn--primary"
+                      href={o.url || tickets.url}
+                      target={(o.url || tickets.url)?.startsWith('mailto:') ? undefined : '_blank'}
+                      rel="noopener noreferrer"
+                    >
+                      {tr(o.buttonLabel, locale) || t('tickets.buy')}
                       <span class="visually-hidden">
                         {' '}
                         {tr(o.name, locale)} {t('misc.newTab')}
@@ -107,12 +112,6 @@ const features = [
     border-radius: var(--radius-l);
     position: relative;
     box-shadow: var(--shadow);
-    -webkit-mask:
-      radial-gradient(circle at 0 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
-      radial-gradient(circle at 100% 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
-    mask:
-      radial-gradient(circle at 0 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
-      radial-gradient(circle at 100% 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
   }
 
   @media (min-width: 56rem) {

@@ -399,7 +399,10 @@ content:
                 label: Opis
                 type: text
               - name: url
-                label: Link do zakupu (jeśli inny niż główny)
+                label: Link do zakupu lub zapisów (np. mailto:) – przycisk pokaże się od razu
+                type: string
+              - name: buttonLabel
+                label: Napis na przycisku (np. „Zapisz się”)
                 type: string
       - name: openCall
         label: Nabór artystów / konkurs

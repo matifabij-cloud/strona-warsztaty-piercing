@@ -97,6 +97,7 @@ const editions = defineCollection({
             price: text,
             description: text,
             url: text,
+            buttonLabel: text,
           }),
         ),
       }),
