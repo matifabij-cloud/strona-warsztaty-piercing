@@ -414,6 +414,10 @@ content:
           - name: description
             label: Opis
             type: text
+          - name: points
+            label: Najważniejsze punkty (krótkie zdania, lista z ptaszkami)
+            type: string
+            list: true
           - name: deadline
             label: Termin zgłoszeń
             type: date

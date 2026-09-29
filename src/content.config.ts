@@ -106,6 +106,7 @@ const editions = defineCollection({
         enabled: z.boolean().catch(false),
         title: text,
         description: text,
+        points: list(z.string()),
         deadline: optional(isoDate),
         url: text,
         buttonLabel: text,

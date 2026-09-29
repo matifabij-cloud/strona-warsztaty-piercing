@@ -26,6 +26,7 @@ export const translatable = {
       'tickets.options[].description',
       'openCall.title',
       'openCall.description',
+      'openCall.points[]',
       'openCall.buttonLabel',
     ],
   },

@@ -3,6 +3,7 @@ import Img from './Img.astro';
 import Icon from './Icon.astro';
 import { formatDate, tr, useUI, type Locale } from '../i18n';
 import { todayInPoland, type Edition } from '../lib/content';
+import { md } from '../lib/markdown';
 
 interface Props {
   locale: Locale;
@@ -27,7 +28,19 @@ const external = Boolean(call.url && /^https?:/i.test(call.url));
   <div class="call__text">
     <span class="eyebrow">{t('section.openCall')}</span>
     {call.title && <h2 class="call__title display">{tr(call.title, locale)}</h2>}
-    {call.description && <p class="call__desc">{tr(call.description, locale)}</p>}
+    {call.description && <div class="call__desc" set:html={md(tr(call.description, locale))} />}
+    {
+      call.points.length > 0 && (
+        <ul role="list" class="call__points">
+          {call.points.map((point) => (
+            <li>
+              <Icon name="check" size={20} stroke-width={2.5} />
+              <span>{tr(point, locale)}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
     {
       call.deadline && (
         <p class:list={['call__deadline', { 'call__deadline--closed': closed }]}>
@@ -90,9 +103,36 @@ const external = Boolean(call.url && /^https?:/i.test(call.url));
   }
 
   .call__desc {
+    display: grid;
+    gap: 0.8em;
     font-size: var(--step-1);
     line-height: 1.55;
-    max-width: 38rem;
+    max-width: 40rem;
+  }
+
+  .call__points {
+    display: grid;
+    gap: 0.7rem;
+    max-width: 40rem;
+  }
+
+  .call__points li {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .call__points :global(svg) {
+    flex: none;
+    margin-top: 0.05em;
+    padding: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--c-red);
+    color: #fff;
   }
 
   .call__deadline {

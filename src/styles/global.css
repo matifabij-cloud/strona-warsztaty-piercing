@@ -253,7 +253,7 @@ body::after {
   text-transform: uppercase;
   letter-spacing: 0.01em;
   /* Anton jest wysoki – polskie znaki (Ó, Ź, Ę) potrzebują miejsca między wierszami */
-  line-height: 1.12;
+  line-height: 1.22;
 }
 
 .eyebrow {
@@ -293,7 +293,7 @@ body::after {
   font-weight: 400;
   font-size: var(--step-4);
   text-transform: uppercase;
-  line-height: 1.12;
+  line-height: 1.22;
   letter-spacing: 0.005em;
 }
 

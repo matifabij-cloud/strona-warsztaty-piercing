@@ -19,10 +19,10 @@ poster: /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg
 stats:
   - value: '2'
     label: dni festiwalu
-  - value: '4'
-    label: strefy tematyczne
+  - value: '9'
+    label: dni wystawy prac
   - value: '30'
-    label: prac w konkursie
+    label: artystów z Polski i ze świata
   - value: '10'
     label: zwycięzców
 attractions:
@@ -30,7 +30,7 @@ attractions:
     description: 'Brazylijski piercing, body art i kultura. Brazylijscy goście i prelegenci.'
     icon: brazil
   - title: Snake Bites Zone
-    description: ''
+    description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Węże bezpiecznie w terrariach, pod opieką Igora Płatka. Liczba miejsc ograniczona.'
     icon: snake
   - title: Suspension Zipline
     description: 'Tyrolka w Manu.'
@@ -38,8 +38,8 @@ attractions:
   - title: Happy Piercing Zone
     description: ''
     icon: smile
-  - title: Konkurs artystów
-    description: '30 prac, 10 zwycięzców.'
+  - title: Wystawa i konkurs artystów
+    description: '30 prac piercerów z Polski i ze świata na publicznej wystawie w Manufakturze. Zwycięzców wybierają odwiedzający.'
     icon: trophy
   - title: Promocyjna sprzedaż biżuterii
     description: ''
@@ -49,7 +49,7 @@ attractions:
     icon: crown
 speakers:
   - speaker: igor-platek.md
-    note: Gość specjalny
+    note: Gość specjalny · Snake Bites Zone
   - speaker: max-alves.md
     note: Gość specjalny
 program: []
@@ -61,7 +61,13 @@ tickets:
 openCall:
   enabled: true
   title: Piercing Artist Łódź Needs You
-  description: 'Szukamy 30 artystów piercingu, których prace pokażemy publiczności podczas festiwalu w Manufakturze. Pokaż nam swoją pracę – my pokażemy ją ludziom.'
+  description: 'Szukamy 30 piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom.'
+  points:
+    - 30 artystów, 30 prac, jedna wystawa w Manufakturze
+    - 'Przez 9 dni, 24 godziny na dobę, Twoją pracę zobaczą tysiące ludzi'
+    - 'Nie liczy się, czy obserwuje Cię 500, 5 000 czy 500 000 osób'
+    - 'Zwycięzców wybierają odwiedzający Manufakturę – nie Instagram, nie algorytm, nie komisja'
+    - 'New Generation – Łódź: 3 miejsca dla młodych piercerów z Łodzi, do 2 lat od ukończenia kursu podstawowego'
   deadline: '2027-01-31'
   url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Zg%C5%82oszenie%20%E2%80%93%20Piercing%20Artist%20%C5%81%C3%B3d%C5%BA%202027'
   buttonLabel: Wyślij zgłoszenie
@@ -93,6 +99,8 @@ hidden: false
 ---
 **Piercing Festival Łódź 2027** to publiczna część Łódzkich Warsztatów Piercingu. Przez dwa marcowe dni Manufaktura stanie się miejscem spotkania piercerów, artystów i wszystkich, których fascynuje piercing, sztuka i biżuteria.
 
-Na miejscu czekają strefy tematyczne: Brazil Zone z brazylijskimi gośćmi i prelegentami, Snake Bites Zone, Happy Piercing Zone i widowiskowy Suspension Zipline. Do tego konkurs artystów, promocyjna sprzedaż biżuterii i królewski wybór kolczyków.
+Na miejscu czekają strefy tematyczne: Brazil Zone z brazylijskimi gośćmi i prelegentami, Happy Piercing Zone, widowiskowy Suspension Zipline i Snake Bites Zone – miejsce, w którym królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Za część związaną z wężami odpowiada Igor Płatek.
+
+W Manufakturze stanie też wystawa prac 30 piercerów z Polski i ze świata. Przez 9 dni zobaczą ją tysiące ludzi i to oni wybiorą zwycięzców. Do tego promocyjna sprzedaż biżuterii i królewski wybór kolczyków.
 
 **Piercing, sztuka, biżuteria, widowisko.** Jedno miejsce. Jeden weekend.
