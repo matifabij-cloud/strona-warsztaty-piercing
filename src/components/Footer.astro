@@ -75,12 +75,16 @@ const socials = [
         {o.address}, {o.postalCode} {o.city}<br />
         {t('contact.nip')}: {o.nip}
         {
-          o.website && (
+          (o.brand || o.website) && (
             <>
               <br />
-              <a href={o.website} target="_blank" rel="noopener noreferrer">
-                {o.brand || o.website.replace(/^https?:\/\/(www\.)?/, '')}
-              </a>
+              {o.website ? (
+                <a href={o.website} target="_blank" rel="noopener noreferrer">
+                  {o.brand || o.website.replace(/^https?:\/\/(www\.)?/, '')}
+                </a>
+              ) : (
+                o.brand
+              )}
             </>
           )
         }

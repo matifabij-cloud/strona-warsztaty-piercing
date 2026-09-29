@@ -61,12 +61,16 @@ const channels = [
       {t('contact.nip')}: {o.nip}
     </p>
     {
-      o.website && (
+      (o.brand || o.website) && (
         <p>
           {t('contact.studio')}:{' '}
-          <a href={o.website} target="_blank" rel="noopener noreferrer">
-            {o.brand || o.website.replace(/^https?:\/\/(www\.)?/, '')}
-          </a>
+          {o.website ? (
+            <a href={o.website} target="_blank" rel="noopener noreferrer">
+              {o.brand || o.website.replace(/^https?:\/\/(www\.)?/, '')}
+            </a>
+          ) : (
+            <strong>{o.brand}</strong>
+          )}
         </p>
       )
     }

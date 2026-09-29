@@ -162,7 +162,10 @@ Na stronie pojawi się żółty przycisk **„Kup bilet”** w nagłówku, na g�
 7. Lepsze zdjęcie Igora Płatka (obecne jest wycięte z plakatu) i opisy gości specjalnych.
 8. Zdjęcia piercerki przy pracy z folderu `_oryginaly` (pliki 1000007360–62) – kto to jest
    i czy możemy ich użyć?
-9. Polityka prywatności to szkic – warto, żeby ktoś po stronie klienta ją przejrzał.
+9. **Pilne:** stara strona studia www.piercinglodz.pl (jest też na plakacie II edycji) prowadzi teraz
+   do strony z hazardem – domena prawdopodobnie wygasła i ktoś ją przejął. Link usunąłem ze strony.
+   Klient powinien to sprawdzić i nie używać tego adresu w materiałach.
+10. Polityka prywatności to szkic – warto, żeby ktoś po stronie klienta ją przejrzał.
 
 ## Zmiany w kodzie w przyszłości
 
