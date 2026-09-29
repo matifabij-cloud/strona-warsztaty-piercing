@@ -1,0 +1,152 @@
+---
+import Img from './Img.astro';
+import Icon from './Icon.astro';
+import { useUI, type Locale } from '../i18n';
+import { getInstagramPosts } from '../lib/instagram';
+import { instagramHandle, site } from '../lib/site';
+
+interface Props {
+  locale: Locale;
+  /** Zdjęcia zastępcze, gdy kanał z Instagrama nie jest jeszcze podłączony. */
+  fallback: string[];
+}
+
+const { locale, fallback } = Astro.props;
+const t = useUI(locale);
+const profile = site.social.instagram;
+const handle = instagramHandle(profile);
+const posts = await getInstagramPosts(site.instagram.feedUrl, 6);
+const tiles = fallback.slice(0, 6);
+---
+
+{
+  profile && (
+    <div class="ig">
+      <div class="ig__head">
+        <a class="ig__handle" href={profile} target="_blank" rel="noopener noreferrer">
+          <Icon name="instagram" size={30} />
+          <span>@{handle}</span>
+        </a>
+        <a class="btn btn--primary btn--small" href={profile} target="_blank" rel="noopener noreferrer">
+          {t('cta.followIg')}
+          <Icon name="arrow-up-right" size={18} />
+        </a>
+      </div>
+
+      <ul role="list" class="ig__grid">
+        {posts.length > 0
+          ? posts.map((p) => (
+              <li>
+                <a href={p.permalink} target="_blank" rel="noopener noreferrer" aria-label={`${t('instagram.post')} ${t('misc.newTab')}`}>
+                  <img src={p.image} alt={p.caption || `@${handle}`} loading="lazy" decoding="async" width={p.width} height={p.height} />
+                  {p.isVideo && (
+                    <span class="ig__badge" aria-hidden="true">
+                      ▶
+                    </span>
+                  )}
+                </a>
+              </li>
+            ))
+          : tiles.map((src) => (
+              <li>
+                <a href={profile} target="_blank" rel="noopener noreferrer" aria-label={`@${handle} ${t('misc.newTab')}`}>
+                  <Img src={src} alt="" widths={[300, 480]} sizes="(min-width: 64rem) 16vw, (min-width: 40rem) 33vw, 50vw" quality={70} />
+                </a>
+              </li>
+            ))}
+      </ul>
+    </div>
+  )
+}
+
+<style>
+  .ig {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .ig__head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ig__handle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+    font-size: var(--step-1);
+    text-decoration: none;
+    word-break: break-all;
+  }
+
+  .ig__handle:hover {
+    color: var(--c-yellow);
+  }
+
+  .ig__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(0.4rem, 0.3rem + 0.5vw, 0.75rem);
+  }
+
+  @media (min-width: 40rem) {
+    .ig__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .ig__grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+
+  .ig__grid a {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--c-bg-3);
+  }
+
+  .ig__grid :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      scale 0.5s var(--ease),
+      opacity 0.3s;
+  }
+
+  .ig__grid a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgb(254 198 39 / 0.35), rgb(238 46 44 / 0.35));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .ig__grid a:hover :global(img) {
+    scale: 1.06;
+  }
+
+  .ig__grid a:hover::after {
+    opacity: 1;
+  }
+
+  .ig__badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1;
+    font-size: 0.75rem;
+    color: #fff;
+    text-shadow: 0 1px 4px rgb(0 0 0 / 0.6);
+  }
+</style>

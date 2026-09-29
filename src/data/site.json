@@ -1,0 +1,68 @@
+{
+  "name": "Łódzkie Warsztaty Piercingu",
+  "tagline": "Warsztaty i festiwal piercingu w sercu Łodzi",
+  "description": "Oficjalna strona Łódzkich Warsztatów Piercingu: wykłady i szkolenia dla piercerów z prelegentami z Polski i z Brazylii. IV edycja: Piercing Festival Łódź 2027, 20–21 marca 2027, Manufaktura.",
+  "currentEdition": "iv-edycja.md",
+  "contact": {
+    "email": "lodzkiewarsztatypiercingu@gmail.com",
+    "phone": "+48 739 003 788"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/lodzkiewarsztatypiercingu/",
+    "facebook": "",
+    "tiktok": "",
+    "youtube": ""
+  },
+  "organizer": {
+    "name": "Piercing Beauty Sp. z o.o.",
+    "brand": "Maria Twarowska Piercing & Beauty",
+    "nip": "726 266 10 31",
+    "address": "ul. Narutowicza 40/1",
+    "postalCode": "90-135",
+    "city": "Łódź",
+    "website": "https://www.piercinglodz.pl"
+  },
+  "about": {
+    "title": "Wiedza, która zostaje w dłoniach",
+    "text": "Łódzkie Warsztaty Piercingu to cykliczne wydarzenie edukacyjne dla piercerów, organizowane w Łodzi przez studio Maria Twarowska Piercing & Beauty.\n\nZapraszamy prelegentów z Polski i z zagranicy, zwłaszcza z Brazylii, którzy dzielą się praktyczną wiedzą: od bezpieczeństwa pracy i biosafety, przez techniki przekłuć, po zaawansowane modyfikacje ciała.\n\nIV edycja to także część publiczna: Piercing Festival Łódź w Manufakturze.",
+    "images": [
+      "/media/edycja-3/iii-edycja-2026-03.jpg",
+      "/media/edycja-3/iii-edycja-2026-04.jpg",
+      "/media/edycja-2/ii-edycja-2025-01.jpg"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Dla kogo są warsztaty?",
+      "answer": "Wykłady i szkolenia są przeznaczone dla piercerów. Warunkiem udziału jest ukończony kurs podstawowy z piercingu. Publiczna część, Piercing Festival Łódź w Manufakturze, to wydarzenie dla wszystkich, których interesuje piercing, sztuka i biżuteria."
+    },
+    {
+      "question": "Gdzie i kiedy odbędzie się IV edycja?",
+      "answer": "20–21 marca 2027 roku w Manufakturze w Łodzi."
+    },
+    {
+      "question": "Jak kupić bilet?",
+      "answer": "Bilety kupisz online na tej stronie. Sprzedaż ruszy wkrótce. Informację o starcie sprzedaży opublikujemy także na Instagramie."
+    },
+    {
+      "question": "Czy mogę dostać fakturę?",
+      "answer": "Tak. Przy zakupie biletu zaznacz, że potrzebujesz faktury VAT, i podaj dane firmy."
+    },
+    {
+      "question": "Ile jest miejsc?",
+      "answer": "Liczba miejsc na warsztaty jest ograniczona, to około 120 osób. Nie zwlekaj z zakupem."
+    },
+    {
+      "question": "Jak zgłosić się do konkursu Piercing Artist Łódź?",
+      "answer": "Zgłoszenia przyjmujemy do 31 stycznia 2027 roku. Napisz do nas, a odpowiemy ze szczegółami."
+    }
+  ],
+  "instagram": {
+    "feedUrl": ""
+  },
+  "announcement": {
+    "enabled": false,
+    "text": "",
+    "url": ""
+  }
+}

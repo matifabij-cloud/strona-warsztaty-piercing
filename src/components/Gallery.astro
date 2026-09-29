@@ -1,0 +1,129 @@
+---
+import { getImage } from 'astro:assets';
+import Img from './Img.astro';
+import Icon from './Icon.astro';
+import { useUI, type Locale } from '../i18n';
+import { dims, resolveMediaList } from '../lib/media';
+
+interface Props {
+  locale: Locale;
+  images: string[];
+  /** Podpis używany w tekstach alternatywnych, np. „III edycja” */
+  label: string;
+  /** Ile zdjęć pokazać od razu (reszta po kliknięciu „Pokaż wszystkie”). */
+  initial?: number;
+  /** Zamiast odsłaniania reszty – link do pełnej galerii. */
+  moreHref?: string;
+  id?: string;
+}
+
+const { locale, images, label, initial = 12, moreHref, id = 'gallery' } = Astro.props;
+const t = useUI(locale);
+const items = await resolveMediaList(images);
+const shown = moreHref ? items.slice(0, initial) : items;
+
+const tiles = await Promise.all(
+  shown.map(async ({ image }, i) => {
+    const size = dims(image);
+    const full = await getImage({ src: image, width: Math.min(1800, size.width), format: 'webp', quality: 80 });
+    return {
+      image,
+      full: full.src,
+      hidden: !moreHref && i >= initial,
+      alt: t('gallery.alt', { edition: label, n: i + 1 }),
+    };
+  }),
+);
+const hiddenCount = tiles.filter((x) => x.hidden).length;
+---
+
+{
+  tiles.length > 0 && (
+    <div class="gallery" data-gallery id={id}>
+      <ul role="list" class="gallery__grid">
+        {tiles.map((tile, i) => (
+          <li class="gallery__item" hidden={tile.hidden}>
+            <a href={tile.full} data-full={tile.full} data-index={i} aria-label={t('gallery.open', { n: i + 1 })}>
+              <Img
+                src={tile.image}
+                alt={tile.alt}
+                widths={[360, 540, 800]}
+                sizes="(min-width: 72rem) 25vw, (min-width: 40rem) 33vw, 50vw"
+                quality={72}
+              />
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      {hiddenCount > 0 && (
+        <button type="button" class="btn gallery__more" data-gallery-more>
+          <Icon name="images" size={18} />
+          {t('cta.showAllPhotos', { n: tiles.length })}
+        </button>
+      )}
+      {moreHref && items.length > shown.length && (
+        <a class="btn gallery__more" href={moreHref}>
+          <Icon name="images" size={18} />
+          {t('cta.showAllPhotos', { n: items.length })}
+        </a>
+      )}
+    </div>
+  )
+}
+
+
+
+<style>
+  .gallery {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  /* Układ „murowany”: zdjęcia w całości, bez przycinania i bez dziur */
+  .gallery__grid {
+    width: 100%;
+    columns: 2;
+    column-gap: clamp(0.5rem, 0.35rem + 0.6vw, 0.9rem);
+  }
+
+  @media (min-width: 40rem) {
+    .gallery__grid {
+      columns: 3;
+    }
+  }
+
+  @media (min-width: 72rem) {
+    .gallery__grid {
+      columns: 4;
+    }
+  }
+
+  .gallery__item {
+    break-inside: avoid;
+    margin-bottom: clamp(0.5rem, 0.35rem + 0.6vw, 0.9rem);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--c-bg-3);
+  }
+
+  .gallery__item[hidden] {
+    display: none;
+  }
+
+  .gallery__item a {
+    display: block;
+    cursor: zoom-in;
+  }
+
+  .gallery__item :global(img) {
+    width: 100%;
+    height: auto;
+    transition: scale 0.5s var(--ease);
+  }
+
+  .gallery__item a:hover :global(img) {
+    scale: 1.04;
+  }
+</style>

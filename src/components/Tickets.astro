@@ -1,0 +1,235 @@
+---
+import Icon from './Icon.astro';
+import { tr, useUI, type Locale } from '../i18n';
+import type { Edition } from '../lib/content';
+import { site } from '../lib/site';
+
+interface Props {
+  locale: Locale;
+  edition: Edition;
+}
+
+const { locale, edition } = Astro.props;
+const t = useUI(locale);
+const tickets = edition.data.tickets ?? { status: 'wkrotce' as const, url: undefined, info: undefined, options: [] };
+const onSale = tickets.status === 'sprzedaz' && Boolean(tickets.url);
+const statusLabel = t(`tickets.status.${tickets.status}` as const);
+
+const features = [
+  { icon: 'file', text: t('tickets.invoice') },
+  { icon: 'ticket', text: t('tickets.online') },
+  { icon: 'users', text: t('tickets.limited') },
+];
+---
+
+<div class="tickets">
+  <div class="ticket">
+    <div class="ticket__main">
+      <p class:list={['tag', onSale ? 'tag--solid' : 'tag--red']}>
+        {onSale && <span class="dot dot--live" />}
+        {statusLabel}
+      </p>
+      {tickets.info && <p class="ticket__info">{tr(tickets.info, locale)}</p>}
+
+      {
+        tickets.options.length > 0 && (
+          <ul role="list" class="ticket__options">
+            {tickets.options.map((o) => (
+              <li class="ticket__option">
+                <div>
+                  <p class="ticket__option-name">{tr(o.name, locale)}</p>
+                  {o.description && <p class="ticket__option-desc">{tr(o.description, locale)}</p>}
+                </div>
+                <div class="ticket__option-side">
+                  {o.price && <p class="ticket__price">{o.price}</p>}
+                  {tickets.status === 'sprzedaz' && (o.url || tickets.url) && (
+                    <a class="btn btn--small btn--primary" href={o.url || tickets.url} target="_blank" rel="noopener noreferrer">
+                      {t('tickets.buy')}
+                      <span class="visually-hidden">
+                        {' '}
+                        {tr(o.name, locale)} {t('misc.newTab')}
+                      </span>
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      <div class="ticket__cta">
+        {
+          onSale ? (
+            <a class="btn btn--primary" href={tickets.url} target="_blank" rel="noopener noreferrer">
+              <Icon name="ticket" size={18} />
+              {t('cta.buyTicket')}
+              <span class="visually-hidden"> {t('misc.newTab')}</span>
+            </a>
+          ) : (
+            tickets.status === 'wkrotce' &&
+            site.social.instagram && (
+              <a class="btn" href={site.social.instagram} target="_blank" rel="noopener noreferrer">
+                <Icon name="instagram" size={18} />
+                {t('cta.followIg')}
+              </a>
+            )
+          )
+        }
+      </div>
+    </div>
+
+    <div class="ticket__stub" aria-hidden="false">
+      <ul role="list" class="ticket__features">
+        {
+          features.map((f) => (
+            <li>
+              <Icon name={f.icon} size={20} />
+              <span>{f.text}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="ticket__questions">
+        {t('tickets.questions')}{' '}
+        <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ticket {
+    --notch: 1.1rem;
+    display: grid;
+    background: var(--c-paper);
+    color: var(--c-paper-text);
+    border-radius: var(--radius-l);
+    position: relative;
+    box-shadow: var(--shadow);
+    -webkit-mask:
+      radial-gradient(circle at 0 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
+      radial-gradient(circle at 100% 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
+    mask:
+      radial-gradient(circle at 0 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) left / 51% 100% no-repeat,
+      radial-gradient(circle at 100% 50%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) right / 51% 100% no-repeat;
+  }
+
+  @media (min-width: 56rem) {
+    .ticket {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      -webkit-mask:
+        radial-gradient(circle at 60% 0, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) top / 100% 51% no-repeat,
+        radial-gradient(circle at 60% 100%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) bottom / 100% 51% no-repeat;
+      mask:
+        radial-gradient(circle at 60% 0, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) top / 100% 51% no-repeat,
+        radial-gradient(circle at 60% 100%, transparent var(--notch), #000 calc(var(--notch) + 0.5px)) bottom / 100% 51% no-repeat;
+    }
+  }
+
+  .ticket__main {
+    display: grid;
+    gap: 1.25rem;
+    align-content: start;
+    justify-items: start;
+    padding: clamp(1.5rem, 1rem + 2.5vw, 3rem);
+  }
+
+  .ticket__info {
+    font-size: var(--step-1);
+    line-height: 1.5;
+    max-width: 36rem;
+  }
+
+  .ticket__options {
+    width: 100%;
+    display: grid;
+    border-top: 1px solid #d6cfbf;
+  }
+
+  .ticket__option {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+    padding-block: 1rem;
+    border-bottom: 1px solid #d6cfbf;
+  }
+
+  .ticket__option-name {
+    font-weight: 800;
+    font-size: var(--step-1);
+  }
+
+  .ticket__option-desc {
+    color: var(--c-paper-muted);
+    font-size: var(--step--1);
+  }
+
+  .ticket__option-side {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ticket__price {
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    white-space: nowrap;
+  }
+
+  .ticket__cta:empty {
+    display: none;
+  }
+
+  .ticket__cta .btn:not(.btn--primary) {
+    --btn-fg: var(--c-paper-text);
+    --btn-border: var(--c-paper-text);
+  }
+
+  .ticket__stub {
+    display: grid;
+    gap: 1.5rem;
+    align-content: space-between;
+    padding: clamp(1.5rem, 1rem + 2.5vw, 3rem);
+    border-top: 2px dashed #cfc6b3;
+    background: var(--c-paper-2);
+  }
+
+  @media (min-width: 56rem) {
+    .ticket__stub {
+      border-top: 0;
+      border-left: 2px dashed #cfc6b3;
+    }
+  }
+
+  .ticket__features {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .ticket__features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+  }
+
+  .ticket__features :global(svg) {
+    flex: none;
+    color: var(--c-red);
+  }
+
+  .ticket__questions {
+    font-size: var(--step--1);
+    color: var(--c-paper-muted);
+  }
+
+  .ticket__questions a {
+    display: inline-block;
+    color: var(--c-paper-text);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+</style>

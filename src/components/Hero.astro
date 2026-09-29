@@ -1,0 +1,343 @@
+---
+import Img from './Img.astro';
+import Icon from './Icon.astro';
+import Countdown from './Countdown.astro';
+import { formatDateRange, tr, useUI, warsawDateTime, type Locale } from '../i18n';
+import { accentColor, editionPhase, type Edition } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  edition: Edition;
+  ticketsOnSale: boolean;
+}
+
+const { locale, edition, ticketsOnSale } = Astro.props;
+const t = useUI(locale);
+const d = edition.data;
+const phase = editionPhase(edition);
+
+const title = tr(d.title, locale);
+// Rok w tytule wyróżniamy kolorem, jak na plakatach.
+const titleParts = title.split(/(\b\d{4}\b)/);
+
+const dateText = d.startDate ? formatDateRange(d.startDate, d.endDate, locale) : d.dateNote || t('editions.dateTba');
+const venue = [d.venue?.name, d.venue?.city && d.venue?.name?.includes(d.venue.city) ? '' : d.venue?.city].filter(Boolean).join(', ');
+
+// Okrągła plakietka z datą: „20–21 / marca / 2027”.
+let badge: { days: string; month: string; year: string } | undefined;
+if (d.startDate) {
+  const end = d.endDate ?? d.startDate;
+  const intl = { pl: 'pl-PL', en: 'en-GB', pt: 'pt-BR' }[locale];
+  const parts = new Intl.DateTimeFormat(intl, { timeZone: 'UTC', day: 'numeric', month: 'long' }).formatToParts(new Date(`${end}T12:00:00Z`));
+  const month = parts.find((p) => p.type === 'month')?.value ?? '';
+  const sameMonth = d.startDate.slice(0, 7) === end.slice(0, 7);
+  const ds = Number(d.startDate.slice(8, 10));
+  const de = Number(end.slice(8, 10));
+  if (sameMonth) badge = { days: ds === de ? String(ds) : `${ds}–${de}`, month, year: end.slice(0, 4) };
+}
+
+const start = d.startDate ? warsawDateTime(d.startDate, d.startTime) : undefined;
+const end = d.startDate ? warsawDateTime(d.endDate ?? d.startDate, '23:59') : undefined;
+---
+
+<section class="hero" style={`--accent:${accentColor[d.accent]}`} aria-labelledby="hero-title">
+  <div class="hero__deco" aria-hidden="true">
+    <svg viewBox="0 0 600 600" class="hero__rings">
+      <circle cx="300" cy="300" r="220" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 12" />
+      <circle cx="300" cy="300" r="280" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" />
+      <circle cx="300" cy="80" r="7" fill="var(--c-red)" />
+      <circle cx="580" cy="300" r="5" fill="var(--c-yellow)" />
+    </svg>
+    <span class="hero__blob hero__blob--y"></span>
+    <span class="hero__blob hero__blob--r"></span>
+  </div>
+
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <p class="hero__kicker">
+        <span class="tag tag--solid">{t('hero.edition', { n: d.number })}</span>
+        {d.theme && d.theme !== d.title && <span class="hero__theme">{tr(d.theme, locale)}</span>}
+      </p>
+
+      <h1 id="hero-title" class="hero__title display">
+        {titleParts.map((part) => (/^\d{4}$/.test(part) ? <span class="hero__year">{part}</span> : part))}
+      </h1>
+
+      {d.tagline && <p class="hero__tagline">{tr(d.tagline, locale)}</p>}
+
+      <ul role="list" class="hero__meta">
+        <li>
+          <Icon name="calendar" size={20} />
+          <span>{dateText}</span>
+        </li>
+        {
+          venue && (
+            <li>
+              <Icon name="map-pin" size={20} />
+              <span>{venue}</span>
+            </li>
+          )
+        }
+      </ul>
+
+      <div class="hero__ctas">
+        {
+          phase !== 'past' && (
+            <a href="#tickets" class="btn btn--primary">
+              <Icon name="ticket" size={18} />
+              {ticketsOnSale ? t('cta.buyTicket') : t('cta.ticketsSoon')}
+            </a>
+          )
+        }
+        <a href="#event" class="btn">
+          {t('cta.whatsOn')}
+          <Icon name="arrow-right" size={18} />
+        </a>
+      </div>
+
+      {start && end && <Countdown locale={locale} start={start} end={end} />}
+    </div>
+
+    {
+      d.cover && (
+        <div class="hero__visual">
+          <div class="hero__card">
+            <Img
+              src={d.cover}
+              alt={title}
+              widths={[420, 640, 900, 1200]}
+              sizes="(min-width: 64rem) 34vw, (min-width: 40rem) 60vw, 88vw"
+              loading="eager"
+              fetchpriority="high"
+              quality={82}
+            />
+          </div>
+          {badge && (
+            <p class="hero__badge" aria-hidden="true">
+              <span class="hero__badge-days">{badge.days}</span>
+              <span class="hero__badge-month">{badge.month}</span>
+              <span class="hero__badge-year">{badge.year}</span>
+            </p>
+          )}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: clip;
+    padding-block: clamp(2.5rem, 1.5rem + 5vw, 6rem) clamp(3.5rem, 2rem + 6vw, 7rem);
+    isolation: isolate;
+  }
+
+  .hero__deco {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .hero__rings {
+    position: absolute;
+    width: min(62rem, 140vw);
+    right: max(-18rem, -30vw);
+    top: 50%;
+    translate: 0 -50%;
+    color: var(--c-line-strong);
+    animation: spin 90s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      rotate: 360deg;
+    }
+  }
+
+  .hero__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.22;
+  }
+
+  .hero__blob--y {
+    width: 36rem;
+    height: 36rem;
+    background: var(--accent);
+    right: -8rem;
+    top: -10rem;
+  }
+
+  .hero__blob--r {
+    width: 28rem;
+    height: 28rem;
+    background: var(--c-red);
+    right: 18%;
+    bottom: -14rem;
+    opacity: 0.16;
+  }
+
+  .hero__grid {
+    display: grid;
+    gap: clamp(2.5rem, 2rem + 3vw, 4rem);
+    align-items: center;
+  }
+
+  @media (min-width: 64rem) {
+    .hero__grid {
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
+    }
+  }
+
+  .hero__text {
+    display: grid;
+    gap: clamp(1.1rem, 0.9rem + 0.8vw, 1.6rem);
+    justify-items: start;
+  }
+
+  .hero__kicker {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.9rem;
+  }
+
+  .hero__theme {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: var(--step--1);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero__title {
+    font-size: var(--step-5);
+    line-height: 1.12;
+    max-width: 12ch;
+  }
+
+  .hero__year {
+    color: var(--accent);
+  }
+
+  .hero__tagline {
+    font-size: var(--step-1);
+    color: var(--c-muted);
+    max-width: 34rem;
+    line-height: 1.45;
+  }
+
+  .hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.5rem;
+    font-weight: 700;
+    font-size: var(--step-0);
+  }
+
+  .hero__meta li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero__meta :global(svg) {
+    color: var(--accent);
+    flex: none;
+  }
+
+  .hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  @media (max-width: 30rem) {
+    .hero__ctas {
+      width: 100%;
+    }
+    .hero__ctas .btn {
+      flex: 1 1 100%;
+    }
+  }
+
+  .hero__visual {
+    position: relative;
+    justify-self: center;
+    width: min(100%, 19rem);
+    margin-inline: auto;
+    padding: 0 0 1.5rem 1.5rem;
+  }
+
+  @media (min-width: 40rem) {
+    .hero__visual {
+      width: min(100%, 24rem);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .hero__visual {
+      width: min(100%, 30rem);
+      justify-self: end;
+    }
+  }
+
+  .hero__card {
+    border-radius: var(--radius-l);
+    overflow: hidden;
+    rotate: 2.5deg;
+    box-shadow:
+      var(--shadow),
+      0 0 0 1px rgb(255 255 255 / 0.08);
+    transition: rotate 0.6s var(--ease);
+    background: var(--c-bg-3);
+  }
+
+  .hero__visual:hover .hero__card {
+    rotate: 0deg;
+  }
+
+  .hero__card :global(img) {
+    width: 100%;
+  }
+
+  .hero__badge {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: clamp(7.5rem, 6rem + 6vw, 9.5rem);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--c-yellow);
+    color: var(--c-ink);
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    text-align: center;
+    rotate: -8deg;
+    box-shadow: 0 0.75rem 2rem -0.5rem rgb(0 0 0 / 0.6);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    line-height: 0.95;
+  }
+
+  .hero__badge-days {
+    font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.3rem);
+  }
+
+  .hero__badge-month {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: var(--step--2);
+    letter-spacing: 0.12em;
+    margin-block: 0.2rem;
+  }
+
+  .hero__badge-year {
+    font-size: clamp(1.3rem, 1rem + 1.2vw, 1.75rem);
+  }
+</style>

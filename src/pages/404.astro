@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import { alternatesFor, paths, useUI } from '../i18n';
+
+// Strona błędu jest po polsku, z odnośnikami do wersji językowych.
+const t = useUI('pl');
+const en = useUI('en');
+const pt = useUI('pt');
+---
+
+<Base locale="pl" title={t('notFound.title')} description={t('notFound.text')} alternates={alternatesFor(paths.home)} noindex>
+  <section class="section nf">
+    <div class="container nf__inner">
+      <p class="nf__code display" aria-hidden="true">404</p>
+      <h1 class="display nf__title">{t('notFound.title')}</h1>
+      <p class="lead">{t('notFound.text')}</p>
+      <a class="btn btn--primary" href={paths.home('pl')}>{t('notFound.home')}</a>
+      <p class="nf__alt">
+        <a href={paths.home('en')} lang="en">{en('notFound.home')}</a>
+        <span aria-hidden="true">·</span>
+        <a href={paths.home('pt')} lang="pt-BR">{pt('notFound.home')}</a>
+      </p>
+      <Logo size="footer" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf__inner {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .nf__code {
+    font-size: clamp(6rem, 4rem + 12vw, 13rem);
+    line-height: 0.9;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--c-yellow);
+  }
+
+  .nf__title {
+    font-size: var(--step-4);
+  }
+
+  .nf__alt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    font-size: var(--step--1);
+    color: var(--c-muted);
+    margin-bottom: 2rem;
+  }
+</style>

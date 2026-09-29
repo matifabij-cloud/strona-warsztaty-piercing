@@ -1,0 +1,50 @@
+# Automatyczne tłumaczenie treści (PL → EN, PT-BR) po każdej zmianie w panelu.
+# Wymaga sekretu DEEPL_API_KEY (Settings → Secrets and variables → Actions).
+# Bez klucza nic się nie psuje – nowe teksty po prostu wyświetlą się po polsku.
+name: Tłumaczenia treści
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/**'
+      - 'src/data/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: translate-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Przetłumacz nowe i zmienione teksty
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: node scripts/translate.mjs
+
+      - name: Zapisz tłumaczenia
+        run: |
+          if git diff --quiet -- src/i18n/translations; then
+            echo "Brak nowych tłumaczeń."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/i18n/translations
+          git commit -m "Automatyczne tłumaczenia treści (EN, PT-BR)"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

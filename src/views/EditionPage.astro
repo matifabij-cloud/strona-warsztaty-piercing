@@ -1,0 +1,423 @@
+---
+import { getImage } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import SectionHead from '../components/SectionHead.astro';
+import Stats from '../components/Stats.astro';
+import Speakers from '../components/Speakers.astro';
+import Program from '../components/Program.astro';
+import Tickets from '../components/Tickets.astro';
+import OpenCall from '../components/OpenCall.astro';
+import Attractions from '../components/Attractions.astro';
+import Partners from '../components/Partners.astro';
+import Gallery from '../components/Gallery.astro';
+import Posters from '../components/Posters.astro';
+import Lightbox from '../components/Lightbox.astro';
+import EditionCard from '../components/EditionCard.astro';
+import Img from '../components/Img.astro';
+import Icon from '../components/Icon.astro';
+import { alternatesFor, formatDateRange, paths, tr, useUI, type Locale } from '../i18n';
+import { accentColor, editionPhase, getEditions, getEditionSpeakers, type Edition } from '../lib/content';
+import { md } from '../lib/markdown';
+import { dims, resolveMedia } from '../lib/media';
+import { eventLd } from '../lib/seo';
+
+interface Props {
+  locale: Locale;
+  edition: Edition;
+}
+
+const { locale, edition } = Astro.props;
+const t = useUI(locale);
+const d = edition.data;
+const phase = editionPhase(edition);
+const title = tr(d.title, locale);
+const editionLabel = t('hero.edition', { n: d.number });
+const speakers = await getEditionSpeakers(edition);
+const body = edition.body?.trim() ? md(tr(edition.body, locale)) : '';
+const dateText = d.startDate ? formatDateRange(d.startDate, d.endDate, locale) : d.dateNote || t('editions.dateTba');
+const ticketsOnSale = d.tickets?.status === 'sprzedaz' && Boolean(d.tickets?.url);
+const showTickets = phase === 'upcoming' || phase === 'ongoing';
+
+const mapUrl =
+  d.venue?.mapUrl ||
+  (d.venue?.name || d.venue?.address
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([d.venue?.name, d.venue?.address, d.venue?.city].filter(Boolean).join(', '))}`
+    : undefined);
+
+const others = (await getEditions()).filter((e) => e.id !== edition.id).slice(0, 3);
+
+const cover = await resolveMedia(d.cover);
+const coverUrl = cover ? new URL((await getImage({ src: cover, width: 1200, format: 'jpg' })).src, Astro.site).href : undefined;
+const pageUrl = new URL(paths.edition(locale, edition.id), Astro.site).href;
+const ld = eventLd(edition, locale, pageUrl, coverUrl, speakers.map((s) => s.speaker.data.name));
+const coverIsPortrait = cover ? dims(cover).height > dims(cover).width : false;
+---
+
+<Base
+  locale={locale}
+  title={`${title} (${editionLabel})`}
+  description={tr(d.summary, locale) || title}
+  image={d.cover}
+  alternates={alternatesFor((l) => paths.edition(l, edition.id))}
+  jsonLd={ld}
+  ticketsOnSale={ticketsOnSale}
+  accent={accentColor[d.accent]}
+>
+  <article>
+    <header class="ehero">
+      <div class="container ehero__grid">
+        <div class="ehero__text">
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <a href={paths.editions(locale)}>
+              <Icon name="chevron-left" size={16} />
+              {t('cta.backToEditions')}
+            </a>
+          </nav>
+          <p class="ehero__kicker">
+            <span class="tag tag--solid">{editionLabel}</span>
+            {phase === 'upcoming' && <span class="ehero__status">{t('editions.upcoming')}</span>}
+          </p>
+          <h1 class="display ehero__title">{title}</h1>
+          {d.tagline && <p class="ehero__tagline">{tr(d.tagline, locale)}</p>}
+          <dl class="ehero__facts">
+            <div>
+              <dt>
+                <Icon name="calendar" size={18} />
+                {t('edition.when')}
+              </dt>
+              <dd>{dateText}</dd>
+            </div>
+            {
+              (d.venue?.name || d.venue?.address) && (
+                <div>
+                  <dt>
+                    <Icon name="map-pin" size={18} />
+                    {t('edition.where')}
+                  </dt>
+                  <dd>
+                    {d.venue?.name}
+                    {d.venue?.address && (
+                      <>
+                        <br />
+                        <span class="ehero__addr">{d.venue.address}</span>
+                      </>
+                    )}
+                    {mapUrl && (
+                      <>
+                        <br />
+                        <a href={mapUrl} target="_blank" rel="noopener noreferrer" class="ehero__map">
+                          {t('cta.map')}
+                        </a>
+                      </>
+                    )}
+                  </dd>
+                </div>
+              )
+            }
+          </dl>
+          {
+            showTickets && (
+              <div class="ehero__ctas">
+                <a class="btn btn--primary" href="#tickets">
+                  <Icon name="ticket" size={18} />
+                  {ticketsOnSale ? t('cta.buyTicket') : t('cta.ticketsSoon')}
+                </a>
+              </div>
+            )
+          }
+        </div>
+        {
+          d.cover && (
+            <div class:list={['ehero__media', { 'ehero__media--portrait': coverIsPortrait }]}>
+              <Img
+                src={d.cover}
+                alt={title}
+                widths={[480, 800, 1200, 1600]}
+                sizes={coverIsPortrait ? '(min-width: 64rem) 30vw, 80vw' : '(min-width: 64rem) 50vw, 100vw'}
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
+          )
+        }
+      </div>
+    </header>
+
+    <Stats locale={locale} stats={d.stats} />
+
+    {
+      (body || d.summary) && (
+        <section class="section" aria-label={t('section.about')}>
+          <div class="container edition-about">
+            <span class="eyebrow">{t('section.about')}</span>
+            {body ? <div class="prose prose--large" set:html={body} /> : <p class="lead">{tr(d.summary, locale)}</p>}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      d.attractions.length > 0 && (
+        <section class="section" aria-labelledby="attr-title">
+          <div class="container">
+            <SectionHead id="attr-title" eyebrow={editionLabel} title={t('section.attractions')} />
+            <Attractions locale={locale} items={d.attractions} />
+          </div>
+        </section>
+      )
+    }
+
+    {
+      (d.program.length > 0 || showTickets) && (
+        <section id="program" class="section" aria-labelledby="program-title">
+          <div class="container">
+            <SectionHead id="program-title" eyebrow={editionLabel} title={t('section.program')} />
+            <Program locale={locale} edition={edition} />
+          </div>
+        </section>
+      )
+    }
+
+    {
+      speakers.length > 0 && (
+        <section id="speakers" class="section" aria-labelledby="speakers-title">
+          <div class="container">
+            <SectionHead id="speakers-title" eyebrow={editionLabel} title={t('section.speakers')} />
+            <Speakers locale={locale} items={speakers} showBio />
+          </div>
+        </section>
+      )
+    }
+
+    {
+      showTickets && (
+        <section id="tickets" class="section" aria-labelledby="tickets-title">
+          <div class="container">
+            <SectionHead id="tickets-title" eyebrow={editionLabel} title={t('section.tickets')} />
+            <Tickets locale={locale} edition={edition} />
+          </div>
+        </section>
+      )
+    }
+
+    {
+      d.openCall?.enabled && phase !== 'past' && (
+        <section class="section section--paper" aria-label={t('section.openCall')}>
+          <div class="container">
+            <OpenCall locale={locale} call={d.openCall} />
+          </div>
+        </section>
+      )
+    }
+
+    {
+      d.gallery.length > 0 && (
+        <section id="gallery" class="section" aria-labelledby="gallery-title">
+          <div class="container">
+            <SectionHead id="gallery-title" eyebrow={editionLabel} title={t('section.gallery')} />
+            <Gallery locale={locale} images={d.gallery} label={editionLabel} initial={12} id="edition-gallery" />
+          </div>
+        </section>
+      )
+    }
+
+    {
+      d.posters.length > 0 && (
+        <section class="section" aria-labelledby="posters-title">
+          <div class="container">
+            <SectionHead id="posters-title" eyebrow={editionLabel} title={t('section.posters')} />
+            <Posters locale={locale} images={d.posters} label={editionLabel} />
+          </div>
+        </section>
+      )
+    }
+
+    {
+      d.partners.length > 0 && (
+        <section class="section" aria-labelledby="partners-title">
+          <div class="container">
+            <SectionHead id="partners-title" eyebrow={editionLabel} title={t('section.partners')} />
+            <Partners locale={locale} items={d.partners} />
+          </div>
+        </section>
+      )
+    }
+  </article>
+
+  {
+    others.length > 0 && (
+      <section class="section section--raised" aria-labelledby="others-title">
+        <div class="container">
+          <SectionHead id="others-title" title={t('edition.other')}>
+            <a class="btn" href={paths.editions(locale)}>
+              {t('cta.allEditions')}
+              <Icon name="arrow-right" size={18} />
+            </a>
+          </SectionHead>
+          <div class="grid-auto" style="--min: 18rem">
+            {others.map((e) => (
+              <EditionCard locale={locale} edition={e} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <Lightbox locale={locale} />
+</Base>
+
+<style>
+  .ehero {
+    position: relative;
+    padding-block: clamp(1.5rem, 1rem + 2vw, 3rem) clamp(2.5rem, 2rem + 3vw, 4.5rem);
+    overflow: clip;
+    isolation: isolate;
+  }
+
+  .ehero::before {
+    content: '';
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    right: -12rem;
+    top: -18rem;
+    border-radius: 50%;
+    background: var(--accent);
+    filter: blur(110px);
+    opacity: 0.18;
+    z-index: -1;
+  }
+
+  .ehero__grid {
+    display: grid;
+    gap: clamp(2rem, 1.5rem + 3vw, 3.5rem);
+    align-items: center;
+  }
+
+  @media (min-width: 64rem) {
+    .ehero__grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+
+  .ehero__text {
+    display: grid;
+    gap: 1.1rem;
+    justify-items: start;
+  }
+
+  .crumbs a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--c-muted);
+    text-decoration: none;
+  }
+
+  .crumbs a:hover {
+    color: var(--c-text);
+  }
+
+  .ehero__kicker {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .ehero__status {
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .ehero__title {
+    font-size: var(--step-5);
+    max-width: 14ch;
+  }
+
+  .ehero__tagline {
+    font-size: var(--step-1);
+    color: var(--c-muted);
+    max-width: 36rem;
+  }
+
+  .ehero__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 3rem;
+    margin-top: 0.5rem;
+  }
+
+  .ehero__facts dt {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    margin-bottom: 0.35rem;
+  }
+
+  .ehero__facts dt :global(svg) {
+    color: var(--accent);
+  }
+
+  .ehero__facts dd {
+    font-weight: 700;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .ehero__addr {
+    font-weight: 500;
+    font-size: var(--step-0);
+    color: var(--c-muted);
+  }
+
+  .ehero__map {
+    font-size: var(--step--1);
+    color: var(--accent);
+  }
+
+  .ehero__ctas {
+    margin-top: 0.5rem;
+  }
+
+  .ehero__media {
+    border-radius: var(--radius-l);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    aspect-ratio: 3 / 2;
+    background: var(--c-bg-3);
+  }
+
+  .ehero__media--portrait {
+    aspect-ratio: auto;
+    width: min(100%, 24rem);
+    justify-self: center;
+    rotate: 2deg;
+  }
+
+  .ehero__media :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .edition-about {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .edition-about .prose {
+    max-width: 60rem;
+    color: var(--c-muted);
+  }
+</style>

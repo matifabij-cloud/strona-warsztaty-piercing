@@ -1,0 +1,142 @@
+---
+import { useUI, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  /** Początek wydarzenia jako ISO z kodem strefy, np. 2027-03-20T00:00:00+01:00 */
+  start: string;
+  /** Koniec wydarzenia (ISO) */
+  end: string;
+}
+
+const { locale, start, end } = Astro.props;
+const t = useUI(locale);
+
+const now = Date.now();
+const startMs = new Date(start).getTime();
+const endMs = new Date(end).getTime();
+const phase = now >= endMs ? 'past' : now >= startMs ? 'ongoing' : 'upcoming';
+const diff = Math.max(0, startMs - now);
+const initial = {
+  d: Math.floor(diff / 86400000),
+  h: Math.floor(diff / 3600000) % 24,
+  m: Math.floor(diff / 60000) % 60,
+  s: Math.floor(diff / 1000) % 60,
+};
+const units = [
+  { key: 'd', label: t('countdown.days') },
+  { key: 'h', label: t('countdown.hours') },
+  { key: 'm', label: t('countdown.minutes') },
+  { key: 's', label: t('countdown.seconds') },
+] as const;
+---
+
+<div class="countdown" data-countdown data-start={start} data-end={end}>
+  <p class="countdown__label" data-when="upcoming" hidden={phase !== 'upcoming'}>{t('hero.countdown')}</p>
+  <div class="countdown__units" data-when="upcoming" role="timer" aria-live="off" hidden={phase !== 'upcoming'}>
+    {
+      units.map((u) => (
+        <div class="countdown__unit">
+          <span class="countdown__num" data-unit={u.key}>
+            {String(initial[u.key]).padStart(2, '0')}
+          </span>
+          <span class="countdown__txt">{u.label}</span>
+        </div>
+      ))
+    }
+  </div>
+  <p class="tag tag--red countdown__live" data-when="ongoing" hidden={phase !== 'ongoing'}>
+    <span class="dot dot--live"></span>
+    {t('hero.now')}
+  </p>
+  <p class="countdown__past" data-when="past" hidden={phase !== 'past'}>{t('hero.past')}</p>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-countdown]').forEach((el) => {
+    const start = new Date(el.dataset.start!).getTime();
+    const end = new Date(el.dataset.end!).getTime();
+    const nums = Object.fromEntries(
+      [...el.querySelectorAll<HTMLElement>('[data-unit]')].map((n) => [n.dataset.unit!, n]),
+    );
+    const show = (phase: string) =>
+      el.querySelectorAll<HTMLElement>('[data-when]').forEach((node) => (node.hidden = node.dataset.when !== phase));
+
+    const tick = () => {
+      const now = Date.now();
+      if (now >= end) return show('past');
+      if (now >= start) return show('ongoing');
+      show('upcoming');
+      const diff = start - now;
+      const values: Record<string, number> = {
+        d: Math.floor(diff / 86400000),
+        h: Math.floor(diff / 3600000) % 24,
+        m: Math.floor(diff / 60000) % 60,
+        s: Math.floor(diff / 1000) % 60,
+      };
+      for (const [k, v] of Object.entries(values)) if (nums[k]) nums[k].textContent = String(v).padStart(2, '0');
+      requestAnimationFrame(() => setTimeout(tick, 1000 - (Date.now() % 1000)));
+    };
+    tick();
+  });
+</script>
+
+<style>
+  .countdown {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .countdown__label {
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+  }
+
+  .countdown__units {
+    display: flex;
+    gap: clamp(0.4rem, 1.5vw, 0.75rem);
+  }
+
+  .countdown__unit {
+    display: grid;
+    justify-items: center;
+    gap: 0.15rem;
+    min-width: clamp(3.6rem, 16vw, 4.6rem);
+    padding: 0.6rem 0.5rem 0.5rem;
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--radius);
+    background: rgb(255 255 255 / 0.03);
+  }
+
+  .countdown__num {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 1.3rem + 2vw, 2.4rem);
+    line-height: 1;
+    color: var(--c-yellow);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown__txt {
+    font-size: var(--step--2);
+    color: var(--c-muted);
+    font-weight: 600;
+  }
+
+  .countdown__live {
+    justify-self: start;
+    font-size: var(--step--1);
+    padding: 0.6em 1em;
+  }
+
+  .countdown__past {
+    font-weight: 700;
+    color: var(--c-muted);
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+</style>
