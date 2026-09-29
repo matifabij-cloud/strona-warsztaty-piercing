@@ -1,0 +1,22 @@
+# Codzienne odświeżenie strony: nowe posty z Instagrama, licznik dni, statusy edycji.
+# Wymaga sekretu CLOUDFLARE_DEPLOY_HOOK (adres „Deploy hook” z ustawień projektu w Cloudflare Pages).
+name: Codzienne odświeżenie strony
+
+on:
+  schedule:
+    - cron: '17 4 * * *' # codziennie ok. 5:17–6:17 czasu polskiego
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uruchom przebudowę strony
+        env:
+          HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "Brak sekretu CLOUDFLARE_DEPLOY_HOOK – pomijam."
+            exit 0
+          fi
+          curl -fsS -X POST "$HOOK" > /dev/null && echo "Przebudowa zlecona."

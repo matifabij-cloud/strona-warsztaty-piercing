@@ -1,0 +1,189 @@
+---
+import Icon from './Icon.astro';
+import { useUI, type Locale } from '../i18n';
+import { instagramHandle, site, telHref } from '../lib/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useUI(locale);
+const o = site.organizer;
+
+// Długi adres e-mail łamiemy ładnie przed „@”, a nie w połowie słowa.
+const breakable = (s: string) => s.replace('@', '<wbr>@');
+
+const channels = [
+  site.contact.email && {
+    icon: 'mail',
+    label: t('contact.email'),
+    value: breakable(site.contact.email),
+    href: `mailto:${site.contact.email}`,
+  },
+  site.contact.phone && { icon: 'phone', label: t('contact.phone'), value: site.contact.phone, href: telHref(site.contact.phone) },
+  site.social.instagram && {
+    icon: 'instagram',
+    label: 'Instagram',
+    value: `@${instagramHandle(site.social.instagram)}`,
+    href: site.social.instagram,
+    external: true,
+  },
+  site.social.facebook && { icon: 'facebook', label: 'Facebook', value: 'Facebook', href: site.social.facebook, external: true },
+].filter(Boolean) as { icon: string; label: string; value: string; href: string; external?: boolean }[];
+---
+
+<div class="contact">
+  <ul role="list" class="contact__channels">
+    {
+      channels.map((c) => (
+        <li>
+          <a class="contact__row" href={c.href} target={c.external ? '_blank' : undefined} rel={c.external ? 'noopener noreferrer' : undefined}>
+            <span class="contact__icon">
+              <Icon name={c.icon} size={22} />
+            </span>
+            <span class="contact__txt">
+              <span class="contact__label">{c.label}</span>
+              <span class="contact__value" set:html={c.value} />
+            </span>
+            <Icon name="arrow-up-right" size={26} class="contact__arrow" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="contact__org">
+    <p class="contact__org-label">{t('contact.organizer')}</p>
+    <p class="contact__org-name">{o.name}</p>
+    <p>
+      {o.address}, {o.postalCode} {o.city}<br />
+      {t('contact.nip')}: {o.nip}
+    </p>
+    {
+      o.website && (
+        <p>
+          {t('contact.studio')}:{' '}
+          <a href={o.website} target="_blank" rel="noopener noreferrer">
+            {o.brand || o.website.replace(/^https?:\/\/(www\.)?/, '')}
+          </a>
+        </p>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .contact {
+    display: grid;
+    gap: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  }
+
+  @media (min-width: 60rem) {
+    .contact {
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+      align-items: start;
+    }
+  }
+
+  .contact__channels {
+    display: grid;
+    border-top: 1px solid var(--c-line);
+  }
+
+  .contact__row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1.25rem;
+    border-bottom: 1px solid var(--c-line);
+    text-decoration: none;
+    transition: color 0.2s var(--ease);
+  }
+
+  .contact__row:hover {
+    color: var(--c-yellow);
+  }
+
+  .contact__icon {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--c-yellow);
+    color: var(--c-ink);
+  }
+
+  .contact__txt {
+    display: grid;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .contact__label {
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+  }
+
+  .contact__value {
+    font-weight: 800;
+    font-size: clamp(1.05rem, 0.85rem + 1.1vw, 1.7rem);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .contact__row :global(.contact__arrow) {
+    color: var(--c-muted);
+    transition:
+      transform 0.25s var(--ease),
+      color 0.2s;
+  }
+
+  .contact__row:hover :global(.contact__arrow) {
+    color: var(--c-yellow);
+    transform: translate(3px, -3px);
+  }
+
+  @media (max-width: 30rem) {
+    .contact__row {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+    .contact__row :global(.contact__arrow) {
+      display: none;
+    }
+  }
+
+  .contact__org {
+    display: grid;
+    gap: 0.4rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-l);
+    border: 1px dashed var(--c-line-strong);
+    color: var(--c-muted);
+    font-size: var(--step--1);
+  }
+
+  .contact__org-label {
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-subtle);
+  }
+
+  .contact__org-name {
+    color: var(--c-text);
+    font-weight: 800;
+    font-size: var(--step-0);
+  }
+
+  .contact__org a {
+    color: var(--c-yellow);
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+import EditionPage from '../../views/EditionPage.astro';
+import { getEditions, type Edition } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const editions = await getEditions();
+  return editions.map((edition) => ({ params: { slug: edition.id }, props: { edition } }));
+}
+
+const { edition } = Astro.props as { edition: Edition };
+---
+
+<EditionPage locale="pl" edition={edition} />

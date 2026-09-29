@@ -1,0 +1,83 @@
+---
+import Img from './Img.astro';
+import { useUI, type Locale } from '../i18n';
+import type { Edition } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  items: Edition['data']['partners'];
+}
+
+const { locale, items } = Astro.props;
+const t = useUI(locale);
+---
+
+<ul role="list" class="partners">
+  {
+    items.map((p) => {
+      const inner = p.logo ? (
+        <Img src={p.logo} alt={p.name} widths={[240, 480]} sizes="12rem" class="partner__logo" />
+      ) : (
+        <span class="partner__name">{p.name}</span>
+      );
+      return (
+        <li class="partner">
+          {p.url ? (
+            <a href={p.url} target="_blank" rel="noopener noreferrer" title={`${p.name} ${t('misc.newTab')}`}>
+              {inner}
+            </a>
+          ) : (
+            <span>{inner}</span>
+          )}
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style>
+  .partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 30rem) {
+    .partners {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .partner > a,
+  .partner > span {
+    display: grid;
+    place-items: center;
+    min-height: 6rem;
+    padding: 1.1rem;
+    border-radius: var(--radius);
+    background: var(--c-paper);
+    color: var(--c-paper-text);
+    text-decoration: none;
+    text-align: center;
+    transition:
+      transform 0.25s var(--ease),
+      box-shadow 0.25s var(--ease);
+  }
+
+  .partner > a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 0 3px var(--c-yellow);
+  }
+
+  .partner :global(.partner__logo) {
+    max-height: 3.5rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .partner__name {
+    font-weight: 800;
+    font-size: var(--step-0);
+    line-height: 1.2;
+  }
+</style>

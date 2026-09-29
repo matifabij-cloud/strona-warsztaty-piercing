@@ -1,0 +1,384 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { locales, localeMeta, paths, useUI, type Locale } from '../i18n';
+import { site } from '../lib/site';
+
+interface Props {
+  locale: Locale;
+  alternates: Record<Locale, string>;
+  ticketsOnSale?: boolean;
+}
+
+const { locale, alternates, ticketsOnSale = false } = Astro.props;
+const t = useUI(locale);
+const home = paths.home(locale);
+
+const nav = [
+  { href: `${home}#event`, label: t('nav.event') },
+  { href: `${home}#speakers`, label: t('nav.speakers') },
+  { href: `${home}#program`, label: t('nav.program') },
+  { href: `${home}#tickets`, label: t('nav.tickets') },
+  { href: paths.editions(locale), label: t('nav.editions') },
+  { href: `${home}#contact`, label: t('nav.contact') },
+];
+
+const current = Astro.url.pathname;
+const isCurrent = (href: string) => !href.includes('#') && current.startsWith(href) && href !== home;
+const ctaLabel = ticketsOnSale ? t('cta.buyTicket') : t('cta.ticketsSoon');
+---
+
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <Logo href={home} label={`${site.name} – ${t('nav.home')}`} />
+
+    <nav class="site-nav" aria-label="Menu">
+      <ul role="list" class="site-nav__list">
+        {
+          nav.map((item) => (
+            <li>
+              <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <nav class="lang" aria-label={t('nav.language')}>
+        {
+          locales.map((l) => (
+            <a
+              href={alternates[l]}
+              hreflang={localeMeta[l].hreflang}
+              lang={localeMeta[l].lang}
+              aria-current={l === locale ? 'true' : undefined}
+              title={localeMeta[l].name}
+            >
+              {localeMeta[l].label}
+            </a>
+          ))
+        }
+      </nav>
+      <a href={`${home}#tickets`} class:list={['btn btn--small header-cta', ticketsOnSale ? 'btn--primary' : 'btn--ghost']}>
+        <Icon name="ticket" size={18} />
+        {ctaLabel}
+      </a>
+      <button class="burger" type="button" popovertarget="mobile-menu" aria-label={t('nav.menu')}>
+        <Icon name="menu" size={26} />
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu" popover>
+  <div class="mobile-menu__top container">
+    <Logo href={home} label={`${site.name} – ${t('nav.home')}`} />
+    <button class="burger" type="button" popovertarget="mobile-menu" popovertargetaction="hide" aria-label={t('nav.close')}>
+      <Icon name="x" size={28} />
+    </button>
+  </div>
+  <nav class="container mobile-menu__nav" aria-label="Menu">
+    <ul role="list">
+      {
+        nav.map((item, i) => (
+          <li style={`--i:${i}`}>
+            <a href={item.href} data-close-menu>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div class="container mobile-menu__foot">
+    <a href={`${home}#tickets`} class="btn btn--primary" data-close-menu>
+      <Icon name="ticket" size={18} />
+      {ctaLabel}
+    </a>
+    <nav class="lang lang--large" aria-label={t('nav.language')}>
+      {
+        locales.map((l) => (
+          <a href={alternates[l]} hreflang={localeMeta[l].hreflang} lang={localeMeta[l].lang} aria-current={l === locale ? 'true' : undefined}>
+            {localeMeta[l].label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="mobile-menu__social">
+      {
+        site.social.instagram && (
+          <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <Icon name="instagram" size={26} />
+          </a>
+        )
+      }
+      {
+        site.social.facebook && (
+          <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <Icon name="facebook" size={26} />
+          </a>
+        )
+      }
+      {
+        site.contact.email && (
+          <a href={`mailto:${site.contact.email}`} aria-label={t('contact.email')}>
+            <Icon name="mail" size={26} />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mocniejsze tło nagłówka po przewinięciu strony.
+  const header = document.querySelector<HTMLElement>('[data-header]');
+  const onScroll = () => header?.toggleAttribute('data-scrolled', window.scrollY > 12);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Zamknięcie menu mobilnego po kliknięciu w link.
+  const menu = document.getElementById('mobile-menu');
+  menu?.querySelectorAll('[data-close-menu]').forEach((a) =>
+    a.addEventListener('click', () => {
+      if (menu.matches(':popover-open')) menu.hidePopover();
+    }),
+  );
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--header-h);
+    background: rgb(15 14 16 / 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid transparent;
+    transition:
+      background-color 0.3s var(--ease),
+      border-color 0.3s var(--ease);
+  }
+
+  .site-header[data-scrolled] {
+    background: rgb(15 14 16 / 0.92);
+    border-bottom-color: var(--c-line);
+  }
+
+  .site-header__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-nav__list {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.9rem, 1.6vw, 1.75rem);
+  }
+
+  .site-nav a {
+    font-size: var(--step--1);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--c-muted);
+    padding-block: 0.5rem;
+    background: linear-gradient(var(--c-yellow), var(--c-yellow)) no-repeat left bottom / 0 2px;
+    transition:
+      color 0.2s var(--ease),
+      background-size 0.25s var(--ease);
+    white-space: nowrap;
+  }
+
+  .site-nav a:hover,
+  .site-nav a[aria-current='page'] {
+    color: var(--c-text);
+    background-size: 100% 2px;
+  }
+
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .lang {
+    display: none;
+    align-items: center;
+    padding: 0.2rem;
+    border: 1px solid var(--c-line);
+    border-radius: 999px;
+  }
+
+  .lang a {
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: var(--c-muted);
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+    line-height: 1;
+  }
+
+  .lang a:hover {
+    color: var(--c-text);
+  }
+
+  .lang a[aria-current='true'] {
+    background: var(--c-text);
+    color: var(--c-bg);
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .burger {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    color: var(--c-text);
+    border: 1px solid var(--c-line-strong);
+  }
+
+  .burger:hover {
+    border-color: var(--c-yellow);
+    color: var(--c-yellow);
+  }
+
+  @media (min-width: 40rem) {
+    .lang,
+    .header-cta {
+      display: inline-flex;
+    }
+  }
+
+  @media (min-width: 70rem) {
+    .site-nav {
+      display: block;
+    }
+    .burger {
+      display: none;
+    }
+  }
+
+  /* ---------- Menu mobilne (popover) ---------- */
+
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0 0 2rem;
+    border: 0;
+    background: var(--c-bg);
+    color: var(--c-text);
+    overflow-y: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mobile-menu:popover-open {
+    display: flex;
+    animation: menu-in 0.35s var(--ease);
+  }
+
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+  }
+
+  .mobile-menu__top {
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: none;
+  }
+
+  .mobile-menu__nav ul {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .mobile-menu__nav a {
+    display: block;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: clamp(2.2rem, 11vw, 3.4rem);
+    line-height: 1.2;
+    text-decoration: none;
+    padding-block: 0.15rem;
+  }
+
+  .mobile-menu:popover-open li {
+    animation: menu-item 0.45s var(--ease) both;
+    animation-delay: calc(var(--i) * 45ms + 80ms);
+  }
+
+  @keyframes menu-item {
+    from {
+      opacity: 0;
+      transform: translateX(-1.5rem);
+    }
+  }
+
+  .mobile-menu__nav a:hover {
+    color: var(--c-yellow);
+  }
+
+  .mobile-menu__foot {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.25rem;
+  }
+
+  .lang--large {
+    display: inline-flex;
+  }
+
+  .lang--large a {
+    font-size: var(--step--1);
+    padding: 0.55rem 0.8rem;
+  }
+
+  .mobile-menu__social {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .mobile-menu__social a {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid var(--c-line-strong);
+  }
+
+  .mobile-menu__social a:hover {
+    color: var(--c-yellow);
+    border-color: var(--c-yellow);
+  }
+</style>

@@ -1,0 +1,113 @@
+---
+import Img from './Img.astro';
+import Icon from './Icon.astro';
+import { formatDate, tr, useUI, type Locale } from '../i18n';
+import { todayInPoland, type Edition } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  call: NonNullable<Edition['data']['openCall']>;
+}
+
+const { locale, call } = Astro.props;
+const t = useUI(locale);
+const today = todayInPoland();
+const closed = Boolean(call.deadline && today > call.deadline);
+const external = Boolean(call.url && /^https?:/i.test(call.url));
+---
+
+<div class="call">
+  {
+    call.image && (
+      <div class="call__poster">
+        <Img src={call.image} alt={tr(call.title, locale) ?? ''} widths={[360, 560, 800]} sizes="(min-width: 56rem) 30vw, 80vw" />
+      </div>
+    )
+  }
+  <div class="call__text">
+    <span class="eyebrow">{t('section.openCall')}</span>
+    {call.title && <h2 class="call__title display">{tr(call.title, locale)}</h2>}
+    {call.description && <p class="call__desc">{tr(call.description, locale)}</p>}
+    {
+      call.deadline && (
+        <p class:list={['call__deadline', { 'call__deadline--closed': closed }]}>
+          <Icon name="calendar" size={20} />
+          {closed ? t('openCall.closed') : t('openCall.deadline', { date: formatDate(call.deadline, locale) })}
+        </p>
+      )
+    }
+    {
+      !closed && call.url && (
+        <a class="btn btn--red" href={call.url} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+          <Icon name="brush" size={18} />
+          {tr(call.buttonLabel, locale) || t('cta.write')}
+        </a>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .call {
+    display: grid;
+    gap: clamp(2rem, 1.5rem + 3vw, 4rem);
+    align-items: center;
+  }
+
+  @media (min-width: 56rem) {
+    .call {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    }
+  }
+
+  .call__poster {
+    width: min(100%, 24rem);
+    margin-inline: auto;
+    rotate: -2.5deg;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem -1rem rgb(26 23 25 / 0.45);
+    transition: rotate 0.5s var(--ease);
+  }
+
+  .call__poster:hover {
+    rotate: 0deg;
+  }
+
+  .call__poster :global(img) {
+    width: 100%;
+  }
+
+  .call__text {
+    display: grid;
+    gap: 1.25rem;
+    justify-items: start;
+  }
+
+  .call__title {
+    font-size: var(--step-4);
+    color: var(--c-paper-text);
+  }
+
+  .call__desc {
+    font-size: var(--step-1);
+    line-height: 1.55;
+    max-width: 38rem;
+  }
+
+  .call__deadline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    background: var(--c-yellow);
+    color: var(--c-ink);
+    font-weight: 800;
+  }
+
+  .call__deadline--closed {
+    background: var(--c-paper-2);
+    color: var(--c-paper-muted);
+  }
+</style>

@@ -1,0 +1,58 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { alternatesFor, formatDate, paths, tr, useUI, type Locale } from '../i18n';
+import { md } from '../lib/markdown';
+
+interface Props {
+  locale: Locale;
+  id: 'polityka-prywatnosci';
+}
+
+const { locale, id } = Astro.props;
+const t = useUI(locale);
+const entry = await getEntry('pages', id);
+if (!entry) throw new Error(`Brak strony src/content/pages/${id}.md`);
+const title = tr(entry.data.title, locale);
+const html = md(tr(entry.body ?? '', locale));
+---
+
+<Base locale={locale} title={title} description={title} alternates={alternatesFor(paths.privacy)}>
+  <article class="section legal">
+    <div class="container--narrow">
+      <h1 class="display legal__title">{title}</h1>
+      {entry.data.updated && <p class="legal__meta">{t('legal.updated', { date: formatDate(entry.data.updated, locale) })}</p>}
+      {locale !== 'pl' && t('legal.binding') && <p class="legal__note">{t('legal.binding')}</p>}
+      <div class="prose" set:html={html} />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .legal {
+    padding-top: clamp(2rem, 1.5rem + 3vw, 4rem);
+  }
+
+  .legal__title {
+    font-size: var(--step-4);
+    margin-bottom: 0.75rem;
+  }
+
+  .legal__meta {
+    color: var(--c-muted);
+    font-size: var(--step--1);
+    margin-bottom: 2rem;
+  }
+
+  .legal__note {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid var(--c-yellow);
+    background: var(--c-bg-2);
+    margin-bottom: 2rem;
+    font-size: var(--step--1);
+  }
+
+  .legal .prose {
+    color: var(--c-muted);
+  }
+</style>

@@ -1,0 +1,254 @@
+---
+import { Image } from 'astro:assets';
+import Img from './Img.astro';
+import mark from '../assets/brand/logo-znak.png';
+import Icon from './Icon.astro';
+import { formatDateRange, paths, tr, useUI, type Locale } from '../i18n';
+import { accentColor, editionPhase, getEditionSpeakers, type Edition } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+  edition: Edition;
+  headingLevel?: 'h2' | 'h3';
+  wide?: boolean;
+}
+
+const { locale, edition, headingLevel: H = 'h3', wide = false } = Astro.props;
+const t = useUI(locale);
+const d = edition.data;
+const phase = editionPhase(edition);
+const speakers = (await getEditionSpeakers(edition)).map((s) => s.speaker.data.name);
+const dateText = d.startDate ? formatDateRange(d.startDate, d.endDate, locale) : d.dateNote || '';
+const image = d.cover || d.gallery[0] || d.poster;
+---
+
+<article class:list={['ecard', { 'ecard--wide': wide }]} style={`--accent:${accentColor[d.accent]}`}>
+  <div class="ecard__media">
+    {
+      image ? (
+        <Img src={image} alt="" widths={[480, 720, 1000]} sizes={wide ? '(min-width: 56rem) 50vw, 100vw' : '(min-width: 64rem) 33vw, (min-width: 40rem) 50vw, 100vw'} />
+      ) : (
+        <span class="ecard__placeholder" aria-hidden="true">
+          <Image src={mark} alt="" width={120} height={120} densities={[1, 2]} />
+        </span>
+      )
+    }
+    <span class="ecard__num" aria-hidden="true">{d.number}</span>
+  </div>
+  <div class="ecard__body">
+    <p class="ecard__meta">
+      <span class:list={['tag', phase === 'upcoming' || phase === 'ongoing' ? 'tag--solid' : '']}>
+        {t('hero.edition', { n: d.number })}
+      </span>
+      {phase === 'upcoming' && <span class="ecard__status">{t('editions.upcoming')}</span>}
+    </p>
+    <H class="ecard__title">
+      <a href={paths.edition(locale, edition.id)}>{tr(d.title, locale)}</a>
+    </H>
+    <ul role="list" class="ecard__facts">
+      {
+        dateText && (
+          <li>
+            <Icon name="calendar" size={16} />
+            {dateText}
+          </li>
+        )
+      }
+      {
+        d.venue?.name && (
+          <li>
+            <Icon name="map-pin" size={16} />
+            {d.venue.name}
+          </li>
+        )
+      }
+      {
+        speakers.length > 0 && (
+          <li>
+            <Icon name="mic" size={16} />
+            {speakers.join(', ')}
+          </li>
+        )
+      }
+    </ul>
+    {wide && d.summary && <p class="ecard__summary">{tr(d.summary, locale)}</p>}
+    <span class="ecard__more" aria-hidden="true">
+      {t('cta.details')}
+      <Icon name="arrow-right" size={18} />
+    </span>
+  </div>
+</article>
+
+<style>
+  .ecard {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: var(--radius-l);
+    overflow: hidden;
+    background: var(--c-bg-2);
+    border: 1px solid var(--c-line);
+    transition:
+      border-color 0.25s var(--ease),
+      transform 0.25s var(--ease);
+  }
+
+  .ecard:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+
+  .ecard:focus-within {
+    border-color: var(--accent);
+  }
+
+  @media (min-width: 56rem) {
+    .ecard--wide {
+      grid-template-rows: none;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    }
+  }
+
+  .ecard__media {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    background: var(--c-bg-3);
+    overflow: hidden;
+  }
+
+  .ecard--wide .ecard__media {
+    aspect-ratio: auto;
+    min-height: 16rem;
+  }
+
+  .ecard__media :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.6s var(--ease);
+  }
+
+  .ecard:hover .ecard__media :global(img) {
+    scale: 1.04;
+  }
+
+  .ecard__placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background:
+      repeating-radial-gradient(circle at 50% 50%, transparent 0 22px, rgb(255 255 255 / 0.05) 22px 23px),
+      radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 65%),
+      var(--c-bg-3);
+  }
+
+  .ecard__placeholder :global(img) {
+    width: 6.5rem;
+    height: 6.5rem;
+    rotate: -8deg;
+    filter: drop-shadow(0 0.75rem 1.5rem rgb(0 0 0 / 0.5));
+    transition: rotate 0.5s var(--ease);
+  }
+
+  .ecard:hover .ecard__placeholder :global(img) {
+    rotate: 4deg;
+  }
+
+  .ecard__num {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 3rem + 3vw, 5.5rem);
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--accent);
+    text-shadow: 0 0.25rem 1.5rem rgb(0 0 0 / 0.5);
+  }
+
+  .ecard__body {
+    display: grid;
+    align-content: start;
+    gap: 0.85rem;
+    padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  }
+
+  .ecard__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+  }
+
+  .ecard__status {
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .ecard__title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: var(--step-3);
+    line-height: 1.12;
+  }
+
+  .ecard__title a {
+    text-decoration: none;
+  }
+
+  /* Cała karta klikalna */
+  .ecard__title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .ecard__facts {
+    display: grid;
+    gap: 0.4rem;
+    font-size: var(--step--1);
+    color: var(--c-muted);
+  }
+
+  .ecard__facts li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .ecard__facts :global(svg) {
+    flex: none;
+    margin-top: 0.2em;
+    color: var(--accent);
+  }
+
+  .ecard__summary {
+    color: var(--c-muted);
+  }
+
+  .ecard__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+    font-weight: 800;
+    font-size: var(--step--1);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .ecard__more :global(svg) {
+    transition: transform 0.25s var(--ease);
+  }
+
+  .ecard:hover .ecard__more :global(svg) {
+    transform: translateX(4px);
+  }
+</style>

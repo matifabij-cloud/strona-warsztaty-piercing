@@ -1,0 +1,523 @@
+# Konfiguracja panelu do edycji treści – Pages CMS (https://app.pagescms.org).
+# Klient loguje się przez link wysłany e-mailem (bez konta na GitHubie).
+# Każdy zapis w panelu = nowa wersja strony, która publikuje się sama po ok. 1–2 minutach.
+
+media:
+  input: src/assets/media
+  output: /media
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    merge: true
+
+content:
+  # ---------------------------------------------------------------- USTAWIENIA
+  - name: ustawienia
+    label: Ustawienia strony
+    description: Dane kontaktowe, social media, FAQ, tekst „O projekcie” i która edycja jest aktualna.
+    type: file
+    path: src/data/site.json
+    format: json
+    fields:
+      - name: currentEdition
+        label: Aktualna edycja (pokazywana na stronie głównej)
+        type: reference
+        required: true
+        options:
+          collection: edycje
+          value: '{name}'
+          label: '{fields.number} edycja – {fields.title}'
+          search: fields.title
+      - name: name
+        label: Nazwa projektu
+        type: string
+        required: true
+      - name: tagline
+        label: Hasło (krótko, np. w stopce)
+        type: string
+      - name: description
+        label: Opis strony dla Google (1–2 zdania)
+        type: text
+      - name: contact
+        label: Kontakt
+        type: object
+        fields:
+          - name: email
+            label: E-mail
+            type: string
+          - name: phone
+            label: Telefon
+            type: string
+      - name: social
+        label: Social media (pełne linki, puste pole = ikona się nie pokaże)
+        type: object
+        fields:
+          - name: instagram
+            label: Instagram
+            type: string
+          - name: facebook
+            label: Facebook
+            type: string
+          - name: tiktok
+            label: TikTok
+            type: string
+          - name: youtube
+            label: YouTube
+            type: string
+      - name: about
+        label: Sekcja „O projekcie”
+        type: object
+        fields:
+          - name: title
+            label: Tytuł
+            type: string
+          - name: text
+            label: Tekst
+            type: rich-text
+          - name: images
+            label: Zdjęcia (3 sztuki)
+            type: image
+            options:
+              multiple: true
+      - name: faq
+        label: Najczęstsze pytania (FAQ)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.question}'
+        fields:
+          - name: question
+            label: Pytanie
+            type: string
+          - name: answer
+            label: Odpowiedź
+            type: text
+      - name: announcement
+        label: Pasek z ogłoszeniem na górze strony
+        type: object
+        fields:
+          - name: enabled
+            label: Pokaż pasek
+            type: boolean
+          - name: text
+            label: Treść ogłoszenia
+            type: string
+          - name: url
+            label: Link (opcjonalnie)
+            type: string
+      - name: instagram
+        label: Instagram na stronie
+        type: object
+        fields:
+          - name: feedUrl
+            label: Link do kanału JSON z Behold (behold.so)
+            description: Po wklejeniu na stronie pokażą się najnowsze posty. Puste pole = zdjęcia zastępcze.
+            type: string
+      - name: organizer
+        label: Organizator (stopka, kontakt, polityka prywatności)
+        type: object
+        fields:
+          - name: name
+            label: Nazwa firmy
+            type: string
+          - name: brand
+            label: Nazwa studia
+            type: string
+          - name: nip
+            label: NIP
+            type: string
+          - name: address
+            label: Ulica i numer
+            type: string
+          - name: postalCode
+            label: Kod pocztowy
+            type: string
+          - name: city
+            label: Miasto
+            type: string
+          - name: website
+            label: Strona studia
+            type: string
+
+  # ---------------------------------------------------------------- EDYCJE
+  - name: edycje
+    label: Edycje
+    description: Każda edycja warsztatów – aktualna i archiwalne. Nową edycję dodajesz przyciskiem „Add an entry”.
+    type: collection
+    path: src/content/editions
+    format: yaml-frontmatter
+    filename: '{fields.number}-edycja.md'
+    view:
+      fields: [number, title, startDate]
+      primary: title
+      sort: [startDate, title]
+      default:
+        sort: startDate
+        order: desc
+    fields:
+      - name: number
+        label: Numer edycji (rzymski, np. V)
+        type: string
+        required: true
+      - name: title
+        label: Tytuł (np. „Piercing Festival Łódź 2028”)
+        type: string
+        required: true
+      - name: theme
+        label: Hasło edycji (opcjonalnie)
+        type: string
+      - name: tagline
+        label: Podtytuł
+        type: string
+      - name: summary
+        label: Krótki opis (karty edycji i Google)
+        type: text
+      - name: startDate
+        label: Data rozpoczęcia
+        type: date
+      - name: endDate
+        label: Data zakończenia
+        type: date
+      - name: startTime
+        label: Godzina rozpoczęcia (np. 10:00) – do odliczania
+        type: string
+      - name: dateNote
+        label: Zamiast daty (gdy nie znamy dokładnej, np. „2024”)
+        type: string
+      - name: accent
+        label: Kolor przewodni edycji
+        type: select
+        options:
+          values:
+            - value: zolty
+              label: Żółty
+            - value: czerwony
+              label: Czerwony
+            - value: zielony
+              label: Zielony
+            - value: rozowy
+              label: Różowy
+      - name: venue
+        label: Miejsce
+        type: object
+        fields:
+          - name: name
+            label: Nazwa miejsca
+            type: string
+          - name: address
+            label: Adres
+            type: string
+          - name: city
+            label: Miasto
+            type: string
+          - name: mapUrl
+            label: Link do mapy (opcjonalnie – inaczej tworzy się sam)
+            type: string
+      - name: cover
+        label: Zdjęcie główne lub plakat
+        type: image
+      - name: poster
+        label: Plakat z programem (opcjonalnie)
+        type: image
+      - name: stats
+        label: Liczby (np. „5 – wykładów”)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.value} {fields.label}'
+        fields:
+          - name: value
+            label: Liczba
+            type: string
+          - name: label
+            label: Opis
+            type: string
+      - name: speakers
+        label: Prelegenci i goście
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.speaker}'
+        fields:
+          - name: speaker
+            label: Prelegent (najpierw dodaj go w zakładce „Prelegenci”)
+            type: reference
+            options:
+              collection: prelegenci
+              value: '{name}'
+              label: '{fields.name}'
+              search: fields.name
+          - name: note
+            label: Dopisek na zdjęciu (np. „Gość specjalny” albo temat)
+            type: string
+      - name: program
+        label: Program (dni)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.day} {fields.label}'
+        fields:
+          - name: day
+            label: Dzień
+            type: date
+          - name: label
+            label: Nazwa dnia (opcjonalnie – inaczej np. „Sobota”)
+            type: string
+          - name: items
+            label: Punkty programu
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.time} {fields.title}'
+            fields:
+              - name: time
+                label: Godzina
+                type: string
+              - name: title
+                label: Temat
+                type: string
+                required: true
+              - name: description
+                label: Opis (opcjonalnie)
+                type: text
+              - name: speakers
+                label: Prowadzący
+                type: reference
+                options:
+                  collection: prelegenci
+                  value: '{name}'
+                  label: '{fields.name}'
+                  search: fields.name
+                  multiple: true
+              - name: host
+                label: Prowadzący spoza listy prelegentów (wpisz ręcznie)
+                type: string
+      - name: attractions
+        label: Atrakcje / strefy
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.title}'
+        fields:
+          - name: title
+            label: Nazwa
+            type: string
+            required: true
+          - name: description
+            label: Opis
+            type: text
+          - name: icon
+            label: Ikona
+            type: select
+            options:
+              values:
+                - value: sparkles
+                  label: Iskierki
+                - value: brazil
+                  label: Brazylia
+                - value: snake
+                  label: Wąż / snake bites
+                - value: zipline
+                  label: Tyrolka
+                - value: smile
+                  label: Uśmiech
+                - value: trophy
+                  label: Puchar
+                - value: bag
+                  label: Torba zakupowa
+                - value: crown
+                  label: Korona
+                - value: gem
+                  label: Kamień szlachetny
+                - value: ring
+                  label: Kolczyk
+                - value: mic
+                  label: Mikrofon
+                - value: palette
+                  label: Paleta / sztuka
+                - value: drama
+                  label: Widowisko
+                - value: party
+                  label: Impreza
+                - value: shield
+                  label: Bezpieczeństwo
+                - value: heart
+                  label: Serce
+                - value: star
+                  label: Gwiazda
+                - value: camera
+                  label: Aparat
+                - value: users
+                  label: Ludzie
+      - name: tickets
+        label: Bilety
+        type: object
+        fields:
+          - name: status
+            label: Status sprzedaży
+            type: select
+            options:
+              values:
+                - value: wkrotce
+                  label: Sprzedaż wkrótce
+                - value: sprzedaz
+                  label: Sprzedaż trwa (pokaż przycisk „Kup bilet”)
+                - value: wyprzedane
+                  label: Wyprzedane
+                - value: zakonczona
+                  label: Sprzedaż zakończona
+          - name: url
+            label: Link do sprzedaży biletów (np. strona wydarzenia na Evenea)
+            type: string
+          - name: info
+            label: Informacja o biletach
+            type: text
+          - name: options
+            label: Rodzaje biletów (opcjonalnie)
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.name} {fields.price}'
+            fields:
+              - name: name
+                label: Nazwa biletu
+                type: string
+                required: true
+              - name: price
+                label: Cena (np. 450 zł)
+                type: string
+              - name: description
+                label: Opis
+                type: text
+              - name: url
+                label: Link do zakupu (jeśli inny niż główny)
+                type: string
+      - name: openCall
+        label: Nabór artystów / konkurs
+        type: object
+        fields:
+          - name: enabled
+            label: Pokaż sekcję naboru
+            type: boolean
+          - name: title
+            label: Tytuł
+            type: string
+          - name: description
+            label: Opis
+            type: text
+          - name: deadline
+            label: Termin zgłoszeń
+            type: date
+          - name: url
+            label: Link do zgłoszenia (formularz lub mailto:)
+            type: string
+          - name: buttonLabel
+            label: Napis na przycisku
+            type: string
+          - name: image
+            label: Plakat naboru
+            type: image
+      - name: partners
+        label: Partnerzy i patroni
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.name}'
+        fields:
+          - name: name
+            label: Nazwa
+            type: string
+            required: true
+          - name: logo
+            label: Logo (najlepiej PNG z przezroczystym tłem)
+            type: image
+          - name: url
+            label: Strona partnera
+            type: string
+      - name: gallery
+        label: Galeria zdjęć
+        type: image
+        options:
+          multiple: true
+      - name: posters
+        label: Plakaty
+        type: image
+        options:
+          multiple: true
+      - name: hidden
+        label: Ukryj tę edycję na stronie
+        type: boolean
+      - name: body
+        label: Opis edycji
+        type: rich-text
+
+  # ---------------------------------------------------------------- PRELEGENCI
+  - name: prelegenci
+    label: Prelegenci
+    description: Osoby występujące na warsztatach. Raz dodaną osobę wybierasz potem w edycji i w programie.
+    type: collection
+    path: src/content/speakers
+    format: yaml-frontmatter
+    filename: '{fields.name}.md'
+    view:
+      fields: [name, role]
+      primary: name
+      sort: [name]
+    fields:
+      - name: name
+        label: Imię i nazwisko
+        type: string
+        required: true
+      - name: photo
+        label: Zdjęcie (pionowe najlepiej)
+        type: image
+      - name: role
+        label: Kim jest (krótko, np. „Piercer z Brazylii”)
+        type: string
+      - name: country
+        label: Kraj
+        type: string
+      - name: instagram
+        label: Instagram (nazwa lub link)
+        type: string
+      - name: website
+        label: Strona www
+        type: string
+      - name: body
+        label: Biogram
+        type: rich-text
+
+  # ---------------------------------------------------------------- STRONY
+  - name: strony
+    label: Strony (polityka prywatności)
+    type: collection
+    path: src/content/pages
+    format: yaml-frontmatter
+    operations:
+      create: false
+      delete: false
+      rename: false
+    view:
+      fields: [title, updated]
+      primary: title
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+        required: true
+      - name: updated
+        label: Data aktualizacji
+        type: date
+      - name: body
+        label: Treść
+        type: rich-text

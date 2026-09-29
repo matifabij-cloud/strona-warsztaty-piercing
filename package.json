@@ -1,0 +1,30 @@
+{
+  "name": "lodzkie-warsztaty-piercingu",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Oficjalna strona Łódzkich Warsztatów Piercingu",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "translate": "node scripts/translate.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/anton": "^5.3.0",
+    "@lucide/astro": "^1.48.0",
+    "astro": "^7.3.5",
+    "marked": "^18.0.14",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3",
+    "yaml": "^2.9.1"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

@@ -1,0 +1,31 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  align?: 'start' | 'center';
+  id?: string;
+  as?: 'h1' | 'h2';
+}
+const { eyebrow, title, lead, align = 'start', id, as: Heading = 'h2' } = Astro.props;
+const hasAside = Astro.slots.has('default');
+---
+
+{
+  hasAside ? (
+    <header class="section-head section-head--row">
+      <div>
+        {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+        <Heading id={id}>{title}</Heading>
+        {lead && <p>{lead}</p>}
+      </div>
+      <slot />
+    </header>
+  ) : (
+    <header class:list={['section-head', { 'section-head--center': align === 'center' }]}>
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <Heading id={id}>{title}</Heading>
+      {lead && <p>{lead}</p>}
+    </header>
+  )
+}

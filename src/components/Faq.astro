@@ -1,0 +1,114 @@
+---
+import { tr, type Locale } from '../i18n';
+import { md } from '../lib/markdown';
+import { site } from '../lib/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const items = site.faq.filter((f) => f.question && f.answer);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((f) => ({
+    '@type': 'Question',
+    name: tr(f.question, locale),
+    acceptedAnswer: { '@type': 'Answer', text: tr(f.answer, locale) },
+  })),
+};
+---
+
+{
+  items.length > 0 && (
+    <div class="faq">
+      {items.map((f, i) => (
+        <details class="faq__item" open={i === 0}>
+          <summary>
+            <span>{tr(f.question, locale)}</span>
+            <span class="faq__icon" aria-hidden="true" />
+          </summary>
+          <div class="faq__answer prose" set:html={md(tr(f.answer, locale))} />
+        </details>
+      ))}
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    </div>
+  )
+}
+
+<style>
+  .faq {
+    display: grid;
+    border-top: 1px solid var(--c-line);
+  }
+
+  .faq__item {
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .faq__item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    font-size: var(--step-1);
+    line-height: 1.35;
+  }
+
+  .faq__item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq__item summary:hover {
+    color: var(--c-yellow);
+  }
+
+  .faq__icon {
+    position: relative;
+    flex: none;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 1px solid var(--c-line-strong);
+    transition:
+      rotate 0.3s var(--ease),
+      background 0.2s;
+  }
+
+  .faq__icon::before,
+  .faq__icon::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0.8rem;
+    height: 2px;
+    background: currentColor;
+    translate: -50% -50%;
+  }
+
+  .faq__icon::after {
+    rotate: 90deg;
+    transition: rotate 0.3s var(--ease);
+  }
+
+  .faq__item[open] .faq__icon {
+    background: var(--c-yellow);
+    color: var(--c-ink);
+    border-color: var(--c-yellow);
+  }
+
+  .faq__item[open] .faq__icon::after {
+    rotate: 0deg;
+  }
+
+  .faq__answer {
+    padding: 0 3.5rem 1.5rem 0;
+    color: var(--c-muted);
+  }
+</style>

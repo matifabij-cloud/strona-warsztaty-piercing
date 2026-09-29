@@ -1,0 +1,70 @@
+---
+import { getImage } from 'astro:assets';
+import Img from './Img.astro';
+import { useUI, type Locale } from '../i18n';
+import { dims, resolveMediaList } from '../lib/media';
+
+interface Props {
+  locale: Locale;
+  images: string[];
+  label: string;
+}
+
+const { locale, images, label } = Astro.props;
+const t = useUI(locale);
+const items = await Promise.all(
+  (await resolveMediaList(images)).map(async ({ image }) => ({
+    image,
+    full: (await getImage({ src: image, width: Math.min(1600, dims(image).width), format: 'webp', quality: 82 })).src,
+  })),
+);
+---
+
+{
+  items.length > 0 && (
+    <ul role="list" class="posters" data-gallery>
+      {items.map((p, i) => (
+        <li>
+          <a href={p.full} data-full={p.full} aria-label={t('gallery.open', { n: i + 1 })}>
+            <Img src={p.image} alt={t('gallery.posterAlt', { edition: label })} widths={[300, 460, 640]} sizes="(min-width: 64rem) 18vw, 45vw" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  .posters {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(11rem, 15rem);
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-line-strong) transparent;
+  }
+
+  .posters li {
+    scroll-snap-align: start;
+  }
+
+  .posters a {
+    display: block;
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 0 0 1px var(--c-line);
+    transition: transform 0.3s var(--ease);
+  }
+
+  .posters a:hover {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+
+  .posters :global(img) {
+    width: 100%;
+  }
+</style>

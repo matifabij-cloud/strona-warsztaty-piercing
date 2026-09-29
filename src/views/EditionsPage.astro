@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHead from '../components/SectionHead.astro';
+import EditionCard from '../components/EditionCard.astro';
+import { alternatesFor, paths, useUI, type Locale } from '../i18n';
+import { getEditions } from '../lib/content';
+import { site } from '../lib/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useUI(locale);
+const editions = await getEditions();
+---
+
+<Base locale={locale} title={t('meta.editions')} description={t('editions.pageIntro')} alternates={alternatesFor(paths.editions)}>
+  <section class="section editions-page">
+    <div class="container">
+      <SectionHead as="h1" eyebrow={site.name} title={t('section.allEditions')} lead={t('editions.pageIntro')} />
+      <ol role="list" class="timeline">
+        {
+          editions.map((e) => (
+            <li class="timeline__item">
+              <EditionCard locale={locale} edition={e} headingLevel="h2" wide />
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .editions-page {
+    padding-top: clamp(2rem, 1.5rem + 3vw, 4rem);
+  }
+
+  .timeline {
+    display: grid;
+    gap: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+    position: relative;
+  }
+</style>
