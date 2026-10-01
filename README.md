@@ -73,5 +73,5 @@ Treści wpisuje się w panelu **tylko po polsku**. Tłumaczenia EN i PT-BR są w
 |---|---|---|
 | `DEEPL_API_KEY` | GitHub → Secrets (Actions) | automatyczne tłumaczenia |
 | `CLOUDFLARE_DEPLOY_HOOK` | GitHub → Secrets (Actions) | codzienne odświeżenie strony (Instagram, liczniki) |
-| `SITE_URL` | Cloudflare Pages → Variables | adres strony, jeśli inny niż `https://lodzkiewarsztatypiercingu.pl` |
+| `SITE_URL` | Cloudflare Pages → Variables | adres strony (domyślnie `https://strona-warsztaty-piercing.pages.dev`; po kupnie domeny wpisz tu ją albo zmień w `astro.config.mjs`) |
 | `INSTAGRAM_FEED_URL` | Cloudflare Pages → Variables | alternatywa dla pola w panelu |

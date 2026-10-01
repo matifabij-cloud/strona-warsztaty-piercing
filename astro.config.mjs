@@ -2,8 +2,9 @@
 import { defineConfig } from 'astro/config';
 
 // Adres strony (używany w linkach kanonicznych, mapie strony i podglądach w social media).
-// Na podglądzie (np. *.pages.dev) można go nadpisać zmienną środowiskową SITE_URL.
-const site = process.env.SITE_URL || 'https://lodzkiewarsztatypiercingu.pl';
+// Po podpięciu własnej domeny zmień go tutaj, np. na 'https://lodzkiewarsztatypiercingu.pl'
+// (albo ustaw zmienną SITE_URL w Cloudflare Pages).
+const site = process.env.SITE_URL || 'https://strona-warsztaty-piercing.pages.dev';
 
 export default defineConfig({
   site,
