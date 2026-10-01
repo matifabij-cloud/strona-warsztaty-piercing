@@ -6,4 +6,4 @@ country: Brazylia
 instagram: ''
 website: ''
 ---
-Piercer z Brazylii z ponad 20-letnim doświadczeniem. Na III edycji poprowadził wykład o przekłuciach intymnych, męskich i damskich.
+Na III edycji poprowadził wykład o przekłuciach intymnych, męskich i damskich.

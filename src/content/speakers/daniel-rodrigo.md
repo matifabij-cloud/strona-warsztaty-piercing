@@ -6,4 +6,4 @@ country: Brazylia
 instagram: ''
 website: ''
 ---
-Piercer i modyfikator ciała, CEO i twórca Expo Piercing Brasil. Specjalista od bifurkacji języka oraz edukacji zawodowej. Ma na koncie 1127 zabiegów tongue splitting w Brazylii i za granicą.
+Specjalista od bifurkacji języka i edukacji zawodowej. Ma na koncie 1127 zabiegów tongue splitting w Brazylii i za granicą.

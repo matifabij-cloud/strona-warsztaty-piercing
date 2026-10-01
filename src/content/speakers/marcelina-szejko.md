@@ -1,9 +1,8 @@
 ---
 name: Marcelina Szejko
 photo: ''
-role: Prelegentka I edycji
+role: Przekłuwanie języka
 country: ''
 instagram: ''
 website: ''
 ---
-Poprowadziła wykład o przekłuwaniu języka podczas pierwszej edycji Łódzkich Warsztatów Piercingu.

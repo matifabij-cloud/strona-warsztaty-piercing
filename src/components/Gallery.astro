@@ -1,6 +1,6 @@
 ---
 import { getImage } from 'astro:assets';
-import Img from './Img.astro';
+import GalleryTile from './GalleryTile.astro';
 import Icon from './Icon.astro';
 import { useUI, type Locale } from '../i18n';
 import { dims, resolveMediaList } from '../lib/media';
@@ -29,34 +29,32 @@ const tiles = await Promise.all(
     return {
       image,
       full: full.src,
-      hidden: !moreHref && i >= initial,
       alt: t('gallery.alt', { edition: label, n: i + 1 }),
     };
   }),
 );
-const hiddenCount = tiles.filter((x) => x.hidden).length;
+// Pierwsze zdjęcia i reszta to dwie osobne siatki – odsłonięcie reszty nie przestawia tych, które już widać.
+const first = moreHref ? tiles : tiles.slice(0, initial);
+const rest = moreHref ? [] : tiles.slice(initial);
 ---
 
 {
   tiles.length > 0 && (
     <div class="gallery" data-gallery id={id}>
-      <ul role="list" class="gallery__grid">
-        {tiles.map((tile, i) => (
-          <li class="gallery__item" hidden={tile.hidden}>
-            <a href={tile.full} data-full={tile.full} data-index={i} aria-label={t('gallery.open', { n: i + 1 })}>
-              <Img
-                src={tile.image}
-                alt={tile.alt}
-                widths={[360, 540, 800]}
-                sizes="(min-width: 72rem) 25vw, (min-width: 40rem) 33vw, 50vw"
-                quality={72}
-              />
-            </a>
-          </li>
-        ))}
+      <div class="gallery__photos">
+        <ul role="list" class="gallery__grid">
+        {first.map((tile, i) => <GalleryTile locale={locale} {...tile} index={i} />)}
       </ul>
+      {rest.length > 0 && (
+        <div class="gallery__rest" data-gallery-rest hidden>
+          <ul role="list" class="gallery__grid">
+            {rest.map((tile, i) => <GalleryTile locale={locale} {...tile} index={first.length + i} />)}
+          </ul>
+        </div>
+      )}
+      </div>
 
-      {hiddenCount > 0 && (
+      {rest.length > 0 && (
         <button type="button" class="btn gallery__more" data-gallery-more>
           <Icon name="images" size={18} />
           {t('cta.showAllPhotos', { n: tiles.length })}
@@ -100,7 +98,7 @@ const hiddenCount = tiles.filter((x) => x.hidden).length;
     }
   }
 
-  .gallery__item {
+  .gallery :global(.gallery__item) {
     break-inside: avoid;
     margin-bottom: clamp(0.5rem, 0.35rem + 0.6vw, 0.9rem);
     border-radius: var(--radius);
@@ -108,22 +106,52 @@ const hiddenCount = tiles.filter((x) => x.hidden).length;
     background: var(--c-bg-3);
   }
 
-  .gallery__item[hidden] {
+  .gallery__photos {
+    width: 100%;
+  }
+
+  /* Reszta zdjęć wysuwa się płynnie */
+  .gallery__rest {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+      grid-template-rows 0.9s var(--ease),
+      opacity 0.6s var(--ease);
+  }
+
+  .gallery__rest[hidden] {
     display: none;
   }
 
-  .gallery__item a {
+  .gallery__rest.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .gallery__rest > .gallery__grid {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery__rest {
+      transition: none;
+    }
+  }
+
+  .gallery :global(.gallery__item a) {
     display: block;
     cursor: zoom-in;
   }
 
-  .gallery__item :global(img) {
+  .gallery :global(.gallery__item img) {
     width: 100%;
     height: auto;
     transition: scale 0.5s var(--ease);
   }
 
-  .gallery__item a:hover :global(img) {
+  .gallery :global(.gallery__item a:hover img) {
     scale: 1.04;
   }
 </style>

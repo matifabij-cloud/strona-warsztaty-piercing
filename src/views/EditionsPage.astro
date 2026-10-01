@@ -42,4 +42,15 @@ const editions = await getEditions();
     gap: clamp(1.25rem, 1rem + 1.5vw, 2rem);
     position: relative;
   }
+
+  /* Wszystkie karty edycji tej samej wysokości */
+  @media (min-width: 56rem) {
+    .timeline {
+      grid-auto-rows: 1fr;
+    }
+
+    .timeline__item {
+      display: grid;
+    }
+  }
 </style>

@@ -6,4 +6,4 @@ country: Brazylia
 instagram: ''
 website: ''
 ---
-Nazywany Królem Microdermali. Na III edycji mówił o microdermalach i przekłuciach powierzchniowych.
+Specjalista od microdermali i przekłuć powierzchniowych – właśnie o nich opowiadał na III edycji.

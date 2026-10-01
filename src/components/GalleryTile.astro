@@ -1,0 +1,21 @@
+---
+import Img from './Img.astro';
+import { useUI, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  image: ImageMetadata;
+  full: string;
+  alt: string;
+  index: number;
+}
+
+const { locale, image, full, alt, index } = Astro.props;
+const t = useUI(locale);
+---
+
+<li class="gallery__item">
+  <a href={full} data-full={full} data-index={index} aria-label={t('gallery.open', { n: index + 1 })}>
+    <Img src={image} alt={alt} widths={[360, 540, 800]} sizes="(min-width: 72rem) 25vw, (min-width: 40rem) 33vw, 50vw" quality={72} />
+  </a>
+</li>

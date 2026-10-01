@@ -59,9 +59,18 @@ const label = t('section.gallery');
       dialog.showModal();
     });
 
+    // „Pokaż wszystkie zdjęcia”: reszta galerii wysuwa się płynnie, a strona łagodnie przewija się do nowych zdjęć.
     gallery.querySelector('[data-gallery-more]')?.addEventListener('click', (e) => {
-      gallery.querySelectorAll<HTMLElement>('.gallery__item[hidden]').forEach((li) => (li.hidden = false));
+      const rest = gallery.querySelector<HTMLElement>('[data-gallery-rest]');
       (e.currentTarget as HTMLElement).remove();
+      if (!rest) return;
+      rest.hidden = false;
+      rest.getBoundingClientRect();
+      rest.classList.add('is-open');
+      const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const header = document.querySelector<HTMLElement>('[data-header]')?.offsetHeight ?? 0;
+      const top = rest.getBoundingClientRect().top + scrollY - header - window.innerHeight * 0.25;
+      if (top > scrollY) scrollTo({ top, behavior: calm ? 'auto' : 'smooth' });
     });
   });
 
