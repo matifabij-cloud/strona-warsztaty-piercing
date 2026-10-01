@@ -24,7 +24,7 @@ const rendered = await Promise.all(
 
 {
   rendered.length > 0 ? (
-    <div class:list={['program', { 'program--two': rendered.length > 1 }]}>
+    <div class:list={['program', { 'program--two': rendered.length > 1, 'program--odd': rendered.length > 1 && rendered.length % 2 === 1, 'program--three': rendered.length === 3 }]}>
       {rendered.map((day) => (
         <section class="program__day" aria-label={`${day.heading} ${day.date}`}>
           <header class="program__head">
@@ -74,6 +74,20 @@ const rendered = await Promise.all(
   @media (min-width: 60rem) {
     .program--two {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    /* Nieparzysta liczba dni: ostatni dzień na całą szerokość, bez pustego miejsca obok */
+    .program--odd > :last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* Trzy dni: trzy kolumny obok siebie */
+  @media (min-width: 72rem) {
+    .program--three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .program--three > :last-child {
+      grid-column: auto;
     }
   }
 

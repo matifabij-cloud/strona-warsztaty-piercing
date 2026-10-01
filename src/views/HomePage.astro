@@ -241,8 +241,11 @@ const jsonLd = [
       grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
       align-items: start;
     }
+    /* Nagłówek „jedzie” obok dłuższego opisu, zamiast zostawiać pustą kolumnę */
     .event-intro :global(.section-head) {
       margin-bottom: 0;
+      position: sticky;
+      top: calc(var(--header-h) + 2rem);
     }
   }
 

@@ -22,16 +22,19 @@ const initials = (name: string) =>
     .join('')
     .toUpperCase();
 
+// 1–2 osoby: poziome karty ze zdjęciem obok opisu, żeby sekcja nie wyglądała pusto.
+const feature = items.length <= 2;
+
 const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagram.com/${v.replace(/^@/, '')}/`);
 ---
 
-<ul role="list" class:list={['speakers', { 'speakers--few': items.length <= 2 }]}>
+<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1 }]}>
   {
     items.map(({ speaker, note }) => {
       const s = speaker.data;
-      const bio = showBio && speaker.body?.trim() ? md(tr(speaker.body, locale)) : '';
+      const bio = (showBio || feature) && speaker.body?.trim() ? md(tr(speaker.body, locale)) : '';
       return (
-        <li class="speaker">
+        <li class:list={['speaker', { 'speaker--nophoto': !s.photo }]}>
           <div class="speaker__photo">
             {s.photo ? (
               <Img src={s.photo} alt={s.name} widths={[320, 480, 720]} sizes="(min-width: 64rem) 20vw, (min-width: 40rem) 33vw, 50vw" />
@@ -46,7 +49,8 @@ const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagra
             <h3 class="speaker__name">{s.name}</h3>
             {s.role && <p class="speaker__role">{tr(s.role, locale)}</p>}
             {s.country && <p class="speaker__country">{tr(s.country, locale)}</p>}
-            {bio && (
+            {bio && feature && <div class="prose speaker__text" set:html={bio} />}
+            {bio && !feature && (
               <details class="speaker__bio">
                 <summary>{t('misc.readMore')}</summary>
                 <div class="prose" set:html={bio} />
@@ -87,13 +91,55 @@ const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagra
     }
   }
 
-  .speakers--few {
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 18rem));
+  /* 1–2 prelegentów: poziome karty */
+  .speakers.speakers--feature {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+  }
+
+  .speakers--solo {
+    max-width: 56rem;
+  }
+
+  .speakers--feature .speaker {
+    grid-template-columns: minmax(6.5rem, 2fr) minmax(0, 3fr);
+    align-items: center;
+    gap: 1rem clamp(1rem, 0.5rem + 2vw, 2rem);
+    padding: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius-l);
+    background: linear-gradient(160deg, var(--c-bg-3), var(--c-bg-2));
+  }
+
+  .speakers--feature .speaker--nophoto {
+    grid-template-columns: minmax(5.5rem, 9rem) minmax(0, 1fr);
+  }
+
+  .speakers--feature .speaker--nophoto .speaker__photo {
+    aspect-ratio: 1;
+  }
+
+  .speakers--feature .speaker__photo {
+    border-radius: var(--radius);
+  }
+
+  .speakers--feature .speaker__body {
+    gap: 0.5rem;
+  }
+
+  .speaker__text {
+    margin-top: 0.4rem;
+    font-size: var(--step--1);
+    color: var(--c-muted);
+    line-height: 1.6;
   }
 
   @media (max-width: 30rem) {
-    .speakers--few {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .speakers--feature .speaker__note {
+      left: 0.4rem;
+      right: 0.4rem;
+      bottom: 0.4rem;
+      max-width: calc(100% - 0.8rem);
+      font-size: 0.65rem;
     }
   }
 

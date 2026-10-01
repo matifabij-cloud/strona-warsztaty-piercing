@@ -28,6 +28,7 @@ const tiles = await Promise.all(
     const full = await getImage({ src: image, width: Math.min(1800, size.width), format: 'webp', quality: 80 });
     return {
       image,
+      ratio: +(size.width / size.height).toFixed(3),
       full: full.src,
       alt: t('gallery.alt', { edition: label, n: i + 1 }),
     };
@@ -40,7 +41,7 @@ const rest = moreHref ? [] : tiles.slice(initial);
 
 {
   tiles.length > 0 && (
-    <div class="gallery" data-gallery id={id}>
+    <div class:list={['gallery', { 'gallery--row': tiles.length <= 4 }]} data-gallery id={id}>
       <div class="gallery__photos">
         <ul role="list" class="gallery__grid">
         {first.map((tile, i) => <GalleryTile locale={locale} {...tile} index={i} />)}
@@ -79,28 +80,53 @@ const rest = moreHref ? [] : tiles.slice(initial);
     justify-items: center;
   }
 
-  /* Układ „murowany”: zdjęcia w całości, bez przycinania i bez dziur */
-  .gallery__grid {
-    width: 100%;
-    columns: 2;
-    column-gap: clamp(0.5rem, 0.35rem + 0.6vw, 0.9rem);
+  /*
+   * Układ „justified”: zdjęcia w równych rzędach na całą szerokość, bez przycinania.
+   * Każde zdjęcie rośnie proporcjonalnie do swoich proporcji (--r), więc w rzędzie mają tę samą wysokość.
+   */
+  .gallery {
+    --gap: clamp(0.5rem, 0.35rem + 0.6vw, 0.9rem);
+    --row-h: 6.5rem;
   }
 
   @media (min-width: 40rem) {
-    .gallery__grid {
-      columns: 3;
+    .gallery {
+      --row-h: 11rem;
     }
   }
 
   @media (min-width: 72rem) {
-    .gallery__grid {
-      columns: 4;
+    .gallery {
+      --row-h: 14rem;
+    }
+  }
+
+  .gallery__grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
+
+  /* Ostatni rząd nie rozciąga się na siłę */
+  .gallery__grid::after {
+    content: '';
+    flex-grow: 1000;
+  }
+
+  /* Mało zdjęć: na większym ekranie wszystkie w jednym rzędzie, na całą szerokość */
+  @media (min-width: 40rem) {
+    .gallery--row .gallery__grid {
+      flex-wrap: nowrap;
+    }
+    .gallery--row .gallery__grid::after {
+      content: none;
     }
   }
 
   .gallery :global(.gallery__item) {
-    break-inside: avoid;
-    margin-bottom: clamp(0.5rem, 0.35rem + 0.6vw, 0.9rem);
+    flex: var(--r) 1 calc(var(--r) * var(--row-h));
+    min-width: 0;
     border-radius: var(--radius);
     overflow: hidden;
     background: var(--c-bg-3);
@@ -132,6 +158,7 @@ const rest = moreHref ? [] : tiles.slice(initial);
   .gallery__rest > .gallery__grid {
     min-height: 0;
     overflow: hidden;
+    padding-top: var(--gap);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -148,6 +175,8 @@ const rest = moreHref ? [] : tiles.slice(initial);
   .gallery :global(.gallery__item img) {
     width: 100%;
     height: auto;
+    aspect-ratio: var(--r);
+    object-fit: cover;
     transition: scale 0.5s var(--ease);
   }
 

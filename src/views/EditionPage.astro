@@ -16,7 +16,9 @@ import EditionCard from '../components/EditionCard.astro';
 import Img from '../components/Img.astro';
 import Icon from '../components/Icon.astro';
 import { alternatesFor, formatDateRange, paths, tr, useUI, type Locale } from '../i18n';
-import { accentColor, editionPhase, getEditions, getEditionSpeakers, type Edition } from '../lib/content';
+import { accentColor, editionPhase, getCurrentEdition, getEditions, getEditionSpeakers, type Edition } from '../lib/content';
+import Logo from '../assets/brand/logo-znak.png';
+import { Image } from 'astro:assets';
 import { md } from '../lib/markdown';
 import { dims, resolveMedia } from '../lib/media';
 import { eventLd } from '../lib/seo';
@@ -34,7 +36,9 @@ const title = tr(d.title, locale);
 const editionLabel = t('hero.edition', { n: d.number });
 const speakers = await getEditionSpeakers(edition);
 const body = edition.body?.trim() ? md(tr(edition.body, locale)) : '';
-const dateText = d.startDate ? formatDateRange(d.startDate, d.endDate, locale) : d.dateNote || t('editions.dateTba');
+// Brak daty: „Data wkrótce” tylko przy aktualnej edycji; przy archiwalnej pole „Kiedy” znika.
+const isCurrent = (await getCurrentEdition())?.id === edition.id;
+const dateText = d.startDate ? formatDateRange(d.startDate, d.endDate, locale) : d.dateNote || (isCurrent ? t('editions.dateTba') : '');
 const ticketsOnSale = d.tickets?.status === 'sprzedaz' && Boolean(d.tickets?.url);
 const showTickets = phase === 'upcoming' || phase === 'ongoing';
 
@@ -80,13 +84,17 @@ const coverIsPortrait = cover ? dims(cover).height > dims(cover).width : false;
           <h1 class="display ehero__title">{title}</h1>
           {d.tagline && <p class="ehero__tagline">{tr(d.tagline, locale)}</p>}
           <dl class="ehero__facts">
-            <div>
-              <dt>
-                <Icon name="calendar" size={18} />
-                {t('edition.when')}
-              </dt>
-              <dd>{dateText}</dd>
-            </div>
+            {
+              dateText && (
+                <div>
+                  <dt>
+                    <Icon name="calendar" size={18} />
+                    {t('edition.when')}
+                  </dt>
+                  <dd>{dateText}</dd>
+                </div>
+              )
+            }
             {
               (d.venue?.name || d.venue?.address) && (
                 <div>
@@ -126,6 +134,13 @@ const coverIsPortrait = cover ? dims(cover).height > dims(cover).width : false;
             )
           }
         </div>
+        {
+          !d.cover && (
+            <div class="ehero__media ehero__media--empty" aria-hidden="true">
+              <Image src={Logo} alt="" width={180} height={180} densities={[1, 2]} />
+            </div>
+          )
+        }
         {
           d.cover && (
             <div class:list={['ehero__media', { 'ehero__media--portrait': coverIsPortrait }]}>
@@ -335,8 +350,14 @@ const coverIsPortrait = cover ? dims(cover).height > dims(cover).width : false;
     color: var(--accent);
   }
 
+  /* Rozmiar tytułu dopasowany do szerokości kolumny, żeby długie słowa (np. „PRZEKŁUWANIE”) się mieściły */
+  .ehero__text {
+    container-type: inline-size;
+    min-width: 0;
+  }
+
   .ehero__title {
-    font-size: var(--step-5);
+    font-size: min(var(--step-5), 15cqi);
     max-width: 14ch;
   }
 
@@ -409,6 +430,29 @@ const coverIsPortrait = cover ? dims(cover).height > dims(cover).width : false;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  /* Edycja bez zdjęć: logo na tle w kolorze edycji */
+  .ehero__media--empty {
+    display: grid;
+    place-items: center;
+    background:
+      repeating-radial-gradient(circle at 50% 50%, transparent 0 26px, rgb(255 255 255 / 0.05) 26px 27px),
+      radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 40%, transparent), transparent 65%),
+      var(--c-bg-3);
+  }
+
+  .ehero__media--empty :global(img) {
+    width: clamp(7rem, 5rem + 6vw, 11rem);
+    height: auto;
+    rotate: -8deg;
+    filter: drop-shadow(0 1rem 2rem rgb(0 0 0 / 0.5));
+  }
+
+  @media (max-width: 63.99rem) {
+    .ehero__media--empty {
+      display: none;
+    }
   }
 
   .edition-about {

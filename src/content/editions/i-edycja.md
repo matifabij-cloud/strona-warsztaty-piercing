@@ -20,7 +20,7 @@ stats: []
 attractions: []
 speakers:
   - speaker: marcelina-szejko.md
-    note: Wykład o przekłuwaniu języka
+    note: ''
 program: []
 tickets:
   status: zakonczona

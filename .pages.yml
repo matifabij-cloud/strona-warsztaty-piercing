@@ -327,6 +327,12 @@ content:
                   label: Wąż / snake bites
                 - value: zipline
                   label: Tyrolka
+                - value: tram
+                  label: Tramwaj
+                - value: graduation
+                  label: Nauka / wykład
+                - value: languages
+                  label: Języki / tłumaczenie
                 - value: smile
                   label: Uśmiech
                 - value: trophy

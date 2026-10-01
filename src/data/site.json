@@ -1,7 +1,7 @@
 {
   "name": "Łódzkie Warsztaty Piercingu",
   "tagline": "Warsztaty i festiwal piercingu w sercu Łodzi",
-  "description": "Oficjalna strona Łódzkich Warsztatów Piercingu: wykłady i szkolenia dla piercerów z prelegentami z Polski i z Brazylii. IV edycja: Piercing Festival Łódź 2027, 20–21 marca 2027, Manufaktura.",
+  "description": "Oficjalna strona Łódzkich Warsztatów Piercingu: wykłady i szkolenia dla piercerów z prelegentami z Polski i ze świata. IV edycja: 19–21 marca 2027 w Łodzi – New Generation Day i Piercing Festival Łódź w Manufakturze.",
   "currentEdition": "iv-edycja.md",
   "contact": {
     "email": "lodzkiewarsztatypiercingu@gmail.com",
@@ -34,7 +34,7 @@
   "faq": [
     {
       "question": "Dla kogo są warsztaty?",
-      "answer": "Wykłady i szkolenia są przeznaczone dla piercerów. Warunkiem udziału jest ukończony kurs podstawowy z piercingu. Publiczna część, Piercing Festival Łódź w Manufakturze, to wydarzenie dla wszystkich, których interesuje piercing, sztuka i biżuteria."
+      "answer": "Wykłady i szkolenia są przeznaczone dla piercerów. Piątkowy New Generation Day przygotowaliśmy przede wszystkim z myślą o młodych stażem piercerach, ale jeśli będą wolne miejsca, wpuścimy wszystkich. Publiczna część, Piercing Festival Łódź w Manufakturze, to wydarzenie dla wszystkich, których interesuje piercing, sztuka i biżuteria."
     },
     {
       "question": "Czy festiwal jest dla wszystkich?",
@@ -42,7 +42,23 @@
     },
     {
       "question": "Gdzie i kiedy odbędzie się IV edycja?",
-      "answer": "20–21 marca 2027 roku w Manufakturze w Łodzi."
+      "answer": "19–21 marca 2027 roku w Łodzi. W piątek New Generation Day: przejazd zabytkowym tramwajem (start ok. 8:30 spod Manufaktury) i wykłady. W sobotę i niedzielę Piercing Festival Łódź w Manufakturze."
+    },
+    {
+      "question": "Ile kosztuje udział w wykładach?",
+      "answer": "W piątek, 19 marca, każdy wykład kupisz osobno za 150 zł. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Możesz wybrać jeden wykład albo wszystkie. To oferta tylko na piątek."
+    },
+    {
+      "question": "W jakim języku są wykłady?",
+      "answer": "Po polsku, po angielsku i w językach ojczystych prelegentów. Zapewniamy tłumaczenie."
+    },
+    {
+      "question": "Przyjeżdżam z zagranicy – czy to wydarzenie dla mnie?",
+      "answer": "Tak. Zapraszamy piercerów z całej Europy, a nawet świata. Wykłady są tłumaczone, a datę ogłaszamy z dużym wyprzedzeniem, żeby był czas spokojnie zaplanować przyjazd."
+    },
+    {
+      "question": "Czy mogę dołączyć do tramwaju po drodze?",
+      "answer": "Tak. Tramwaj Train to the Future rusza 19 marca ok. 8:30 spod Manufaktury i zatrzyma się na wybranych przystankach. Trasę opublikujemy około tydzień przed wydarzeniem."
     },
     {
       "question": "Jak kupić bilet?",

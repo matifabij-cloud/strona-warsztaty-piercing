@@ -1,4 +1,8 @@
 {
+  "003b2e5ab75b0fe6": {
+    "pl": "Po polsku, po angielsku i w językach ojczystych prelegentów. Zapewniamy tłumaczenie.",
+    "text": "Polish, English and the speakers' native languages. Translation is provided."
+  },
   "00ae56ab6308cdc7": {
     "pl": "Snake Bites Zone",
     "text": "Snake Bites Zone"
@@ -11,10 +15,6 @@
     "pl": "Tyrolka w Manu.",
     "text": "A zipline at Manufaktura."
   },
-  "029cad192927d74d": {
-    "pl": "Oficjalna strona Łódzkich Warsztatów Piercingu: wykłady i szkolenia dla piercerów z prelegentami z Polski i z Brazylii. IV edycja: Piercing Festival Łódź 2027, 20–21 marca 2027, Manufaktura.",
-    "text": "The official website of Łódzkie Warsztaty Piercingu: lectures and training for piercers, with speakers from Poland and Brazil. Edition IV: Piercing Festival Łódź 2027, 20–21 March 2027, Manufaktura."
-  },
   "03c3d9576fbaf157": {
     "pl": "Piercer z Brazylii",
     "text": "Piercer from Brazil"
@@ -26,6 +26,10 @@
   "07042729bd3a86d3": {
     "pl": "Kamienie szlachetne w biżuterii",
     "text": "Gemstones in jewellery"
+  },
+  "0a04c09e56bccd1a": {
+    "pl": "Trzy dni w Łodzi: w piątek przejazd zabytkowym tramwajem i wykłady po 150 zł, a w weekend Piercing Festival Łódź w Manufakturze.",
+    "text": "Three days in Łódź: on Friday a ride on a vintage tram and talks at 150 PLN each, and at the weekend Piercing Festival Łódź at Manufaktura."
   },
   "0d6ae7863adf8454": {
     "pl": "Dwa dni wykładów brazylijskich piercerów w Hotelu PURO: septum i biosafety, kamienie szlachetne, microdermale, przekłucia intymne i tongue splitting.",
@@ -55,13 +59,21 @@
     "pl": "Czy na festiwalu zrobię sobie snake bites?",
     "text": "Can I get snake bites at the festival?"
   },
-  "26370fe0d36745da": {
-    "pl": "Dwa dni piercingu, sztuki, biżuterii i widowiska w łódzkiej Manufakturze. Jedno miejsce. Jeden weekend.",
-    "text": "Two days of piercing, art, jewellery and spectacle at Manufaktura in Łódź. One place. One weekend."
+  "1c27c1abecb41942": {
+    "pl": "Wykłady New Generation",
+    "text": "New Generation talks"
+  },
+  "2675cacecd371ede": {
+    "pl": "Tak. Tramwaj Train to the Future rusza 19 marca ok. 8:30 spod Manufaktury i zatrzyma się na wybranych przystankach. Trasę opublikujemy około tydzień przed wydarzeniem.",
+    "text": "Yes. The Train to the Future tram leaves Manufaktura on 19 March around 8:30 and will stop at selected stops. We will publish the route about a week before the event."
   },
   "27787d700fcfa56a": {
     "pl": "Specjalista od microdermali i przekłuć powierzchniowych – właśnie o nich opowiadał na III edycji.",
     "text": "A specialist in microdermals and surface piercings – the topic of his talk at the 3rd edition."
+  },
+  "28db6fd8cb29ae3a": {
+    "pl": "Wykłady i szkolenia są przeznaczone dla piercerów. Piątkowy New Generation Day przygotowaliśmy przede wszystkim z myślą o młodych stażem piercerach, ale jeśli będą wolne miejsca, wpuścimy wszystkich. Publiczna część, Piercing Festival Łódź w Manufakturze, to wydarzenie dla wszystkich, których interesuje piercing, sztuka i biżuteria.",
+    "text": "The talks and training are for piercers. Friday's New Generation Day is designed mainly for piercers early in their careers, but if there are seats left, everyone is welcome. The public part, Piercing Festival Łódź at Manufaktura, is for anyone interested in piercing, art and jewellery."
   },
   "29d09bf285afba96": {
     "pl": "Szkolenie z przekłuć sutków",
@@ -75,6 +87,10 @@
     "pl": "artystów z Polski i ze świata",
     "text": "artists from Poland and around the world"
   },
+  "2ec08ac7e571aee5": {
+    "pl": "Start spod Manufaktury. Runda zabytkowym tramwajem po Łodzi z Klubem Miłośników Starych Tramwajów w Łodzi. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem.",
+    "text": "Departure from Manufaktura. A ride around Łódź on a vintage tram with the Łódź Vintage Tram Enthusiasts' Club. You can hop on at selected stops – we will publish the route about a week before the event."
+  },
   "303f781d2de13331": {
     "pl": "## Kto jest administratorem danych\n\nAdministratorem danych osobowych jest **Piercing Beauty Sp. z o.o.**, ul. Narutowicza 40/1, 90-135 Łódź, NIP 726 266 10 31, organizator Łódzkich Warsztatów Piercingu. We wszystkich sprawach dotyczących danych osobowych możesz napisać na adres [lodzkiewarsztatypiercingu@gmail.com](mailto:lodzkiewarsztatypiercingu@gmail.com).\n\n## Jakie dane przetwarzamy i w jakim celu\n\n- **Kontakt e-mailowy i telefoniczny.** Jeśli do nas piszesz lub dzwonisz, przetwarzamy dane, które nam przekażesz (np. imię, adres e-mail, numer telefonu, treść wiadomości), aby odpowiedzieć na Twoje pytanie. Podstawą jest nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).\n- **Zakup biletu.** Bilety sprzedajemy przez zewnętrzną platformę biletową. Dane podane przy zakupie przetwarzamy w celu realizacji udziału w wydarzeniu (art. 6 ust. 1 lit. b RODO) oraz wystawienia faktury i rozliczeń podatkowych (art. 6 ust. 1 lit. c RODO). Zasady przetwarzania danych przez platformę biletową opisuje jej regulamin i polityka prywatności.\n- **Zgłoszenia do konkursu artystów.** Dane i materiały przesłane w zgłoszeniu przetwarzamy w celu przeprowadzenia naboru i konkursu (art. 6 ust. 1 lit. b i f RODO).\n\n## Pliki cookies i statystyki\n\nStrona nie używa plików cookies do celów analitycznych ani marketingowych. Serwer, na którym działa strona, może zapisywać podstawowe dane techniczne (np. adres IP) w celu zapewnienia bezpieczeństwa i poprawnego działania serwisu.\n\nNa stronie wyświetlamy zdjęcia z naszego profilu na Instagramie oraz linki do serwisów zewnętrznych (Instagram, Google Maps, platforma biletowa). Po kliknięciu linku obowiązują zasady prywatności danego serwisu.\n\n## Jak długo przechowujemy dane\n\nDane z korespondencji przechowujemy przez czas potrzebny do jej obsługi, a dane związane z zakupem biletów przez okres wymagany przepisami podatkowymi i rachunkowymi.\n\n## Twoje prawa\n\nMasz prawo do dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu. Przysługuje Ci także prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.",
     "text": "## Who is the data controller\n\nThe controller of your personal data is **Piercing Beauty Sp. z o.o.**, ul. Narutowicza 40/1, 90-135 Łódź, Poland, NIP (tax ID) 726 266 10 31, the organiser of Łódzkie Warsztaty Piercingu. For any matters concerning personal data, write to [lodzkiewarsztatypiercingu@gmail.com](mailto:lodzkiewarsztatypiercingu@gmail.com).\n\n## What data we process and why\n\n- **Email and phone contact.** If you write to us or call us, we process the data you give us (e.g. your name, email address, phone number and the content of your message) to answer your question. The legal basis is our legitimate interest (Art. 6(1)(f) GDPR).\n- **Ticket purchase.** We sell tickets through an external ticketing platform. We process the data provided at purchase to enable your participation in the event (Art. 6(1)(b) GDPR) and to issue invoices and meet our tax obligations (Art. 6(1)(c) GDPR). How the ticketing platform processes data is described in its terms and privacy policy.\n- **Applications for the artists' competition.** We process the data and materials sent in an application to run the call for artists and the competition (Art. 6(1)(b) and (f) GDPR).\n\n## Cookies and statistics\n\nThis website does not use cookies for analytics or marketing. The server hosting the website may record basic technical data (e.g. your IP address) to keep the service secure and working properly.\n\nWe display photos from our Instagram profile and links to external services (Instagram, Google Maps, the ticketing platform). Once you click a link, the privacy policy of that service applies.\n\n## How long we keep data\n\nWe keep correspondence data for as long as needed to handle it, and ticket purchase data for the period required by tax and accounting regulations.\n\n## Your rights\n\nYou have the right to access your data, have it rectified, erased or its processing restricted, the right to data portability and the right to object. You also have the right to lodge a complaint with the President of the Personal Data Protection Office (PUODO) in Poland."
@@ -82,6 +98,14 @@
   "315b62dac3c4e13c": {
     "pl": "Autorzy 10 najlepiej ocenionych prac wykonają swoją kompozycję (albo projekt ustalony indywidualnie) dla osób wylosowanych spośród głosujących",
     "text": "The authors of the 10 top-rated works will create their piece (or an individual design) for people drawn from the voters"
+  },
+  "3200a03eb2c57101": {
+    "pl": "Piątkowe wykłady specjalistów z Polski i zagranicy, przygotowane przede wszystkim dla młodych stażem piercerów. Każdy wykład kupisz osobno za 150 zł – z kawą, herbatą i imiennym certyfikatem.",
+    "text": "Friday talks by specialists from Poland and abroad, designed mainly for piercers early in their careers. Each talk can be bought separately for 150 PLN – with coffee, tea and a personalised certificate."
+  },
+  "327698505e65def8": {
+    "pl": "Piątek: New Generation Day z tramwajem i wykładami po 150 zł. Weekend: Piercing Festival Łódź w Manufakturze.",
+    "text": "Friday: New Generation Day with a tram ride and talks at 150 PLN each. Weekend: Piercing Festival Łódź at Manufaktura."
   },
   "3618b8fa8c47ca43": {
     "pl": "I edycja Łódzkich Warsztatów Piercingu",
@@ -99,9 +123,17 @@
     "pl": "Zapisz się",
     "text": "Sign up"
   },
+  "38ce606072b55181": {
+    "pl": "za wykład w piątek",
+    "text": "per talk on Friday"
+  },
   "3a297c79545a082c": {
     "pl": "Wykład o przekłuwaniu języka",
     "text": "Lecture on tongue piercing"
+  },
+  "3c626737057c373a": {
+    "pl": "Oficjalna strona Łódzkich Warsztatów Piercingu: wykłady i szkolenia dla piercerów z prelegentami z Polski i ze świata. IV edycja: 19–21 marca 2027 w Łodzi – New Generation Day i Piercing Festival Łódź w Manufakturze.",
+    "text": "Official website of Łódź Piercing Workshops: talks and training for piercers with speakers from Poland and around the world. 4th edition: 19–21 March 2027 in Łódź – New Generation Day and Piercing Festival Łódź at Manufaktura."
   },
   "3d0335fd0d76c171": {
     "pl": "Łódzkie Warsztaty Piercingu to cykliczne wydarzenie edukacyjne dla piercerów, organizowane w Łodzi przez studio Maria Twarowska Piercing & Beauty.\n\nZapraszamy prelegentów z Polski i z zagranicy, zwłaszcza z Brazylii, którzy dzielą się praktyczną wiedzą: od bezpieczeństwa pracy i biosafety, przez techniki przekłuć, po zaawansowane modyfikacje ciała.\n\nIV edycja to także część publiczna: Piercing Festival Łódź w Manufakturze.",
@@ -143,13 +175,17 @@
     "pl": "Specjalista od bifurkacji języka i edukacji zawodowej. Ma na koncie 1127 zabiegów tongue splitting w Brazylii i za granicą.",
     "text": "A specialist in tongue bifurcation and professional education, with 1,127 tongue splitting procedures performed in Brazil and abroad."
   },
-  "47260fb50c5ea2ff": {
-    "pl": "**Piercing Festival Łódź 2027** to otwarta dla publiczności część Łódzkich Warsztatów Piercingu. Przez cały weekend 20–21 marca Manufaktura stanie się miejscem spotkania piercingu, biżuterii, body art, edukacji i międzynarodowej kultury branżowej.\n\nW wydarzeniu wezmą udział piercerzy, edukatorzy, artyści i przedstawiciele marek z Polski oraz zagranicy. Celem festiwalu jest pokazanie piercingu nie tylko jako usługi, ale również jako połączenia rzemiosła, sztuki, wiedzy, bezpieczeństwa, kultury ciała i międzynarodowej wymiany doświadczeń.\n\nOd 13 marca 2027 w Manufakturze będzie można oglądać wystawę około 30 prac przygotowanych przez artystów z Polski i świata. Odwiedzający głosują na ulubione kompozycje, a 10 wylosowanych osób wygra wykonanie piercingu przez autora pracy.\n\n**Piercing, sztuka, biżuteria, widowisko.** Jedno miejsce. Jeden weekend.",
-    "text": "**Piercing Festival Łódź 2027** is the part of Łódzkie Warsztaty Piercingu that is open to the public. Throughout the weekend of 20–21 March, Manufaktura will become a meeting place for piercing, jewellery, body art, education and the international piercing community.\n\nPiercers, educators, artists and brand representatives from Poland and abroad will take part. The festival aims to show piercing not only as a service, but as a combination of craftsmanship, art, knowledge, safety, body culture and the international exchange of experience.\n\nFrom 13 March 2027, Manufaktura will host an exhibition of around 30 works by artists from Poland and around the world. Visitors vote for their favourite pieces, and 10 people drawn from the voters will win a piercing done by the author of the work.\n\n**Piercing, art, jewellery, spectacle.** One place. One weekend."
-  },
   "49235cd8acb2b7d4": {
     "pl": "Na III edycji poprowadził wykład o przekłuciach intymnych, męskich i damskich.",
     "text": "At the 3rd edition he gave a talk on male and female intimate piercings."
+  },
+  "4d004ceabde8c095": {
+    "pl": "New Generation Day",
+    "text": "New Generation Day"
+  },
+  "4dfa337ed5136754": {
+    "pl": "Łódzkie Warsztaty Piercingu 2027",
+    "text": "Łódź Piercing Workshops 2027"
   },
   "4eb6915ec96253e3": {
     "pl": "Przekłucia intymne męskie oraz damskie.",
@@ -187,6 +223,10 @@
     "pl": "30 artystów, 30 prac, jedna wystawa w Manufakturze",
     "text": "30 artists, 30 works, one exhibition at Manufaktura"
   },
+  "5ebd6399e0f19c01": {
+    "pl": "W jakim języku są wykłady?",
+    "text": "What language are the talks in?"
+  },
   "5f4f4c613c0ada66": {
     "pl": "Gość specjalny",
     "text": "Special guest"
@@ -195,9 +235,17 @@
     "pl": "Poprowadził II edycję, poświęconą bezpieczeństwu pracy i przekłuciom sutków. Na III edycji mówił o idealnym septum i technikach biosafety. Na Piercing Festival Łódź 2027 wraca jako gość specjalny.",
     "text": "He led the 2nd edition, devoted to safe working practices and nipple piercings. At the 3rd edition he spoke about the perfect septum and biosafety techniques. He returns to Piercing Festival Łódź 2027 as a special guest."
   },
+  "6221778a0f928b75": {
+    "pl": "Do 17:00. Snake bites w towarzystwie węży, zapisy mailowo.",
+    "text": "Until 17:00. Snake bites in the company of snakes – sign up by email."
+  },
   "63836e2fd7d1ce1c": {
     "pl": "Piercing Artist Łódź Needs You",
     "text": "Piercing Artist Łódź Needs You"
+  },
+  "64ffd70260b8ae7e": {
+    "pl": "Wykład New Generation Day",
+    "text": "New Generation Day talk"
   },
   "6592ab20a62b6927": {
     "pl": "Pierwsza edycja, od której wszystko się zaczęło: wykład o przekłuwaniu języka z Marceliną Szejko.",
@@ -215,6 +263,26 @@
     "pl": "Strefa dla dzieci i młodzieży – profesjonalne, spokojne i przyjazne podejście do piercingu młodszych klientów.",
     "text": "A zone for children and teenagers – a professional, calm and friendly approach to piercing for younger clients."
   },
+  "70d6f7d85305f980": {
+    "pl": "19–21 marca 2027 roku w Łodzi. W piątek New Generation Day: przejazd zabytkowym tramwajem (start ok. 8:30 spod Manufaktury) i wykłady. W sobotę i niedzielę Piercing Festival Łódź w Manufakturze.",
+    "text": "19–21 March 2027 in Łódź. On Friday, New Generation Day: a vintage tram ride (departing around 8:30 from Manufaktura) and talks. On Saturday and Sunday, Piercing Festival Łódź at Manufaktura."
+  },
+  "70df245668922079": {
+    "pl": "Piątek, 19 marca, ok. 8:30: zabytkowy tramwaj oznaczony Piercing Festival Łódź rusza spod Manufaktury na rundę po Łodzi. Można dołączyć na wybranych przystankach. We współpracy z Klubem Miłośników Starych Tramwajów w Łodzi.",
+    "text": "Friday, 19 March, around 8:30: a vintage tram branded Piercing Festival Łódź leaves from Manufaktura for a ride around Łódź. You can hop on at selected stops. Organised with the Łódź Vintage Tram Enthusiasts' Club."
+  },
+  "73cb8bd55a693438": {
+    "pl": "Tak. Zapraszamy piercerów z całej Europy, a nawet świata. Wykłady są tłumaczone, a datę ogłaszamy z dużym wyprzedzeniem, żeby był czas spokojnie zaplanować przyjazd.",
+    "text": "Yes. We invite piercers from all over Europe, and even the world. The talks are translated, and we announce the dates well in advance so you have time to plan your trip."
+  },
+  "7410c3e0133feafa": {
+    "pl": "Przyjeżdżam z zagranicy – czy to wydarzenie dla mnie?",
+    "text": "I'm coming from abroad – is this event for me?"
+  },
+  "74a1f94f5c2276a2": {
+    "pl": "Ile kosztuje udział w wykładach?",
+    "text": "How much do the talks cost?"
+  },
   "7618ec1254ce2581": {
     "pl": "Prezenter telewizyjny, hodowca węży",
     "text": "TV presenter and snake breeder"
@@ -222,10 +290,6 @@
   "7a2c176718992ba2": {
     "pl": "II edycja Łódzkich Warsztatów Piercingu",
     "text": "The second edition of Łódzkie Warsztaty Piercingu"
-  },
-  "80ff44eb34f22600": {
-    "pl": "zwycięzców",
-    "text": "winners"
   },
   "816961e774bfa22f": {
     "pl": "wykładów",
@@ -255,17 +319,25 @@
     "pl": "Zgłoszenia przyjmujemy do 31 stycznia 2027 roku. Szukamy 30 piercerów z Polski i ze świata – liczy się praca, nie liczba obserwujących. 3 miejsca rezerwujemy dla młodych piercerów z Łodzi (do 2 lat od ukończenia kursu podstawowego). Napisz do nas, a odpowiemy ze szczegółami.",
     "text": "Applications are open until 31 January 2027. We're looking for 30 piercers from Poland and around the world – what counts is your work, not your number of followers. 3 places are reserved for young piercers from Łódź (up to 2 years after completing a basic course). Get in touch and we'll reply with the details."
   },
+  "8ee2b2f6da4c672b": {
+    "pl": "**Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.\n\n**Piątek, 19 marca – New Generation Day.** Zaczynamy o 8:30 spod Manufaktury: zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze nas na rundę po mieście. Train to the Future realizujemy we współpracy z Klubem Miłośników Starych Tramwajów w Łodzi. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem. Potem wracamy pod Manufakturę i zaczynamy wykłady.\n\nTo dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie zawsze mogą pozwolić sobie na szkolenia za kilka tysięcy złotych. Każdy wykład kupisz osobno za 150 zł – w cenie kawa, herbata i imienny certyfikat uczestnictwa. Jeśli będą wolne miejsca, wpuścimy wszystkich. Taką cenę umożliwiają sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo.\n\n**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Piercerzy, edukatorzy, artyści i marki z Polski oraz zagranicy.\n\nOd 13 marca 2027 w Manufakturze będzie można oglądać wystawę około 30 prac artystów z Polski i świata. Odwiedzający głosują na ulubione kompozycje, a 10 wylosowanych osób wygra wykonanie piercingu przez autora pracy.\n\nWydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.\n\n**Wiedza nie musi kosztować milionów.**",
+    "text": "**Łódź Piercing Workshops 2027 – New Generation** means three days in Łódź: 19–21 March 2027.\n\n**Friday, 19 March – New Generation Day.** We start at 8:30 in front of Manufaktura: a vintage tram branded Piercing Festival Łódź will take us on a ride around the city. Train to the Future is organised together with the Łódź Vintage Tram Enthusiasts' Club (KMST Łódź). You can hop on at selected stops – we will publish the route about a week before the event. Then we return to Manufaktura and the talks begin.\n\nThe day is designed mainly for piercers early in their careers: for those who are just starting out, and for those who want to grow but can't always afford training that costs several thousand złoty. Each talk can be bought separately for 150 PLN – coffee, tea and a personalised certificate of attendance included. If there are seats left, everyone is welcome. This price is possible thanks to our sponsors: Maria Twarowska Piercing & Beauty studio, Brzeski Holding and Bursztynowo.\n\n**Saturday and Sunday, 20–21 March – Piercing Festival Łódź.** The part of the event open to the public, at Manufaktura: piercing, jewellery, body art, education and international industry culture. Piercers, educators, artists and brands from Poland and abroad.\n\nFrom 13 March 2027, Manufaktura will host an exhibition of around 30 works by artists from Poland and around the world. Visitors vote for their favourite pieces, and 10 people drawn at random will win a piercing done by the author of the work.\n\nThe event is held in Polish, English and the speakers' native languages – translation is provided. We invite piercers from all over Europe, and even the world.\n\n**Knowledge doesn't have to cost millions.**"
+  },
   "8fc0328f64ceeff8": {
     "pl": "Piercer i modyfikator ciała, twórca Expo Piercing Brasil",
     "text": "Piercer and body modification artist, founder of Expo Piercing Brasil"
   },
-  "91ee5dc73f242e6f": {
-    "pl": "Część publiczna Łódzkich Warsztatów Piercingu",
-    "text": "The public part of Łódzkie Warsztaty Piercingu"
+  "90da8eb94b4c68ad": {
+    "pl": "New Generation",
+    "text": "New Generation"
   },
   "92d9112b7e6d860a": {
     "pl": "Nie liczy się, czy obserwuje Cię 500, 5 000 czy 500 000 osób",
     "text": "We don't care whether you have 500, 5,000 or 500,000 followers"
+  },
+  "9e0275eda4dc1737": {
+    "pl": "Strefy festiwalowe, wystawa i głosowanie w konkursie Piercing Artist Łódź",
+    "text": "Festival zones, exhibition and voting in the Piercing Artist Łódź competition"
   },
   "9ff1bc156b78de5e": {
     "pl": "Nie decyduje Instagram, algorytm ani komisja. Od 13 marca 2027 odwiedzający Manufakturę głosują na ulubione prace. Wyłonimy 10 najlepiej ocenionych, a spośród osób głosujących na każdą z nich wylosujemy zwycięzcę. Każdy z 10 zwycięzców otrzyma możliwość wykonania przez autora prezentowanej kompozycji albo indywidualnego projektu ustalonego z artystą.",
@@ -283,9 +355,9 @@
     "pl": "Od 13 marca 2027, przez 9 dni, 24 godziny na dobę, Twoją pracę zobaczą tysiące ludzi",
     "text": "From 13 March 2027, for 9 days, 24 hours a day, your work will be seen by thousands of people"
   },
-  "a5d9e19b77d4ceea": {
-    "pl": "dni festiwalu",
-    "text": "festival days"
+  "a40cb0c89e2e910c": {
+    "pl": "Niedziela – Piercing Festival Łódź",
+    "text": "Sunday – Piercing Festival Łódź"
   },
   "abf5f456733fdd29": {
     "pl": "Druga edycja trwała dwa dni, a poprowadził ją Max Alves.\n\nPierwszy dzień poświęciliśmy bezpieczeństwu pracy: antyseptyce, aseptyce, organizacji stanowiska, świadomości ciała i dobrym praktykom. W części bonusowej rozmawialiśmy o ziarninie i innych problemach z gojeniem oraz o tym, jak radzi się sobie z nimi w Brazylii.\n\nDrugiego dnia odbyło się szkolenie z przekłuć sutków.",
@@ -303,17 +375,21 @@
     "pl": "Liczba miejsc na warsztaty jest ograniczona, to około 120 osób. Nie zwlekaj z zakupem.",
     "text": "Places at the workshops are limited – about 120 people. Don't wait too long to buy."
   },
-  "b5f5f3510b97ff55": {
-    "pl": "Piercing Festival Łódź 2027",
-    "text": "Piercing Festival Łódź 2027"
-  },
   "b680454a9bd01688": {
     "pl": "Piercer z ponad 20-letnim doświadczeniem",
     "text": "Piercer with over 20 years of experience"
   },
+  "b6aabccb6c3d6cbf": {
+    "pl": "Piątek, 19 marca. Jeden wykład do wyboru – możesz kupić kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Oferta tylko na piątek.",
+    "text": "Friday, 19 March. One talk of your choice – you can buy several or all of them. Coffee, tea and a personalised certificate of attendance included. Friday only."
+  },
   "b8b047f7b5cd6f1b": {
     "pl": "Happy Piercing Zone",
     "text": "Happy Piercing Zone"
+  },
+  "c1ac76cf1911124e": {
+    "pl": "Sobota – Piercing Festival Łódź",
+    "text": "Saturday – Piercing Festival Łódź"
   },
   "c4b02c02fda18a61": {
     "pl": "Suspension Zipline",
@@ -331,6 +407,10 @@
     "pl": "Sprzedaż biletów ruszy wkrótce. Bilety kupisz online, z możliwością otrzymania faktury VAT. Zapisy do Snake Bites Zone już trwają.",
     "text": "Ticket sales start soon. You'll be able to buy tickets online and get a VAT invoice. Sign-ups for the Snake Bites Zone are already open."
   },
+  "cabb386be492fe41": {
+    "pl": "Czy mogę dołączyć do tramwaju po drodze?",
+    "text": "Can I join the tram along the way?"
+  },
   "cae42b5deb7f6a41": {
     "pl": "Na prace głosują odwiedzający Manufakturę – nie Instagram, nie algorytm, nie komisja",
     "text": "The works are voted on by visitors to Manufaktura – not Instagram, not an algorithm, not a committee"
@@ -346,6 +426,10 @@
   "cda1a51f466c8997": {
     "pl": "Antyseptyka, aseptyka, stanowisko pracy, świadomość ciała i dobre praktyki. Bonus: ziarnina i inne problemy z gojeniem – jak radzimy sobie z nimi w Brazylii?",
     "text": "Antisepsis, asepsis, the workstation, body awareness and good practice. Bonus: hypergranulation and other healing problems – how do we deal with them in Brazil?"
+  },
+  "cfaecad8e66c117c": {
+    "pl": "Po powrocie pod Manufakturę zaczynamy wykłady. Każdy wykład kupisz osobno za 150 zł. Prelegentów i tematy ogłosimy wkrótce.",
+    "text": "After returning to Manufaktura, the talks begin. Each talk can be bought separately for 150 PLN. Speakers and topics will be announced soon."
   },
   "d1dcd7aa490b2f1e": {
     "pl": "Król Microdermali",
@@ -375,13 +459,13 @@
     "pl": "Wyślij zgłoszenie",
     "text": "Apply now"
   },
-  "e0c275500027c550": {
-    "pl": "20–21 marca 2027 roku w Manufakturze w Łodzi.",
-    "text": "On 20–21 March 2027 at Manufaktura in Łódź."
-  },
   "ea849208635a6529": {
     "pl": "Rozszczepienie języka i zaawansowane modyfikacje",
     "text": "Tongue splitting and advanced modifications"
+  },
+  "edfec30c39984d46": {
+    "pl": "W piątek, 19 marca, każdy wykład kupisz osobno za 150 zł. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Możesz wybrać jeden wykład albo wszystkie. To oferta tylko na piątek.",
+    "text": "On Friday, 19 March, each talk can be bought separately for 150 PLN. Coffee, tea and a personalised certificate of attendance are included. You can choose one talk or all of them. This offer is for Friday only."
   },
   "f019479569300753": {
     "pl": "Biosafety i szkolenie z przekłuć sutków",
@@ -391,13 +475,25 @@
     "pl": "Microdermale i przekłucia powierzchniowe",
     "text": "Microdermals and surface piercings"
   },
+  "f28a9e9ce7792e77": {
+    "pl": "Do 16:00. Snake bites w towarzystwie węży, zapisy mailowo.",
+    "text": "Until 16:00. Snake bites in the company of snakes – sign up by email."
+  },
+  "f3bd473f33feb2be": {
+    "pl": "Piątek – New Generation Day",
+    "text": "Friday – New Generation Day"
+  },
   "f4909ccb07ce35c5": {
     "pl": "dni wystawy prac",
     "text": "days of the exhibition"
   },
-  "f4b1355a02c8a4aa": {
-    "pl": "Wykłady i szkolenia są przeznaczone dla piercerów. Warunkiem udziału jest ukończony kurs podstawowy z piercingu. Publiczna część, Piercing Festival Łódź w Manufakturze, to wydarzenie dla wszystkich, których interesuje piercing, sztuka i biżuteria.",
-    "text": "The lectures and training sessions are for piercers. To take part, you need to have completed a basic piercing course. The public part – Piercing Festival Łódź at Manufaktura – is open to everyone interested in piercing, art and jewellery."
+  "f6448ef306e684b4": {
+    "pl": "Train to the Future",
+    "text": "Train to the Future"
+  },
+  "f7dea3a25216463e": {
+    "pl": "dni wydarzenia",
+    "text": "days of the event"
   },
   "fc9fe16304585134": {
     "pl": "Od 13 marca wystawa 30 prac artystów z Polski i ze świata. Odwiedzający głosują, a 10 wylosowanych osób wygra wykonanie piercingu przez autora pracy.",
