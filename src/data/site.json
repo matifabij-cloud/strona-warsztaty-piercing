@@ -82,7 +82,7 @@
     }
   ],
   "announcement": {
-    "enabled": false,
+    "enabled": true,
     "text": "Bilety już wkrótce – obserwuj nasz Instagram",
     "url": "https://www.instagram.com/lodzkiewarsztatypiercingu/"
   }
