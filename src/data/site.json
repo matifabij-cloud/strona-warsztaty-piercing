@@ -8,10 +8,7 @@
     "phone": "+48 739 003 788"
   },
   "social": {
-    "instagram": "https://www.instagram.com/lodzkiewarsztatypiercingu/",
-    "facebook": "",
-    "tiktok": "",
-    "youtube": ""
+    "instagram": "https://www.instagram.com/lodzkiewarsztatypiercingu/"
   },
   "organizer": {
     "name": "Piercing Beauty Sp. z o.o.",
@@ -19,8 +16,7 @@
     "nip": "726 266 10 31",
     "address": "ul. Narutowicza 40/1",
     "postalCode": "90-135",
-    "city": "Łódź",
-    "website": ""
+    "city": "Łódź"
   },
   "about": {
     "title": "Wiedza, która zostaje w dłoniach",
@@ -85,12 +81,9 @@
       "answer": "Tak. W Snake Bites Zone (20 marca 10:00–17:00, 21 marca 10:00–16:00) wykonujemy tylko snake bites, w towarzystwie węży. Koszt to 450 zł – w cenie sesja zdjęciowa, nagranie przez kamerzystę i 2 bezpłatne konsultacje po przekłuciu. Zapisy mailowo na lodzkiewarsztatypiercingu@gmail.com z tytułem „SNAKE BITES ZONE”. Liczba miejsc jest ograniczona."
     }
   ],
-  "instagram": {
-    "feedUrl": ""
-  },
   "announcement": {
     "enabled": false,
-    "text": "",
-    "url": ""
+    "text": "Bilety już wkrótce – obserwuj nasz Instagram",
+    "url": "https://www.instagram.com/lodzkiewarsztatypiercingu/"
   }
 }
