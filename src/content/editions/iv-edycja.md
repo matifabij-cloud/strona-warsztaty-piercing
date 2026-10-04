@@ -24,7 +24,7 @@ stats:
   - value: '9'
     label: dni wystawy prac
   - value: '10'
-    label: zwycięzców konkursu
+    label: piercingów do wygrania dla głosujących
 attractions:
   - title: Train to the Future
     description: 'Zaczynamy nietypowo: w piątek rano zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze uczestników na rundę po mieście.'
@@ -45,7 +45,7 @@ attractions:
     description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Za węże odpowiada Igor Płatek.'
     icon: snake
   - title: Wystawa i konkurs artystów
-    description: 'Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. O zwycięzcach decydują głosy odwiedzających.'
+    description: 'Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. Odwiedzający głosują na ulubione prace i mogą wygrać piercing wykonany przez ich autora.'
     icon: trophy
   - title: Suspension Zipline
     description: 'Tyrolka w Manufakturze.'
