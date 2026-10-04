@@ -82,7 +82,7 @@
     }
   ],
   "announcement": {
-    "enabled": true,
+    "enabled": false,
     "text": "Zapisz datę: 19–21 marca 2027 w Łodzi"
   }
 }
