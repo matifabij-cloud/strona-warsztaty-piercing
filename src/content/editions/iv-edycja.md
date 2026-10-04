@@ -24,7 +24,7 @@ stats:
   - value: '9'
     label: dni wystawy prac
   - value: '10'
-    label: piercingów do wygrania dla głosujących
+    label: stref i atrakcji festiwalu
 attractions:
   - title: Train to the Future
     description: 'Zaczynamy nietypowo: w piątek rano zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze uczestników na rundę po mieście.'
