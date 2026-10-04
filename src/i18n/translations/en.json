@@ -111,10 +111,6 @@
     "pl": "Zapisz się",
     "text": "Sign up"
   },
-  "3a451ef775eea43a": {
-    "pl": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. Spośród osób, które oddały głos na 10 najwyżej ocenionych prac, wylosujemy zwycięzców – każdy z nich dostanie piercing wykonany przez autora pracy albo projekt ustalony indywidualnie z artystą.",
-    "text": "From 13 March 2027, anyone visiting Manufaktura can vote for their favourite piece from the exhibition. We will draw winners at random from among those who have voted for the 10 highest-rated pieces – each winner will receive a piercing created by the artist behind the piece or a design agreed upon individually with the artist."
-  },
   "3c626737057c373a": {
     "pl": "Oficjalna strona Łódzkich Warsztatów Piercingu: wykłady i szkolenia dla piercerów z prelegentami z Polski i ze świata. IV edycja: 19–21 marca 2027 w Łodzi – New Generation Day i Piercing Festival Łódź w Manufakturze.",
     "text": "Official website of Łódź Piercing Workshops: talks and training for piercers with speakers from Poland and around the world. 4th edition: 19–21 March 2027 in Łódź – New Generation Day and Piercing Festival Łódź at Manufaktura."
@@ -187,6 +183,10 @@
     "pl": "Przekłucia intymne męskie oraz damskie.",
     "text": "Male and female intimate piercings."
   },
+  "50c02b67e3d4c9ac": {
+    "pl": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. Wyłonimy 10 najwyżej ocenionych prac, a spośród osób, które głosowały na każdą z nich, wylosujemy jednego zwycięzcę. Zwycięzca dostanie piercing wykonany przez autora pracy – tę kompozycję albo projekt ustalony indywidualnie z artystą.",
+    "text": "From 13 March 2027, every visitor to Manufaktura can vote for their favourite piece from the exhibition. We will select the 10 highest-rated pieces, and from among those who voted for each one, we will draw one winner. The winner will receive a piercing created by the artist behind the piece – either that particular design or a design agreed upon individually with the artist."
+  },
   "510d47703364dbad": {
     "pl": "Wystawa i konkurs artystów",
     "text": "Artists' exhibition and competition"
@@ -194,6 +194,10 @@
   "51837a0adfe89588": {
     "pl": "Maria Twarowska Piercing Zone",
     "text": "Maria Twarowska Piercing Zone"
+  },
+  "55fe921defba5da4": {
+    "pl": "Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. Odwiedzający głosują na ulubione prace i mogą wygrać piercing wykonany przez ich autora.",
+    "text": "From 13 March, Manufaktura will host an exhibition of works by piercers from Poland and around the world. Visitors can vote for their favourite pieces and stand a chance of winning a piercing carried out by the artist themselves."
   },
   "567fd0ec27b548ff": {
     "pl": "Trzecia edycja Łódzkich Warsztatów Piercingu odbyła się pod hasłem **Brazylijska Przygoda**. Przez dwa dni w Hotelu PURO w sercu Łodzi gościliśmy piercerów z Brazylii, którzy podzielili się wiedzą i technikami ze swojej codziennej pracy.\n\nProgram objął pięć wykładów: od idealnego septum i zasad biosafety, przez kamienie szlachetne w biżuterii, microdermale i przekłucia powierzchniowe, po przekłucia intymne i tongue splitting.\n\nWarsztaty były przeznaczone dla piercerów po ukończonym kursie podstawowym.",
@@ -206,10 +210,6 @@
   "59ab03c84bb6a386": {
     "pl": "New Generation – Łódź: 3 miejsca dla młodych piercerów z Łodzi, do 2 lat od ukończenia kursu podstawowego",
     "text": "New Generation – Łódź: 3 places reserved for young piercers from Łódź who completed their basic course no more than 2 years ago"
-  },
-  "5b8a4b7a406fb0e8": {
-    "pl": "Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. O zwycięzcach decydują głosy odwiedzających.",
-    "text": "From 13 March, Manufaktura will host an exhibition of works by piercers from Poland and around the world. The winners will be decided by visitors’ votes."
   },
   "5c7f2b3df39dd7e4": {
     "pl": "Promocyjna sprzedaż biżuterii",
@@ -319,6 +319,10 @@
     "pl": "Kamienie szlachetne w piercingu",
     "text": "Gemstones in piercing"
   },
+  "8bbf8b863cb18177": {
+    "pl": "piercingów do wygrania dla głosujących",
+    "text": "Piercings to be won by those who vote"
+  },
   "8f51a0caff34b0c1": {
     "pl": "Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Cena za jeden wykład – możesz wybrać kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa.",
     "text": "Friday, 19 March, The Loom Hotel (21 Ogrodowa Street). Price per lecture – you can choose a few or all of them. The price includes coffee, tea and a personalised certificate of attendance."
@@ -422,10 +426,6 @@
   "c50cb53ec8ceaa5c": {
     "pl": "Strefy festiwalowe, wystawa prac i głosowanie w konkursie Piercing Artist Łódź. Godziny otwarcia podamy wkrótce.",
     "text": "Festival zones, an exhibition of works and voting in the Piercing Artist Łódź competition. Opening hours will be announced shortly."
-  },
-  "c620d3e2362f0329": {
-    "pl": "zwycięzców konkursu",
-    "text": "competition winners"
   },
   "cabb386be492fe41": {
     "pl": "Czy mogę dołączyć do tramwaju po drodze?",
