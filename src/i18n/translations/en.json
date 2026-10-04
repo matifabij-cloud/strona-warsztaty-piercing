@@ -111,10 +111,6 @@
     "pl": "Zapisz się",
     "text": "Sign up"
   },
-  "38ce606072b55181": {
-    "pl": "za wykład w piątek",
-    "text": "per talk on Friday"
-  },
   "3a451ef775eea43a": {
     "pl": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. Spośród osób, które oddały głos na 10 najwyżej ocenionych prac, wylosujemy zwycięzców – każdy z nich dostanie piercing wykonany przez autora pracy albo projekt ustalony indywidualnie z artystą.",
     "text": "From 13 March 2027, anyone visiting Manufaktura can vote for their favourite piece from the exhibition. We will draw winners at random from among those who have voted for the 10 highest-rated pieces – each winner will receive a piercing created by the artist behind the piece or a design agreed upon individually with the artist."
@@ -426,6 +422,10 @@
   "c50cb53ec8ceaa5c": {
     "pl": "Strefy festiwalowe, wystawa prac i głosowanie w konkursie Piercing Artist Łódź. Godziny otwarcia podamy wkrótce.",
     "text": "Festival zones, an exhibition of works and voting in the Piercing Artist Łódź competition. Opening hours will be announced shortly."
+  },
+  "c620d3e2362f0329": {
+    "pl": "zwycięzców konkursu",
+    "text": "competition winners"
   },
   "cabb386be492fe41": {
     "pl": "Czy mogę dołączyć do tramwaju po drodze?",
