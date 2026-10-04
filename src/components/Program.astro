@@ -34,7 +34,7 @@ const rendered = await Promise.all(
           <ol role="list" class="program__items">
             {day.items.map((item) => (
               <li class="program__item">
-                <span class="program__time">{item.time || '—'}</span>
+                <span class="program__time">{item.time}</span>
                 <div class="program__info">
                   <p class="program__title">{tr(item.title, locale)}</p>
                   {item.hosts.length > 0 && (
@@ -114,7 +114,7 @@ const rendered = await Promise.all(
     font-weight: 400;
     text-transform: uppercase;
     font-size: var(--step-2);
-    line-height: 1;
+    line-height: 1.2;
   }
 
   .program__head p {
