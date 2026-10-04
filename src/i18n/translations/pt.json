@@ -147,6 +147,10 @@
     "pl": "Idealne septum i techniki biosafety",
     "text": "O septo perfeito e técnicas de biossegurança"
   },
+  "440e19b35982b525": {
+    "pl": "Partner wydarzenia",
+    "text": "Parceiro do evento"
+  },
   "44cb5aea18ec43d8": {
     "pl": "Brazylijska Przygoda",
     "text": "Aventura Brasileira"
@@ -207,10 +211,6 @@
     "pl": "Promocyjna sprzedaż biżuterii",
     "text": "Venda promocional de joias"
   },
-  "5db77d5195c4c839": {
-    "pl": "**Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.\n\n**Piątek, 19 marca – New Generation Day.** Zaczynamy o 8:30 spod Manufaktury: zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze nas na rundę po mieście. Train to the Future realizujemy we współpracy z Klubem Miłośników Starych Tramwajów w Łodzi. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem. Potem zaczynamy wykłady w The Loom Hotel przy ul. Ogrodowej 21. Pierwszy, o 9:30, poprowadzi Max Alves: „Bezpieczeństwo w piercingu”.\n\nTo dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie zawsze mogą pozwolić sobie na szkolenia za kilka tysięcy złotych. Każdy wykład kupisz osobno za 150 zł – w cenie kawa, herbata i imienny certyfikat uczestnictwa. Jeśli będą wolne miejsca, wpuścimy wszystkich. Taką cenę umożliwiają sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo.\n\n**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Piercerzy, edukatorzy, artyści i marki z Polski oraz zagranicy.\n\nOd 13 marca 2027 w Manufakturze będzie można oglądać wystawę około 30 prac artystów z Polski i świata. Odwiedzający głosują na ulubione kompozycje, a 10 wylosowanych osób wygra wykonanie piercingu przez autora pracy.\n\nWydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.\n\n**Wiedza nie musi kosztować milionów.**",
-    "text": "**Łódź Piercing Workshops 2027 – New Generation**: três dias em Łódź, de 19 a 21 de março de 2027.\n\n**Sexta-feira, 19 de março – New Generation Day.** Começamos às 8h30 em frente à Manufaktura: um bonde histórico com a inscrição “Piercing Festival Łódź” nos levará para um passeio pela cidade. O “Train to the Future” é realizado em parceria com o Clube de Amantes de Bondes Antigos de Łódź. É possível embarcar no bonde em paradas selecionadas – o trajeto será divulgado cerca de uma semana antes do evento. Em seguida, começaremos as palestras no The Loom Hotel, na Rua Ogrodowa, 21. A primeira, às 9h30, será ministrada por Max Alves: “Segurança no piercing”.\n\nEste é um dia preparado principalmente para piercers em início de carreira: para aqueles que estão apenas começando e para aqueles que querem se aperfeiçoar, mas nem sempre podem arcar com os custos de treinamentos que custam vários mil zlotys. Cada palestra pode ser adquirida separadamente por 150 zł – o valor inclui café, chá e um certificado de participação nominal. Se houver vagas disponíveis, todos serão admitidos. Esse preço é possível graças aos patrocinadores: o estúdio Maria Twarowska Piercing & Beauty, a Brzeski Holding e a Bursztynowo.\n\n**Sábado e domingo, 20 e 21 de março – Piercing Festival Łódź.** Parte do evento aberta ao público na Manufaktura: piercing, joias, arte corporal, educação e cultura internacional do setor. Piercers, educadores, artistas e marcas da Polônia e do exterior.\n\nA partir de 13 de março de 2027, na Manufaktura, será possível conferir uma exposição com cerca de 30 obras de artistas da Polônia e do mundo. Os visitantes votam em suas composições favoritas, e 10 pessoas sorteadas ganharão um piercing feito pelo próprio autor da obra.\n\nO evento será conduzido em polonês, inglês e nas línguas nativas dos palestrantes – garantimos tradução. Convidamos piercers de toda a Europa e até mesmo do mundo inteiro.\n\n**O conhecimento não precisa custar milhões.**"
-  },
   "5dcb900f34f7a06e": {
     "pl": "Gość specjalny · Snake Bites Zone",
     "text": "Convidado especial · Snake Bites Zone"
@@ -226,6 +226,10 @@
   "5ebd6399e0f19c01": {
     "pl": "W jakim języku są wykłady?",
     "text": "Em que idioma são as palestras?"
+  },
+  "619a93bfed9cbe14": {
+    "pl": "Klub Miłośników Starych Tramwajów · partner Train to the Future",
+    "text": "Clube dos Amantes de Bondes Antigos · parceiro do Train to the Future"
   },
   "6221778a0f928b75": {
     "pl": "Do 17:00. Snake bites w towarzystwie węży, zapisy mailowo.",
@@ -282,6 +286,10 @@
   "74a1f94f5c2276a2": {
     "pl": "Ile kosztuje udział w wykładach?",
     "text": "Quanto custam as palestras?"
+  },
+  "75240d7156756b2d": {
+    "pl": "Sponsor branżowy · aftercare z HOCl",
+    "text": "Patrocinador do setor · cuidados pós-procedimento com HOCl"
   },
   "7618ec1254ce2581": {
     "pl": "Prezenter telewizyjny, hodowca węży",
@@ -387,6 +395,10 @@
     "pl": "Piercer z ponad 20-letnim doświadczeniem",
     "text": "Piercer com mais de 20 anos de experiência"
   },
+  "b6ed19acf409ed15": {
+    "pl": "**Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.\n\n**Piątek, 19 marca – New Generation Day.** Zaczynamy o 8:30 spod Manufaktury: zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze nas na rundę po mieście. Train to the Future realizujemy we współpracy z Klubem Miłośników Starych Tramwajów w Łodzi. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem. Potem zaczynamy wykłady w The Loom Hotel przy ul. Ogrodowej 21. Pierwszy, o 9:30, poprowadzi Max Alves: „Bezpieczeństwo w piercingu”.\n\nTo dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie zawsze mogą pozwolić sobie na szkolenia za kilka tysięcy złotych. Każdy wykład kupisz osobno za 150 zł – w cenie kawa, herbata i imienny certyfikat uczestnictwa. Jeśli będą wolne miejsca, wpuścimy wszystkich. Taką cenę umożliwiają sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo.\n\n**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Piercerzy, edukatorzy, artyści i marki z Polski oraz zagranicy.\n\nOd 13 marca 2027 w Manufakturze będzie można oglądać wystawę około 30 prac artystów z Polski i świata. Odwiedzający głosują na ulubione kompozycje, a 10 wylosowanych osób wygra wykonanie piercingu przez autora pracy.\n\nWspierają nas także sponsorzy z branży: Piercing69 – hurtownia biżuterii do piercingu – i AquaTouch – aftercare na bazie HOCl. Możecie spodziewać się prezentów.\n\nWydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.\n\n**Wiedza nie musi kosztować milionów.**",
+    "text": "**Oficinas de Piercing de Łódź 2027 – New Generation**: três dias em Łódź, de 19 a 21 de março de 2027.\n\n**Sexta-feira, 19 de março – New Generation Day.** Começamos às 8h30 em frente à Manufaktura: um bonde histórico com a inscrição “Piercing Festival Łódź” nos levará para um passeio pela cidade. O “Train to the Future” é realizado em parceria com o Clube de Amantes de Bondes Antigos de Łódź. É possível embarcar no bonde em paradas selecionadas – o trajeto será divulgado cerca de uma semana antes do evento. Em seguida, começaremos as palestras no The Loom Hotel, na Rua Ogrodowa, 21. A primeira, às 9h30, será ministrada por Max Alves: “Segurança no piercing”.\n\nEste é um dia preparado principalmente para piercers em início de carreira: para aqueles que estão apenas começando e para aqueles que querem se aperfeiçoar, mas nem sempre podem arcar com os custos de treinamentos que custam alguns milhares de zlotys. Cada palestra pode ser adquirida separadamente por 150 zł – o preço inclui café, chá e um certificado de participação nominal. Se houver vagas disponíveis, todos serão admitidos. Esse preço é possível graças aos patrocinadores: o estúdio Maria Twarowska Piercing & Beauty, a Brzeski Holding e a Bursztynowo.\n\n**Sábado e domingo, 20 e 21 de março – Piercing Festival Łódź.** Parte do evento aberta ao público na Manufaktura: piercing, joias, arte corporal, educação e cultura internacional do setor. Piercers, educadores, artistas e marcas da Polônia e do exterior.\n\nA partir de 13 de março de 2027, na Manufaktura, será possível conferir uma exposição com cerca de 30 obras de artistas da Polônia e do mundo. Os visitantes votam em suas composições favoritas, e 10 pessoas sorteadas ganharão um piercing feito pelo próprio autor da obra.\n\nTambém contamos com o apoio de patrocinadores do setor: Piercing69 – atacadista de joias para piercing – e AquaTouch – produtos para cuidados pós-piercing à base de HOCl. Vocês podem esperar por brindes.\n\nO evento será conduzido em polonês, inglês e nas línguas nativas dos palestrantes – garantimos a tradução. Convidamos piercers de toda a Europa e até mesmo do mundo todo.\n\n**O conhecimento não precisa custar milhões.**"
+  },
   "b8b047f7b5cd6f1b": {
     "pl": "Happy Piercing Zone",
     "text": "Happy Piercing Zone"
@@ -463,6 +475,10 @@
     "pl": "Wyślij zgłoszenie",
     "text": "Enviar inscrição"
   },
+  "e34305c6b31c97ab": {
+    "pl": "Sponsor branżowy · hurtownia biżuterii do piercingu",
+    "text": "Patrocinador do setor · atacadista de joias para piercing"
+  },
   "ea849208635a6529": {
     "pl": "Rozszczepienie języka i zaawansowane modyfikacje",
     "text": "Bifurcação de língua e modificações avançadas"
@@ -506,5 +522,9 @@
   "fc9fe16304585134": {
     "pl": "Od 13 marca wystawa 30 prac artystów z Polski i ze świata. Odwiedzający głosują, a 10 wylosowanych osób wygra wykonanie piercingu przez autora pracy.",
     "text": "A partir de 13 de março: exposição de 30 trabalhos de artistas da Polônia e do mundo. Os visitantes votam, e 10 pessoas sorteadas ganham um piercing feito pelo autor do trabalho."
+  },
+  "fd0b743b62904a6e": {
+    "pl": "Sponsor",
+    "text": "Patrocinador"
   }
 }
