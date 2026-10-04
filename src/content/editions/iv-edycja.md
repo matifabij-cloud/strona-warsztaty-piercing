@@ -19,12 +19,12 @@ poster: /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg
 stats:
   - value: '3'
     label: dni wydarzenia
-  - value: 150 zł
-    label: za wykład w piątek
   - value: '30'
     label: artystów z Polski i ze świata
   - value: '9'
     label: dni wystawy prac
+  - value: '10'
+    label: zwycięzców konkursu
 attractions:
   - title: Train to the Future
     description: 'Zaczynamy nietypowo: w piątek rano zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze uczestników na rundę po mieście.'
