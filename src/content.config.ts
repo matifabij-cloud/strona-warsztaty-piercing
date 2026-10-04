@@ -117,6 +117,7 @@ const editions = defineCollection({
     partners: list(
       z.object({
         name: z.string(),
+        role: text, // np. „Sponsor branżowy”
         logo: text,
         url: text,
       }),

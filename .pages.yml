@@ -451,6 +451,9 @@ content:
             label: Nazwa
             type: string
             required: true
+          - name: role
+            label: Rola (krótko, np. „Sponsor branżowy · aftercare”)
+            type: string
           - name: logo
             label: Logo (najlepiej PNG z przezroczystym tłem)
             type: image

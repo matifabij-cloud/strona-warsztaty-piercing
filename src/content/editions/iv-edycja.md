@@ -140,27 +140,34 @@ openCall:
   buttonLabel: Wyślij zgłoszenie
   image: /media/plakaty/iv-edycja-nabor-artystow.jpg
 partners:
-  - name: Łódź Travel
-    logo: ''
-    url: 'https://www.lodz.travel'
   - name: Manufaktura
+    role: Partner wydarzenia
     logo: ''
     url: 'https://manufaktura.com'
   - name: Piercing69
+    role: Sponsor branżowy · hurtownia biżuterii do piercingu
     logo: ''
     url: ''
   - name: AquaTouch
+    role: Sponsor branżowy · aftercare z HOCl
     logo: ''
-    url: ''
+    url: 'https://www.instagram.com/aqua.touch.pro/'
   - name: Brzeski Holding S.A.
+    role: Sponsor
     logo: ''
     url: ''
   - name: Bursztynowo
+    role: Sponsor
     logo: ''
     url: ''
-  - name: KMST Łódź – Klub Miłośników Starych Tramwajów
+  - name: KMST Łódź
+    role: Klub Miłośników Starych Tramwajów · partner Train to the Future
     logo: ''
     url: ''
+  - name: Łódź Travel
+    role: ''
+    logo: ''
+    url: 'https://www.lodz.travel'
 gallery: []
 posters:
   - /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg
@@ -176,6 +183,8 @@ To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tyc
 **Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Piercerzy, edukatorzy, artyści i marki z Polski oraz zagranicy.
 
 Od 13 marca 2027 w Manufakturze będzie można oglądać wystawę około 30 prac artystów z Polski i świata. Odwiedzający głosują na ulubione kompozycje, a 10 wylosowanych osób wygra wykonanie piercingu przez autora pracy.
+
+Wspierają nas także sponsorzy z branży: Piercing69 – hurtownia biżuterii do piercingu – i AquaTouch – aftercare na bazie HOCl. Możecie spodziewać się prezentów.
 
 Wydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.
 

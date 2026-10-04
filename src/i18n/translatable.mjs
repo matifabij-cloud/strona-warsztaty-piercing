@@ -29,6 +29,7 @@ export const translatable = {
       'openCall.description',
       'openCall.points[]',
       'openCall.buttonLabel',
+      'partners[].role',
     ],
   },
   speakers: {
