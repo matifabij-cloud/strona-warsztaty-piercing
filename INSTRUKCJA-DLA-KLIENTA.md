@@ -62,6 +62,32 @@ tłem), link do strony partnera.
 
 ---
 
+## Nowy post na Instagramie – co gdzie wpisać
+
+Organizatorzy często ogłaszają nowości na Instagramie. Nie trzeba przepisywać całego posta –
+wystarczą konkrety. Ściąga:
+
+| W poście jest… | Gdzie to wpisać w panelu |
+|---|---|
+| **Nowy prelegent** (imię, zdjęcie, kim jest) | **Prelegenci** → dodaj wpis (imię, zdjęcie, „kim jest”, kraj, Instagram, 2–3 zdania biogramu). Potem **Edycje → IV edycja → Prelegenci i goście** → dodaj i wybierz osobę; w „Dopisek na zdjęciu” krótko temat, np. „Wykład: Bezpieczeństwo w piercingu”. |
+| **Nowy wykład** (temat, dzień, godzina) | **Edycje → IV edycja → Program (dni)** → otwórz właściwy dzień → **Punkty programu** → dodaj: godzina, temat, krótki opis (2–3 zdania), prowadzący z listy. |
+| **Cena / rodzaj biletu** | **Edycje → IV edycja → Bilety → Rodzaje biletów** → nazwa, cena, krótki opis. |
+| **Nowa atrakcja / strefa** | **Edycje → IV edycja → Atrakcje / strefy** → nazwa, 1–2 zdania opisu, ikona. |
+| **Nowy partner / sponsor** | **Edycje → IV edycja → Partnerzy i patroni** → nazwa, logo, link. |
+| **Zmiana daty, godziny, miejsca** | **Edycje → IV edycja** → pola na górze (daty, godzina, miejsce). Sprawdź też **Ustawienia strony → FAQ**, czy odpowiedzi nadal się zgadzają. |
+| **Nowy plakat** | **Edycje → IV edycja → Plakaty** → dodaj plik (najlepiej oryginał, nie zrzut ekranu). |
+| **Ważny komunikat** (start sprzedaży, ostatnie miejsca) | **Ustawienia strony → Pasek z ogłoszeniem** → zaznacz „Pokaż pasek”, wpisz 1 zdanie, link np. `/#tickets`. |
+| **Odpowiedź na częste pytanie** | **Ustawienia strony → FAQ** → dodaj pytanie i odpowiedź. |
+
+**Zasady pisania:** krótko i konkretnie, bez emotek, bez „CDN w kom”. Strona to nie Instagram –
+odwiedzający szuka faktów: co, kiedy, gdzie, ile kosztuje, jak się zapisać.
+Wpisujesz po polsku – angielski i portugalski zrobią się same po kilku minutach.
+
+> Szybki sposób na tekst: wklej post do darmowego czatu (np. Claude albo ChatGPT) z prośbą
+> „Streść to w 2–3 rzeczowych zdaniach na stronę wydarzenia, bez emotek” i wklej wynik do panelu.
+
+---
+
 ## Dobrze wiedzieć
 
 - **Nic nie zepsujesz na zawsze.** Każda zmiana jest zapisywana jako osobna wersja, więc

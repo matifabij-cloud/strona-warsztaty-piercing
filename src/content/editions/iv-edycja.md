@@ -30,7 +30,7 @@ attractions:
     description: 'Piątek, 19 marca, ok. 8:30: zabytkowy tramwaj oznaczony Piercing Festival Łódź rusza spod Manufaktury na rundę po Łodzi. Można dołączyć na wybranych przystankach. We współpracy z Klubem Miłośników Starych Tramwajów w Łodzi.'
     icon: tram
   - title: New Generation Day
-    description: 'Piątkowe wykłady specjalistów z Polski i zagranicy, przygotowane przede wszystkim dla młodych stażem piercerów. Każdy wykład kupisz osobno za 150 zł – z kawą, herbatą i imiennym certyfikatem.'
+    description: 'Piątkowe wykłady specjalistów z Polski i zagranicy w The Loom Hotel, przygotowane przede wszystkim dla młodych stażem piercerów. Każdy wykład kupisz osobno za 150 zł – z kawą, herbatą i imiennym certyfikatem.'
     icon: graduation
   - title: Maria Twarowska Piercing Zone
     description: 'Strefa, w której przekłucia wykonują piercerzy zespołu Maria Twarowska Piercing & Beauty oraz zaproszeni artyści z Polski i zagranicy.'
@@ -60,7 +60,7 @@ speakers:
   - speaker: igor-platek.md
     note: Gość specjalny · Snake Bites Zone
   - speaker: max-alves.md
-    note: Gość specjalny
+    note: Wykład „Bezpieczeństwo w piercingu”
 program:
   - day: '2027-03-19'
     label: Piątek – New Generation Day
@@ -70,9 +70,15 @@ program:
         description: 'Start spod Manufaktury. Runda zabytkowym tramwajem po Łodzi z Klubem Miłośników Starych Tramwajów w Łodzi. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem.'
         speakers: []
         host: ''
+      - time: '9:30'
+        title: Bezpieczeństwo w piercingu
+        description: 'The Loom Hotel, ul. Ogrodowa 21. Bezpieczeństwo jako system, a nie pojedyncza czynność: procedury, odpowiedzialność, przewidywanie błędów, organizacja bezpiecznego stanowiska i biobezpieczeństwo. Krótszy i bardziej skondensowany wykład niż na II edycji – szczególnie ważny dla osób, które dopiero zaczynają.'
+        speakers:
+          - max-alves.md
+        host: ''
       - time: ''
-        title: Wykłady New Generation
-        description: 'Po powrocie pod Manufakturę zaczynamy wykłady. Każdy wykład kupisz osobno za 150 zł. Prelegentów i tematy ogłosimy wkrótce.'
+        title: Kolejne wykłady New Generation
+        description: 'The Loom Hotel. Kolejnych prelegentów i tematy ogłosimy wkrótce. Każdy wykład kupisz osobno za 150 zł.'
         speakers: []
         host: ''
   - day: '2027-03-20'
@@ -110,7 +116,7 @@ tickets:
   options:
     - name: Wykład New Generation Day
       price: 150 zł
-      description: 'Piątek, 19 marca. Jeden wykład do wyboru – możesz kupić kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Oferta tylko na piątek.'
+      description: 'Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Jeden wykład do wyboru – możesz kupić kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Oferta tylko na piątek.'
       url: ''
       buttonLabel: ''
     - name: Snake Bites Zone
@@ -163,7 +169,7 @@ hidden: false
 ---
 **Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.
 
-**Piątek, 19 marca – New Generation Day.** Zaczynamy o 8:30 spod Manufaktury: zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze nas na rundę po mieście. Train to the Future realizujemy we współpracy z Klubem Miłośników Starych Tramwajów w Łodzi. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem. Potem wracamy pod Manufakturę i zaczynamy wykłady.
+**Piątek, 19 marca – New Generation Day.** Zaczynamy o 8:30 spod Manufaktury: zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze nas na rundę po mieście. Train to the Future realizujemy we współpracy z Klubem Miłośników Starych Tramwajów w Łodzi. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem. Potem zaczynamy wykłady w The Loom Hotel przy ul. Ogrodowej 21. Pierwszy, o 9:30, poprowadzi Max Alves: „Bezpieczeństwo w piercingu”.
 
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie zawsze mogą pozwolić sobie na szkolenia za kilka tysięcy złotych. Każdy wykład kupisz osobno za 150 zł – w cenie kawa, herbata i imienny certyfikat uczestnictwa. Jeśli będą wolne miejsca, wpuścimy wszystkich. Taką cenę umożliwiają sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo.
 
