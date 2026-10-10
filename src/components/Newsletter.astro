@@ -1,0 +1,99 @@
+---
+/**
+ * Zapis do newslettera. Formularz jest u dostawcy (np. MailerLite albo Brevo) –
+ * tu tylko zachęta i przycisk z linkiem. Sekcja pokazuje się, gdy w panelu
+ * jest zaznaczone „Pokaż” i wklejony link do formularza.
+ */
+import Icon from './Icon.astro';
+import { tr, useUI, type Locale } from '../i18n';
+import { site } from '../lib/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useUI(locale);
+const n = site.newsletter;
+const show = n.enabled && Boolean(n.url);
+---
+
+{
+  show && (
+    <section class="section newsletter-section" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter">
+          <span class="newsletter__icon" aria-hidden="true">
+            <Icon name="mail" size={30} stroke-width={1.8} />
+          </span>
+          <div class="newsletter__text">
+            <h2 id="newsletter-title" class="newsletter__title display">
+              {tr(n.title, locale)}
+            </h2>
+            {n.text && <p>{tr(n.text, locale)}</p>}
+          </div>
+          <a class="btn newsletter__btn" href={n.url} target="_blank" rel="noopener noreferrer">
+            {tr(n.buttonLabel, locale)}
+            <Icon name="arrow-up-right" size={18} />
+            <span class="visually-hidden"> {t('misc.newTab')}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .newsletter-section {
+    padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  }
+
+  .newsletter {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+    padding: clamp(1.5rem, 1rem + 2.5vw, 2.75rem);
+    border-radius: var(--radius-l);
+    background: var(--c-yellow);
+    color: var(--c-ink);
+  }
+
+  @media (min-width: 48rem) {
+    .newsletter {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 1.75rem;
+    }
+  }
+
+  .newsletter__icon {
+    display: grid;
+    place-items: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    background: var(--c-ink);
+    color: var(--c-yellow);
+  }
+
+  .newsletter__text {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .newsletter__title {
+    font-size: var(--step-3);
+    line-height: 1.2;
+  }
+
+  .newsletter__text p {
+    font-weight: 600;
+    max-width: 40rem;
+  }
+
+  .newsletter__btn {
+    --btn-fg: var(--c-yellow);
+    --btn-bg: var(--c-ink);
+    --btn-border: var(--c-ink);
+    justify-self: start;
+  }
+</style>

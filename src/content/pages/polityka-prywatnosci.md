@@ -1,6 +1,6 @@
 ---
 title: Polityka prywatności
-updated: '2026-09-29'
+updated: '2026-10-10'
 ---
 ## Kto jest administratorem danych
 
@@ -10,6 +10,7 @@ Administratorem danych osobowych jest **Piercing Beauty Sp. z o.o.**, ul. Naruto
 
 - **Kontakt e-mailowy i telefoniczny.** Jeśli do nas piszesz lub dzwonisz, przetwarzamy dane, które nam przekażesz (na przykład imię, adres e-mail, numer telefonu, treść wiadomości), aby odpowiedzieć na Twoje pytanie. Podstawą jest nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).
 - **Zakup biletu.** Bilety sprzedajemy przez zewnętrzną platformę biletową. Dane podane przy zakupie przetwarzamy w celu realizacji udziału w wydarzeniu (art. 6 ust. 1 lit. b RODO) oraz wystawienia faktury i rozliczeń podatkowych (art. 6 ust. 1 lit. c RODO). Zasady przetwarzania danych przez platformę biletową opisuje jej regulamin i polityka prywatności.
+- **Newsletter.** Jeśli zapiszesz się do newslettera, przetwarzamy Twój adres e-mail, aby wysyłać informacje o wydarzeniu: nowych prelegentach, programie i sprzedaży biletów. Podstawą jest Twoja zgoda (art. 6 ust. 1 lit. a RODO), którą możesz w każdej chwili wycofać, klikając link rezygnacji w wiadomości albo pisząc do nas. Do wysyłki korzystamy z zewnętrznego dostawcy usług mailingowych, który przetwarza dane na nasze zlecenie.
 - **Zgłoszenia do konkursu artystów.** Dane i materiały przesłane w zgłoszeniu przetwarzamy w celu przeprowadzenia naboru i konkursu (art. 6 ust. 1 lit. b i f RODO).
 
 ## Pliki cookies i statystyki
@@ -20,7 +21,7 @@ Na stronie wyświetlamy zdjęcia z naszego profilu na Instagramie oraz linki do 
 
 ## Jak długo przechowujemy dane
 
-Dane z korespondencji przechowujemy przez czas potrzebny do jej obsługi, a dane związane z zakupem biletów przez okres wymagany przepisami podatkowymi i rachunkowymi.
+Dane z korespondencji przechowujemy przez czas potrzebny do jej obsługi, adres e-mail z newslettera – do czasu wypisania się, a dane związane z zakupem biletów przez okres wymagany przepisami podatkowymi i rachunkowymi.
 
 ## Twoje prawa
 

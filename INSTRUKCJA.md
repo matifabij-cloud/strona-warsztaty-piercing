@@ -112,9 +112,17 @@ Dopóki link jest pusty, w sekcji Instagrama widać zdjęcia zastępcze z linkie
 
 1. Klient zakłada konto organizatora na [evenea.pl](https://evenea.pl) na dane
    **Piercing Beauty Sp. z o.o.** i podpina konto bankowe.
-2. Tworzy wydarzenie IV edycji: rodzaje biletów (pojedyncze i pakiety), limit ok. 120 miejsc,
-   język formularza EN/PT dla gości z zagranicy, **włączone faktury** (Evenea wystawia je
-   w imieniu organizatora i wysyła do KSeF – warto potwierdzić z księgową).
+2. Tworzy wydarzenie IV edycji (ustalenia z klientem z 5.10.2026):
+   - **główne wydarzenie** (około 2000 zł) w dwóch wariantach: **bez noclegu** i **z noclegiem
+     w hotelu The Loom** – ceny i szczegóły klient poda później,
+   - **piątkowe wykłady**: osobny bilet na każdy wykład, 150 zł, limit **100 miejsc na wykład**;
+     otwarty wykład bezpłatny – zapisy (bilet 0 zł) albo wolne wejście, do ustalenia,
+   - bez pakietu 3-dniowego i bez early bird,
+   - w formularzu obowiązkowe pole **„Imię i nazwisko lub pseudonim na certyfikat”**,
+   - bilety **imienne** z możliwością bezpłatnej zmiany uczestnika do określonego terminu
+     (zgodnie z regulaminem, który klient przygotuje przed sprzedażą),
+   - język formularza EN/PT dla gości z zagranicy, **włączone faktury** (Evenea wystawia je
+     w imieniu organizatora i wysyła do KSeF – warto potwierdzić z księgową).
    Prowizję Evenea klient wlicza w cenę biletu.
 3. Po opublikowaniu wydarzenia – w panelu: **Edycje → IV edycja → Bilety**:
    - Status: **Sprzedaż trwa**

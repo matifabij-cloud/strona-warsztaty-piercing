@@ -34,7 +34,7 @@
     },
     {
       "question": "Czy festiwal jest dla wszystkich?",
-      "answer": "Tak. Piercing Festival Łódź to otwarta dla publiczności część Łódzkich Warsztatów Piercingu. Jest też Happy Piercing Zone – strefa przygotowana z myślą o dzieciach i młodzieży."
+      "answer": "Tak. Piercing Festival Łódź to otwarta dla publiczności część Łódzkich Warsztatów Piercingu, a wstęp jest bezpłatny. Płatne są tylko wybrane warsztaty i zajęcia, na które trzeba zapisać się wcześniej."
     },
     {
       "question": "Gdzie i kiedy odbędzie się IV edycja?",
@@ -42,7 +42,7 @@
     },
     {
       "question": "Ile kosztuje udział w wykładach?",
-      "answer": "Każdy piątkowy wykład kosztuje 150 zł. Kupujesz je pojedynczo – jeden, kilka albo wszystkie."
+      "answer": "W piątek zaplanowaliśmy trzy płatne wykłady po 150 zł i jeden otwarty, bezpłatny. Bilety kupujesz pojedynczo – na jeden, kilka albo wszystkie wykłady."
     },
     {
       "question": "W jakim języku są wykłady?",
@@ -65,16 +65,20 @@
       "answer": "Tak. Przy zakupie biletu zaznacz, że potrzebujesz faktury VAT, i podaj dane firmy."
     },
     {
+      "question": "Czy mogę przepisać bilet na inną osobę?",
+      "answer": "Tak. Bilety są imienne, ale do określonego terminu przed wydarzeniem możesz bezpłatnie przepisać bilet na inną osobę. Szczegóły znajdą się w regulaminie."
+    },
+    {
       "question": "Ile jest miejsc?",
-      "answer": "Liczba miejsc na warsztaty jest ograniczona, to około 120 osób. Nie zwlekaj z zakupem."
+      "answer": "Na każdy piątkowy wykład mamy maksymalnie 100 miejsc."
     },
     {
       "question": "Jak zgłosić się do konkursu Piercing Artist Łódź?",
-      "answer": "Napisz do nas na lodzkiewarsztatypiercingu@gmail.com. Zgłoszenia przyjmujemy do 31 stycznia 2027 roku, a w odpowiedzi prześlemy wszystkie szczegóły."
+      "answer": "Zostaw deklarację udziału w komentarzu pod postem Piercing Artists na naszym Instagramie albo napisz na lodzkiewarsztatypiercingu@gmail.com. Zgłoszenia przyjmujemy do 31 stycznia 2027 roku."
     },
     {
       "question": "Jak działa głosowanie w konkursie?",
-      "answer": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. Wyłonimy 10 najwyżej ocenionych prac, a spośród osób, które głosowały na każdą z nich, wylosujemy jednego zwycięzcę. Zwycięzca dostanie piercing wykonany przez autora pracy – tę kompozycję albo projekt ustalony indywidualnie z artystą."
+      "answer": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. Spośród osób, które zagłosują na zwycięską pracę, wylosujemy zwycięzcę – dostanie stylizację ucha wykonaną przez autora tej pracy. Szczegółowe zasady ogłosimy wkrótce."
     },
     {
       "question": "Czy na festiwalu zrobię sobie snake bites?",
@@ -84,5 +88,12 @@
   "announcement": {
     "enabled": false,
     "text": "Zapisz datę: 19–21 marca 2027 w Łodzi"
+  },
+  "newsletter": {
+    "enabled": false,
+    "title": "Bądź na bieżąco",
+    "text": "Zapisz się do newslettera – damy znać o nowych prelegentach, programie i starcie sprzedaży biletów.",
+    "buttonLabel": "Zapisz się",
+    "url": ""
   }
 }

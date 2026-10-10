@@ -50,6 +50,9 @@ export const translatable = {
       'faq[].question',
       'faq[].answer',
       'announcement.text',
+      'newsletter.title',
+      'newsletter.text',
+      'newsletter.buttonLabel',
     ],
   },
 };

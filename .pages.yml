@@ -108,6 +108,26 @@ content:
           - name: url
             label: Link (opcjonalnie)
             type: string
+      - name: newsletter
+        label: Newsletter
+        description: Sekcja pokaże się, gdy zaznaczysz „Pokaż” i wkleisz link do formularza zapisu (np. z MailerLite albo Brevo).
+        type: object
+        fields:
+          - name: enabled
+            label: Pokaż sekcję newslettera
+            type: boolean
+          - name: title
+            label: Tytuł
+            type: string
+          - name: text
+            label: Tekst zachęty
+            type: text
+          - name: buttonLabel
+            label: Napis na przycisku
+            type: string
+          - name: url
+            label: Link do formularza zapisu
+            type: string
       - name: instagram
         label: Instagram na stronie
         type: object

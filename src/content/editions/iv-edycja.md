@@ -19,12 +19,12 @@ poster: /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg
 stats:
   - value: '3'
     label: dni wydarzenia
-  - value: '30'
-    label: artystów z Polski i ze świata
-  - value: '9'
-    label: dni wystawy prac
-  - value: '10'
-    label: stref i atrakcji festiwalu
+  - value: '4'
+    label: wykłady w piątek
+  - value: '100'
+    label: miejsc na każdym wykładzie
+  - value: 0 zł
+    label: wstęp na festiwal w Manufakturze
 attractions:
   - title: Train to the Future
     description: 'Zaczynamy nietypowo: w piątek rano zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze uczestników na rundę po mieście.'
@@ -32,42 +32,24 @@ attractions:
   - title: New Generation Day
     description: 'Wykłady specjalistów z Polski i zagranicy, które kupujesz pojedynczo. Wybierasz tylko tematy, które Cię interesują – bez płacenia za całe kilkudniowe szkolenie.'
     icon: graduation
-  - title: Maria Twarowska Piercing Zone
-    description: 'Strefa, w której przekłucia wykonują piercerzy zespołu Maria Twarowska Piercing & Beauty oraz zaproszeni artyści z Polski i zagranicy.'
-    icon: ring
-  - title: Brazil Zone
-    description: 'Specjalna przestrzeń poświęcona Brazylii: brazylijscy piercerzy, body art, edukacja i kultura.'
-    icon: brazil
-  - title: Happy Piercing Zone
-    description: 'Strefa dla dzieci i młodzieży – profesjonalne, spokojne i przyjazne podejście do piercingu młodszych klientów.'
-    icon: smile
   - title: Snake Bites Zone
     description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Za węże odpowiada Igor Płatek.'
     icon: snake
   - title: Wystawa i konkurs artystów
-    description: 'Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. Odwiedzający głosują na ulubione prace i mogą wygrać piercing wykonany przez ich autora.'
+    description: 'Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. Odwiedzający głosują na ulubione prace, a jedna z osób, które zagłosują na zwycięską pracę, wygra stylizację ucha wykonaną przez jej autora.'
     icon: trophy
-  - title: Suspension Zipline
-    description: 'Tyrolka w Manufakturze.'
-    icon: zipline
-  - title: Promocyjna sprzedaż biżuterii
-    description: ''
-    icon: bag
-  - title: Królewski wybór kolczyków
-    description: ''
-    icon: crown
 speakers:
-  - speaker: igor-platek.md
-    note: Gość specjalny · Snake Bites Zone
   - speaker: max-alves.md
     note: Wykład „Bezpieczeństwo w piercingu”
+  - speaker: silas.md
+    note: Wykład 19 marca, 12:00
 program:
   - day: '2027-03-19'
     label: Piątek – New Generation Day
     items:
       - time: '8:30'
         title: Train to the Future
-        description: 'Start spod Manufaktury. Do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem.'
+        description: 'Rozpoczęcie wydarzenia i przejażdżka zabytkowym tramwajem z przewodnikiem. Start spod Manufaktury; do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem.'
         speakers: []
         host: ''
       - time: '9:30'
@@ -76,9 +58,15 @@ program:
         speakers:
           - max-alves.md
         host: ''
+      - time: '12:00'
+        title: Wykład – temat ogłosimy wkrótce
+        description: 'The Loom Hotel.'
+        speakers:
+          - silas.md
+        host: ''
       - time: ''
         title: Kolejne wykłady New Generation
-        description: 'Prelegentów i tematy ogłosimy wkrótce.'
+        description: 'Jeszcze jeden płatny wykład i jeden otwarty, bezpłatny. Prelegentów i tematy ogłosimy wkrótce.'
         speakers: []
         host: ''
   - day: '2027-03-20'
@@ -92,8 +80,7 @@ program:
       - time: '10:00'
         title: Snake Bites Zone
         description: 'Do 17:00.'
-        speakers:
-          - igor-platek.md
+        speakers: []
         host: ''
   - day: '2027-03-21'
     label: Niedziela – Piercing Festival Łódź
@@ -106,35 +93,41 @@ program:
       - time: '10:00'
         title: Snake Bites Zone
         description: 'Do 16:00.'
-        speakers:
-          - igor-platek.md
+        speakers: []
         host: ''
 tickets:
   status: wkrotce
   url: ''
-  info: 'Sprzedaż biletów ruszy wkrótce. Zapisy do Snake Bites Zone już trwają.'
+  info: 'Sprzedaż biletów ruszy wkrótce. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.'
   options:
     - name: Wykład New Generation Day
       price: 150 zł
-      description: 'Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Cena za jeden wykład – możesz wybrać kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa.'
+      description: 'Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Cena za jeden wykład – możesz wybrać kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Maksymalnie 100 miejsc na wykład.'
+      url: ''
+      buttonLabel: ''
+    - name: Otwarty wykład New Generation Day
+      price: 0 zł
+      description: 'Piątek, 19 marca, The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.'
       url: ''
       buttonLabel: ''
     - name: Snake Bites Zone
-      price: 450 zł
-      description: 'W cenie: wykonanie snake bites, sesja zdjęciowa, nagranie przez kamerzystę (udostępnimy je na naszych profilach) i 2 bezpłatne konsultacje po przekłuciu. 20 marca 10:00–17:00, 21 marca 10:00–16:00. Zapisy mailowo – w tytule wiadomości wpisz „SNAKE BITES ZONE”. Liczba miejsc ograniczona.'
+      price: 400 zł
+      description: 'W cenie: wykonanie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego (udostępnimy je na naszych profilach) i 2 bezpłatne konsultacje po przekłuciu. Na jedną osobę przewidujemy około 40–60 minut, dlatego liczba miejsc jest ograniczona. 20 marca 10:00–17:00, 21 marca 10:00–16:00. Zapisy mailowo – w tytule wiadomości wpisz „SNAKE BITES ZONE”.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=SNAKE%20BITES%20ZONE'
       buttonLabel: Zapisz się
 openCall:
   enabled: true
   title: Piercing Artist Łódź Needs You
-  description: 'Szukamy 30 piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom.'
+  description: 'Szukamy 30 piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom. Pełne zasady konkursu ogłosimy wkrótce.'
   points:
     - 30 artystów, 30 prac, jedna wystawa w Manufakturze
     - 'Od 13 marca 2027, przez 9 dni, 24 godziny na dobę, Twoją pracę zobaczą tysiące ludzi'
     - 'Nie liczy się, czy obserwuje Cię 500, 5 000 czy 500 000 osób'
     - 'Na prace głosują odwiedzający Manufakturę – nie Instagram, nie algorytm, nie komisja'
-    - 'Autorzy 10 najlepiej ocenionych prac wykonają swoją kompozycję (albo projekt ustalony indywidualnie) dla osób wylosowanych spośród głosujących'
+    - 'Nagrody: I miejsce – tygodniowy pobyt w Bursztynowie, II i III miejsce – weekendowy pobyt w Bursztynowie'
+    - 'Jedna z osób głosujących na zwycięską pracę wygra stylizację ucha wykonaną przez jej autora'
     - 'New Generation – Łódź: 3 miejsca dla młodych piercerów z Łodzi, do 2 lat od ukończenia kursu podstawowego'
+    - 'Deklarację udziału zostaw w komentarzu pod postem Piercing Artists na naszym Instagramie albo napisz do nas mailowo'
   deadline: '2027-01-31'
   url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Zg%C5%82oszenie%20%E2%80%93%20Piercing%20Artist%20%C5%81%C3%B3d%C5%BA%202027'
   buttonLabel: Wyślij zgłoszenie
@@ -160,10 +153,6 @@ partners:
     role: Sponsor
     logo: ''
     url: ''
-  - name: KMST Łódź
-    role: Klub Miłośników Starych Tramwajów · partner Train to the Future
-    logo: ''
-    url: ''
   - name: Łódź Travel
     role: ''
     logo: ''
@@ -176,7 +165,7 @@ hidden: false
 ---
 **Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.
 
-**Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.
+**Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który z przewodnikiem zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.
 
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
 

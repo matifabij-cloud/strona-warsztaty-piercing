@@ -16,6 +16,7 @@ import Lightbox from '../components/Lightbox.astro';
 import InstagramFeed from '../components/InstagramFeed.astro';
 import Faq from '../components/Faq.astro';
 import Contact from '../components/Contact.astro';
+import Newsletter from '../components/Newsletter.astro';
 import Img from '../components/Img.astro';
 import Icon from '../components/Icon.astro';
 import { alternatesFor, paths, tr, useUI, type Locale } from '../i18n';
@@ -211,6 +212,8 @@ const jsonLd = [
   </section>
 
   <!-- FAQ -->
+  <Newsletter locale={locale} />
+
   <section id="faq" class="section" aria-labelledby="faq-title">
     <div class="container faq-layout">
       <SectionHead id="faq-title" eyebrow="FAQ" title={t('section.faq')} />

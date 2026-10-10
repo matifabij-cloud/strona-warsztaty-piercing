@@ -28,6 +28,9 @@ const schema = z.object({
   faq: z.preprocess((v) => v ?? [], z.array(z.object({ question: str, answer: str }))),
   instagram: z.object({ feedUrl: str }).catch({ feedUrl: '' }),
   announcement: z.object({ enabled: z.boolean().catch(false), text: str, url: str }).catch({ enabled: false, text: '', url: '' }),
+  newsletter: z
+    .object({ enabled: z.boolean().catch(false), title: str, text: str, buttonLabel: str, url: str })
+    .catch({ enabled: false, title: '', text: '', buttonLabel: '', url: '' }),
 });
 
 export type Site = z.infer<typeof schema>;
