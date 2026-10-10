@@ -35,10 +35,6 @@
     "pl": "Pierwsza edycja Łódzkich Warsztatów Piercingu, od której wszystko się zaczęło. Wykład o przekłuwaniu języka poprowadziła Marcelina Szejko.",
     "text": "A primeira edição do Łódzkie Warsztaty Piercingu – onde tudo começou. Marcelina Szejko ministrou uma palestra sobre piercing de língua."
   },
-  "0efb12a83478fc88": {
-    "pl": "Piątek, 19 marca, The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.",
-    "text": "Sexta-feira, 19 de março, no The Loom Hotel. O tema e as regras de inscrição serão divulgados em breve."
-  },
   "17de1fac0b3e801a": {
     "pl": "Czy mogę dostać fakturę?",
     "text": "Posso receber fatura?"
@@ -66,6 +62,10 @@
   "1f986b972176f700": {
     "pl": "Konferencja, która zaczyna się w tramwaju: zanim usiądziemy na wykładach, zwiedzamy Łódź z przewodnikiem.",
     "text": "Uma conferência que começa no bonde: antes de assistirmos às palestras, fazemos um passeio guiado por Łódź."
+  },
+  "229e90d799ca78b6": {
+    "pl": "Piątek, 19 marca · The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.",
+    "text": "Sexta-feira, 19 de março · The Loom Hotel. O tema e as regras de inscrição serão divulgados em breve."
   },
   "243374ec12f26d82": {
     "pl": "Trzy dni w Łodzi: przejazd zabytkowym tramwajem, wykłady dla piercerów i publiczny Piercing Festival Łódź w Manufakturze.",
@@ -102,6 +102,10 @@
   "2c1a07d058313793": {
     "pl": "Piercer i edukator",
     "text": "Piercer e instrutor"
+  },
+  "2fd9b58f80f3ccdf": {
+    "pl": "Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.",
+    "text": "Sexta-feira, 19 de março · The Loom Hotel. Ingresso para uma palestra à escolha, com café, chá e certificado nominal incluídos no preço. 100 vagas para cada palestra."
   },
   "3618b8fa8c47ca43": {
     "pl": "I edycja Łódzkich Warsztatów Piercingu",
@@ -198,10 +202,6 @@
   "5ebd6399e0f19c01": {
     "pl": "W jakim języku są wykłady?",
     "text": "Em que idioma são as palestras?"
-  },
-  "60dff0d404fca88a": {
-    "pl": "W cenie: wykonanie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego (udostępnimy je na naszych profilach) i 2 bezpłatne konsultacje po przekłuciu. Na jedną osobę przewidujemy około 40–60 minut, dlatego liczba miejsc jest ograniczona. 20 marca 10:00–17:00, 21 marca 10:00–16:00. Zapisy mailowo – w tytule wiadomości wpisz „SNAKE BITES ZONE”.",
-    "text": "Incluído no preço: realização de “snake bites”, sessão de fotos, gravação de material promocional (que será compartilhado em nossos perfis) e duas consultas gratuitas após a perfuração. Prevemos cerca de 40 a 60 minutos por pessoa; por isso, o número de vagas é limitado. 20 de março, das 10h às 17h; 21 de março, das 10h às 16h. Inscrições por e-mail – coloque “SNAKE BITES ZONE” no assunto da mensagem."
   },
   "62ab31d8e361b3d4": {
     "pl": "Wykład „Od kaniuli do igły”",
@@ -467,6 +467,10 @@
     "pl": "Tak. Tramwaj zatrzyma się na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem.",
     "text": "Sim. O bonde fará paradas em pontos específicos – divulgaremos o trajeto cerca de uma semana antes do evento."
   },
+  "e760755ff7364b46": {
+    "pl": "Sobota 10:00–17:00, niedziela 10:00–16:00 · Manufaktura. W cenie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego i 2 bezpłatne konsultacje po przekłuciu. Około 40–60 minut na osobę, liczba miejsc ograniczona.",
+    "text": "Sábado, das 10h às 17h; domingo, das 10h às 16h · Manufaktura. O preço inclui piercings “snake bites”, sessão de fotos, gravação de material promocional e duas consultas gratuitas após a perfuração. Cerca de 40 a 60 minutos por pessoa, vagas limitadas."
+  },
   "ea849208635a6529": {
     "pl": "Rozszczepienie języka i zaawansowane modyfikacje",
     "text": "Bifurcação de língua e modificações avançadas"
@@ -514,9 +518,5 @@
   "fd0b743b62904a6e": {
     "pl": "Sponsor",
     "text": "Patrocinador"
-  },
-  "fe0e33fbac76be66": {
-    "pl": "Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Cena za jeden wykład – możesz wybrać kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Maksymalnie 100 miejsc na wykład. Napisz, które wykłady Cię interesują, a zarezerwujemy miejsce.",
-    "text": "Sexta-feira, 19 de março, The Loom Hotel (Rua Ogrodowa, 21). Preço por palestra – você pode escolher algumas ou todas. O preço inclui café, chá e um certificado de participação nominal. Máximo de 100 vagas por palestra. Escreva quais palestras lhe interessam e reservaremos sua vaga."
   }
 }
