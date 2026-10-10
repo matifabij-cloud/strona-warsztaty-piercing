@@ -73,6 +73,81 @@ const rest = moreHref ? [] : tiles.slice(initial);
 
 
 
+<script>
+  /*
+   * Równe rzędy bez luk: zdjęcia dzielimy na tyle rzędów, ile mieści się przy docelowej
+   * wysokości, i rozkładamy je tak, żeby każdy rząd (także ostatni) wypełniał całą szerokość.
+   * Bez JavaScriptu działa zwykły układ z CSS.
+   */
+  const toPx = (v: string, el: Element) => {
+    const n = parseFloat(v);
+    if (v.trim().endsWith('rem')) return n * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    if (v.trim().endsWith('em')) return n * parseFloat(getComputedStyle(el).fontSize);
+    return n;
+  };
+
+  function layout(grid: HTMLElement) {
+    const items = [...grid.querySelectorAll<HTMLElement>(':scope > .gallery__item')];
+    // Dokładna (ułamkowa) szerokość; clientWidth jest zaokrąglany i rząd mógłby się zawinąć.
+    const width = grid.getBoundingClientRect().width;
+    if (!width || !items.length) return;
+    const gallery = grid.closest<HTMLElement>('.gallery')!;
+    const styles = getComputedStyle(gallery);
+    const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+    const rowH = toPx(styles.getPropertyValue('--row-h'), gallery) || 200;
+    const ratios = items.map((li) => parseFloat(li.style.getPropertyValue('--r')) || 1.5);
+    const total = ratios.reduce((a, b) => a + b, 0);
+
+    // Liczba rzędów i podział zdjęć tak, żeby rzędy miały podobną wysokość.
+    // Mało zdjęć na szerszym ekranie (flex-wrap: nowrap) – zawsze jeden rząd.
+    // Inaczej liczba rzędów, przy której wysokość rzędu jest najbliższa docelowej.
+    const oneRow = getComputedStyle(grid).flexWrap === 'nowrap';
+    const exact = (total * rowH) / width;
+    const off = (k: number) => Math.abs(Math.log((width * k) / total / rowH));
+    let rows = oneRow ? 1 : off(Math.floor(exact)) <= off(Math.ceil(exact)) ? Math.floor(exact) : Math.ceil(exact);
+    rows = Math.min(items.length, Math.max(1, rows));
+
+    // Podział na rzędy o możliwie równej „długości” (programowanie dynamiczne).
+    const target = total / rows;
+    const prefix = [0];
+    ratios.forEach((r) => prefix.push(prefix[prefix.length - 1] + r));
+    const n = ratios.length;
+    const cost: number[][] = Array.from({ length: rows + 1 }, () => Array(n + 1).fill(Infinity));
+    const cut: number[][] = Array.from({ length: rows + 1 }, () => Array(n + 1).fill(0));
+    cost[0][0] = 0;
+    for (let k = 1; k <= rows; k++) {
+      for (let j = k; j <= n; j++) {
+        for (let i = k - 1; i < j; i++) {
+          const c = cost[k - 1][i] + (prefix[j] - prefix[i] - target) ** 2;
+          if (c < cost[k][j]) {
+            cost[k][j] = c;
+            cut[k][j] = i;
+          }
+        }
+      }
+    }
+    const groups: number[][] = [];
+    for (let k = rows, j = n; k > 0; k--) {
+      const i = cut[k][j];
+      groups.unshift(Array.from({ length: j - i }, (_, x) => i + x));
+      j = i;
+    }
+
+    for (const group of groups) {
+      const groupSum = group.reduce((a, i) => a + ratios[i], 0);
+      const height = (width - gap * (group.length - 1) - 1) / groupSum;
+      for (const i of group) {
+        const w = Math.floor(ratios[i] * height * 100) / 100;
+        items[i].style.flex = `0 0 ${w}px`;
+      }
+    }
+    grid.classList.add('is-justified');
+  }
+
+  const observer = new ResizeObserver((entries) => entries.forEach((e) => layout(e.target as HTMLElement)));
+  document.querySelectorAll<HTMLElement>('.gallery__grid').forEach((grid) => observer.observe(grid));
+</script>
+
 <style>
   .gallery {
     display: grid;
@@ -108,10 +183,14 @@ const rest = moreHref ? [] : tiles.slice(initial);
     gap: var(--gap);
   }
 
-  /* Ostatni rząd nie rozciąga się na siłę */
+  /* Ostatni rząd nie rozciąga się na siłę (gdy rzędy układa CSS, bez JavaScriptu) */
   .gallery__grid::after {
     content: '';
     flex-grow: 1000;
+  }
+
+  .gallery__grid.is-justified::after {
+    content: none;
   }
 
   /* Mało zdjęć: na większym ekranie wszystkie w jednym rzędzie, na całą szerokość */
