@@ -15,11 +15,12 @@ const tickets = edition.data.tickets ?? { status: 'wkrotce' as const, url: undef
 const onSale = tickets.status === 'sprzedaz' && Boolean(tickets.url);
 const statusLabel = t(`tickets.status.${tickets.status}` as const);
 
+// „Zakup online” pokazujemy dopiero, gdy sprzedaż naprawdę trwa.
 const features = [
   { icon: 'file', text: t('tickets.invoice') },
-  { icon: 'ticket', text: t('tickets.online') },
+  onSale && { icon: 'ticket', text: t('tickets.online') },
   { icon: 'users', text: t('tickets.limited') },
-];
+].filter(Boolean) as { icon: string; text: string }[];
 ---
 
 <div class="tickets">

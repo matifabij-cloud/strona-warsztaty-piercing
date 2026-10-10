@@ -27,16 +27,16 @@ stats:
     label: wstęp na festiwal w Manufakturze
 attractions:
   - title: Train to the Future
-    description: 'Zaczynamy nietypowo: w piątek rano zabytkowy tramwaj oznaczony Piercing Festival Łódź zabierze uczestników na rundę po mieście.'
+    description: 'Konferencja, która zaczyna się w tramwaju: zanim usiądziemy na wykładach, zwiedzamy Łódź z przewodnikiem.'
     icon: tram
   - title: New Generation Day
-    description: 'Wykłady specjalistów z Polski i zagranicy, które kupujesz pojedynczo. Wybierasz tylko tematy, które Cię interesują – bez płacenia za całe kilkudniowe szkolenie.'
+    description: 'Wykłady specjalistów z Polski i zagranicy: od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
     icon: graduation
   - title: Snake Bites Zone
     description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Za węże odpowiada Igor Płatek.'
     icon: snake
   - title: Wystawa i konkurs artystów
-    description: 'Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. Odwiedzający głosują na ulubione prace, a jedna z osób, które zagłosują na zwycięską pracę, wygra stylizację ucha wykonaną przez jej autora.'
+    description: 'Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. O zwycięzcy zdecydują głosy odwiedzających.'
     icon: trophy
 speakers:
   - speaker: max-alves.md
@@ -51,7 +51,7 @@ program:
     items:
       - time: '8:30'
         title: Train to the Future
-        description: 'Rozpoczęcie wydarzenia i przejażdżka zabytkowym tramwajem z przewodnikiem. Start spod Manufaktury; do tramwaju można dołączyć na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem.'
+        description: 'Rozpoczęcie wydarzenia i przejażdżka zabytkowym tramwajem z przewodnikiem. Start spod Manufaktury.'
         speakers: []
         host: ''
       - time: '9:30'
@@ -81,8 +81,8 @@ program:
     label: Sobota – Piercing Festival Łódź
     items:
       - time: ''
-        title: Piercing Festival Łódź w Manufakturze
-        description: 'Strefy festiwalowe, wystawa prac i głosowanie w konkursie Piercing Artist Łódź. Godziny otwarcia podamy wkrótce.'
+        title: Strefy festiwalowe i wystawa prac
+        description: 'Głosowanie w konkursie Piercing Artist Łódź. Godziny otwarcia podamy wkrótce.'
         speakers: []
         host: ''
       - time: '10:00'
@@ -94,8 +94,8 @@ program:
     label: Niedziela – Piercing Festival Łódź
     items:
       - time: ''
-        title: Drugi dzień festiwalu
-        description: 'Ostatni dzień wystawy i ostatnia szansa, żeby oddać głos w konkursie.'
+        title: Ostatni dzień wystawy
+        description: 'Ostatnia szansa, żeby oddać głos w konkursie.'
         speakers: []
         host: ''
       - time: '10:00'
@@ -126,14 +126,13 @@ tickets:
 openCall:
   enabled: true
   title: Piercing Artist Łódź Needs You
-  description: 'Szukamy 30 piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom. Pełne zasady konkursu ogłosimy wkrótce.'
+  description: 'Szukamy piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom. Pełne zasady konkursu ogłosimy wkrótce.'
   points:
     - 30 artystów, 30 prac, jedna wystawa w Manufakturze
     - 'Od 13 marca 2027, przez 9 dni, 24 godziny na dobę, Twoją pracę zobaczą tysiące ludzi'
     - 'Nie liczy się, czy obserwuje Cię 500, 5 000 czy 500 000 osób'
     - 'Na prace głosują odwiedzający Manufakturę – nie Instagram, nie algorytm, nie komisja'
     - 'Nagrody: I miejsce – tygodniowy pobyt w Bursztynowie, II i III miejsce – weekendowy pobyt w Bursztynowie'
-    - 'Jedna z osób głosujących na zwycięską pracę wygra stylizację ucha wykonaną przez jej autora'
     - 'New Generation – Łódź: 3 miejsca dla młodych piercerów z Łodzi, do 2 lat od ukończenia kursu podstawowego'
     - 'Deklarację udziału zostaw w komentarzu pod postem Piercing Artists na naszym Instagramie albo napisz do nas mailowo'
   deadline: '2027-01-31'
@@ -173,11 +172,11 @@ hidden: false
 ---
 **Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.
 
-**Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który z przewodnikiem zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.
+**Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.
 
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
 
-**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich sponsorów z branży: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możecie spodziewać się prezentów.
+**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich sponsorów z branży: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 
 Wydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.
 

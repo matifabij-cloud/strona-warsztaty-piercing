@@ -20,7 +20,7 @@
   },
   "about": {
     "title": "Wiedza, która zostaje w dłoniach",
-    "text": "Łódzkie Warsztaty Piercingu to cykliczne wydarzenie edukacyjne dla piercerów, organizowane w Łodzi przez studio Maria Twarowska Piercing & Beauty.\n\nZapraszamy prelegentów z Polski i z zagranicy, zwłaszcza z Brazylii, którzy dzielą się praktyczną wiedzą: od bezpieczeństwa pracy i biosafety, przez techniki przekłuć, po zaawansowane modyfikacje ciała.\n\nIV edycja to także część publiczna: Piercing Festival Łódź w Manufakturze.",
+    "text": "Łódzkie Warsztaty Piercingu to cykliczne wydarzenie edukacyjne dla piercerów, organizowane w Łodzi przez studio Maria Twarowska Piercing & Beauty.\n\nZapraszamy prelegentów z Polski i z zagranicy, zwłaszcza z Brazylii, którzy dzielą się praktyczną wiedzą: od bezpieczeństwa pracy i biosafety, przez techniki przekłuć, po zaawansowane modyfikacje ciała.",
     "images": [
       "/media/edycja-3/iii-edycja-2026-03.jpg",
       "/media/edycja-3/iii-edycja-2026-04.jpg",
@@ -30,7 +30,7 @@
   "faq": [
     {
       "question": "Dla kogo są warsztaty?",
-      "answer": "Wykłady są przeznaczone dla piercerów. Piątkowy New Generation Day przygotowaliśmy przede wszystkim z myślą o młodych stażem piercerach, ale bilet może kupić każdy – liczba miejsc jest ograniczona."
+      "answer": "Wykłady są przeznaczone dla piercerów – zarówno tych, którzy dopiero zaczynają, jak i tych z wieloletnim stażem."
     },
     {
       "question": "Czy festiwal jest dla wszystkich?",
@@ -41,16 +41,12 @@
       "answer": "19–21 marca 2027 roku w Łodzi. W piątek New Generation Day: przejazd zabytkowym tramwajem (start około 8:30 spod Manufaktury) i wykłady w The Loom Hotel przy ul. Ogrodowej 21. W sobotę i niedzielę Piercing Festival Łódź w Manufakturze."
     },
     {
-      "question": "Ile kosztuje udział w wykładach?",
-      "answer": "W piątek zaplanowaliśmy trzy płatne wykłady po 150 zł i jeden otwarty, bezpłatny. Bilety kupujesz pojedynczo – na jeden, kilka albo wszystkie wykłady. Pojedyncze bilety są dostępne tylko na piątkowe wykłady."
-    },
-    {
       "question": "W jakim języku są wykłady?",
       "answer": "Po polsku, po angielsku i w językach ojczystych prelegentów. Zapewniamy tłumaczenie."
     },
     {
       "question": "Przyjeżdżam z zagranicy – czy to wydarzenie dla mnie?",
-      "answer": "Tak. Zapraszamy piercerów z całej Europy, a nawet świata. Wykłady są tłumaczone, a datę ogłaszamy z dużym wyprzedzeniem, żeby był czas spokojnie zaplanować przyjazd."
+      "answer": "Tak. Datę ogłaszamy z dużym wyprzedzeniem, żeby gościom z zagranicy łatwiej było zaplanować przyjazd."
     },
     {
       "question": "Czy mogę dołączyć do tramwaju po drodze?",
@@ -58,7 +54,7 @@
     },
     {
       "question": "Jak kupić bilet?",
-      "answer": "Rezerwacje na piątkowe wykłady już ruszyły – napisz do nas, które wykłady Cię interesują. Pełną sprzedaż biletów online uruchomimy wkrótce i ogłosimy ją także na Instagramie."
+      "answer": "Na piątkowe wykłady przyjmujemy już rezerwacje – przycisk „Zarezerwuj” znajdziesz w sekcji Bilety. Sprzedaż online uruchomimy wkrótce i ogłosimy ją także na Instagramie."
     },
     {
       "question": "Czy mogę dostać fakturę?",
@@ -69,20 +65,12 @@
       "answer": "Tak. Bilety są imienne, ale do określonego terminu przed wydarzeniem możesz bezpłatnie przepisać bilet na inną osobę. Szczegóły znajdą się w regulaminie."
     },
     {
-      "question": "Ile jest miejsc?",
-      "answer": "Na każdy piątkowy wykład mamy maksymalnie 100 miejsc."
-    },
-    {
       "question": "Jak zgłosić się do konkursu Piercing Artist Łódź?",
       "answer": "Zostaw deklarację udziału w komentarzu pod postem Piercing Artists na naszym Instagramie albo napisz na lodzkiewarsztatypiercingu@gmail.com. Zgłoszenia przyjmujemy do 31 stycznia 2027 roku."
     },
     {
       "question": "Jak działa głosowanie w konkursie?",
-      "answer": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. Spośród osób, które zagłosują na zwycięską pracę, wylosujemy zwycięzcę – dostanie stylizację ucha wykonaną przez autora tej pracy. Szczegółowe zasady ogłosimy wkrótce."
-    },
-    {
-      "question": "Czy na festiwalu zrobię sobie snake bites?",
-      "answer": "Tak. W sobotę i niedzielę działa Snake Bites Zone, w której wykonujemy tylko snake bites – w towarzystwie węży. Cenę, godziny i zapisy znajdziesz w sekcji Bilety."
+      "answer": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. Jedna z osób, które zagłosują na zwycięską pracę, wygra stylizację ucha wykonaną przez jej autora. Szczegółowe zasady ogłosimy wkrótce."
     }
   ],
   "announcement": {
