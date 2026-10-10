@@ -122,6 +122,14 @@ const pl = {
   'misc.soon': 'Wkrótce',
   'misc.from': 'z',
   'misc.readMore': 'Czytaj więcej',
+  'mail.title': 'Napisz do nas',
+  'mail.intro': 'Wybierz, gdzie chcesz napisać wiadomość, albo skopiuj adres i temat do swojej poczty.',
+  'mail.address': 'Adres e-mail',
+  'mail.subject': 'Temat wiadomości',
+  'mail.copy': 'Kopiuj',
+  'mail.copied': 'Skopiowano',
+  'mail.app': 'Program pocztowy',
+  'mail.close': 'Zamknij',
 } as const;
 
 export type UIKey = keyof typeof pl;
@@ -248,6 +256,14 @@ const en: Dict = {
   'misc.soon': 'Soon',
   'misc.from': 'of',
   'misc.readMore': 'Read more',
+  'mail.title': 'Write to us',
+  'mail.intro': 'Choose where to write your message, or copy the address and subject into your own email.',
+  'mail.address': 'Email address',
+  'mail.subject': 'Subject',
+  'mail.copy': 'Copy',
+  'mail.copied': 'Copied',
+  'mail.app': 'Email app',
+  'mail.close': 'Close',
 };
 
 const pt: Dict = {
@@ -371,6 +387,14 @@ const pt: Dict = {
   'misc.soon': 'Em breve',
   'misc.from': 'de',
   'misc.readMore': 'Leia mais',
+  'mail.title': 'Escreva para nós',
+  'mail.intro': 'Escolha onde escrever a mensagem ou copie o endereço e o assunto para o seu e-mail.',
+  'mail.address': 'Endereço de e-mail',
+  'mail.subject': 'Assunto',
+  'mail.copy': 'Copiar',
+  'mail.copied': 'Copiado',
+  'mail.app': 'App de e-mail',
+  'mail.close': 'Fechar',
 };
 
 export const ui = { pl: pl as Dict, en, pt };

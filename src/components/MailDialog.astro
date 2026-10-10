@@ -1,0 +1,231 @@
+---
+/**
+ * Okienko dla linków „mailto:”. Samo „mailto:” nic nie robi, gdy ktoś nie ma ustawionego
+ * programu pocztowego (np. używa Gmaila w przeglądarce). Dlatego po kliknięciu pokazujemy
+ * adres i temat do skopiowania oraz przyciski: Gmail, Outlook i program pocztowy.
+ */
+import Icon from './Icon.astro';
+import { useUI, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useUI(locale);
+---
+
+<dialog class="maildlg" data-maildlg aria-labelledby="maildlg-title" data-copied={t('mail.copied')} data-copy={t('mail.copy')}>
+  <button type="button" class="maildlg__close" data-maildlg-close aria-label={t('mail.close')}>
+    <Icon name="x" size={22} />
+  </button>
+  <h2 id="maildlg-title" class="maildlg__title display">{t('mail.title')}</h2>
+  <p class="maildlg__intro">{t('mail.intro')}</p>
+
+  <dl class="maildlg__fields">
+    <div class="maildlg__field">
+      <dt>{t('mail.address')}</dt>
+      <dd>
+        <span data-maildlg-to></span>
+        <button type="button" class="maildlg__copy" data-maildlg-copy="to">{t('mail.copy')}</button>
+      </dd>
+    </div>
+    <div class="maildlg__field" data-maildlg-subject-row>
+      <dt>{t('mail.subject')}</dt>
+      <dd>
+        <span data-maildlg-subject></span>
+        <button type="button" class="maildlg__copy" data-maildlg-copy="subject">{t('mail.copy')}</button>
+      </dd>
+    </div>
+  </dl>
+
+  <div class="maildlg__actions">
+    <a class="btn btn--primary" data-maildlg-gmail target="_blank" rel="noopener noreferrer">
+      <Icon name="mail" size={18} />
+      Gmail
+    </a>
+    <a class="btn" data-maildlg-outlook target="_blank" rel="noopener noreferrer">Outlook</a>
+    <a class="btn" data-maildlg-app>{t('mail.app')}</a>
+  </div>
+</dialog>
+
+<script>
+  const dlg = document.querySelector<HTMLDialogElement>('[data-maildlg]');
+  if (dlg) {
+    const $ = <T extends HTMLElement>(sel: string) => dlg.querySelector<T>(sel)!;
+    const toEl = $('[data-maildlg-to]');
+    const subjectEl = $('[data-maildlg-subject]');
+    const subjectRow = $('[data-maildlg-subject-row]');
+    const gmail = $<HTMLAnchorElement>('[data-maildlg-gmail]');
+    const outlook = $<HTMLAnchorElement>('[data-maildlg-outlook]');
+    const app = $<HTMLAnchorElement>('[data-maildlg-app]');
+    let values = { to: '', subject: '' };
+
+    document.addEventListener('click', (e) => {
+      const link = (e.target as Element).closest<HTMLAnchorElement>('a[href^="mailto:"]');
+      if (!link || link.hasAttribute('data-maildlg-app')) return;
+      e.preventDefault();
+      const [address, query = ''] = link.getAttribute('href')!.slice(7).split('?');
+      const to = decodeURIComponent(address);
+      const subject = new URLSearchParams(query.replace(/\+/g, '%2B')).get('subject') ?? '';
+      values = { to, subject };
+      // Długi adres łamiemy przed „@”, a nie w środku słowa.
+      toEl.textContent = to.replace('@', '\u200B@');
+      subjectEl.textContent = subject;
+      subjectRow.hidden = !subject;
+      const enc = encodeURIComponent;
+      gmail.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${enc(to)}${subject ? `&su=${enc(subject)}` : ''}`;
+      outlook.href = `https://outlook.live.com/mail/0/deeplink/compose?to=${enc(to)}${subject ? `&subject=${enc(subject)}` : ''}`;
+      app.href = link.getAttribute('href')!;
+      dlg.showModal();
+    });
+
+    dlg.querySelectorAll<HTMLButtonElement>('[data-maildlg-copy]').forEach((btn) =>
+      btn.addEventListener('click', async () => {
+        const text = values[btn.dataset.maildlgCopy as 'to' | 'subject'];
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch {
+          const range = document.createRange();
+          range.selectNodeContents(btn.previousElementSibling!);
+          getSelection()?.removeAllRanges();
+          getSelection()?.addRange(range);
+          document.execCommand('copy');
+        }
+        btn.textContent = dlg.dataset.copied!;
+        setTimeout(() => (btn.textContent = dlg.dataset.copy!), 1800);
+      }),
+    );
+
+    $('[data-maildlg-close]').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', (e) => {
+      if (e.target === dlg) dlg.close();
+    });
+    // Po wybraniu sposobu wysyłki okienko się zamyka.
+    [gmail, outlook, app].forEach((a) => a.addEventListener('click', () => setTimeout(() => dlg.close(), 100)));
+  }
+</script>
+
+<style>
+  .maildlg {
+    box-sizing: border-box;
+    width: min(32rem, calc(100vw - 2rem));
+    max-width: calc(100vw - 2rem);
+    margin: auto;
+    padding: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius-l);
+    background: var(--c-bg-2);
+    color: var(--c-text);
+    box-shadow: var(--shadow);
+  }
+
+  .maildlg[open] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem;
+  }
+
+  .maildlg::backdrop {
+    background: rgb(0 0 0 / 0.7);
+    backdrop-filter: blur(4px);
+  }
+
+  .maildlg__close {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--c-line-strong);
+    color: var(--c-text);
+  }
+
+  .maildlg__close:hover {
+    border-color: var(--c-yellow);
+    color: var(--c-yellow);
+  }
+
+  .maildlg__title {
+    font-size: var(--step-3);
+    line-height: 1.2;
+    padding-right: 3rem;
+  }
+
+  .maildlg__intro {
+    color: var(--c-muted);
+  }
+
+  .maildlg__fields {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .maildlg__field {
+    display: grid;
+    gap: 0.3rem;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius);
+    background: var(--c-bg-3);
+  }
+
+  .maildlg__field[hidden] {
+    display: none;
+  }
+
+  .maildlg__field dt {
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+  }
+
+  .maildlg__field dd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    user-select: all;
+  }
+
+  .maildlg__field dd > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .maildlg__copy {
+    flex: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--c-line-strong);
+    font-size: var(--step--2);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-text);
+    user-select: none;
+  }
+
+  .maildlg__copy:hover {
+    border-color: var(--c-yellow);
+    color: var(--c-yellow);
+  }
+
+  .maildlg__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .maildlg__actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+</style>
