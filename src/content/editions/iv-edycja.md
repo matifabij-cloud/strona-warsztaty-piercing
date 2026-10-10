@@ -110,17 +110,17 @@ tickets:
   options:
     - name: Wykład New Generation Day
       price: 150 zł
-      description: 'Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Cena za jeden wykład – możesz wybrać kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Maksymalnie 100 miejsc na wykład. Napisz, które wykłady Cię interesują, a zarezerwujemy miejsce.'
+      description: 'Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Rezerwacja%20%E2%80%93%20New%20Generation%20Day'
       buttonLabel: Zarezerwuj
     - name: Otwarty wykład New Generation Day
       price: 0 zł
-      description: 'Piątek, 19 marca, The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.'
+      description: 'Piątek, 19 marca · The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.'
       url: ''
       buttonLabel: ''
     - name: Snake Bites Zone
       price: 400 zł
-      description: 'W cenie: wykonanie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego (udostępnimy je na naszych profilach) i 2 bezpłatne konsultacje po przekłuciu. Na jedną osobę przewidujemy około 40–60 minut, dlatego liczba miejsc jest ograniczona. 20 marca 10:00–17:00, 21 marca 10:00–16:00. Zapisy mailowo – w tytule wiadomości wpisz „SNAKE BITES ZONE”.'
+      description: 'Sobota 10:00–17:00, niedziela 10:00–16:00 · Manufaktura. W cenie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego i 2 bezpłatne konsultacje po przekłuciu. Około 40–60 minut na osobę, liczba miejsc ograniczona.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=SNAKE%20BITES%20ZONE'
       buttonLabel: Zapisz się
 openCall:
