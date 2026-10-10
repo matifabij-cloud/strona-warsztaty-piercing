@@ -92,6 +92,16 @@ async function deepl(texts, locale) {
   return out;
 }
 
+/* ---------- Nazwy własne ---------- */
+
+// DeepL czasem tłumaczy nazwy, które mają zostać bez zmian. Poprawiamy je po tłumaczeniu.
+const termFixes = [
+  [/(?:\bthe )?Łódź Piercing Festival/g, 'Piercing Festival Łódź'],
+  [/(?:Oficinas|Workshops?) de Piercing de Łódź/g, 'Łódź Piercing Workshops'],
+  [/\bBursztyn(?!owo)\b/g, 'Bursztynowo'],
+];
+export const fixTerms = (text) => termFixes.reduce((t, [re, to]) => t.replace(re, to), text);
+
 /* ---------- Główna logika ---------- */
 
 const strings = collectStrings();
@@ -138,7 +148,7 @@ for (const locale of targetLocales) {
   }
   if (missing.length) {
     const translated = await deepl(missing.map(([, pl]) => pl), locale);
-    missing.forEach(([hash, pl], i) => (tm[hash] = { pl, text: normalize(translated[i]) }));
+    missing.forEach(([hash, pl], i) => (tm[hash] = { pl, text: fixTerms(normalize(translated[i])) }));
     console.log(`[${locale}] przetłumaczono: ${missing.length}`);
   }
   const removed = saveTM(locale, tm, used);
