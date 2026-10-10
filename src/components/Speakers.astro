@@ -1,5 +1,6 @@
 ---
 import Img from './Img.astro';
+import Icon from './Icon.astro';
 import { tr, useUI, type Locale } from '../i18n';
 import type { Speaker } from '../lib/content';
 import { md } from '../lib/markdown';
@@ -26,9 +27,20 @@ const initials = (name: string) =>
 const feature = items.length <= 2;
 
 const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagram.com/${v.replace(/^@/, '')}/`);
+const igHandle = (v: string) => '@' + v.replace(/\/+$/, '').split('/').pop()!.replace(/^@/, '');
+// W panelu można wpisać kilka kont oddzielonych przecinkiem (np. duet).
+const igAccounts = (v: string | undefined) =>
+  (v ?? '')
+    .split(/[,\s]+/)
+    .filter(Boolean)
+    .map((a) => ({ href: igUrl(a), handle: igHandle(a) }));
+
+// 3–5 osób: tyle kolumn, ile osób, żeby rząd był pełny; więcej – równe rzędy.
+const n = items.length;
+const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
 ---
 
-<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1 }]}>
+<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1, 'speakers--three': items.length === 3 }]} style={`--cols:${Math.max(cols, 1)}`}>
   {
     items.map(({ speaker, note }) => {
       const s = speaker.data;
@@ -58,11 +70,12 @@ const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagra
             )}
             {(s.instagram || s.website) && (
               <p class="speaker__links">
-                {s.instagram && (
-                  <a href={igUrl(s.instagram)} target="_blank" rel="noopener noreferrer">
-                    Instagram
+                {igAccounts(s.instagram).map((ig) => (
+                  <a href={ig.href} target="_blank" rel="noopener noreferrer">
+                    <Icon name="instagram" size={16} />
+                    {ig.handle}
                   </a>
-                )}
+                ))}
                 {s.website && (
                   <a href={s.website} target="_blank" rel="noopener noreferrer">
                     WWW
@@ -100,9 +113,31 @@ const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagra
     max-width: 56rem;
   }
 
+  @media (min-width: 64rem) {
+    .speakers:not(.speakers--feature) {
+      grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    }
+  }
+
+  /* Trzy szerokie karty: kwadratowe zdjęcia, żeby karty nie były za wysokie */
+  @media (min-width: 64rem) {
+    .speakers--three .speaker__photo {
+      aspect-ratio: 1;
+    }
+  }
+
+  /* Telefon: nieparzysta ostatnia karta na środku, tej samej szerokości co pozostałe */
+  @media (max-width: 30rem) {
+    .speakers:not(.speakers--feature) > .speaker:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: calc(50% - 0.45rem);
+    }
+  }
+
   .speakers--feature .speaker {
     grid-template-columns: minmax(6.5rem, 2fr) minmax(0, 3fr);
-    align-items: center;
+    align-items: stretch;
     gap: 1rem clamp(1rem, 0.5rem + 2vw, 2rem);
     padding: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
     border: 1px solid var(--c-line);
@@ -116,6 +151,25 @@ const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagra
 
   .speakers--feature .speaker--nophoto .speaker__photo {
     aspect-ratio: 1;
+  }
+
+  /* Zdjęcie na całą wysokość karty – obie karty w rzędzie wyglądają tak samo */
+  .speakers--feature .speaker:not(.speaker--nophoto) .speaker__photo {
+    aspect-ratio: auto;
+    min-height: clamp(12rem, 9rem + 8vw, 18rem);
+  }
+
+  .speakers--feature .speaker:not(.speaker--nophoto) .speaker__photo :global(img) {
+    position: absolute;
+    inset: 0;
+  }
+
+  .speakers--feature .speaker--nophoto .speaker__photo {
+    align-self: center;
+  }
+
+  .speakers--feature .speaker__body {
+    align-self: center;
   }
 
   .speakers--feature .speaker__photo {
@@ -259,12 +313,17 @@ const igUrl = (v: string) => (/^https?:\/\//.test(v) ? v : `https://www.instagra
 
   .speaker__links {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
     font-size: var(--step--1);
     font-weight: 700;
   }
 
   .speaker__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    overflow-wrap: anywhere;
     color: var(--accent);
   }
 </style>

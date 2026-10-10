@@ -1,7 +1,7 @@
 ---
 name: Max Alves
 photo: /media/prelegenci/max-alves.jpg
-role: Piercer i edukator z Brazylii
+role: Piercer i edukator
 country: Brazylia
 instagram: maxalvespiercer_2
 website: ''

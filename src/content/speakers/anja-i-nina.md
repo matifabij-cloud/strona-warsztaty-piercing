@@ -1,9 +1,11 @@
 ---
-name: Anja & Nina
+name: Ania & Nina
 photo: /media/prelegenci/anja-i-nina.jpg
-role: Kamienie szlachetne w biżuterii
+role: Duet piercerek
 country: ''
-instagram: ''
+instagram: 'starlosky_piercing, piercingsbynina'
 website: ''
 ---
-Duet, który na III edycji przedstawił temat kamieni szlachetnych w biżuterii do piercingu. To prezentacja pokazywana wcześniej na konferencji BMXnet.
+Obie zaczynały od kaniul, a dziś pracują wyłącznie na igłach piercingowych.
+
+Na III edycji przedstawiły temat kamieni szlachetnych w biżuterii do piercingu – prezentację pokazywaną wcześniej na konferencji BMXnet.

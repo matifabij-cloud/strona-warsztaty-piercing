@@ -524,7 +524,7 @@ content:
         label: Kraj
         type: string
       - name: instagram
-        label: Instagram (nazwa lub link)
+        label: Instagram (nazwa lub link; kilka kont oddziel przecinkiem)
         type: string
       - name: website
         label: Strona www

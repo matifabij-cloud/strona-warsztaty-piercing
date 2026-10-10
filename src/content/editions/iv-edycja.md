@@ -42,7 +42,9 @@ speakers:
   - speaker: max-alves.md
     note: Wykład „Bezpieczeństwo w piercingu”
   - speaker: silas.md
-    note: Wykład 19 marca, 12:00
+    note: Wykład „Infekcjologia i gojenie ran”
+  - speaker: anja-i-nina.md
+    note: Wykład „Od kaniuli do igły”
 program:
   - day: '2027-03-19'
     label: Piątek – New Generation Day
@@ -59,14 +61,20 @@ program:
           - max-alves.md
         host: ''
       - time: '12:00'
-        title: Wykład – temat ogłosimy wkrótce
-        description: 'The Loom Hotel.'
+        title: Infekcjologia i gojenie ran w piercingu
+        description: 'Co robić, kiedy po przekłuciu coś idzie nie tak: jak rozpoznać obrzęk, podrażnienie, stan zapalny albo infekcję, skąd biorą się problemy, jak analizować przebieg gojenia, reagować na komplikacje i kiedy skierować klienta dalej. Dla początkujących i dla piercerów z wieloletnim stażem.'
         speakers:
           - silas.md
         host: ''
+      - time: '14:30'
+        title: Od starych technik do nowych. Od kaniuli do igły
+        description: 'Jak zmiana techniki wpływa na sposób pracy i kontrolę nad przekłuciem, jak igła zachowuje się w tkance, czym jest bevel theory i kiedy modyfikacja igły ma sens. Prowadzące zaczynały od kaniul, a dziś pracują wyłącznie na igłach – pokażą cały proces przejścia krok po kroku.'
+        speakers:
+          - anja-i-nina.md
+        host: ''
       - time: ''
-        title: Kolejne wykłady New Generation
-        description: 'Jeszcze jeden płatny wykład i jeden otwarty, bezpłatny. Prelegentów i tematy ogłosimy wkrótce.'
+        title: Otwarty wykład – temat ogłosimy wkrótce
+        description: ''
         speakers: []
         host: ''
   - day: '2027-03-20'
@@ -98,13 +106,13 @@ program:
 tickets:
   status: wkrotce
   url: ''
-  info: 'Sprzedaż biletów ruszy wkrótce. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.'
+  info: 'Ruszyły rezerwacje na piątkowe wykłady New Generation Day. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.'
   options:
     - name: Wykład New Generation Day
       price: 150 zł
-      description: 'Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Cena za jeden wykład – możesz wybrać kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Maksymalnie 100 miejsc na wykład.'
-      url: ''
-      buttonLabel: ''
+      description: 'Piątek, 19 marca, The Loom Hotel (ul. Ogrodowa 21). Cena za jeden wykład – możesz wybrać kilka albo wszystkie. W cenie kawa, herbata i imienny certyfikat uczestnictwa. Maksymalnie 100 miejsc na wykład. Napisz, które wykłady Cię interesują, a zarezerwujemy miejsce.'
+      url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Rezerwacja%20%E2%80%93%20New%20Generation%20Day'
+      buttonLabel: Zarezerwuj
     - name: Otwarty wykład New Generation Day
       price: 0 zł
       description: 'Piątek, 19 marca, The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.'

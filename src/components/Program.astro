@@ -20,11 +20,22 @@ const rendered = await Promise.all(
     items: await Promise.all(day.items.map(async (item) => ({ ...item, hosts: await programHosts(item) }))),
   })),
 );
+// Dni o bardzo różnej liczbie punktów nie stoją obok siebie (jedna kolumna byłaby dużo dłuższa):
+// wtedy każdy dzień zajmuje całą szerokość, a jego punkty układają się w kafelki obok siebie.
+const counts = rendered.map((d) => d.items.length);
+const stacked = rendered.length > 1 && Math.max(...counts) - Math.min(...counts) > 1;
 ---
 
 {
   rendered.length > 0 ? (
-    <div class:list={['program', { 'program--two': rendered.length > 1, 'program--odd': rendered.length > 1 && rendered.length % 2 === 1, 'program--three': rendered.length === 3 }]}>
+    <div
+      class:list={[
+        'program',
+        stacked
+          ? 'program--stacked'
+          : { 'program--two': rendered.length > 1, 'program--odd': rendered.length > 1 && rendered.length % 2 === 1, 'program--three': rendered.length === 3 },
+      ]}
+    >
       {rendered.map((day) => (
         <section class="program__day" aria-label={`${day.heading} ${day.date}`}>
           <header class="program__head">
@@ -91,6 +102,25 @@ const rendered = await Promise.all(
     }
   }
 
+  /* Układ „dzień pod dniem”: punkty programu jako kafelki w rzędzie */
+  .program--stacked .program__items {
+    gap: 0.75rem;
+    padding: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+  }
+
+  @media (min-width: 48rem) {
+    .program--stacked .program__items {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+    }
+  }
+
+  .program--stacked .program__item,
+  .program--stacked .program__item:first-child {
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    background: var(--c-bg-3);
+  }
+
   .program__day {
     border: 1px solid var(--c-line);
     border-radius: var(--radius-l);
@@ -149,6 +179,7 @@ const rendered = await Promise.all(
   .program__info {
     display: grid;
     gap: 0.3rem;
+    align-content: start;
   }
 
   .program__title {
