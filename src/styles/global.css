@@ -169,9 +169,31 @@ ol[role='list'] {
   border-radius: 4px;
 }
 
+/* Płynne przejście między podstronami (logo, „Edycje”, karty edycji).
+   Przeglądarki bez tej funkcji po prostu przechodzą od razu. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.35s;
+  animation-timing-function: ease;
+}
+
+/* Pasek nawigacji zostaje w miejscu, zmienia się tylko treść */
+.site-header {
+  view-transition-name: site-header;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
   *,
   *::before,

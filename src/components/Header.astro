@@ -140,6 +140,17 @@ const ctaLabel = ticketsOnSale ? t('cta.buyTicket') : t('cta.ticketsSoon');
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  // Link do strony, na której już jesteśmy (np. logo na stronie głównej):
+  // zamiast przeładowania – płynne przewinięcie do góry.
+  document.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((a) =>
+    a.addEventListener('click', (e) => {
+      const url = new URL(a.href, location.href);
+      if (url.origin !== location.origin || url.pathname !== location.pathname || url.hash || a.target) return;
+      e.preventDefault();
+      scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }),
+  );
+
   // Zamknięcie menu mobilnego po kliknięciu w link.
   const menu = document.getElementById('mobile-menu');
   menu?.querySelectorAll('[data-close-menu]').forEach((a) =>
