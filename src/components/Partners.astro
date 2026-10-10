@@ -14,9 +14,11 @@ const t = useUI(locale);
 // Liczba kolumn na dużym ekranie dobrana tak, żeby rzędy były możliwie pełne (np. 7 → 4 + 3).
 const n = items.length;
 const cols = n <= 6 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
+// Tablet: 3 albo 4 kolumny – tak, żeby ostatni rząd był jak najpełniejszy.
+const colsMd = n <= 3 ? n : n % 3 === 0 ? 3 : n % 4 === 0 || n % 4 === 3 ? 4 : 3;
 ---
 
-<ul role="list" class="partners" style={`--cols:${Math.max(cols, 1)}`}>
+<ul role="list" class="partners" style={`--cols:${Math.max(cols, 1)};--cols-md:${Math.max(colsMd, 1)}`}>
   {
     items.map((p) => {
       const inner = p.logo ? (
@@ -60,17 +62,29 @@ const cols = n <= 6 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 
     }
   }
 
+  @media (min-width: 40rem) {
+    .partners {
+      grid-template-columns: repeat(var(--cols-md), minmax(0, 1fr));
+    }
+  }
+
   @media (min-width: 72rem) {
     .partners {
       grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
     }
   }
 
+  /* Wszystkie kafelki w rzędzie tej samej wysokości */
+  .partner {
+    display: grid;
+  }
+
   .partner > a,
   .partner > span {
     display: grid;
     place-items: center;
-    min-height: 6rem;
+    height: 100%;
+    min-height: 7.5rem;
     padding: 1.1rem;
     border-radius: var(--radius);
     background: var(--c-paper);
