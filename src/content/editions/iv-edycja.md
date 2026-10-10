@@ -10,7 +10,7 @@ startTime: '08:30'
 dateNote: ''
 accent: zolty
 venue:
-  name: Manufaktura
+  name: Manufaktura · The Loom Hotel
   address: ''
   city: Łódź
   mapUrl: 'https://www.google.com/maps/search/?api=1&query=Manufaktura%2C%20%C5%81%C3%B3d%C5%BA'

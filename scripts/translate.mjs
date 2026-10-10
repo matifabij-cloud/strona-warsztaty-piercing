@@ -98,6 +98,7 @@ async function deepl(texts, locale) {
 const termFixes = [
   [/(?:\bthe )?Łódź Piercing Festival/g, 'Piercing Festival Łódź'],
   [/(?:Oficinas|Workshops?) de Piercing de Łódź/g, 'Łódź Piercing Workshops'],
+  [/(?:o |O )?Festival de Piercing de Łódź/g, 'Piercing Festival Łódź'],
   [/\bBursztyn(?!owo)\b/g, 'Bursztynowo'],
 ];
 export const fixTerms = (text) => termFixes.reduce((t, [re, to]) => t.replace(re, to), text);
