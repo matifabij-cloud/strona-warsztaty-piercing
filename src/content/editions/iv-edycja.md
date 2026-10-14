@@ -55,11 +55,11 @@ attractions:
     icon: zipline
 speakers:
   - speaker: max-alves.md
-    note: Wykład „Bezpieczeństwo w piercingu”
+    note: Bezpieczeństwo w piercingu
   - speaker: silas.md
-    note: Wykład „Infekcjologia i gojenie ran”
+    note: Infekcjologia i gojenie ran
   - speaker: anja-i-nina.md
-    note: Wykład „Od kaniuli do igły”
+    note: Od kaniuli do igły
   - speaker: igor-platek.md
     note: Gość specjalny
 program:

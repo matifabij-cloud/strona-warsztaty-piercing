@@ -40,15 +40,44 @@ const n = items.length;
 const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
 // Tablet: 4 osoby → 2 × 2, inaczej 3 kolumny; niepełny ostatni rząd jest wyśrodkowany.
 const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
+
+// Karty w siatce o podwójnej liczbie kolumn: każda zajmuje 2, więc niepełny ostatni rząd
+// można przesunąć o pół karty i wyśrodkować. Dla każdej szerokości ekranu osobno.
+const lastRowStart = (c: number, i: number) => {
+  const rest = n % c;
+  return rest && i === n - rest ? c - rest + 1 : 0;
+};
+const placement = (i: number) =>
+  [
+    ['--gs', lastRowStart(2, i)],
+    ['--gs-md', lastRowStart(colsMd, i)],
+    ['--gs-lg', lastRowStart(cols, i)],
+  ]
+    .filter(([, v]) => v)
+    .map(([k, v]) => `${k}:${v}`)
+    .join(';');
+
+// Wiersze wewnątrz kart (podsiatka): imię, rola, kraj, „Czytaj więcej” i linki leżą
+// na tej samej wysokości we wszystkich kartach rzędu. Puste wiersze pomijamy.
+const withBio = (sp: Speaker) => showBio && !!sp.body?.trim();
+const rowNames = [
+  'photo',
+  'name',
+  items.some((i) => i.speaker.data.role) && 'role',
+  items.some((i) => i.speaker.data.country) && 'country',
+  items.some((i) => withBio(i.speaker)) && 'bio',
+  items.some((i) => i.speaker.data.instagram || i.speaker.data.website) && 'links',
+].filter(Boolean) as string[];
+const rowVars = rowNames.map((r, i) => `--r-${r}:${i + 1}`).join(';');
 ---
 
-<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1, 'speakers--three': items.length === 3, 'speakers--four': items.length === 4 }]} style={`--cols:${Math.max(cols, 1)};--cols-md:${Math.max(colsMd, 1)}`}>
+<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1, 'speakers--three': items.length === 3, 'speakers--four': items.length === 4 }]} style={`--c2:4;--c2-md:${Math.max(colsMd, 1) * 2};--c2-lg:${Math.max(cols, 1) * 2};--rows:${rowNames.length};${rowVars}`}>
   {
-    items.map(({ speaker, note }) => {
+    items.map(({ speaker, note }, i) => {
       const s = speaker.data;
       const bio = (showBio || feature) && speaker.body?.trim() ? md(tr(speaker.body, locale)) : '';
       return (
-        <li class:list={['speaker', { 'speaker--nophoto': !s.photo }]}>
+        <li class:list={['speaker', { 'speaker--nophoto': !s.photo }]} style={feature ? undefined : placement(i) || undefined}>
           <div class="speaker__photo">
             {s.photo ? (
               <Img src={s.photo} alt={s.name} widths={[320, 480, 720]} sizes="(min-width: 64rem) 20vw, (min-width: 40rem) 33vw, 50vw" />
@@ -98,17 +127,53 @@ const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
     gap: var(--gap);
   }
 
-  /* 3 i więcej osób: równe kolumny, niepełny ostatni rząd na środku (bez dziury z boku) */
+  /*
+   * 3 i więcej osób: siatka o podwójnej liczbie kolumn (każda karta zajmuje 2),
+   * niepełny ostatni rząd wyśrodkowany. Wnętrze kart to podsiatka – imiona, role,
+   * kraje i linki stoją w jednej linii we wszystkich kartach rzędu.
+   */
   .speakers:not(.speakers--feature) {
-    --c: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(var(--c2), minmax(0, 1fr));
   }
 
   .speakers:not(.speakers--feature) > .speaker {
-    flex: 0 0 calc((100% - (var(--c) - 1) * var(--gap)) / var(--c));
+    grid-column: var(--gs, auto) / span 2;
+    grid-row: span var(--rows);
+    grid-template-rows: subgrid;
+    align-content: stretch;
+    row-gap: 0.3rem;
     min-width: 0;
+  }
+
+  .speakers:not(.speakers--feature) .speaker__body {
+    display: contents;
+  }
+
+  .speakers:not(.speakers--feature) .speaker__photo {
+    grid-row: var(--r-photo);
+    margin-bottom: 0.6rem;
+  }
+
+  .speakers:not(.speakers--feature) .speaker__name {
+    grid-row: var(--r-name);
+  }
+
+  .speakers:not(.speakers--feature) .speaker__role {
+    grid-row: var(--r-role);
+  }
+
+  .speakers:not(.speakers--feature) .speaker__country {
+    grid-row: var(--r-country);
+  }
+
+  .speakers:not(.speakers--feature) .speaker__links {
+    grid-row: var(--r-links);
+    align-content: start;
+  }
+
+  .speakers:not(.speakers--feature) .speaker__bio {
+    grid-row: var(--r-bio);
   }
 
   @media (max-width: 30rem) {
@@ -119,7 +184,11 @@ const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
 
   @media (min-width: 30rem) {
     .speakers:not(.speakers--feature) {
-      --c: var(--cols-md);
+      grid-template-columns: repeat(var(--c2-md), minmax(0, 1fr));
+    }
+
+    .speakers:not(.speakers--feature) > .speaker {
+      grid-column: var(--gs-md, auto) / span 2;
     }
   }
 
@@ -135,7 +204,11 @@ const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
 
   @media (min-width: 64rem) {
     .speakers:not(.speakers--feature) {
-      --c: var(--cols);
+      grid-template-columns: repeat(var(--c2-lg), minmax(0, 1fr));
+    }
+
+    .speakers:not(.speakers--feature) > .speaker {
+      grid-column: var(--gs-lg, auto) / span 2;
     }
   }
 
@@ -314,7 +387,7 @@ const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
   }
 
   .speaker__bio {
-    margin-top: 0.35rem;
+    margin-block: 0.35rem 0.2rem;
     font-size: var(--step--1);
     color: var(--c-muted);
   }
