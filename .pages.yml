@@ -1,6 +1,6 @@
 # Konfiguracja panelu do edycji treści – Pages CMS (https://app.pagescms.org).
 # Klient loguje się przez link wysłany e-mailem (bez konta na GitHubie).
-# Każdy zapis w panelu = nowa wersja strony, która publikuje się sama po ok. 1–2 minutach.
+# Każdy zapis w panelu = nowa wersja strony, która publikuje się sama po około 1–2 minutach.
 
 media:
   input: src/assets/media
@@ -35,7 +35,7 @@ content:
         type: string
         required: true
       - name: tagline
-        label: Hasło (krótko, np. w stopce)
+        label: Hasło (krótko, na przykład w stopce)
         type: string
       - name: description
         label: Opis strony dla Google (1–2 zdania)
@@ -110,7 +110,7 @@ content:
             type: string
       - name: newsletter
         label: Newsletter
-        description: Sekcja pokaże się, gdy zaznaczysz „Pokaż” i wkleisz link do formularza zapisu (np. z MailerLite albo Brevo).
+        description: Sekcja pokaże się, gdy zaznaczysz „Pokaż” i wkleisz link do formularza zapisu (na przykład z MailerLite albo Brevo).
         type: object
         fields:
           - name: enabled
@@ -179,11 +179,11 @@ content:
         order: desc
     fields:
       - name: number
-        label: Numer edycji (rzymski, np. V)
+        label: Numer edycji (rzymski, na przykład V)
         type: string
         required: true
       - name: title
-        label: Tytuł (np. „Piercing Festival Łódź 2028”)
+        label: Tytuł (na przykład „Piercing Festival Łódź 2028”)
         type: string
         required: true
       - name: theme
@@ -202,10 +202,10 @@ content:
         label: Data zakończenia
         type: date
       - name: startTime
-        label: Godzina rozpoczęcia (np. 10:00) – do odliczania
+        label: Godzina rozpoczęcia (na przykład 10:00) – do odliczania
         type: string
       - name: dateNote
-        label: Zamiast daty (gdy nie znamy dokładnej, np. „2024”)
+        label: Zamiast daty (gdy nie znamy dokładnej, na przykład „2024”)
         type: string
       - name: accent
         label: Kolor przewodni edycji
@@ -243,7 +243,7 @@ content:
         label: Plakat z programem (opcjonalnie)
         type: image
       - name: stats
-        label: Liczby (np. „5 – wykładów”)
+        label: Liczby (na przykład „5 – wykładów”)
         type: object
         list:
           collapsible:
@@ -273,7 +273,7 @@ content:
               label: '{fields.name}'
               search: fields.name
           - name: note
-            label: Dopisek na zdjęciu (np. „Gość specjalny” albo temat)
+            label: Dopisek na zdjęciu (na przykład „Gość specjalny” albo temat)
             type: string
       - name: program
         label: Program (dni)
@@ -287,7 +287,7 @@ content:
             label: Dzień
             type: date
           - name: label
-            label: Nazwa dnia (opcjonalnie – inaczej np. „Sobota”)
+            label: Nazwa dnia (opcjonalnie – inaczej na przykład „Sobota”)
             type: string
           - name: items
             label: Punkty programu
@@ -401,7 +401,7 @@ content:
                 - value: zakonczona
                   label: Sprzedaż zakończona
           - name: url
-            label: Link do sprzedaży biletów (np. strona wydarzenia na Evenea)
+            label: Link do sprzedaży biletów (na przykład strona wydarzenia na Evenea)
             type: string
           - name: info
             label: Informacja o biletach
@@ -419,16 +419,16 @@ content:
                 type: string
                 required: true
               - name: price
-                label: Cena (np. 450 zł)
+                label: Cena (na przykład 450 zł)
                 type: string
               - name: description
                 label: Opis
                 type: text
               - name: url
-                label: Link do zakupu lub zapisów (np. mailto:) – przycisk pokaże się od razu
+                label: Link do zakupu lub zapisów (na przykład mailto:) – przycisk pokaże się od razu
                 type: string
               - name: buttonLabel
-                label: Napis na przycisku (np. „Zapisz się”)
+                label: Napis na przycisku (na przykład „Zapisz się”)
                 type: string
       - name: openCall
         label: Nabór artystów / konkurs
@@ -472,7 +472,7 @@ content:
             type: string
             required: true
           - name: role
-            label: Rola (krótko, np. „Sponsor branżowy · aftercare”)
+            label: Rola (krótko, na przykład „Sponsor branżowy · aftercare”)
             type: string
           - name: logo
             label: Logo (najlepiej PNG z przezroczystym tłem)
@@ -518,7 +518,7 @@ content:
         label: Zdjęcie (pionowe najlepiej)
         type: image
       - name: role
-        label: Kim jest (krótko, np. „Piercer z Brazylii”)
+        label: Kim jest (krótko, na przykład „Piercer z Brazylii”)
         type: string
       - name: country
         label: Kraj

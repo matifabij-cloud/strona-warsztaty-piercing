@@ -17,7 +17,7 @@ i miejscem na sprzedaż biletów oraz posty z Instagrama.
 | Tłumaczenia | Pamięć tłumaczeń + DeepL API Free (500 tys. znaków/mies.) | 0 zł |
 | Instagram | [Behold](https://behold.so) – kanał JSON, plan darmowy | 0 zł |
 | Bilety | [Evenea](https://evenea.pl) – przycisk „Kup bilet” prowadzi do sprzedaży | prowizja od biletu |
-| Domena | lodzkiewarsztatypiercingu.pl | ok. 50–100 zł/rok |
+| Domena | lodzkiewarsztatypiercingu.pl | około 50–100 zł rocznie |
 
 ## Struktura projektu
 

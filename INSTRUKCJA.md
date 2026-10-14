@@ -1,182 +1,151 @@
-# Uruchomienie strony – instrukcja krok po kroku
+# Strona Łódzkich Warsztatów Piercingu – instrukcja dla Mateusza
 
-Wszystkie usługi poniżej są **darmowe** (poza domeną i prowizją od biletów).
-Konta najlepiej zakładać na adres projektu **lodzkiewarsztatypiercingu@gmail.com** –
-wtedy wszystko zostaje przy kliencie.
+Wszystko poniżej zrobisz **bez programowania i bez Claude**. Strona, panel, tłumaczenia
+i codzienne odświeżanie działają same i są darmowe.
 
-Szacowany czas: ok. 1–2 godziny (plus czekanie na domenę).
-
----
-
-## ✅ Lista kontrolna
-
-- [ ] 1. Strona na GitHubie w gałęzi `main`
-- [ ] 2. Hosting: Cloudflare Pages (strona działa pod adresem `…pages.dev`)
-- [ ] 3. Domena `lodzkiewarsztatypiercingu.pl` podpięta do Cloudflare
-- [ ] 4. Codzienne odświeżanie strony (deploy hook)
-- [ ] 5. Panel do edycji dla klienta (Pages CMS) + zaproszenie dla Rafała
-- [ ] 6. Automatyczne tłumaczenia (klucz DeepL)
-- [ ] 7. Posty z Instagrama (Behold)
-- [ ] 8. Sprzedaż biletów (Evenea) – robi klient
-- [ ] 9. Wizytówka Google + Google Search Console
+Adres strony: https://strona-warsztaty-piercing.pages.dev
+Panel do edycji: https://app.pagescms.org
+Kod: GitHub, repozytorium `matifabij-cloud/strona-warsztaty-piercing`, gałąź `main`.
 
 ---
 
-## 1. Kod na GitHubie
+## Stan (październik 2026)
 
-Kod strony jest w repozytorium `matifabij-cloud/strona-warsztaty-piercing`, gałąź `main`.
-Zalecane: ustaw repozytorium jako prywatne (**Settings → Danger Zone → Change visibility → Make private**).
-Hosting i panel działają z prywatnym repozytorium tak samo.
+**Działa:**
+- [x] Hosting Cloudflare Pages – każda zmiana publikuje się sama po 1–2 minutach
+- [x] Codzienne odświeżanie strony (licznik dni, zamykanie naboru po terminie)
+- [x] Panel Pages CMS
+- [x] Automatyczne tłumaczenia EN i PT-BR (DeepL, plan darmowy)
 
-## 2. Hosting – Cloudflare Pages
-
-1. Załóż konto na [dash.cloudflare.com](https://dash.cloudflare.com/sign-up).
-2. W menu wybierz **Workers & Pages → Create → Pages → Import an existing Git repository**
-   (jeśli Cloudflare pokaże inny wygląd, szukaj opcji „Pages” i „Connect to Git”).
-3. Połącz konto GitHub i wybierz repozytorium **strona-warsztaty-piercing**.
-4. Ustawienia budowania:
-   - **Production branch:** `main`
-   - **Framework preset:** `Astro`
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-5. Kliknij **Save and Deploy**. Po 1–2 minutach strona będzie pod adresem typu
-   `strona-warsztaty-piercing.pages.dev` – możesz go od razu wysłać klientowi.
-
-Od teraz **każda zmiana** (z panelu albo z kodu) publikuje się sama po ok. 1–2 minutach.
-Jeśli budowanie się nie uda (np. literówka w panelu), na stronie zostaje poprzednia wersja –
-strona nigdy nie „znika”.
-
-## 3. Domena
-
-1. Kup domenę **lodzkiewarsztatypiercingu.pl** (np. w OVH, nazwa.pl, home.pl) – najlepiej na dane
-   firmy klienta (Piercing Beauty Sp. z o.o.).
-2. W Cloudflare: **Add a domain** → wpisz domenę → plan **Free**.
-3. Cloudflare poda dwa adresy serwerów DNS (np. `xxx.ns.cloudflare.com`). W panelu rejestratora
-   domeny zmień **serwery DNS** na te dwa adresy. Zmiana działa od kilku minut do 24 godzin.
-4. W projekcie Pages: **Custom domains → Set up a custom domain** → dodaj
-   `lodzkiewarsztatypiercingu.pl` oraz `www.lodzkiewarsztatypiercingu.pl`.
-
-Certyfikat SSL (kłódka, https) Cloudflare ustawia sam.
-
-## 4. Codzienne odświeżanie strony
-
-Strona odświeża się raz dziennie sama (nowe posty z Instagrama, licznik dni do wydarzenia,
-automatyczne zamykanie naboru po terminie). Żeby to działało:
-
-1. Cloudflare Pages → Twój projekt → **Settings → Builds → Deploy hooks → Add deploy hook**
-   (nazwa: `codzienne`, gałąź: `main`) → skopiuj wygenerowany adres.
-2. GitHub → repozytorium → **Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `CLOUDFLARE_DEPLOY_HOOK`
-   - Secret: wklej adres z punktu 1.
-
-## 5. Panel do edycji dla klienta – Pages CMS
-
-1. Wejdź na [app.pagescms.org](https://app.pagescms.org) → **Sign in with GitHub**.
-2. Zainstaluj aplikację Pages CMS na koncie GitHub i daj jej dostęp do repozytorium
-   **strona-warsztaty-piercing**.
-3. Otwórz repozytorium w Pages CMS (gałąź `main`). Po lewej zobaczysz zakładki:
-   **Ustawienia strony, Edycje, Prelegenci, Strony**.
-4. Zaproś klienta: **Settings → Collaborators → Invite** → wpisz e-mail Rafała.
-   Rafał dostanie link do logowania – **nie potrzebuje konta na GitHubie**.
-5. Wyślij Rafałowi plik [INSTRUKCJA-DLA-KLIENTA.md](INSTRUKCJA-DLA-KLIENTA.md).
-
-## 6. Automatyczne tłumaczenia – DeepL
-
-Wszystkie obecne teksty są już przetłumaczone. Klucz DeepL jest potrzebny do tłumaczenia
-**nowych** treści, które klient doda w panelu.
-
-1. Wejdź na [deepl.com/pro-api](https://www.deepl.com/pro-api) → wybierz **DeepL API Free**
-   (500 000 znaków miesięcznie za darmo – z zapasem wystarczy).
-   DeepL poprosi o kartę tylko do weryfikacji – w planie Free nic nie pobiera.
-2. Na koncie DeepL: **API Keys** → skopiuj klucz (kończy się na `:fx`).
-3. GitHub → **Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `DEEPL_API_KEY`
-   - Secret: wklej klucz.
-
-Od teraz po każdym zapisie w panelu GitHub w ciągu ~1 minuty przetłumaczy nowe teksty
-i strona opublikuje się z tłumaczeniami. Dopóki klucza nie ma, nowe teksty na wersjach
-EN/PT wyświetlają się po polsku.
-
-## 7. Posty z Instagrama – Behold
-
-1. Wejdź na [behold.so](https://behold.so) i załóż darmowe konto.
-2. **Connect Instagram** → zaloguj się na konto @lodzkiewarsztatypiercingu
-   (konto twórcy – jest OK).
-3. Utwórz feed typu **JSON** i skopiuj jego adres (np. `https://feeds.behold.so/…`).
-4. W panelu: **Ustawienia strony → Instagram na stronie → Link do kanału JSON** → wklej i zapisz.
-
-Plan darmowy Behold: 6 ostatnich postów, odświeżanie raz dziennie – dokładnie tyle, ile pokazuje strona.
-Dopóki link jest pusty, w sekcji Instagrama widać zdjęcia zastępcze z linkiem do profilu.
-
-## 8. Sprzedaż biletów – Evenea (robi klient)
-
-1. Klient zakłada konto organizatora na [evenea.pl](https://evenea.pl) na dane
-   **Piercing Beauty Sp. z o.o.** i podpina konto bankowe.
-2. Tworzy wydarzenie IV edycji (ustalenia z klientem z 5.10.2026):
-   - **główne wydarzenie** (około 2000 zł) w dwóch wariantach: **bez noclegu** i **z noclegiem
-     w hotelu The Loom** – ceny i szczegóły klient poda później,
-   - **piątkowe wykłady**: osobny bilet na każdy wykład, 150 zł, limit **100 miejsc na wykład**;
-     otwarty wykład bezpłatny – zapisy (bilet 0 zł) albo wolne wejście, do ustalenia,
-   - bez pakietu 3-dniowego i bez early bird,
-   - w formularzu obowiązkowe pole **„Imię i nazwisko lub pseudonim na certyfikat”**,
-   - bilety **imienne** z możliwością bezpłatnej zmiany uczestnika do określonego terminu
-     (zgodnie z regulaminem, który klient przygotuje przed sprzedażą),
-   - język formularza EN/PT dla gości z zagranicy, **włączone faktury** (Evenea wystawia je
-     w imieniu organizatora i wysyła do KSeF – warto potwierdzić z księgową).
-   Prowizję Evenea klient wlicza w cenę biletu.
-3. Po opublikowaniu wydarzenia – w panelu: **Edycje → IV edycja → Bilety**:
-   - Status: **Sprzedaż trwa**
-   - Link do sprzedaży biletów: adres wydarzenia na Evenea
-   - (opcjonalnie) Rodzaje biletów z cenami – pokażą się na stronie jako lista.
-
-Na stronie pojawi się żółty przycisk **„Kup bilet”** w nagłówku, na górze strony i w sekcji Bilety.
-
-## 9. Wizytówka Google i Google Search Console
-
-- **Wizytówka:** [business.google.com](https://business.google.com) → dodaj
-  „Łódzkie Warsztaty Piercingu”, kategoria np. *Organizator wydarzeń*, adres organizatora
-  (ul. Narutowicza 40/1, Łódź), strona www: `https://lodzkiewarsztatypiercingu.pl` → weryfikacja.
-- **Search Console:** [search.google.com/search-console](https://search.google.com/search-console)
-  → dodaj domenę → w **Mapy witryn** wpisz `sitemap.xml`. Strona ma już dane o wydarzeniu
-  dla Google (data, miejsce), więc może pokazywać się w wynikach wyszukiwania jako wydarzenie.
+**Do zrobienia (instrukcje niżej):**
+- [ ] Zaproszenie Rafała do panelu
+- [ ] Sprzedaż biletów – Evenea
+- [ ] Newsletter – MailerLite
+- [ ] Własna domena
+- [ ] Posty z Instagrama na stronie – Behold
+- [ ] Wizytówka Google i Google Search Console
+- [ ] Odpowiedzi Rafała z ostatniego maila (wpisujesz w panelu)
 
 ---
 
-## Ustalenia z klientem (stan na 29.09.2026)
+## 1. Zaproszenie Rafała do panelu
 
-- **IV edycja:** Piercing Festival Łódź 2027, 20–21 marca 2027, Manufaktura (część publiczna
-  Łódzkich Warsztatów Piercingu). Goście specjalni: Igor Płatek, Max Alves.
-- **Poprzednie edycje:** I (Marcelina Szejko – przekłuwanie języka), II (28.02–1.03.2025,
-  Hotel Tobaco, Max Alves), III (24–25.01.2026, Hotel PURO, „Brazylijska Przygoda”).
-- **Bilety:** zewnętrzna platforma (rekomendacja: Evenea – faktury + KSeF), pojedyncze i pakiety,
-  limit ok. 120 osób, prowizja wliczona w cenę, faktury obowiązkowe.
-- **Języki:** polski + automatycznie angielski i portugalski brazylijski.
-- **Kontakt na stronie:** lodzkiewarsztatypiercingu@gmail.com, +48 739 003 788.
-- **Organizator:** Piercing Beauty Sp. z o.o., NIP 726 266 10 31, ul. Narutowicza 40/1, 90-135 Łódź.
-- **Edytuje stronę:** Rafał Chudziński.
-- **Instagram:** konto twórcy – automatyczny feed przez Behold. Facebook w przygotowaniu
-  (link dodaje się w panelu: Ustawienia strony → Social media).
+Pages CMS → **Admin → Collaborators** → wpisz `lodzkiewarsztatypiercingu@gmail.com` → **Add**.
+Rafał dostanie link do logowania, nie potrzebuje konta na GitHubie.
+Wyślij mu plik [INSTRUKCJA-DLA-KLIENTA.md](INSTRUKCJA-DLA-KLIENTA.md).
 
-## Do dopytania klienta
+## 2. Sprzedaż biletów – Evenea
 
-1. Czy wstęp na część publiczną w Manufakturze jest darmowy, a bilety dotyczą tylko warsztatów
-   dla piercerów? (od tego zależy opis w sekcji Bilety)
-2. Ceny i rodzaje biletów IV edycji oraz data startu sprzedaży.
-3. Jak zgłaszać się do naboru „Piercing Artist Łódź Needs You”? Teraz przycisk otwiera e-mail
-   do organizatora – jeśli będzie formularz, wystarczy podmienić link w panelu.
-4. Data I edycji i ewentualne zdjęcia z niej.
-5. Program IV edycji i pozostali prelegenci.
-6. Logotypy partnerów w plikach (PNG z przezroczystym tłem albo SVG) – teraz są nazwy.
-7. Lepsze zdjęcie Igora Płatka (obecne jest wycięte z plakatu) i opisy gości specjalnych.
-8. Zdjęcia piercerki przy pracy z folderu `_oryginaly` (pliki 1000007360–62) – kto to jest
-   i czy możemy ich użyć?
-9. **Pilne:** stara strona studia www.piercinglodz.pl (jest też na plakacie II edycji) prowadzi teraz
-   do strony z hazardem – domena prawdopodobnie wygasła i ktoś ją przejął. Link usunąłem ze strony.
-   Klient powinien to sprawdzić i nie używać tego adresu w materiałach.
-10. Polityka prywatności to szkic – warto, żeby ktoś po stronie klienta ją przejrzał.
+Konto zakłada Rafał (na dane firmy i z jego kontem bankowym), a Tobie daje dostęp.
 
-## Zmiany w kodzie w przyszłości
+**Bilety do ustawienia w Evenea:**
+- wykład New Generation Day: osobny bilet na każdy z 3 wykładów, 150 zł, limit 100 miejsc,
+- otwarty wykład: bilet 0 zł albo wolne wejście (do ustalenia z Rafałem),
+- Snake Bites Zone: 400 zł, liczba miejsc od Rafała,
+- główne wydarzenie dla piercerów w The Loom Hotel (wcześniej Rafał podawał około 2000 zł,
+  w wariancie z noclegiem i bez) – jeśli zostaje, cenę i program poda Rafał,
+- w formularzu obowiązkowe pole **„Imię i nazwisko lub pseudonim na certyfikat”**,
+- włączone faktury, formularz także po angielsku,
+- prowizję Evenea Rafał wlicza w cenę.
 
-Treści (teksty, zdjęcia, program, prelegenci, bilety, nowe edycje) klient zmienia sam w panelu.
-Zmiany wyglądu lub nowych funkcji wymagają edycji kodu – opis budowy projektu jest w
-[README.md](README.md).
+**Gdy wydarzenie jest opublikowane**, w panelu: **Edycje → IV edycja → Bilety**:
+1. **Status sprzedaży:** „Sprzedaż trwa” – na stronie pojawi się żółty przycisk „Kup bilet”.
+2. **Link do sprzedaży biletów:** adres wydarzenia na Evenea.
+3. W **Rodzaje biletów** przy każdym bilecie zamień **Link do zakupu lub zapisów**
+   (teraz jest tam adres e-mail) na link do tego biletu w Evenea, a **Napis na przycisku**
+   na „Kup bilet”.
+4. Popraw **Informację o biletach** (teraz jest o rezerwacjach mailowych).
+5. W **Ustawienia strony → FAQ** popraw odpowiedź „Jak kupić bilet?”.
+
+## 3. Newsletter – MailerLite
+
+Konto zakłada Rafał na `lodzkiewarsztatypiercingu@gmail.com` i zaprasza Ciebie jako użytkownika.
+
+1. W MailerLite utwórz **stronę zapisu** (Landing page z formularzem): pole e-mail,
+   zgoda na otrzymywanie wiadomości (RODO) i potwierdzenie zapisu mailem (double opt-in).
+2. Opublikuj ją i skopiuj jej publiczny adres.
+3. W panelu: **Ustawienia strony → Newsletter** → wklej adres w **Link do formularza zapisu**,
+   zaznacz **Pokaż sekcję newslettera** → zapisz.
+
+Sekcja „Bądź na bieżąco” pojawi się na stronie głównej nad FAQ.
+
+## 4. Własna domena
+
+1. Kup domenę (proponowana: `lodzkiewarsztatypiercingu.pl`) w dowolnym rejestratorze,
+   najlepiej na dane firmy organizatora.
+2. Cloudflare → **Add a domain** → wpisz domenę → plan **Free**. Cloudflare poda dwa adresy
+   serwerów DNS – wpisz je w panelu rejestratora. Zmiana działa od kilku minut do 24 godzin.
+3. Cloudflare → projekt strony → **Custom domains → Set up a custom domain** → dodaj domenę
+   z `www` i bez.
+4. Cloudflare → projekt strony → **Settings → Variables and Secrets** → dodaj zmienną
+   **SITE_URL** = `https://lodzkiewarsztatypiercingu.pl` (bez ukośnika na końcu).
+   Potem w **Deployments** kliknij **Retry deployment** przy ostatniej wersji.
+   Dzięki temu linki dla Google i podglądy w social media będą pokazywać nowy adres.
+
+## 5. Posty z Instagrama – Behold
+
+1. Załóż darmowe konto na [behold.so](https://behold.so) → **Connect Instagram** →
+   zaloguj się na @lodzkiewarsztatypiercingu.
+2. Utwórz feed typu **JSON** i skopiuj jego adres.
+3. Panel: **Ustawienia strony → Instagram na stronie → Link do kanału JSON z Behold** → wklej.
+
+Dopóki link jest pusty, sekcja Instagrama pokazuje przycisk do profilu.
+
+## 6. Wizytówka Google i Search Console
+
+- **Wizytówka:** [business.google.com](https://business.google.com) → „Łódzkie Warsztaty
+  Piercingu”, kategoria „Organizator wydarzeń”, adres organizatora, strona www → weryfikacja.
+- **Search Console** (po podpięciu domeny): [search.google.com/search-console](https://search.google.com/search-console)
+  → dodaj domenę → **Mapy witryn** → wpisz `sitemap.xml`.
+
+---
+
+## Codzienna praca
+
+Treści zmienia się w panelu – opis pól i ściąga „nowy post na Instagramie → co gdzie wpisać”
+są w [INSTRUKCJA-DLA-KLIENTA.md](INSTRUKCJA-DLA-KLIENTA.md).
+
+**Zdjęcia i loga:** w panelu przy polu zdjęcia kliknij i wgraj plik.
+- Zdjęcia: JPG, poziome, najlepiej 2000 px szerokości. Strona sama robi lżejsze wersje.
+- Loga partnerów: PNG z przezroczystym tłem albo SVG. Logo powinno być ciemne,
+  bo kafelki partnerów są jasne.
+- Plakaty: oryginalne pliki graficzne, nie zrzuty z Instagrama.
+
+**Kolejność na stronie** jest taka jak w panelu – przeciągnij element na liście, żeby go przesunąć.
+
+## Tłumaczenia
+
+Po każdym zapisie w panelu GitHub w ciągu około minuty tłumaczy nowe teksty na angielski
+i portugalski, a strona publikuje się sama. Nazwy własne (Piercing Festival Łódź,
+Bursztynowo, bevel theory) poprawiają się automatycznie.
+
+**Jak poprawić złe tłumaczenie bez Claude:**
+1. GitHub → repozytorium → plik `src/i18n/translations/en.json` (angielski)
+   albo `pt.json` (portugalski) → ikona ołówka (**Edit**).
+2. Wyszukaj (Ctrl+F) polski tekst – jest w polu `"pl"`.
+3. Popraw tekst w polu `"text"` tuż pod nim. Nie usuwaj cudzysłowów ani przecinków.
+4. **Commit changes**. Strona opublikuje się sama.
+
+Jeśli później zmienisz ten polski tekst w panelu, tłumaczenie zrobi się od nowa.
+
+## Gdy coś nie działa
+
+- **Zmiana nie widać na stronie:** odczekaj 2–3 minuty i odśwież stronę z Ctrl+F5
+  (albo otwórz w oknie incognito).
+- **Strona się nie aktualizuje:** Cloudflare → projekt → **Deployments**. Czerwona wersja
+  oznacza błąd – zwykle źle wpisane pole w panelu (na przykład data). Cofnij ostatnią zmianę
+  w panelu. Na stronie zostaje poprzednia działająca wersja, strona nigdy nie znika.
+- **Brak tłumaczenia:** GitHub → zakładka **Actions** → „Tłumaczenia treści”. Czerwony krzyżyk to
+  najczęściej wyczerpany limit DeepL (500 000 znaków miesięcznie) albo nieważny klucz
+  (sekret `DEEPL_API_KEY` w **Settings → Secrets and variables → Actions**).
+  Do czasu naprawy nowe teksty na wersjach EN i PT wyświetlają się po polsku.
+
+## Koszty
+
+Hosting Cloudflare, panel Pages CMS, GitHub, DeepL (plan darmowy) i Behold (plan darmowy)
+są bezpłatne. Płatna jest tylko domena (raz w roku) i prowizja Evenea od biletów.
+
+## Zmiany wyglądu i nowe funkcje
+
+Treści zmienia się w panelu. Zmiany wyglądu albo nowe funkcje wymagają zmian w kodzie –
+opis budowy projektu jest w [README.md](README.md).
