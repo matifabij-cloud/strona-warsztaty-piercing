@@ -31,10 +31,6 @@
     "pl": "Pierwsza edycja Łódzkich Warsztatów Piercingu, od której wszystko się zaczęło. Wykład o przekłuwaniu języka poprowadziła Marcelina Szejko.",
     "text": "The first edition of Łódzkie Warsztaty Piercingu – where it all began. Marcelina Szejko gave a lecture on tongue piercing."
   },
-  "1461bdac5a829c06": {
-    "pl": "Uczestnik programu „Gogglebox. Przed telewizorem”, hodowca gadów",
-    "text": "Cast member of the TV show “Gogglebox. Przed telewizorem”, reptile breeder"
-  },
   "17de1fac0b3e801a": {
     "pl": "Czy mogę dostać fakturę?",
     "text": "Can I get an invoice?"
@@ -74,6 +70,10 @@
   "229e90d799ca78b6": {
     "pl": "Piątek, 19 marca · The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.",
     "text": "Friday, 19 March · The Loom Hotel. We will announce the theme and registration details shortly."
+  },
+  "2383b5441cf1e3b6": {
+    "pl": "Od kaniuli do igły",
+    "text": "From cannula to needle"
   },
   "23ee3597aaf5d7d6": {
     "pl": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. W niedzielę 21 marca o 13:00 ogłosimy 10 najlepszych prac i wylosujemy 10 zwycięzców spośród głosujących – nagrodą jest stylizacja ucha wykonana przez autora pracy. Szczegółowe zasady ogłosimy wkrótce.",
@@ -118,6 +118,10 @@
   "2fd9b58f80f3ccdf": {
     "pl": "Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.",
     "text": "Friday, 19 March · The Loom Hotel. A ticket for one chosen talk, including coffee, tea and a personalised certificate. 100 places available for each talk."
+  },
+  "32eb0ad24139d9f3": {
+    "pl": "Infekcjologia i gojenie ran",
+    "text": "Infectious diseases and wound healing"
   },
   "3618b8fa8c47ca43": {
     "pl": "I edycja Łódzkich Warsztatów Piercingu",
@@ -230,10 +234,6 @@
   "5f4f4c613c0ada66": {
     "pl": "Gość specjalny",
     "text": "Special guest"
-  },
-  "62ab31d8e361b3d4": {
-    "pl": "Wykład „Od kaniuli do igły”",
-    "text": "Lecture: ‘From cannula to needle’"
   },
   "63836e2fd7d1ce1c": {
     "pl": "Piercing Artist Łódź Needs You",
@@ -391,10 +391,6 @@
     "pl": "Druga edycja trwała dwa dni, a poprowadził ją Max Alves.\n\nPierwszy dzień poświęciliśmy bezpieczeństwu pracy: antyseptyce, aseptyce, organizacji stanowiska, świadomości ciała i dobrym praktykom. W części bonusowej rozmawialiśmy o ziarninie i innych problemach z gojeniem oraz o tym, jak radzi się sobie z nimi w Brazylii.\n\nDrugiego dnia odbyło się szkolenie z przekłuć sutków.",
     "text": "The second edition lasted two days and was led by Max Alves.\n\nThe first day was devoted to workplace safety: antisepsis, asepsis, setting up the workstation, body awareness and good practice. In the bonus part we talked about hypergranulation and other healing problems, and how they are dealt with in Brazil.\n\nOn the second day there was a nipple piercing training."
   },
-  "acd5394c6c36c29e": {
-    "pl": "Wykład „Bezpieczeństwo w piercingu”",
-    "text": "Lecture: ‘Safety in Piercing’"
-  },
   "ad08a9724706471c": {
     "pl": "Czy mogę przepisać bilet na inną osobę?",
     "text": "Can I transfer my ticket to someone else?"
@@ -414,10 +410,6 @@
   "b2d7bb0fb30816b6": {
     "pl": "Warsztaty i festiwal piercingu w sercu Łodzi",
     "text": "Piercing workshops and festival in the heart of Łódź"
-  },
-  "b85fe0bc4e14cdff": {
-    "pl": "Wykład „Infekcjologia i gojenie ran”",
-    "text": "Lecture: ‘Infections and Wound Healing’"
   },
   "b8b047f7b5cd6f1b": {
     "pl": "Happy Piercing Zone",
@@ -475,10 +467,6 @@
     "pl": "Na prace głosują odwiedzający Manufakturę – nie Instagram, nie algorytm, nie komisja",
     "text": "The works are voted on by visitors to Manufaktura – not Instagram, not an algorithm, not a committee"
   },
-  "cc877352f2e84e72": {
-    "pl": "Miłośnik węży i waranów, właściciel jednej z największych hodowli gadów w Polsce. Kieruje spółką Xclusive Ball Pythons i prowadzi Gorilla Ink Studio. Pochodzi z Grodziska Mazowieckiego, interesuje się tatuażem i kulturą alternatywną.\n\nNa Piercing Festival Łódź 2027 jest gościem specjalnym i twarzą Snake Bites Zone – węże będą na miejscu bezpiecznie, w terrariach i pod opieką.",
-    "text": "A lover of snakes and monitor lizards, and owner of one of the largest reptile breeding facilities in Poland. He runs Xclusive Ball Pythons and operates Gorilla Ink Studio. He comes from Grodzisk Mazowiecki and is interested in tattooing and alternative culture.\n\nAt the Piercing Festival Łódź 2027, he is a special guest and the face of the Snake Bites Zone – the snakes will be on site, kept safe in terrariums and under supervision."
-  },
   "cda1a51f466c8997": {
     "pl": "Antyseptyka, aseptyka, stanowisko pracy, świadomość ciała i dobre praktyki. Bonus: ziarnina i inne problemy z gojeniem – jak radzimy sobie z nimi w Brazylii?",
     "text": "Antisepsis, asepsis, the workstation, body awareness and good practice. Bonus: hypergranulation and other healing problems – how do we deal with them in Brazil?"
@@ -506,6 +494,10 @@
   "d67cb521c30acabd": {
     "pl": "Bądź na bieżąco",
     "text": "Stay up to date"
+  },
+  "d854710be1c144ef": {
+    "pl": "Hodowca gadów, znany z „Gogglebox”",
+    "text": "A reptile breeder, known from ‘Gogglebox’"
   },
   "d9aca522eabb7748": {
     "pl": "Od 13 marca w Manufakturze stanie wystawa 30 prac piercerów z Polski i ze świata. O zwycięzcach zdecydują głosy odwiedzających.",
@@ -562,6 +554,10 @@
   "f1c08992912220c6": {
     "pl": "Brazylijscy piercerzy, piercing na miejscu, historia brazylijskiej sceny body piercingu i body modification oraz kultura Brazylii.",
     "text": "Brazilian piercers, on-site piercing, the history of the Brazilian body piercing and body modification scene, and Brazilian culture."
+  },
+  "f32dbc51695d4056": {
+    "pl": "Uczestnik programu „Gogglebox. Przed telewizorem” w TTV, miłośnik węży i waranów, właściciel jednej z największych hodowli gadów w Polsce. Kieruje spółką Xclusive Ball Pythons i prowadzi Gorilla Ink Studio. Pochodzi z Grodziska Mazowieckiego, interesuje się tatuażem i kulturą alternatywną.\n\nNa Piercing Festival Łódź 2027 jest gościem specjalnym i twarzą Snake Bites Zone – węże będą na miejscu bezpiecznie, w terrariach i pod opieką.",
+    "text": "A participant in the TTV programme ‘Gogglebox. In front of the telly’, a lover of snakes and monitor lizards, and the owner of one of the largest reptile breeding centres in Poland. He runs Xclusive Ball Pythons and operates Gorilla Ink Studio. He comes from Grodzisk Mazowiecki and is interested in tattooing and alternative culture.\n\nAt the Piercing Festival Łódź 2027, he is a special guest and the face of the Snake Bites Zone – the snakes will be on site, safely housed in terrariums and under supervision."
   },
   "f3640659c3437a3c": {
     "pl": "Ruszyły rezerwacje na piątkowe wykłady New Generation Day. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.",
