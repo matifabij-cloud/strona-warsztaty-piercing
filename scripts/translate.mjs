@@ -100,6 +100,8 @@ const termFixes = [
   [/(?:Oficinas|Workshops?) de Piercing de Łódź/g, 'Łódź Piercing Workshops'],
   [/(?:o |O )?Festival de Piercing de Łódź/g, 'Piercing Festival Łódź'],
   [/\bBursztyn(?!owo)\b/g, 'Bursztynowo'],
+  [/[„“"‘']?teoria do chanfro[”"’']?/g, 'bevel theory'],
+  [/[‘']bevel theory[’']/g, 'bevel theory'],
 ];
 export const fixTerms = (text) => termFixes.reduce((t, [re, to]) => t.replace(re, to), text);
 
