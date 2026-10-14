@@ -142,7 +142,7 @@ openCall:
 partners:
   - name: Manufaktura
     role: Partner wydarzenia
-    logo: ''
+    logo: /media/partnerzy/manufaktura.png
     url: 'https://manufaktura.com'
   - name: Piercing69
     role: Sponsor branżowy · hurtownia biżuterii do piercingu
@@ -150,7 +150,7 @@ partners:
     url: ''
   - name: AquaTouch
     role: Sponsor branżowy · aftercare z HOCl
-    logo: ''
+    logo: /media/partnerzy/aquatouch.png
     url: 'https://www.instagram.com/aqua.touch.pro/'
   - name: Brzeski Holding S.A.
     role: Sponsor
@@ -158,12 +158,16 @@ partners:
     url: ''
   - name: Bursztynowo
     role: Sponsor
-    logo: ''
+    logo: /media/partnerzy/bursztynowo.png
     url: ''
   - name: Łódź Travel
     role: ''
-    logo: ''
+    logo: /media/partnerzy/lodz-travel.png
     url: 'https://www.lodz.travel'
+  - name: KMST Łódź
+    role: Partner Train to the Future
+    logo: /media/partnerzy/kmst-lodz.png
+    url: ''
 gallery: []
 posters:
   - /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg

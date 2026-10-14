@@ -46,32 +46,31 @@ const colsMd = n <= 3 ? n : n % 3 === 0 ? 3 : n % 4 === 0 || n % 4 === 3 ? 4 : 3
 </ul>
 
 <style>
+  /* Kafelki w rzędach; niepełny ostatni rząd jest wyśrodkowany (bez dziury z boku) */
   .partners {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
-    gap: 0.75rem;
-  }
-
-  @media (max-width: 30rem) {
-    .partners {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    /* Nieparzysta liczba: ostatni na całą szerokość */
-    .partner:last-child:nth-child(odd) {
-      grid-column: 1 / -1;
-    }
+    --gap: 0.75rem;
+    --c: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
   }
 
   @media (min-width: 40rem) {
     .partners {
-      grid-template-columns: repeat(var(--cols-md), minmax(0, 1fr));
+      --c: var(--cols-md);
     }
   }
 
   @media (min-width: 72rem) {
     .partners {
-      grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+      --c: var(--cols);
     }
+  }
+
+  .partner {
+    flex: 0 0 calc((100% - (var(--c) - 1) * var(--gap)) / var(--c));
+    min-width: 0;
   }
 
   /* Wszystkie kafelki w rzędzie tej samej wysokości */
@@ -103,7 +102,9 @@ const colsMd = n <= 3 ? n : n % 3 === 0 ? 3 : n % 4 === 0 || n % 4 === 3 ? 4 : 3
 
   .partner :global(.partner__logo) {
     max-height: 3.5rem;
+    max-width: 100%;
     width: auto;
+    height: auto;
     object-fit: contain;
   }
 
