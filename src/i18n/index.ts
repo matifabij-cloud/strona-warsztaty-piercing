@@ -2,6 +2,7 @@ import { hashText } from './tm.mjs';
 import en from './translations/en.json';
 import pt from './translations/pt.json';
 import { ui, type UIKey } from './ui';
+import { typo } from '../lib/typography';
 
 export const locales = ['pl', 'en', 'pt'] as const;
 export type Locale = (typeof locales)[number];
@@ -43,9 +44,9 @@ const memory: Record<Exclude<Locale, 'pl'>, Memory> = { en: en as Memory, pt: pt
  * (np. automat jeszcze go nie przygotował), pokazujemy oryginał.
  */
 export function tr<T extends string | undefined | null>(text: T, locale: Locale): T {
-  if (!text || locale === 'pl') return text;
+  if (!text || locale === 'pl') return typo(text);
   const hit = memory[locale][hashText(text)];
-  return (hit?.text ?? text) as T;
+  return typo((hit?.text ?? text) as T);
 }
 
 /** Czy dany tekst ma już tłumaczenie (przydatne w trybie deweloperskim). */
@@ -59,7 +60,7 @@ export function useUI(locale: Locale) {
   return (key: UIKey, vars?: Record<string, string | number>) => {
     let s: string = dict[key] ?? ui.pl[key];
     if (vars) for (const [k, v] of Object.entries(vars)) s = s.replaceAll(`{${k}}`, String(v));
-    return s;
+    return typo(s);
   };
 }
 

@@ -1,4 +1,5 @@
 import { Marked } from 'marked';
+import { typo } from './typography';
 
 // Treści z panelu (opisy, biogramy, odpowiedzi w FAQ) są w Markdownie.
 // Linki zewnętrzne otwieramy w nowej karcie.
@@ -16,5 +17,6 @@ const marked = new Marked({
   },
 });
 
-export const md = (text: string | undefined | null) => (text ? (marked.parse(text, { async: false }) as string) : '');
-export const mdInline = (text: string | undefined | null) => (text ? (marked.parseInline(text, { async: false }) as string) : '');
+export const md = (text: string | undefined | null) => (text ? (marked.parse(typo(text), { async: false }) as string) : '');
+export const mdInline = (text: string | undefined | null) =>
+  text ? (marked.parseInline(typo(text), { async: false }) as string) : '';
