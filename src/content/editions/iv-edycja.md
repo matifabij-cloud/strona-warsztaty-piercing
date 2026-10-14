@@ -129,7 +129,7 @@ program:
         host: ''
       - time: '17:00'
         title: Suspension Zipline
-        description: 'Główne widowisko i kulminacyjny moment weekendu.'
+        description: 'Kulminacyjny moment weekendu.'
         speakers:
           - max-alves.md
         host: ''
