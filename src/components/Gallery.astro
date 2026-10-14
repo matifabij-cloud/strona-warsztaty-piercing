@@ -105,6 +105,8 @@ const rest = moreHref ? [] : tiles.slice(initial);
     const exact = (total * rowH) / width;
     const off = (k: number) => Math.abs(Math.log((width * k) / total / rowH));
     let rows = oneRow ? 1 : off(Math.floor(exact)) <= off(Math.ceil(exact)) ? Math.floor(exact) : Math.ceil(exact);
+    // Najwyżej 4 zdjęcia w rzędzie, żeby przy kilku zdjęciach nie były małymi paskami.
+    if (!oneRow) rows = Math.max(rows, Math.ceil(items.length / 4));
     rows = Math.min(items.length, Math.max(1, rows));
 
     // Podział na rzędy o możliwie równej „długości” (programowanie dynamiczne).

@@ -85,7 +85,7 @@ program:
         host: ''
       - time: '14:30'
         title: Od starych technik do nowych. Od kaniuli do igły
-        description: 'Jak zmiana techniki wpływa na sposób pracy i kontrolę nad przekłuciem, jak igła zachowuje się w tkance, czym jest bevel theory i kiedy modyfikacja igły ma sens. Prowadzące zaczynały od kaniul, a dziś pracują wyłącznie na igłach – pokażą cały proces przejścia krok po kroku.'
+        description: 'Jak zmiana techniki wpływa na sposób pracy i kontrolę nad przekłuciem, jak igła zachowuje się w tkance, czym jest bevel theory, jak świadomie dobierać technikę do sytuacji i kiedy modyfikacja igły ma sens. Prowadzące zaczynały od kaniul, a dziś pracują wyłącznie na igłach – pokażą krok po kroku, co było trudne, co trzeba było zmienić i co zaczęło działać inaczej.'
         speakers:
           - anja-i-nina.md
         host: ''

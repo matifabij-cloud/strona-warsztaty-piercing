@@ -14,7 +14,7 @@ venue:
   address: ''
   city: Łódź
   mapUrl: ''
-cover: ''
+cover: /media/edycja-1/i-edycja-2024-01.jpg
 poster: ''
 stats:
   - value: '~40'
@@ -32,7 +32,12 @@ tickets:
 openCall:
   enabled: false
 partners: []
-gallery: []
+gallery:
+  - /media/edycja-1/i-edycja-2024-01.jpg
+  - /media/edycja-1/i-edycja-2024-02.jpg
+  - /media/edycja-1/i-edycja-2024-03.jpg
+  - /media/edycja-1/i-edycja-2024-04.jpg
+  - /media/edycja-1/i-edycja-2024-05.jpg
 posters: []
 hidden: false
 ---
