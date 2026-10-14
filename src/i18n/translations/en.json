@@ -19,6 +19,10 @@
     "pl": "Strefa dla dzieci i młodzieży: bezpieczne przekłuwanie uszu, edukacja i atrakcje.",
     "text": "Children’s and teenagers’ area: safe ear piercing, education and activities."
   },
+  "0baae9150e4937bc": {
+    "pl": "Tak. Piercing Festival Łódź to otwarta dla publiczności część Łódzkich Warsztatów Piercingu, a wstęp jest bezpłatny. Płacisz tylko za to, z czego skorzystasz, na przykład za przekłucie albo biżuterię. Na Snake Bites Zone trzeba zapisać się wcześniej.",
+    "text": "Yes. The Piercing Festival Łódź is the part of the Łódź Piercing Workshops that is open to the public, and entry is free. You only pay for what you use, such as a piercing or jewellery. You need to book in advance for the Snake Bites Zone."
+  },
   "0c3551d8a7cb2ff8": {
     "pl": "Polska · Brazylia",
     "text": "Poland · Brazil"
@@ -46,10 +50,6 @@
   "19a4a7316dd3cb20": {
     "pl": "prelegent z Brazylii",
     "text": "speaker from Brazil"
-  },
-  "1b6ba36fb428313d": {
-    "pl": "Tak. Piercing Festival Łódź to otwarta dla publiczności część Łódzkich Warsztatów Piercingu, a wstęp jest bezpłatny. Płatne są tylko wybrane warsztaty i zajęcia, na które trzeba zapisać się wcześniej.",
-    "text": "Yes. The Piercing Festival Łódź is the part of the Łódź Piercing Workshops that is open to the public, and admission is free. Only selected workshops and sessions, for which you need to book in advance, incur a charge."
   },
   "1bc10df9c985b6e6": {
     "pl": "wykłady w piątek",
@@ -271,10 +271,6 @@
     "pl": "Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.",
     "text": "Piercings carried out by our team of piercers and guest artists from Poland and abroad."
   },
-  "6f39c31d516a20bb": {
-    "pl": "Główne widowisko i kulminacyjny moment weekendu.",
-    "text": "The main event and the highlight of the weekend."
-  },
   "73ae5326974639c4": {
     "pl": "Infekcjologia i gojenie ran w piercingu",
     "text": "Infections and wound healing in piercing"
@@ -382,6 +378,10 @@
   "a5a89ae5bcea743f": {
     "pl": "Szukamy piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom. Pełne zasady konkursu ogłosimy wkrótce.",
     "text": "We are looking for piercers from Poland and around the world whose work we will showcase at a large, public exhibition at Manufaktura. We’re not interested in your reach; we’re interested in your work. We want to showcase piercing not just as a service, but as a design, precision, craftsmanship and art created on the human body. You create – we showcase your work to the public. We will announce the full competition rules shortly."
+  },
+  "a9e718d2407eb4c0": {
+    "pl": "Kulminacyjny moment weekendu.",
+    "text": "The highlight of the weekend."
   },
   "a9f003e0091af859": {
     "pl": "wstęp na festiwal w Manufakturze",
