@@ -38,9 +38,11 @@ const igAccounts = (v: string | undefined) =>
 // 3–5 osób: tyle kolumn, ile osób, żeby rząd był pełny; więcej – równe rzędy.
 const n = items.length;
 const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
+// Tablet: 4 osoby → 2 × 2, inaczej 3 kolumny; niepełny ostatni rząd jest wyśrodkowany.
+const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
 ---
 
-<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1, 'speakers--three': items.length === 3 }]} style={`--cols:${Math.max(cols, 1)}`}>
+<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1, 'speakers--three': items.length === 3, 'speakers--four': items.length === 4 }]} style={`--cols:${Math.max(cols, 1)};--cols-md:${Math.max(colsMd, 1)}`}>
   {
     items.map(({ speaker, note }) => {
       const s = speaker.data;
@@ -92,20 +94,38 @@ const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 
 
 <style>
   .speakers {
-    display: grid;
-    gap: clamp(1rem, 0.75rem + 1vw, 1.75rem);
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 13.5rem), 1fr));
+    --gap: clamp(1rem, 0.75rem + 1vw, 1.75rem);
+    gap: var(--gap);
+  }
+
+  /* 3 i więcej osób: równe kolumny, niepełny ostatni rząd na środku (bez dziury z boku) */
+  .speakers:not(.speakers--feature) {
+    --c: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .speakers:not(.speakers--feature) > .speaker {
+    flex: 0 0 calc((100% - (var(--c) - 1) * var(--gap)) / var(--c));
+    min-width: 0;
   }
 
   @media (max-width: 30rem) {
     .speakers {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.9rem;
+      --gap: 0.9rem;
+    }
+  }
+
+  @media (min-width: 30rem) {
+    .speakers:not(.speakers--feature) {
+      --c: var(--cols-md);
     }
   }
 
   /* 1–2 prelegentów: poziome karty */
   .speakers.speakers--feature {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
   }
 
@@ -115,7 +135,14 @@ const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 
 
   @media (min-width: 64rem) {
     .speakers:not(.speakers--feature) {
-      grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+      --c: var(--cols);
+    }
+  }
+
+  /* Tablet, 2 × 2: kwadratowe zdjęcia, żeby karty nie były za wysokie */
+  @media (min-width: 30rem) and (max-width: 63.99rem) {
+    .speakers--four .speaker__photo {
+      aspect-ratio: 1;
     }
   }
 
@@ -126,14 +153,6 @@ const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 
     }
   }
 
-  /* Telefon: nieparzysta ostatnia karta na środku, tej samej szerokości co pozostałe */
-  @media (max-width: 30rem) {
-    .speakers:not(.speakers--feature) > .speaker:last-child:nth-child(odd) {
-      grid-column: 1 / -1;
-      justify-self: center;
-      width: calc(50% - 0.45rem);
-    }
-  }
 
   .speakers--feature .speaker {
     grid-template-columns: minmax(6.5rem, 2fr) minmax(0, 3fr);

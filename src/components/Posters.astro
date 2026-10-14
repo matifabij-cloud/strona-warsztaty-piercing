@@ -16,17 +16,22 @@ const items = await Promise.all(
   (await resolveMediaList(images)).map(async ({ image }) => ({
     image,
     full: (await getImage({ src: image, width: Math.min(1600, dims(image).width), format: 'webp', quality: 82 })).src,
+    ratio: dims(image).width / dims(image).height,
   })),
 );
+// Plakaty mają różne proporcje – wszystkie dostają tę samą wysokość. Na dużym ekranie,
+// jeśli zmieszczą się w rozsądnej wysokości, wypełniają jeden równy rząd bez przewijania.
+const sum = items.reduce((a, p) => a + p.ratio, 0);
+const fit = sum >= 2.8 && sum <= 5.5;
 ---
 
 {
   items.length > 0 && (
-    <ul role="list" class="posters" data-gallery>
+    <ul role="list" class:list={['posters', { 'posters--fit': fit }]} data-gallery>
       {items.map((p, i) => (
-        <li>
+        <li style={`--r:${p.ratio.toFixed(4)}`}>
           <a href={p.full} data-full={p.full} aria-label={t('gallery.open', { n: i + 1 })}>
-            <Img src={p.image} alt={t('gallery.posterAlt', { edition: label })} widths={[300, 460, 640]} sizes="(min-width: 64rem) 18vw, 45vw" />
+            <Img src={p.image} alt={t('gallery.posterAlt', { edition: label })} widths={[300, 460, 640]} sizes="(min-width: 72rem) 20vw, 21rem" />
           </a>
         </li>
       ))}
@@ -36,9 +41,8 @@ const items = await Promise.all(
 
 <style>
   .posters {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(11rem, 15rem);
+    --h: clamp(15rem, 10rem + 18vw, 21rem);
+    display: flex;
     gap: 1rem;
     overflow-x: auto;
     padding-bottom: 1rem;
@@ -48,7 +52,22 @@ const items = await Promise.all(
   }
 
   .posters li {
+    flex: 0 0 auto;
+    width: calc(var(--h) * var(--r));
     scroll-snap-align: start;
+  }
+
+  /* Jeden rząd na całą szerokość: szerokość każdego plakatu proporcjonalna do jego kształtu */
+  @media (min-width: 72rem) {
+    .posters--fit {
+      overflow: visible;
+    }
+
+    .posters--fit li {
+      flex: var(--r) 1 0;
+      width: auto;
+      min-width: 0;
+    }
   }
 
   .posters a {

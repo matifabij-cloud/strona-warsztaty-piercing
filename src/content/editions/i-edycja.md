@@ -16,7 +16,9 @@ venue:
   mapUrl: ''
 cover: ''
 poster: ''
-stats: []
+stats:
+  - value: '~40'
+    label: uczestników
 attractions: []
 speakers:
   - speaker: marcelina-szejko.md

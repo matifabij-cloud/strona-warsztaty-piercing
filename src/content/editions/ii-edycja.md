@@ -17,6 +17,8 @@ venue:
 cover: /media/edycja-2/ii-edycja-2025-01.jpg
 poster: ''
 stats:
+  - value: '~50'
+    label: uczestników
   - value: '2'
     label: dni
   - value: '1'

@@ -13,9 +13,17 @@ const { locale, items } = Astro.props;
 // Liczba kolumn na dużym ekranie dobrana tak, żeby rzędy były pełne (np. 10 → 5 + 5, 9 → 3 × 3).
 const n = items.length;
 const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
+// Mniejszy laptop: 3 kolumny, jeśli rzędy wyjdą pełne, inaczej 2.
+const colsMd = n % 3 === 0 ? 3 : n % 4 === 0 ? 4 : 2;
+// Przy 2 kolumnach i nieparzystej liczbie ostatnia karta zajmuje cały rząd.
+const odd = n % 2 === 1;
 ---
 
-<ul role="list" class="attractions" style={`--cols:${Math.max(cols, 1)}`}>
+<ul
+  role="list"
+  class:list={['attractions', { 'attractions--odd': odd, 'attractions--odd-md': odd && colsMd === 2 }]}
+  style={`--cols:${Math.max(cols, 1)};--cols-md:${Math.max(colsMd, 1)}`}
+>
   {
     items.map((a, i) => (
       <li class="attraction" style={`--i:${i}`}>
@@ -33,12 +41,36 @@ const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 
   .attractions {
     display: grid;
     gap: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (min-width: 36rem) {
+    .attractions {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .attractions--odd > :last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (min-width: 60rem) {
+    .attractions {
+      grid-template-columns: repeat(var(--cols-md), minmax(0, 1fr));
+    }
+
+    .attractions--odd:not(.attractions--odd-md) > :last-child {
+      grid-column: auto;
+    }
   }
 
   @media (min-width: 72rem) {
     .attractions {
       grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    }
+
+    .attractions--odd > :last-child {
+      grid-column: auto;
     }
   }
 

@@ -32,12 +32,27 @@ attractions:
   - title: New Generation Day
     description: 'Wykłady specjalistów z Polski i zagranicy: od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
     icon: graduation
+  - title: Maria Twarowska Piercing Beauty Zone
+    description: 'Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.'
+    icon: ring
+  - title: Brazil Zone
+    description: 'Brazylijscy piercerzy, piercing na miejscu, historia brazylijskiej sceny body piercingu i body modification oraz kultura Brazylii.'
+    icon: brazil
+  - title: Happy Piercing Zone
+    description: 'Strefa dla dzieci i młodzieży: bezpieczne przekłuwanie uszu, edukacja i atrakcje.'
+    icon: smile
   - title: Snake Bites Zone
-    description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Za węże odpowiada Igor Płatek.'
+    description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek.'
     icon: snake
+  - title: Strefa biżuterii i wystawców
+    description: 'Sprzedaż biżuterii, prezentacja marek i produktów oraz specjalne ceny festiwalowe.'
+    icon: bag
   - title: Wystawa i konkurs artystów
-    description: 'Od 13 marca w Manufakturze stanie wystawa prac piercerów z Polski i ze świata. O zwycięzcy zdecydują głosy odwiedzających.'
+    description: 'Od 13 marca w Manufakturze stanie wystawa 30 prac piercerów z Polski i ze świata. O zwycięzcach zdecydują głosy odwiedzających.'
     icon: trophy
+  - title: Suspension Zipline
+    description: 'Body suspension połączone ze zjazdem na tyrolce nad Manufakturą. Główne widowisko weekendu, które poprowadzi Max Alves z Brazylii.'
+    icon: zipline
 speakers:
   - speaker: max-alves.md
     note: Wykład „Bezpieczeństwo w piercingu”
@@ -45,6 +60,8 @@ speakers:
     note: Wykład „Infekcjologia i gojenie ran”
   - speaker: anja-i-nina.md
     note: Wykład „Od kaniuli do igły”
+  - speaker: igor-platek.md
+    note: Gość specjalny
 program:
   - day: '2027-03-19'
     label: Piątek – New Generation Day
@@ -81,27 +98,40 @@ program:
     label: Sobota – Piercing Festival Łódź
     items:
       - time: ''
-        title: Strefy festiwalowe i wystawa prac
-        description: 'Głosowanie w konkursie Piercing Artist Łódź. Godziny otwarcia podamy wkrótce.'
+        title: Strefy festiwalu i wystawa prac
+        description: 'Przez cały dzień, w godzinach otwarcia Manufaktury: Maria Twarowska Piercing Beauty Zone, Brazil Zone, Happy Piercing Zone, strefa biżuterii i wystawców oraz głosowanie w konkursie Piercing Artist Łódź.'
         speakers: []
         host: ''
       - time: '10:00'
         title: Snake Bites Zone
         description: 'Do 17:00.'
-        speakers: []
+        speakers:
+          - igor-platek.md
         host: ''
   - day: '2027-03-21'
     label: Niedziela – Piercing Festival Łódź
     items:
       - time: ''
-        title: Ostatni dzień wystawy
-        description: 'Ostatnia szansa, żeby oddać głos w konkursie.'
+        title: Strefy festiwalu i ostatni dzień wystawy
+        description: 'Przez cały dzień, w godzinach otwarcia Manufaktury.'
         speakers: []
         host: ''
       - time: '10:00'
         title: Snake Bites Zone
         description: 'Do 16:00.'
+        speakers:
+          - igor-platek.md
+        host: ''
+      - time: '13:00'
+        title: Finał wystawy i losowanie nagród
+        description: 'Finał głosowania publiczności: ogłosimy 10 najlepszych prac i wylosujemy 10 zwycięzców.'
         speakers: []
+        host: ''
+      - time: '17:00'
+        title: Suspension Zipline
+        description: 'Główne widowisko i kulminacyjny moment weekendu.'
+        speakers:
+          - max-alves.md
         host: ''
 tickets:
   status: wkrotce
@@ -140,37 +170,41 @@ openCall:
   buttonLabel: Wyślij zgłoszenie
   image: /media/plakaty/iv-edycja-nabor-artystow.jpg
 partners:
-  - name: Manufaktura
-    role: Partner wydarzenia
-    logo: /media/partnerzy/manufaktura.png
-    url: 'https://manufaktura.com'
-  - name: Piercing69
-    role: Sponsor branżowy · hurtownia biżuterii do piercingu
-    logo: ''
-    url: ''
-  - name: AquaTouch
-    role: Sponsor branżowy · aftercare z HOCl
-    logo: /media/partnerzy/aquatouch.png
-    url: 'https://www.instagram.com/aqua.touch.pro/'
   - name: Brzeski Holding S.A.
     role: Sponsor
-    logo: ''
+    logo: /media/partnerzy/brzeski-holding.png
     url: ''
   - name: Bursztynowo
     role: Sponsor
     logo: /media/partnerzy/bursztynowo.png
     url: ''
+  - name: Piercing69
+    role: Partner branżowy · hurtownia biżuterii do piercingu
+    logo: /media/partnerzy/piercing69.png
+    url: ''
+  - name: AquaTouch
+    role: Partner branżowy · aftercare z HOCl
+    logo: /media/partnerzy/aquatouch.png
+    url: 'https://www.instagram.com/aqua.touch.pro/'
   - name: Łódź Travel
-    role: ''
+    role: Partner instytucjonalny
     logo: /media/partnerzy/lodz-travel.png
     url: 'https://www.lodz.travel'
-  - name: KMST Łódź
-    role: Partner Train to the Future
+  - name: Manufaktura
+    role: Partner medialny
+    logo: /media/partnerzy/manufaktura.png
+    url: 'https://manufaktura.com'
+  - name: Klub Miłośników Starych Tramwajów w Łodzi
+    role: Partner techniczny · Train to the Future
     logo: /media/partnerzy/kmst-lodz.png
     url: ''
 gallery: []
 posters:
   - /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg
+  - /media/plakaty/iv-edycja-train-to-the-future.jpg
+  - /media/plakaty/iv-edycja-max-alves.jpg
+  - /media/plakaty/iv-edycja-silas.jpg
+  - /media/plakaty/iv-edycja-ania-i-nina.jpg
   - /media/plakaty/iv-edycja-nabor-artystow.jpg
 hidden: false
 ---
@@ -180,7 +214,7 @@ hidden: false
 
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
 
-**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich sponsorów z branży: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
+**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 
 Wydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.
 

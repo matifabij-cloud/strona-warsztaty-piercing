@@ -24,6 +24,16 @@ const rendered = await Promise.all(
 // wtedy każdy dzień zajmuje całą szerokość, a jego punkty układają się w kafelki obok siebie.
 const counts = rendered.map((d) => d.items.length);
 const stacked = rendered.length > 1 && Math.max(...counts) - Math.min(...counts) > 1;
+
+// Kafelki dnia w siatce 6-kolumnowej: każdy rząd jest pełny, a niepełny ostatni rząd
+// dzieli szerokość po równo (np. 5 punktów → 3 + 2 szersze, 4 punkty → 2 × 2).
+const spans = (n: number, i: number) => {
+  const cols = n <= 3 ? n : n === 4 ? 2 : 3;
+  const rest = n % cols;
+  const lg = rest && i >= n - rest ? 6 / rest : 6 / cols;
+  const md = n === 1 || (n % 2 === 1 && i === n - 1) ? 6 : 3;
+  return `--s:${lg};--s-md:${md}`;
+};
 ---
 
 {
@@ -43,8 +53,8 @@ const stacked = rendered.length > 1 && Math.max(...counts) - Math.min(...counts)
             {day.date && <p>{day.date}</p>}
           </header>
           <ol role="list" class="program__items">
-            {day.items.map((item) => (
-              <li class="program__item">
+            {day.items.map((item, i) => (
+              <li class="program__item" style={stacked ? spans(day.items.length, i) : undefined}>
                 <span class="program__time">{item.time}</span>
                 <div class="program__info">
                   <p class="program__title">{tr(item.title, locale)}</p>
@@ -110,7 +120,17 @@ const stacked = rendered.length > 1 && Math.max(...counts) - Math.min(...counts)
 
   @media (min-width: 48rem) {
     .program--stacked .program__items {
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .program--stacked .program__item {
+      grid-column: span var(--s-md, 6);
+    }
+  }
+
+  @media (min-width: 72rem) {
+    .program--stacked .program__item {
+      grid-column: span var(--s, 6);
     }
   }
 
