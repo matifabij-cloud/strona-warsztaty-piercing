@@ -51,7 +51,7 @@ attractions:
     description: 'Od 13 marca w Manufakturze stanie wystawa 30 prac piercerów z Polski i ze świata. O zwycięzcach zdecydują głosy odwiedzających.'
     icon: trophy
   - title: Suspension Zipline
-    description: 'Body suspension połączone ze zjazdem na tyrolce nad Manufakturą. Główne widowisko weekendu, które poprowadzi Max Alves z Brazylii.'
+    description: 'Body suspension połączone ze zjazdem na tyrolce nad Manufakturą – główne widowisko weekendu. Poprowadzi je Max Alves, pierwszy w Brazylii, który zjechał na tyrolce zawieszony na hakach.'
     icon: zipline
 speakers:
   - speaker: max-alves.md
