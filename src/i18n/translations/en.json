@@ -23,6 +23,10 @@
     "pl": "Tak. Piercing Festival Łódź to otwarta dla publiczności część Łódzkich Warsztatów Piercingu, a wstęp jest bezpłatny. Płacisz tylko za to, z czego skorzystasz, na przykład za przekłucie albo biżuterię. Na Snake Bites Zone trzeba zapisać się wcześniej.",
     "text": "Yes. The Piercing Festival Łódź is the part of the Łódź Piercing Workshops that is open to the public, and entry is free. You only pay for what you use, such as a piercing or jewellery. You need to book in advance for the Snake Bites Zone."
   },
+  "0c0063ebbb6d5042": {
+    "pl": "Na brazylijskiej i międzynarodowej scenie od 2008 roku, od 2013 roku specjalizuje się w modyfikacjach ciała. Jest jednym z największych na świecie specjalistów od rozszczepienia języka (tongue splitting) – ma na koncie ponad 1127 takich zabiegów w Brazylii i za granicą. W Brazylii mówią o nim „Cientista da perfuração corporal”, czyli naukowiec perforacji ciała.\n\nProwadzi kursy i warsztaty z podstawowych i zaawansowanych technik piercingu oraz modyfikacji ciała. Jest stałym jurorem konwencji tatuażu i piercingu – oceniał prace już 98 razy. Współtworzył kategorię „Najlepszy Zabieg” na największych konwencjach i stworzył pierwszy warsztat poświęcony ocenianiu takich zabiegów.\n\nJest CEO i twórcą Expo Piercing Brasil – pierwszych w Brazylii targów wyłącznie dla profesjonalnych piercerów, z ponad 50 wystawcami, producentami i dostawcami sprzętu.",
+    "text": "Active on the Brazilian and international scene since 2008, he has specialised in body modification since 2013. He is one of the world’s leading specialists in tongue splitting – he has performed over 1,127 such procedures in Brazil and abroad. In Brazil, he is known as the ‘Cientista da perfuração corporal’, or body piercing scientist.\n\nHe runs courses and workshops on basic and advanced piercing techniques and body modification. He is a regular judge at tattoo and piercing conventions – he has judged entries on 98 occasions. He co-created the ‘Best Procedure’ category at the largest conventions and developed the first workshop dedicated to judging such procedures.\n\nHe is the CEO and founder of Expo Piercing Brasil – Brazil’s first trade fair exclusively for professional piercers, featuring over 50 exhibitors, manufacturers and equipment suppliers."
+  },
   "0c3551d8a7cb2ff8": {
     "pl": "Polska · Brazylia",
     "text": "Poland · Brazil"
@@ -183,10 +187,6 @@
     "pl": "Bezpieczeństwo w piercingu",
     "text": "Safety in piercing"
   },
-  "4711e7a1f6c9adb2": {
-    "pl": "Specjalista od bifurkacji języka i edukacji zawodowej. Ma na koncie 1127 zabiegów tongue splitting w Brazylii i za granicą.",
-    "text": "A specialist in tongue bifurcation and professional education, with 1,127 tongue splitting procedures performed in Brazil and abroad."
-  },
   "4d004ceabde8c095": {
     "pl": "New Generation Day",
     "text": "New Generation Day"
@@ -215,13 +215,13 @@
     "pl": "Wykłady są przeznaczone dla piercerów – zarówno tych, którzy dopiero zaczynają, jak i tych z wieloletnim stażem.",
     "text": "The talks are aimed at piercers – both those just starting out and those with many years’ experience."
   },
-  "55c43906c4fca831": {
-    "pl": "**Ania (Anna Cielecka)** zaczynała ponad dekadę temu we Wrocławiu, a dziś pracuje w Berlinie jako senior piercer. Należy do Association of Professional Piercers (APP) i Verband Professioneller Piercer (VPP), występowała na konferencji BMXnet w Berlinie i pracuje nad własną książką, której premierę planuje na 2027 rok. Współorganizuje Łódzkie Warsztaty Piercingu 2027.\n\n**Nina Falci** ma 18 lat doświadczenia zdobytego w Brazylii, Holandii i Niemczech – pracowała między innymi w São Paulo, Belo Horizonte, Salvadorze, Rotterdamie, Amsterdamie i Berlinie. Jest w zespole Maria Black, międzynarodowej marki biżuterii łączącej modę i fine jewelry, a na Maria Black Day w Kopenhadze opowiadała o swojej wizji historii piercingu.\n\nPoznały się w Berlinie. Łączy je pasja do biżuterii, kamieni szlachetnych i edukacji – na III edycji przedstawiły wspólny wykład o kamieniach szlachetnych w biżuterii do piercingu, pokazywany wcześniej na konferencji BMXnet.",
-    "text": "**Ania (Anna Cielecka)** started out over a decade ago in Wrocław, and now works in Berlin as a senior piercer. She is a member of the Association of Professional Piercers (APP) and the Verband Professioneller Piercer (VPP), has spoken at the BMXnet conference in Berlin, and is working on her own book, which she plans to publish in 2027. She is co-organising the Łódź Piercing Workshops 2027.\n\n**Nina Falci** has 18 years’ experience gained in Brazil, the Netherlands and Germany – she has worked in São Paulo, Belo Horizonte, Salvador, Rotterdam, Amsterdam and Berlin, amongst other places. She is part of the team at Maria Black, an international jewellery brand combining fashion and fine jewellery, and at Maria Black Day in Copenhagen she spoke about her vision of the history of piercing.\n\nThey met in Berlin. They share a passion for jewellery, gemstones and education – at the third edition, they presented a joint lecture on gemstones in piercing jewellery, which had previously been shown at the BMXnet conference."
-  },
   "567fd0ec27b548ff": {
     "pl": "Trzecia edycja Łódzkich Warsztatów Piercingu odbyła się pod hasłem **Brazylijska Przygoda**. Przez dwa dni w Hotelu PURO w sercu Łodzi gościliśmy piercerów z Brazylii, którzy podzielili się wiedzą i technikami ze swojej codziennej pracy.\n\nProgram objął pięć wykładów: od idealnego septum i zasad biosafety, przez kamienie szlachetne w biżuterii, microdermale i przekłucia powierzchniowe, po przekłucia intymne i tongue splitting.\n\nWarsztaty były przeznaczone dla piercerów po ukończonym kursie podstawowym.",
     "text": "The third edition of Łódzkie Warsztaty Piercingu took place under the banner **Brazilian Adventure**. For two days at Hotel PURO in the heart of Łódź, we hosted piercers from Brazil who shared the knowledge and techniques they use in their everyday work.\n\nThe programme included five lectures: from the perfect septum and biosafety rules, through gemstones in jewellery, microdermals and surface piercings, to intimate piercings and tongue splitting.\n\nThe workshops were open to piercers who had completed a basic course."
+  },
+  "57e87b5605bb8acd": {
+    "pl": "Piercer, modyfikator ciała i CEO Expo Piercing Brasil",
+    "text": "Piercer, body modifier and CEO of Expo Piercing Brasil"
   },
   "59ab03c84bb6a386": {
     "pl": "New Generation – Łódź: 3 miejsca dla młodych piercerów z Łodzi, do 2 lat od ukończenia kursu podstawowego",
@@ -338,10 +338,6 @@
   "8b41cab48fb552a7": {
     "pl": "Kamienie szlachetne w piercingu",
     "text": "Gemstones in piercing"
-  },
-  "8fc0328f64ceeff8": {
-    "pl": "Piercer i modyfikator ciała, twórca Expo Piercing Brasil",
-    "text": "Piercer and body modification artist, founder of Expo Piercing Brasil"
   },
   "90da8eb94b4c68ad": {
     "pl": "New Generation",
@@ -542,6 +538,10 @@
   "ea849208635a6529": {
     "pl": "Rozszczepienie języka i zaawansowane modyfikacje",
     "text": "Tongue splitting and advanced modifications"
+  },
+  "ef3d9fe7705de43c": {
+    "pl": "**Ania (Anna Cielecka)** zaczynała ponad dekadę temu we Wrocławiu, a dziś pracuje w Berlinie jako senior piercer. Należy do Association of Professional Piercers (APP) i Verband Professioneller Piercer (VPP), występowała na konferencji BMXnet w Berlinie i pracuje nad własną książką, której premierę planuje na 2027 rok. Współorganizuje Łódzkie Warsztaty Piercingu 2027.\n\n**Nina Falci** ma 18 lat doświadczenia zdobytego w ośmiu miastach Brazylii, Holandii i Niemiec: São Paulo, Belo Horizonte, Salvador, Sabará, Florianópolis, Rotterdam, Amsterdam i Berlin. Współpracowała ze studiami i markami Maria Black, Glassic Ink & Mods, Dare2Wear, Classic Glamour, Ao Cubo i Tattoei. Dziś jest w zespole Maria Black – międzynarodowej marki biżuterii łączącej modę i fine jewelry – gdzie współtworzy projekty z recyklingowanego złota i srebra oraz diamentów laboratoryjnych. Na Maria Black Day w Kopenhadze opowiadała o swojej wizji historii piercingu.\n\nPoznały się kilka lat temu w jednym z berlińskich studiów piercingu. Łączy je przyjaźń i pasja do biżuterii, kamieni szlachetnych i edukacji. Na II edycję przyjechały poznać Maxa, a Nina pomagała przy warsztatach. Na III edycji wróciły z własnym wykładem o kamieniach szlachetnych w piercingu, który zadebiutował na konferencji BMXnet w Berlinie.",
+    "text": "**Ania (Anna Cielecka)** started out over a decade ago in Wrocław, and now works in Berlin as a senior piercer. She is a member of the Association of Professional Piercers (APP) and the Verband Professioneller Piercer (VPP), has spoken at the BMXnet conference in Berlin, and is working on her own book, which she plans to publish in 2027. She is co-organising the Łódź Piercing Workshops 2027.\n\n**Nina Falci** has 18 years’ experience gained in eight cities across Brazil, the Netherlands and Germany: São Paulo, Belo Horizonte, Salvador, Sabará, Florianópolis, Rotterdam, Amsterdam and Berlin. She has collaborated with studios and brands including Maria Black, Glassic Ink & Mods, Dare2Wear, Classic Glamour, Ao Cubo and Tattoei. Today she is part of the Maria Black team – an international jewellery brand combining fashion and fine jewellery – where she co-creates designs using recycled gold and silver, as well as lab-grown diamonds. At Maria Black Day in Copenhagen, she spoke about her vision of the history of piercing.\n\nThey met a few years ago at one of Berlin’s piercing studios. They are united by their friendship and a passion for jewellery, gemstones and education. They came to the second edition to meet Max, whilst Nina helped out with the workshops. At the third edition, they returned with their own talk on gemstones in piercing, which made its debut at the BMXnet conference in Berlin."
   },
   "f019479569300753": {
     "pl": "Biosafety i szkolenie z przekłuć sutków",
