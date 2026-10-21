@@ -41,8 +41,8 @@ program:
     label: ''
     items:
       - time: ''
-        title: Szkolenie z przekłuć sutków
-        description: ''
+        title: Szkolenie z przekłuć sutków metodą WALET
+        description: 'Ćwiczenia na silikonowych modelach.'
         speakers:
           - max-alves.md
         host: ''
@@ -62,8 +62,8 @@ gallery:
 posters: []
 hidden: false
 ---
-Druga edycja trwała dwa dni, a poprowadził ją Max Alves.
+Druga edycja trwała dwa dni, a poprowadził ją Max Alves. Miała trwać jeden dzień, ale Max został w Polsce na tydzień i świętował 20-lecie pracy, więc drugi dzień dołożyliśmy w bonusie.
 
 Pierwszy dzień poświęciliśmy bezpieczeństwu pracy: antyseptyce, aseptyce, organizacji stanowiska, świadomości ciała i dobrym praktykom. W części bonusowej rozmawialiśmy o ziarninie i innych problemach z gojeniem oraz o tym, jak radzi się sobie z nimi w Brazylii.
 
-Drugiego dnia odbyło się szkolenie z przekłuć sutków.
+Drugiego dnia odbyło się szkolenie z przekłuć sutków metodą WALET, z ćwiczeniami na silikonowych modelach.
