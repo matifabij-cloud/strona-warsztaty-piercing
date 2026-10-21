@@ -107,10 +107,6 @@
     "pl": "Na piątkowe wykłady przyjmujemy już rezerwacje – przycisk „Zarezerwuj” znajdziesz w sekcji Bilety. Sprzedaż online uruchomimy wkrótce i ogłosimy ją także na Instagramie.",
     "text": "Já estamos aceitando reservas para as palestras de sexta-feira – você encontrará o botão “Reservar” na seção Ingressos. A venda online será iniciada em breve e também será anunciada no Instagram."
   },
-  "29d09bf285afba96": {
-    "pl": "Szkolenie z przekłuć sutków",
-    "text": "Treinamento de piercing de mamilo"
-  },
   "2c5657c72c007cac": {
     "pl": "Partner techniczny · Train to the Future",
     "text": "Parceiro técnico · Train to the Future"
@@ -138,6 +134,10 @@
   "38530d17a3d0ab79": {
     "pl": "Zapisz się",
     "text": "Inscrever-se"
+  },
+  "38800b04abafca98": {
+    "pl": "Druga edycja trwała dwa dni, a poprowadził ją Max Alves. Miała trwać jeden dzień, ale Max został w Polsce na tydzień i świętował 20-lecie pracy, więc drugi dzień dołożyliśmy w bonusie.\n\nPierwszy dzień poświęciliśmy bezpieczeństwu pracy: antyseptyce, aseptyce, organizacji stanowiska, świadomości ciała i dobrym praktykom. W części bonusowej rozmawialiśmy o ziarninie i innych problemach z gojeniem oraz o tym, jak radzi się sobie z nimi w Brazylii.\n\nDrugiego dnia odbyło się szkolenie z przekłuć sutków metodą WALET, z ćwiczeniami na silikonowych modelach.",
+    "text": "A segunda edição durou dois dias e foi conduzida por Max Alves. O evento deveria ter durado apenas um dia, mas Max ficou na Polônia por uma semana e comemorou seus 20 anos de carreira, então adicionamos um segundo dia como bônus.\n\nDedicamos o primeiro dia à segurança no trabalho: antissepsia, assepsia, organização do local de trabalho, consciência corporal e boas práticas. Na parte bônus, conversamos sobre granulação e outros problemas relacionados à cicatrização, além de como lidar com eles no Brasil.\n\nNo segundo dia, foi realizado um treinamento sobre piercing nos mamilos pelo método WALET, com exercícios em modelos de silicone."
   },
   "3c626737057c373a": {
     "pl": "Oficjalna strona Łódzkich Warsztatów Piercingu: wykłady i szkolenia dla piercerów z prelegentami z Polski i ze świata. IV edycja: 19–21 marca 2027 w Łodzi – New Generation Day i Piercing Festival Łódź w Manufakturze.",
@@ -387,13 +387,13 @@
     "pl": "wstęp na festiwal w Manufakturze",
     "text": "Entrada para o festival na Manufaktura"
   },
-  "abf5f456733fdd29": {
-    "pl": "Druga edycja trwała dwa dni, a poprowadził ją Max Alves.\n\nPierwszy dzień poświęciliśmy bezpieczeństwu pracy: antyseptyce, aseptyce, organizacji stanowiska, świadomości ciała i dobrym praktykom. W części bonusowej rozmawialiśmy o ziarninie i innych problemach z gojeniem oraz o tym, jak radzi się sobie z nimi w Brazylii.\n\nDrugiego dnia odbyło się szkolenie z przekłuć sutków.",
-    "text": "A segunda edição durou dois dias e foi conduzida por Max Alves.\n\nO primeiro dia foi dedicado à segurança no trabalho: antissepsia, assepsia, organização da bancada, consciência corporal e boas práticas. Na parte bônus, falamos sobre hipergranulação e outros problemas de cicatrização – e sobre como eles são tratados no Brasil.\n\nNo segundo dia, aconteceu um treinamento de piercing de mamilo."
-  },
   "ac2e47c1e08dd95f": {
     "pl": "Body suspension połączone ze zjazdem na tyrolce nad Manufakturą – główne widowisko weekendu. Poprowadzi je Max Alves, pierwszy w Brazylii, który zjechał na tyrolce zawieszony na hakach.",
     "text": "Suspensão corporal combinada com uma descida de tirolesa sobre a Manufaktura – a principal atração do fim de semana. A atividade será conduzida por Max Alves, o primeiro no Brasil a descer de tirolesa suspenso por ganchos."
+  },
+  "acdc601946e5c99c": {
+    "pl": "Ćwiczenia na silikonowych modelach.",
+    "text": "Exercícios em modelos de silicone."
   },
   "ad08a9724706471c": {
     "pl": "Czy mogę przepisać bilet na inną osobę?",
@@ -434,6 +434,10 @@
   "bd34ddc0468fbc50": {
     "pl": "Piercerki i edukatorki",
     "text": "Piercers e educadoras"
+  },
+  "bec7e1be837f7e49": {
+    "pl": "Szkolenie z przekłuć sutków metodą WALET",
+    "text": "Treinamento em piercing nos mamilos pelo método WALET"
   },
   "bfa43fc774df9286": {
     "pl": "Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek.",
