@@ -6,6 +6,8 @@ country: Brazylia
 instagram: silasbodyart
 website: ''
 ---
-Od 2008 roku prowadzi warsztaty i seminaria w Brazylii. Specjalizuje się w infekcjologii i gojeniu ran, kontroli infekcji, pierwszej pomocy, biosafety, fizjologii skóry i błon śluzowych oraz w technice, ułożeniu i oznaczaniu miejsca przekłucia.
+Specjalista od przekłuć podstawowych i zaawansowanych, w całej Brazylii znany z przekłuć intymnych. Od 2008 roku prowadzi warsztaty i seminaria w całej Brazylii.
+
+Jego techniczne filary to pierwsza pomoc, kontrola infekcji, biosafety, fizjologia skóry i błon śluzowych, infekcjologia i leczenie ran oraz kąt, ułożenie i oznaczanie miejsca przekłucia.
 
 Na III edycji poprowadził wykład o przekłuciach intymnych, męskich i damskich.
