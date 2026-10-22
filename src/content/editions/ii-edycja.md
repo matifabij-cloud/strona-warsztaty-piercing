@@ -59,6 +59,11 @@ gallery:
   - /media/edycja-2/ii-edycja-2025-02.jpg
   - /media/edycja-2/ii-edycja-2025-03.jpg
   - /media/edycja-2/ii-edycja-2025-04.jpg
+  - /media/edycja-2/ii-edycja-2025-05.jpg
+  - /media/edycja-2/ii-edycja-2025-06.jpg
+  - /media/edycja-2/ii-edycja-2025-07.jpg
+  - /media/edycja-2/ii-edycja-2025-08.jpg
+  - /media/edycja-2/ii-edycja-2025-09.jpg
 posters: []
 hidden: false
 ---
