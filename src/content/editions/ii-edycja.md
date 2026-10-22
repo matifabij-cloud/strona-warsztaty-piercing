@@ -11,7 +11,7 @@ dateNote: ''
 accent: czerwony
 venue:
   name: Hotel Tobaco
-  address: ul. Kopernika 62/3, 90-553 Łódź
+  address: ul. Mikołaja Kopernika 64, 90-553 Łódź
   city: Łódź
   mapUrl: ''
 cover: /media/edycja-2/ii-edycja-2025-01.jpg
@@ -33,7 +33,7 @@ program:
     items:
       - time: '10:00'
         title: 'Piercing × Ryzyko Biologiczne'
-        description: 'Antyseptyka, aseptyka, stanowisko pracy, świadomość ciała i dobre praktyki. Bonus: ziarnina i inne problemy z gojeniem – jak radzimy sobie z nimi w Brazylii?'
+        description: 'Antyseptyka, aseptyka, stanowisko pracy, świadomość ciała i dobre praktyki. Bonus: ziarnina, keloidy, infekcje i inne problemy po przekłuciu – jak radzą sobie z nimi piercerzy w Brazylii.'
         speakers:
           - max-alves.md
         host: ''
@@ -41,8 +41,8 @@ program:
     label: ''
     items:
       - time: ''
-        title: Szkolenie z przekłuć sutków metodą WALET
-        description: 'Ćwiczenia na silikonowych modelach.'
+        title: Sutki – Sekret Waleta
+        description: 'Przekłucia sutków metodą WALET, ćwiczenia na silikonowych modelach.'
         speakers:
           - max-alves.md
         host: ''
@@ -69,6 +69,6 @@ hidden: false
 ---
 Druga edycja trwała dwa dni, a poprowadził ją Max Alves. Miała trwać jeden dzień, ale Max został w Polsce na tydzień i świętował 20-lecie pracy, więc drugi dzień dołożyliśmy w bonusie.
 
-Pierwszy dzień poświęciliśmy bezpieczeństwu pracy: antyseptyce, aseptyce, organizacji stanowiska, świadomości ciała i dobrym praktykom. W części bonusowej rozmawialiśmy o ziarninie i innych problemach z gojeniem oraz o tym, jak radzi się sobie z nimi w Brazylii.
+Pierwszy dzień poświęciliśmy bezpieczeństwu pracy: antyseptyce, aseptyce, organizacji stanowiska, świadomości ciała i dobrym praktykom. W części bonusowej rozmawialiśmy o ziarninie, keloidach, infekcjach i innych problemach po przekłuciu oraz o tym, jak radzą sobie z nimi piercerzy w Brazylii.
 
-Drugiego dnia odbyło się szkolenie z przekłuć sutków metodą WALET, z ćwiczeniami na silikonowych modelach.
+Drugiego dnia odbyło się szkolenie „Sutki – Sekret Waleta”: przekłucia sutków metodą WALET, z ćwiczeniami na silikonowych modelach. Każdy uczestnik dostał dyplom ukończenia warsztatów.
