@@ -62,11 +62,14 @@ gallery:
   - /media/edycja-2/ii-edycja-2025-11.jpg
   - /media/edycja-2/ii-edycja-2025-12.jpg
   - /media/edycja-2/ii-edycja-2025-13.jpg
+  - /media/edycja-2/ii-edycja-2025-28.jpg
   - /media/edycja-2/ii-edycja-2025-14.jpg
+  - /media/edycja-2/ii-edycja-2025-31.jpg
   - /media/edycja-2/ii-edycja-2025-05.jpg
   - /media/edycja-2/ii-edycja-2025-15.jpg
   - /media/edycja-2/ii-edycja-2025-16.jpg
   - /media/edycja-2/ii-edycja-2025-03.jpg
+  - /media/edycja-2/ii-edycja-2025-29.jpg
   - /media/edycja-2/ii-edycja-2025-17.jpg
   - /media/edycja-2/ii-edycja-2025-26.jpg
   - /media/edycja-2/ii-edycja-2025-18.jpg
@@ -78,6 +81,7 @@ gallery:
   - /media/edycja-2/ii-edycja-2025-27.jpg
   - /media/edycja-2/ii-edycja-2025-24.jpg
   - /media/edycja-2/ii-edycja-2025-25.jpg
+  - /media/edycja-2/ii-edycja-2025-30.jpg
   - /media/edycja-2/ii-edycja-2025-06.jpg
   - /media/edycja-2/ii-edycja-2025-07.jpg
   - /media/edycja-2/ii-edycja-2025-08.jpg
