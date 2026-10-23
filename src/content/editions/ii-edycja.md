@@ -56,10 +56,26 @@ openCall:
 partners: []
 gallery:
   - /media/edycja-2/ii-edycja-2025-01.jpg
+  - /media/edycja-2/ii-edycja-2025-10.jpg
   - /media/edycja-2/ii-edycja-2025-02.jpg
-  - /media/edycja-2/ii-edycja-2025-03.jpg
-  - /media/edycja-2/ii-edycja-2025-04.jpg
+  - /media/edycja-2/ii-edycja-2025-11.jpg
+  - /media/edycja-2/ii-edycja-2025-12.jpg
+  - /media/edycja-2/ii-edycja-2025-13.jpg
+  - /media/edycja-2/ii-edycja-2025-14.jpg
   - /media/edycja-2/ii-edycja-2025-05.jpg
+  - /media/edycja-2/ii-edycja-2025-15.jpg
+  - /media/edycja-2/ii-edycja-2025-16.jpg
+  - /media/edycja-2/ii-edycja-2025-03.jpg
+  - /media/edycja-2/ii-edycja-2025-17.jpg
+  - /media/edycja-2/ii-edycja-2025-18.jpg
+  - /media/edycja-2/ii-edycja-2025-19.jpg
+  - /media/edycja-2/ii-edycja-2025-20.jpg
+  - /media/edycja-2/ii-edycja-2025-21.jpg
+  - /media/edycja-2/ii-edycja-2025-22.jpg
+  - /media/edycja-2/ii-edycja-2025-23.jpg
+  - /media/edycja-2/ii-edycja-2025-24.jpg
+  - /media/edycja-2/ii-edycja-2025-25.jpg
+  - /media/edycja-2/ii-edycja-2025-04.jpg
   - /media/edycja-2/ii-edycja-2025-06.jpg
   - /media/edycja-2/ii-edycja-2025-07.jpg
   - /media/edycja-2/ii-edycja-2025-08.jpg
