@@ -2,8 +2,8 @@
 number: IV
 title: Łódzkie Warsztaty Piercingu 2027
 theme: New Generation
-tagline: 'Piątek: tramwaj Train to the Future i wykłady New Generation Day. Weekend: Piercing Festival Łódź w Manufakturze.'
-summary: 'Trzy dni w Łodzi: przejazd zabytkowym tramwajem, wykłady dla piercerów i publiczny Piercing Festival Łódź w Manufakturze.'
+tagline: 'Piątek: New Generation Day. Sobota: Main Event w The Loom Hotel. Weekend: Piercing Festival Łódź w Manufakturze.'
+summary: 'Trzy dni w Łodzi: New Generation Day, Main Event z Jane Absinth i Andre Bergiem, przejazd zabytkowym tramwajem i publiczny Piercing Festival Łódź w Manufakturze.'
 startDate: '2027-03-19'
 endDate: '2027-03-21'
 startTime: '08:30'
@@ -32,6 +32,9 @@ attractions:
   - title: New Generation Day
     description: 'Wykłady specjalistów z Polski i zagranicy: od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
     icon: graduation
+  - title: Main Event
+    description: 'Sobota w The Loom Hotel: wykłady gwiazd światowej sceny piercingu, otwarte Q&A z Jane Absinth i Andre Bergiem, a na koniec przejazd zabytkowym tramwajem.'
+    icon: star
   - title: Maria Twarowska Piercing Beauty Zone
     description: 'Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.'
     icon: ring
@@ -60,6 +63,10 @@ speakers:
     note: Infekcjologia i gojenie ran
   - speaker: anja-i-nina.md
     note: Od kaniuli do igły
+  - speaker: jane-absinth.md
+    note: Cartilage Piercings 101
+  - speaker: andre-berg.md
+    note: Cartilage Piercings 101
   - speaker: igor-platek.md
     note: Gość specjalny
 program:
@@ -95,18 +102,42 @@ program:
         speakers: []
         host: ''
   - day: '2027-03-20'
-    label: Sobota – Piercing Festival Łódź
+    label: Sobota – Main Event i Piercing Festival Łódź
     items:
       - time: ''
-        title: Strefy festiwalu i wystawa prac
-        description: 'Przez cały dzień, w godzinach otwarcia Manufaktury: Maria Twarowska Piercing Beauty Zone, Brazil Zone, Happy Piercing Zone, strefa biżuterii i wystawców oraz głosowanie w konkursie Piercing Artist Łódź.'
+        title: Piercing Festival Łódź
+        description: 'Manufaktura, przez cały dzień, w godzinach otwarcia: Maria Twarowska Piercing Beauty Zone, Brazil Zone, Happy Piercing Zone, strefa biżuterii i wystawców oraz głosowanie w konkursie Piercing Artist Łódź.'
         speakers: []
+        host: ''
+      - time: '9:30'
+        title: Cartilage Piercings 101
+        description: 'Main Event, The Loom Hotel, ul. Ogrodowa 21. Przekłucia chrząstek od podstaw.'
+        speakers:
+          - jane-absinth.md
+          - andre-berg.md
         host: ''
       - time: '10:00'
         title: Snake Bites Zone
-        description: 'Do 17:00.'
+        description: 'Manufaktura, do 17:00.'
         speakers:
           - igor-platek.md
+        host: ''
+      - time: '12:00'
+        title: Wykład – temat ogłosimy wkrótce
+        description: 'Main Event, The Loom Hotel.'
+        speakers: []
+        host: ''
+      - time: '14:00'
+        title: Wykład – temat ogłosimy wkrótce
+        description: 'Main Event, The Loom Hotel.'
+        speakers: []
+        host: ''
+      - time: '16:00'
+        title: 'Open Piercing Q&A'
+        description: 'Około 16:00. Wy pytacie, oni odpowiadają: chrząstki, technika, gojenie, problemy i codzienna praktyka. Na zakończenie dnia przejazd zabytkowym tramwajem z przewodnikiem dla uczestników Main Event.'
+        speakers:
+          - jane-absinth.md
+          - andre-berg.md
         host: ''
   - day: '2027-03-21'
     label: Niedziela – Piercing Festival Łódź
@@ -143,6 +174,11 @@ tickets:
       description: 'Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Rezerwacja%20%E2%80%93%20New%20Generation%20Day'
       buttonLabel: Zarezerwuj
+    - name: Main Event
+      price: ''
+      description: 'Sobota, 20 marca · The Loom Hotel. Wykłady, w tym Cartilage Piercings 101, otwarte Q&A z Jane Absinth i Andre Bergiem oraz przejazd zabytkowym tramwajem z przewodnikiem. Cenę i start sprzedaży ogłosimy wkrótce.'
+      url: ''
+      buttonLabel: ''
     - name: Otwarty wykład New Generation Day
       price: 0 zł
       description: 'Piątek, 19 marca · The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.'
@@ -205,6 +241,7 @@ posters:
   - /media/plakaty/iv-edycja-max-alves.jpg
   - /media/plakaty/iv-edycja-silas.jpg
   - /media/plakaty/iv-edycja-ania-i-nina.jpg
+  - /media/plakaty/iv-edycja-main-event-jane-andre.jpg
   - /media/plakaty/iv-edycja-nabor-artystow.jpg
 hidden: false
 ---
@@ -213,6 +250,8 @@ hidden: false
 **Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.
 
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
+
+**Sobota, 20 marca – Main Event.** Pierwszy dzień głównej części warsztatów w The Loom Hotel. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101, a około 16:00 otwarte Q&A. Dzień zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
 
 **Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 

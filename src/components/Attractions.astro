@@ -21,7 +21,7 @@ const odd = n % 2 === 1;
 
 <ul
   role="list"
-  class:list={['attractions', { 'attractions--odd': odd, 'attractions--odd-md': odd && colsMd === 2 }]}
+  class:list={['attractions', { 'attractions--odd': odd, 'attractions--odd-md': odd && colsMd === 2, 'attractions--dense': cols >= 5 }]}
   style={`--cols:${Math.max(cols, 1)};--cols-md:${Math.max(colsMd, 1)}`}
 >
   {
@@ -118,6 +118,17 @@ const odd = n % 2 === 1;
     font-size: var(--step-2);
     line-height: 1.22;
     letter-spacing: 0.01em;
+  }
+
+  /* 5 kolumn: węższe karty – mniejszy tytuł i ciaśniejsze wnętrze, żeby tytuły nie łamały się na 3 linie */
+  @media (min-width: 72rem) {
+    .attractions--dense .attraction__title {
+      font-size: var(--step-1);
+    }
+
+    .attractions--dense .attraction {
+      padding: 1.25rem 1.1rem;
+    }
   }
 
   .attraction__text {
