@@ -72,8 +72,10 @@ const socials = [
       <p class="site-footer__label">{t('footer.organizer')}</p>
       <p>
         {o.name}<br />
-        {o.address}, {o.postalCode} {o.city}<br />
+        {o.address}, <span style="white-space: nowrap">{o.postalCode} {o.city}</span><br />
         {t('contact.nip')}: {o.nip}
+        {o.krs && <><br />KRS: {o.krs}</>}
+        {o.regon && <><br />REGON: {o.regon}</>}
         {
           (o.brand || o.website) && (
             <>

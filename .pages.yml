@@ -149,6 +149,12 @@ content:
           - name: nip
             label: NIP
             type: string
+          - name: krs
+            label: KRS
+            type: string
+          - name: regon
+            label: REGON
+            type: string
           - name: address
             label: Ulica i numer
             type: string

@@ -1,10 +1,10 @@
 ---
 title: Polityka prywatności
-updated: '2026-10-10'
+updated: '2026-10-31'
 ---
 ## Kto jest administratorem danych
 
-Administratorem danych osobowych jest **Piercing Beauty Sp. z o.o.**, ul. Narutowicza 40/1, 90-135 Łódź, NIP 726 266 10 31, organizator Łódzkich Warsztatów Piercingu. We wszystkich sprawach dotyczących danych osobowych możesz napisać na adres [lodzkiewarsztatypiercingu@gmail.com](mailto:lodzkiewarsztatypiercingu@gmail.com).
+Administratorem danych osobowych jest **Piercing Beauty Sp. z o.o.**, ul. Prezydenta Gabriela Narutowicza 40/1, 90-135 Łódź, NIP 726 266 10 31, KRS 0000624606, REGON 364774930, organizator Łódzkich Warsztatów Piercingu. We wszystkich sprawach dotyczących danych osobowych możesz napisać na adres [lodzkiewarsztatypiercingu@gmail.com](mailto:lodzkiewarsztatypiercingu@gmail.com).
 
 ## Jakie dane przetwarzamy i w jakim celu
 

@@ -19,6 +19,8 @@ const schema = z.object({
     name: str,
     brand: str,
     nip: str,
+    krs: str,
+    regon: str,
     address: str,
     postalCode: str,
     city: str,

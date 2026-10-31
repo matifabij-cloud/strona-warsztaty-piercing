@@ -12,15 +12,17 @@
   },
   "organizer": {
     "name": "Piercing Beauty Sp. z o.o.",
-    "brand": "Maria Twarowska Piercing & Beauty",
+    "brand": "Maria Twarowska Piercing Beauty",
     "nip": "726 266 10 31",
-    "address": "ul. Narutowicza 40/1",
+    "krs": "0000624606",
+    "regon": "364774930",
+    "address": "ul. Prezydenta Gabriela Narutowicza 40/1",
     "postalCode": "90-135",
     "city": "Łódź"
   },
   "about": {
     "title": "Wiedza, która zostaje w dłoniach",
-    "text": "Łódzkie Warsztaty Piercingu to cykliczne wydarzenie edukacyjne dla piercerów, organizowane w Łodzi przez studio Maria Twarowska Piercing & Beauty. Projekt wyrósł z naszej własnej potrzeby szkolenia się i wymiany doświadczeń: chcemy wysłuchać i pokazać wszystkich, którzy mają w branży coś ciekawego do powiedzenia.\n\nZapraszamy prelegentów z Polski i z zagranicy, zwłaszcza z Brazylii, którzy dzielą się praktyczną wiedzą: od bezpieczeństwa pracy i biosafety, przez techniki przekłuć, po zaawansowane modyfikacje ciała. Uczestnicy przyjeżdżają nie tylko z Polski, ale też między innymi z Niemiec, Szwecji i Norwegii.",
+    "text": "Łódzkie Warsztaty Piercingu to cykliczne wydarzenie edukacyjne dla piercerów, organizowane w Łodzi przez studio Maria Twarowska Piercing Beauty. Projekt wyrósł z naszej własnej potrzeby szkolenia się i wymiany doświadczeń: chcemy wysłuchać i pokazać wszystkich, którzy mają w branży coś ciekawego do powiedzenia.\n\nZapraszamy prelegentów z Polski i z zagranicy, zwłaszcza z Brazylii, którzy dzielą się praktyczną wiedzą: od bezpieczeństwa pracy i biosafety, przez techniki przekłuć, po zaawansowane modyfikacje ciała. Uczestnicy przyjeżdżają nie tylko z Polski, ale też między innymi z Niemiec, Szwecji i Norwegii.",
     "images": [
       "/media/edycja-3/iii-edycja-2026-03.jpg",
       "/media/edycja-3/iii-edycja-2026-04.jpg",
@@ -37,8 +39,12 @@
       "answer": "Tak. Piercing Festival Łódź to otwarta dla publiczności część Łódzkich Warsztatów Piercingu, a wstęp jest bezpłatny. Płacisz tylko za to, z czego skorzystasz, na przykład za przekłucie albo biżuterię. Na Snake Bites Zone trzeba zapisać się wcześniej."
     },
     {
+      "question": "Czy osoba niepełnoletnia może zrobić przekłucie na festiwalu?",
+      "answer": "Tak, ale wymagana jest zgoda rodzica lub opiekuna prawnego albo jego obecność, zgodnie z zasadami obowiązującymi w danej strefie."
+    },
+    {
       "question": "Gdzie i kiedy odbędzie się IV edycja?",
-      "answer": "19–21 marca 2027 roku w Łodzi. W piątek New Generation Day: przejazd zabytkowym tramwajem (start około 8:30 spod Manufaktury) i wykłady w The Loom Hotel przy ul. Ogrodowej 21. W sobotę Main Event w The Loom Hotel. W sobotę i niedzielę Piercing Festival Łódź w Manufakturze."
+      "answer": "19–21 marca 2027 roku w Łodzi. W piątek New Generation Day: przejazd zabytkowym tramwajem (start około 8:30 spod Manufaktury) i wykłady w The Loom Hotel przy ul. Ogrodowej 21. W sobotę i niedzielę Main Event w The Loom Hotel oraz Piercing Festival Łódź w Manufakturze."
     },
     {
       "question": "W jakim języku są wykłady?",
@@ -50,11 +56,11 @@
     },
     {
       "question": "Czy mogę dołączyć do tramwaju po drodze?",
-      "answer": "Tak. Tramwaj zatrzyma się na wybranych przystankach – trasę opublikujemy około tydzień przed wydarzeniem."
+      "answer": "Tak. Piątkowy przejazd Train to the Future jest bezpłatny i nie wymaga zapisów ani biletu – możesz wsiąść na trasie, w miarę wolnych miejsc. Trasę opublikujemy około tydzień przed wydarzeniem."
     },
     {
       "question": "Jak kupić bilet?",
-      "answer": "Na piątkowe wykłady przyjmujemy już rezerwacje – przycisk „Zarezerwuj” znajdziesz w sekcji Bilety. Sprzedaż online uruchomimy wkrótce i ogłosimy ją także na Instagramie."
+      "answer": "Bilety na piątkowe wykłady i na Main Event kupisz w sekcji Bilety – sprzedaż online uruchomimy wkrótce i ogłosimy ją także na Instagramie. Na Snake Bites Zone zapisujesz się mailowo, wybierając konkretną godzinę."
     },
     {
       "question": "Czy mogę dostać fakturę?",

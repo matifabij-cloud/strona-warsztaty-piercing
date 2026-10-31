@@ -57,8 +57,10 @@ const channels = [
     <p class="contact__org-label">{t('contact.organizer')}</p>
     <p class="contact__org-name">{o.name}</p>
     <p>
-      {o.address}, {o.postalCode} {o.city}<br />
+      {o.address}, <span style="white-space: nowrap">{o.postalCode} {o.city}</span><br />
       {t('contact.nip')}: {o.nip}
+      {o.krs && <><br />KRS: {o.krs}</>}
+      {o.regon && <><br />REGON: {o.regon}</>}
     </p>
     {
       (o.brand || o.website) && (

@@ -2,7 +2,7 @@
 number: IV
 title: Łódzkie Warsztaty Piercingu 2027
 theme: New Generation
-tagline: 'Piątek: New Generation Day. Sobota: Main Event w The Loom Hotel. Weekend: Piercing Festival Łódź w Manufakturze.'
+tagline: 'Piątek: New Generation Day. Weekend: Main Event w The Loom Hotel i Piercing Festival Łódź w Manufakturze.'
 summary: 'Trzy dni w Łodzi: New Generation Day, Main Event z Jane Absinth i Andre Bergiem, przejazd zabytkowym tramwajem i publiczny Piercing Festival Łódź w Manufakturze.'
 startDate: '2027-03-19'
 endDate: '2027-03-21'
@@ -27,13 +27,13 @@ stats:
     label: wstęp na festiwal w Manufakturze
 attractions:
   - title: Train to the Future
-    description: 'Konferencja, która zaczyna się w tramwaju: zanim usiądziemy na wykładach, zwiedzamy Łódź z przewodnikiem.'
+    description: 'Konferencja, która zaczyna się w tramwaju: zanim usiądziemy na wykładach, zwiedzamy Łódź z przewodnikiem. Przejazd jest bezpłatny i nie wymaga zapisów.'
     icon: tram
   - title: New Generation Day
     description: 'Wykłady specjalistów z Polski i zagranicy: od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
     icon: graduation
   - title: Main Event
-    description: 'Sobota w The Loom Hotel: wykłady gwiazd światowej sceny piercingu, otwarte Q&A z Jane Absinth i Andre Bergiem, a na koniec przejazd zabytkowym tramwajem.'
+    description: 'Sobota i niedziela w The Loom Hotel: główne warsztaty z gwiazdami światowej sceny piercingu, otwarte Q&A z Jane Absinth i Andre Bergiem, a w sobotę wieczorem przejazd zabytkowym tramwajem.'
     icon: star
   - title: Maria Twarowska Piercing Beauty Zone
     description: 'Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.'
@@ -42,7 +42,7 @@ attractions:
     description: 'Brazylijscy piercerzy, piercing na miejscu, historia brazylijskiej sceny body piercingu i body modification oraz kultura Brazylii.'
     icon: brazil
   - title: Happy Piercing Zone
-    description: 'Strefa dla dzieci i młodzieży: bezpieczne przekłuwanie uszu, edukacja i atrakcje.'
+    description: 'Strefa dla dzieci i młodzieży: bezpieczne przekłuwanie uszu, edukacja i atrakcje. Osoby niepełnoletnie potrzebują zgody rodzica lub opiekuna prawnego albo jego obecności.'
     icon: smile
   - title: Snake Bites Zone
     description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek.'
@@ -75,7 +75,7 @@ program:
     items:
       - time: '8:30'
         title: Train to the Future
-        description: 'Rozpoczęcie wydarzenia i przejażdżka zabytkowym tramwajem z przewodnikiem. Start spod Manufaktury.'
+        description: 'Rozpoczęcie wydarzenia i przejażdżka zabytkowym tramwajem z przewodnikiem. Start spod Manufaktury, przejazd bezpłatny i bez zapisów.'
         speakers: []
         host: ''
       - time: '9:30'
@@ -96,19 +96,14 @@ program:
         speakers:
           - anja-i-nina.md
         host: ''
-      - time: ''
-        title: Otwarty wykład – temat ogłosimy wkrótce
-        description: ''
+      - time: '16:30'
+        title: Jak rozmawiać z drugim człowiekiem
+        description: 'Otwarty wykład, wstęp bezpłatny dla wszystkich. The Loom Hotel. Terminologia queer, inkluzywność i komunikacja.'
         speakers: []
-        host: ''
+        host: XHULES
   - day: '2027-03-20'
     label: Sobota – Main Event i Piercing Festival Łódź
     items:
-      - time: ''
-        title: Piercing Festival Łódź
-        description: 'Manufaktura, przez cały dzień, w godzinach otwarcia: Maria Twarowska Piercing Beauty Zone, Brazil Zone, Happy Piercing Zone, strefa biżuterii i wystawców oraz głosowanie w konkursie Piercing Artist Łódź.'
-        speakers: []
-        host: ''
       - time: '9:30'
         title: Cartilage Piercings 101
         description: 'Main Event, The Loom Hotel, ul. Ogrodowa 21. Przekłucia chrząstek od podstaw.'
@@ -117,8 +112,13 @@ program:
           - andre-berg.md
         host: ''
       - time: '10:00'
+        title: Piercing Festival Łódź
+        description: 'Manufaktura, do 22:00: Maria Twarowska Piercing Beauty Zone, Brazil Zone i Happy Piercing Zone, a także strefa biżuterii i wystawców oraz głosowanie w konkursie Piercing Artist Łódź.'
+        speakers: []
+        host: ''
+      - time: '10:00'
         title: Snake Bites Zone
-        description: 'Manufaktura, do 17:00.'
+        description: 'Do 17:00. Zapisy mailowe na konkretną godzinę.'
         speakers:
           - igor-platek.md
         host: ''
@@ -134,22 +134,27 @@ program:
         host: ''
       - time: '16:00'
         title: 'Open Piercing Q&A'
-        description: 'Około 16:00. Wy pytacie, oni odpowiadają: chrząstki, technika, gojenie, problemy i codzienna praktyka. Na zakończenie dnia przejazd zabytkowym tramwajem z przewodnikiem dla uczestników Main Event.'
+        description: 'Około 16:00. Wy pytacie, oni odpowiadają: chrząstki, technika, gojenie, problemy i codzienna praktyka. Wieczorem, po zakończeniu warsztatów, przejazd zabytkowym tramwajem z przewodnikiem dla uczestników Main Event.'
         speakers:
           - jane-absinth.md
           - andre-berg.md
         host: ''
   - day: '2027-03-21'
-    label: Niedziela – Piercing Festival Łódź
+    label: Niedziela – Main Event i Piercing Festival Łódź
     items:
       - time: ''
-        title: Strefy festiwalu i ostatni dzień wystawy
-        description: 'Przez cały dzień, w godzinach otwarcia Manufaktury.'
+        title: Main Event – drugi dzień
+        description: 'The Loom Hotel. Program ogłosimy wkrótce.'
+        speakers: []
+        host: ''
+      - time: '10:00'
+        title: Piercing Festival Łódź
+        description: 'Manufaktura, do 21:00: strefy piercingu, strefa biżuterii i wystawców oraz ostatni dzień wystawy.'
         speakers: []
         host: ''
       - time: '10:00'
         title: Snake Bites Zone
-        description: 'Do 16:00.'
+        description: 'Do 16:00. Zapisy mailowe na konkretną godzinę.'
         speakers:
           - igor-platek.md
         host: ''
@@ -174,19 +179,24 @@ tickets:
       description: 'Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Rezerwacja%20%E2%80%93%20New%20Generation%20Day'
       buttonLabel: Zarezerwuj
-    - name: Main Event
-      price: ''
-      description: 'Sobota, 20 marca · The Loom Hotel. Wykłady, w tym Cartilage Piercings 101, otwarte Q&A z Jane Absinth i Andre Bergiem oraz przejazd zabytkowym tramwajem z przewodnikiem. Cenę i start sprzedaży ogłosimy wkrótce.'
+    - name: Main Event – bez noclegu
+      price: 1500 zł
+      description: 'Sobota i niedziela, 20–21 marca · The Loom Hotel. Jeden bilet na oba dni głównych warsztatów, w tym wykłady Jane Absinth i Andre Berga oraz sobotni przejazd zabytkowym tramwajem. Maksymalnie 120 uczestników.'
       url: ''
       buttonLabel: ''
-    - name: Otwarty wykład New Generation Day
+    - name: Main Event – z noclegiem
+      price: 2000 zł
+      description: 'Wszystko, co w bilecie bez noclegu, oraz nocleg ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel.'
+      url: ''
+      buttonLabel: ''
+    - name: Otwarty wykład „Jak rozmawiać z drugim człowiekiem”
       price: 0 zł
-      description: 'Piątek, 19 marca · The Loom Hotel. Temat i zasady zapisów ogłosimy wkrótce.'
+      description: 'Piątek, 19 marca, 16:30 · The Loom Hotel. Prowadzi XHULES. Wstęp bezpłatny, otwarty dla wszystkich.'
       url: ''
       buttonLabel: ''
     - name: Snake Bites Zone
       price: 400 zł
-      description: 'Sobota 10:00–17:00, niedziela 10:00–16:00 · Manufaktura. W cenie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego i 2 bezpłatne konsultacje po przekłuciu. Około 40–60 minut na osobę, liczba miejsc ograniczona.'
+      description: 'Sobota 10:00–17:00, niedziela 10:00–16:00. W cenie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego i 2 bezpłatne konsultacje po przekłuciu. Około 50 minut na osobę: zapisujesz się na konkretną godzinę, a dostępność terminu potwierdzamy mailowo.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=SNAKE%20BITES%20ZONE'
       buttonLabel: Zapisz się
 openCall:
@@ -249,9 +259,9 @@ hidden: false
 
 **Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.
 
-To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing & Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
+To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
 
-**Sobota, 20 marca – Main Event.** Pierwszy dzień głównej części warsztatów w The Loom Hotel. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101, a około 16:00 otwarte Q&A. Dzień zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
+**Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101, a około 16:00 otwarte Q&A. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
 
 **Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 
