@@ -81,6 +81,12 @@ Sekcja „Bądź na bieżąco” pojawi się na stronie głównej nad FAQ.
    **SITE_URL** = `https://lodzkiewarsztatypiercingu.pl` (bez ukośnika na końcu).
    Potem w **Deployments** kliknij **Retry deployment** przy ostatniej wersji.
    Dzięki temu linki dla Google i podglądy w social media będą pokazywać nowy adres.
+5. **Podmień stary adres `strona-warsztaty-piercing.pages.dev` na nowy wszędzie, gdzie go wpisaliśmy:**
+   - Evenea → wydarzenie → **Opis wydarzenia** → linijka „Pełny program: …”,
+   - bio na Instagramie @lodzkiewarsztatypiercingu,
+   - materiały i plakaty przygotowywane od tej pory.
+
+   Stary adres dalej działa, więc nic się nie psuje, ale ludzie powinni widzieć docelowy.
 
 ## 5. Posty z Instagrama – Behold
 
