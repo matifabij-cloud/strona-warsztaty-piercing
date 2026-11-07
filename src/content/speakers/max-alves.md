@@ -6,7 +6,7 @@ country: Brazylia
 instagram: maxalvespiercer_2
 website: ''
 ---
-Znany też jako Max do Gancho. Body piercingiem interesuje się od końca lat 90., a jako piercer pracuje od 2005 roku – zaczynał od kolczyków za 8 reali. Pierwszą suspension wykonał 19 marca 2005 roku w São Paulo i od lat zajmuje się techniczną stroną podwieszeń: hakami, linami, karabinkami, bloczkami, węzłami i mechaniką całego systemu. Zorganizował pierwszy warsztat body suspension w Brazylii, jako pierwszy w Brazylii zjechał na tyrolce zawieszony na hakach i jako pierwsza osoba w Brazylii (druga na świecie) zawisł podwieszony pod helikopterem.
+Znany też jako Max do Gancho. Body piercingiem interesuje się od końca lat 90., a jako piercer pracuje od 2005 roku – zaczynał od kolczyków za 8 reali. Pierwszą suspension wykonał 19 marca 2005 roku w São Paulo i od lat zajmuje się techniczną stroną podwieszeń: hakami, linami, karabinkami, bloczkami, węzłami i mechaniką całego systemu. To brazylijski pionier body suspension: prowadzi warsztaty podwieszeń, jest znany między innymi ze zjazdów na tyrolce w podwieszeniu na hakach, a zawisł też podwieszony pod helikopterem.
 
 Uczestniczył w setkach warsztatów, a dziesiątki z nich poprowadził. Wyszkolił ponad 2000 uczniów na całym świecie i jest jednym z pionierów nauczania piercingu online w Brazylii: stworzył kurs WOEP (Workshop Online Estudando Piercing) z setkami uczniów, kurs biobezpieczeństwa z tysiącami uczestników, platformę edukacyjną Clube do Piercing i Monstro – największy kongres piercingu online w Brazylii.
 

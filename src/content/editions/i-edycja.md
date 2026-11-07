@@ -16,9 +16,7 @@ venue:
   mapUrl: ''
 cover: /media/edycja-1/i-edycja-2024-01.jpg
 poster: ''
-stats:
-  - value: '~40'
-    label: uczestników
+stats: []
 attractions: []
 speakers:
   - speaker: marcelina-szejko.md
@@ -41,4 +39,4 @@ gallery:
 posters: []
 hidden: false
 ---
-Pierwsza edycja Łódzkich Warsztatów Piercingu, od której wszystko się zaczęło. Wykład o przekłuwaniu języka poprowadziła Marcelina Szejko.
+Pierwsza edycja Łódzkich Warsztatów Piercingu, od której wszystko się zaczęło. Wykład poprowadziła Marcelina Szejko, autorka pracy magisterskiej o profesjonalnym piercingu języka i jego uwarunkowaniach anatomiczno-czynnościowych.

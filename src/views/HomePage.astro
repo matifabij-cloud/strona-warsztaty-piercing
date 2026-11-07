@@ -75,7 +75,7 @@ const jsonLd = [
           <SectionHead id="event-title" eyebrow={t('section.about')} title={t('section.attractions')} />
           {body && <div class="prose prose--large event-intro__text" set:html={body} />}
         </div>
-        {d.attractions.length > 0 && <Attractions locale={locale} items={d.attractions} />}
+        {d.attractions.length > 0 && <Attractions locale={locale} items={d.attractions} parts={d.parts} />}
       </div>
     </section>
 

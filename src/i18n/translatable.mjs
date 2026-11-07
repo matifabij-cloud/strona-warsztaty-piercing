@@ -15,6 +15,8 @@ export const translatable = {
       'summary',
       'body',
       'stats[].label',
+      'parts[].title',
+      'parts[].subtitle',
       'attractions[].title',
       'attractions[].description',
       'speakers[].note',

@@ -15,15 +15,27 @@ const days = edition.data.program.filter((d) => d.items.length > 0);
 
 const rendered = await Promise.all(
   days.map(async (day, i) => ({
+    group: day.group,
     heading: day.label ? tr(day.label, locale) : day.day ? formatWeekday(day.day, locale) : t('program.day', { n: i + 1 }),
     date: day.day ? formatDate(day.day, locale) : '',
     items: await Promise.all(day.items.map(async (item) => ({ ...item, hosts: await programHosts(item) }))),
   })),
 );
-// Dni o bardzo różnej liczbie punktów nie stoją obok siebie (jedna kolumna byłaby dużo dłuższa):
-// wtedy każdy dzień zajmuje całą szerokość, a jego punkty układają się w kafelki obok siebie.
-const counts = rendered.map((d) => d.items.length);
-const stacked = rendered.length > 1 && Math.max(...counts) - Math.min(...counts) > 1;
+
+// Osobny harmonogram dla każdej części wydarzenia (np. warsztaty i festiwal).
+const parts = edition.data.parts;
+const blocks = (
+  parts.length > 0
+    ? parts.map((p, i) => ({ part: p, days: rendered.filter((d) => d.group === p.key || (i === 0 && !parts.some((q) => q.key === d.group))) }))
+    : [{ part: undefined, days: rendered }]
+)
+  .filter((b) => b.days.length > 0)
+  .map((b) => {
+    // Dni o bardzo różnej liczbie punktów nie stoją obok siebie (jedna kolumna byłaby dużo dłuższa):
+    // wtedy każdy dzień zajmuje całą szerokość, a jego punkty układają się w kafelki obok siebie.
+    const counts = b.days.map((d) => d.items.length);
+    return { ...b, stacked: b.days.length > 1 && Math.max(...counts) - Math.min(...counts) > 1 };
+  });
 
 // Kafelki dnia w siatce 6-kolumnowej: każdy rząd jest pełny, a niepełny ostatni rząd
 // dzieli szerokość po równo (np. 5 punktów → 3 + 2 szersze, 4 punkty → 2 × 2).
@@ -38,40 +50,50 @@ const spans = (n: number, i: number) => {
 
 {
   rendered.length > 0 ? (
-    <div
-      class:list={[
-        'program',
-        stacked
-          ? 'program--stacked'
-          : { 'program--two': rendered.length > 1, 'program--odd': rendered.length > 1 && rendered.length % 2 === 1, 'program--three': rendered.length === 3 },
-      ]}
-    >
-      {rendered.map((day) => (
-        <section class="program__day" aria-label={`${day.heading} ${day.date}`}>
-          <header class="program__head">
-            <h3>{day.heading}</h3>
-            {day.date && <p>{day.date}</p>}
+    blocks.map(({ part, days: list, stacked }) => (
+      <div class:list={['program-part', { 'program-part--titled': part }]}>
+        {part && (
+          <header class="program-part__head">
+            <h3 class="program-part__title">{tr(part.title, locale)}</h3>
+            {part.subtitle && <p class="program-part__sub">{tr(part.subtitle, locale)}</p>}
           </header>
-          <ol role="list" class="program__items">
-            {day.items.map((item, i) => (
-              <li class="program__item" style={stacked ? spans(day.items.length, i) : undefined}>
-                <span class="program__time">{item.time}</span>
-                <div class="program__info">
-                  <p class="program__title">{tr(item.title, locale)}</p>
-                  {item.hosts.length > 0 && (
-                    <p class="program__hosts">
-                      <Icon name="mic" size={16} />
-                      {item.hosts.join(', ')}
-                    </p>
-                  )}
-                  {item.description && <p class="program__desc">{tr(item.description, locale)}</p>}
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-      ))}
-    </div>
+        )}
+        <div
+          class:list={[
+            'program',
+            stacked
+              ? 'program--stacked'
+              : { 'program--two': list.length > 1, 'program--odd': list.length > 1 && list.length % 2 === 1, 'program--three': list.length === 3 },
+          ]}
+        >
+          {list.map((day) => (
+            <section class="program__day" aria-label={`${day.heading} ${day.date}`}>
+              <header class="program__head">
+                <h3>{day.heading}</h3>
+                {day.date && <p>{day.date}</p>}
+              </header>
+              <ol role="list" class="program__items">
+                {day.items.map((item, i) => (
+                  <li class="program__item" style={stacked ? spans(day.items.length, i) : undefined}>
+                    <span class="program__time">{item.time}</span>
+                    <div class="program__info">
+                      <p class="program__title">{tr(item.title, locale)}</p>
+                      {item.hosts.length > 0 && (
+                        <p class="program__hosts">
+                          <Icon name="mic" size={16} />
+                          {item.hosts.join(', ')}
+                        </p>
+                      )}
+                      {item.description && <p class="program__desc">{tr(item.description, locale)}</p>}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          ))}
+        </div>
+      </div>
+    ))
   ) : (
     <div class="program-soon">
       <Icon name="clock" size={32} stroke-width={1.6} />
@@ -87,6 +109,35 @@ const spans = (n: number, i: number) => {
 }
 
 <style>
+  .program-part + .program-part {
+    margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+  }
+
+  .program-part__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .program-part__title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: var(--step-3);
+    line-height: 1.1;
+    color: var(--accent);
+  }
+
+  .program-part__sub {
+    color: var(--c-muted);
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
   .program {
     display: grid;
     gap: clamp(1rem, 0.75rem + 1.5vw, 2rem);

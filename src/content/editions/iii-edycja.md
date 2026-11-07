@@ -17,8 +17,6 @@ venue:
 cover: /media/edycja-3/iii-edycja-2026-01.jpg
 poster: /media/plakaty/iii-edycja-program.jpg
 stats:
-  - value: '55–70'
-    label: uczestników
   - value: '5'
     label: wykładów
   - value: '6'

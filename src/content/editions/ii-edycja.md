@@ -1,6 +1,6 @@
 ---
 number: II
-title: Piercing × Ryzyko Biologiczne
+title: Piercing – ryzyko biologiczne
 theme: ''
 tagline: II edycja Łódzkich Warsztatów Piercingu
 summary: 'Dwa dni z Maxem Alvesem: bezpieczeństwo pracy, antyseptyka i aseptyka, a drugiego dnia szkolenie z przekłuć sutków.'
@@ -17,8 +17,6 @@ venue:
 cover: /media/edycja-2/ii-edycja-2025-01.jpg
 poster: ''
 stats:
-  - value: '~50'
-    label: uczestników
   - value: '2'
     label: dni
   - value: '1'
@@ -32,7 +30,7 @@ program:
     label: ''
     items:
       - time: '10:00'
-        title: 'Piercing × Ryzyko Biologiczne'
+        title: 'Piercing – ryzyko biologiczne'
         description: 'Antyseptyka, aseptyka, stanowisko pracy, świadomość ciała i dobre praktyki. Bonus: ziarnina, keloidy, infekcje i inne problemy po przekłuciu – jak radzą sobie z nimi piercerzy w Brazylii.'
         speakers:
           - max-alves.md

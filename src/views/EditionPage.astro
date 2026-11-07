@@ -176,7 +176,7 @@ const coverIsPortrait = cover ? dims(cover).height > dims(cover).width : false;
         <section class="section" aria-labelledby="attr-title">
           <div class="container">
             <SectionHead id="attr-title" eyebrow={editionLabel} title={t('section.attractions')} />
-            <Attractions locale={locale} items={d.attractions} />
+            <Attractions locale={locale} items={d.attractions} parts={d.parts} />
           </div>
         </section>
       )

@@ -1,76 +1,148 @@
 ---
 import Icon from './Icon.astro';
+import Img from './Img.astro';
 import { tr, type Locale } from '../i18n';
 import type { Edition } from '../lib/content';
 
 interface Props {
   locale: Locale;
   items: Edition['data']['attractions'];
+  parts?: Edition['data']['parts'];
 }
 
-const { locale, items } = Astro.props;
+const { locale, items, parts = [] } = Astro.props;
 
-// Liczba kolumn na dużym ekranie dobrana tak, żeby rzędy były pełne (np. 10 → 5 + 5, 9 → 3 × 3).
-const n = items.length;
-const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
-// Mniejszy laptop: 3 kolumny, jeśli rzędy wyjdą pełne, inaczej 2.
-const colsMd = n % 3 === 0 ? 3 : n % 4 === 0 ? 4 : 2;
-// Przy 2 kolumnach i nieparzystej liczbie ostatnia karta zajmuje cały rząd.
-const odd = n % 2 === 1;
+// Podział na części wydarzenia (np. warsztaty i festiwal). Atrakcje bez części trafiają do pierwszej.
+const blocks =
+  parts.length > 0
+    ? parts
+        .map((p, i) => ({ part: p, items: items.filter((a) => a.group === p.key || (i === 0 && !parts.some((q) => q.key === a.group))) }))
+        .filter((b) => b.items.length > 0)
+    : [{ part: undefined, items }];
+
+// Siatka o podwójnej liczbie kolumn: każdy kafelek zajmuje 2, więc niepełny ostatni rząd
+// da się wyśrodkować (bez dziury z boku). Liczba kolumn tak, żeby rzędy były możliwie pełne.
+const layout = (n: number) => {
+  const lg = n <= 4 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
+  const md = n <= 3 ? n : n % 3 === 0 ? 3 : 2;
+  const sm = Math.min(n, 2);
+  const start = (c: number, i: number) => {
+    const rest = n % c;
+    return rest && i === n - rest ? c - rest + 1 : 0;
+  };
+  return {
+    lg,
+    style: `--c2:${sm * 2};--c2-md:${md * 2};--c2-lg:${lg * 2}`,
+    place: (i: number) =>
+      [
+        ['--gs', start(sm, i)],
+        ['--gs-md', start(md, i)],
+        ['--gs-lg', start(lg, i)],
+      ]
+        .filter(([, v]) => v)
+        .map(([k, v]) => `${k}:${v}`)
+        .join(';'),
+  };
+};
 ---
 
-<ul
-  role="list"
-  class:list={['attractions', { 'attractions--odd': odd, 'attractions--odd-md': odd && colsMd === 2, 'attractions--dense': cols >= 5 }]}
-  style={`--cols:${Math.max(cols, 1)};--cols-md:${Math.max(colsMd, 1)}`}
->
-  {
-    items.map((a, i) => (
-      <li class="attraction" style={`--i:${i}`}>
-        <span class="attraction__icon">
-          <Icon name={a.icon ?? 'sparkles'} size={26} stroke-width={1.8} />
-        </span>
-        <h3 class="attraction__title">{tr(a.title, locale)}</h3>
-        {a.description && <p class="attraction__text">{tr(a.description, locale)}</p>}
-      </li>
-    ))
-  }
-</ul>
+{
+  blocks.map(({ part, items: list }) => {
+    const l = layout(list.length);
+    return (
+      <div class:list={['attractions-part', { 'attractions-part--titled': part }]}>
+        {part && (
+          <header class="attractions-part__head">
+            <h3 class="attractions-part__title">{tr(part.title, locale)}</h3>
+            {part.subtitle && <p class="attractions-part__sub">{tr(part.subtitle, locale)}</p>}
+          </header>
+        )}
+        <ul role="list" class:list={['attractions', { 'attractions--dense': l.lg >= 5 }]} style={l.style}>
+          {list.map((a, i) => (
+            <li class="attraction" style={`--i:${i};${l.place(i)}`}>
+              {a.image ? (
+                <span class="attraction__image">
+                  <Img src={a.image} alt="" widths={[160, 320]} sizes="10rem" />
+                </span>
+              ) : (
+                <span class="attraction__icon">
+                  <Icon name={a.icon ?? 'sparkles'} size={26} stroke-width={1.8} />
+                </span>
+              )}
+              <h3 class="attraction__title">{tr(a.title, locale)}</h3>
+              {a.description && <p class="attraction__text">{tr(a.description, locale)}</p>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  })
+}
 
 <style>
+  .attractions-part + .attractions-part {
+    margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+  }
+
+  .attractions-part__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .attractions-part__title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: var(--step-3);
+    line-height: 1.1;
+    color: var(--accent);
+  }
+
+  .attractions-part__sub {
+    color: var(--c-muted);
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
   .attractions {
+    --gap: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
     display: grid;
-    gap: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+    gap: var(--gap);
     grid-template-columns: minmax(0, 1fr);
   }
 
   @media (min-width: 36rem) {
     .attractions {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(var(--c2), minmax(0, 1fr));
     }
 
-    .attractions--odd > :last-child {
-      grid-column: 1 / -1;
+    .attraction {
+      grid-column: var(--gs, auto) / span 2;
     }
   }
 
   @media (min-width: 60rem) {
     .attractions {
-      grid-template-columns: repeat(var(--cols-md), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--c2-md), minmax(0, 1fr));
     }
 
-    .attractions--odd:not(.attractions--odd-md) > :last-child {
-      grid-column: auto;
+    .attraction {
+      grid-column: var(--gs-md, auto) / span 2;
     }
   }
 
   @media (min-width: 72rem) {
     .attractions {
-      grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--c2-lg), minmax(0, 1fr));
     }
 
-    .attractions--odd > :last-child {
-      grid-column: auto;
+    .attraction {
+      grid-column: var(--gs-lg, auto) / span 2;
     }
   }
 
@@ -101,6 +173,21 @@ const odd = n % 2 === 1;
     border-radius: 50%;
     color: var(--c-ink);
     background: linear-gradient(var(--c-yellow) 50%, var(--c-red) 50%);
+  }
+
+  .attraction__image {
+    display: flex;
+    align-items: center;
+    height: 5.5rem;
+  }
+
+  .attraction__image :global(img) {
+    max-height: 100%;
+    max-width: 11rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.4rem;
   }
 
   .attraction:nth-child(3n + 2) .attraction__icon {

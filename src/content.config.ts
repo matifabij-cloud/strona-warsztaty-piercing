@@ -58,11 +58,22 @@ const editions = defineCollection({
     cover: text,
     poster: text,
     stats: list(z.object({ value: z.coerce.string(), label: z.string() })),
+    // Części wydarzenia (np. warsztaty i festiwal). Atrakcje i dni programu przypisuje się
+    // do części polem „group”; bez części wszystko wyświetla się jedną listą.
+    parts: list(
+      z.object({
+        key: z.string(),
+        title: z.string(),
+        subtitle: text,
+      }),
+    ),
     attractions: list(
       z.object({
         title: z.string(),
         description: text,
         icon: optional(z.string()),
+        image: text, // logo lub grafika zamiast ikony
+        group: text,
       }),
     ),
     speakers: list(
@@ -75,6 +86,7 @@ const editions = defineCollection({
       z.object({
         day: optional(isoDate),
         label: text,
+        group: text,
         items: list(
           z.object({
             time: text,

@@ -295,6 +295,9 @@ content:
           - name: label
             label: Nazwa dnia (opcjonalnie – inaczej na przykład „Sobota”)
             type: string
+          - name: group
+            label: Część (klucz, na przykład warsztaty albo festiwal)
+            type: string
           - name: items
             label: Punkty programu
             type: object
@@ -325,6 +328,26 @@ content:
               - name: host
                 label: Prowadzący spoza listy prelegentów (wpisz ręcznie)
                 type: string
+      - name: parts
+        label: Części wydarzenia (opcjonalnie)
+        description: Na przykład „Łódzkie Warsztaty Piercingu” i „Piercing Festival Łódź”. Atrakcje i dni programu przypisujesz do części polem „Część”. Klucz to krótkie słowo bez polskich liter, na przykład warsztaty albo festiwal.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.title}'
+        fields:
+          - name: key
+            label: Klucz (na przykład warsztaty)
+            type: string
+            required: true
+          - name: title
+            label: Nazwa części
+            type: string
+            required: true
+          - name: subtitle
+            label: Podpis (na przykład miejsce i daty)
+            type: string
       - name: attractions
         label: Atrakcje / strefy
         type: object
@@ -389,6 +412,12 @@ content:
                   label: Aparat
                 - value: users
                   label: Ludzie
+          - name: image
+            label: Logo lub grafika zamiast ikony (opcjonalnie)
+            type: image
+          - name: group
+            label: Część (klucz, na przykład warsztaty albo festiwal)
+            type: string
       - name: tickets
         label: Bilety
         type: object

@@ -25,37 +25,56 @@ stats:
     label: miejsc na każdym wykładzie
   - value: 0 zł
     label: wstęp na festiwal w Manufakturze
+parts:
+  - key: warsztaty
+    title: Łódzkie Warsztaty Piercingu
+    subtitle: '19–21 marca 2027 · The Loom Hotel · dla piercerów'
+  - key: festiwal
+    title: Piercing Festival Łódź
+    subtitle: '20–21 marca 2027 · Manufaktura · wstęp wolny'
 attractions:
   - title: Train to the Future
     description: 'Konferencja, która zaczyna się w tramwaju: zanim usiądziemy na wykładach, zwiedzamy Łódź z przewodnikiem. Przejazd jest bezpłatny i nie wymaga zapisów.'
     icon: tram
+    group: warsztaty
   - title: New Generation Day
-    description: 'Wykłady specjalistów z Polski i zagranicy: od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
+    description: 'Piątek w The Loom Hotel: wykłady specjalistów z Polski i zagranicy – od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
     icon: graduation
+    group: warsztaty
   - title: Main Event
     description: 'Sobota i niedziela w The Loom Hotel: główne warsztaty z gwiazdami światowej sceny piercingu, otwarte Q&A z Jane Absinth i Andre Bergiem, a w sobotę wieczorem przejazd zabytkowym tramwajem.'
     icon: star
+    group: warsztaty
   - title: Maria Twarowska Piercing Beauty Zone
     description: 'Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.'
     icon: ring
+    group: festiwal
   - title: Brazil Zone
     description: 'Brazylijscy piercerzy, piercing na miejscu, historia brazylijskiej sceny body piercingu i body modification oraz kultura Brazylii.'
     icon: brazil
+    group: festiwal
   - title: Happy Piercing Zone
     description: 'Strefa dla dzieci i młodzieży: bezpieczne przekłuwanie uszu, edukacja i atrakcje. Osoby niepełnoletnie potrzebują zgody rodzica lub opiekuna prawnego albo jego obecności.'
     icon: smile
+    image: /media/atrakcje/happy-piercing.jpg
+    group: festiwal
   - title: Snake Bites Zone
-    description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek.'
+    description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek, hodowca gadów, który dba o bezpieczeństwo zwierząt w strefie.'
     icon: snake
+    group: festiwal
   - title: Strefa biżuterii i wystawców
     description: 'Sprzedaż biżuterii, prezentacja marek i produktów oraz specjalne ceny festiwalowe.'
     icon: bag
+    group: festiwal
   - title: Wystawa i konkurs artystów
     description: 'Od 13 marca w Manufakturze stanie wystawa 30 prac piercerów z Polski i ze świata. O zwycięzcach zdecydują głosy odwiedzających.'
     icon: trophy
-  - title: Suspension Zipline
-    description: 'Body suspension połączone ze zjazdem na tyrolce nad Manufakturą – główne widowisko weekendu. Poprowadzi je Max Alves, pierwszy w Brazylii, który zjechał na tyrolce zawieszony na hakach.'
+    group: festiwal
+  - title: Body Suspension Zipline
+    description: 'Body suspension połączone ze zjazdem na tyrolce nad Manufakturą – główne widowisko weekendu. Poprowadzi je Max Alves, brazylijski pionier body suspension, znany między innymi ze zjazdów na tyrolce w podwieszeniu na hakach.'
     icon: zipline
+    image: /media/atrakcje/tyrolka-w-manu.jpg
+    group: festiwal
 speakers:
   - speaker: max-alves.md
     note: Bezpieczeństwo w piercingu
@@ -64,14 +83,15 @@ speakers:
   - speaker: anja-i-nina.md
     note: Od kaniuli do igły
   - speaker: jane-absinth.md
-    note: Cartilage Piercings 101
+    note: Cartilage Piercings 101 · Piercing Q&A
   - speaker: andre-berg.md
-    note: Cartilage Piercings 101
+    note: Cartilage Piercings 101 · Piercing Q&A
   - speaker: igor-platek.md
     note: Gość specjalny
 program:
   - day: '2027-03-19'
     label: Piątek – New Generation Day
+    group: warsztaty
     items:
       - time: '8:30'
         title: Train to the Future
@@ -102,18 +122,49 @@ program:
         speakers: []
         host: XHULES
   - day: '2027-03-20'
-    label: Sobota – Main Event i Piercing Festival Łódź
+    label: Sobota – Main Event
+    group: warsztaty
     items:
       - time: '9:30'
         title: Cartilage Piercings 101
-        description: 'Main Event, The Loom Hotel, ul. Ogrodowa 21. Przekłucia chrząstek od podstaw.'
+        description: 'The Loom Hotel, ul. Ogrodowa 21. Przekłucia chrząstek od podstaw.'
         speakers:
           - jane-absinth.md
           - andre-berg.md
         host: ''
+      - time: '12:00'
+        title: Wykład – temat ogłosimy wkrótce
+        description: ''
+        speakers: []
+        host: ''
+      - time: '14:00'
+        title: Wykład – temat ogłosimy wkrótce
+        description: ''
+        speakers: []
+        host: ''
+      - time: '16:00'
+        title: 'Piercing Q&A: Questions, Problem-Solving & Discussion'
+        description: 'Około 16:00. Wy pytacie, oni odpowiadają: chrząstki, technika, gojenie, problemy i codzienna praktyka. Wieczorem, po zakończeniu warsztatów, przejazd zabytkowym tramwajem z przewodnikiem dla uczestników Main Event.'
+        speakers:
+          - jane-absinth.md
+          - andre-berg.md
+        host: ''
+  - day: '2027-03-21'
+    label: Niedziela – Main Event
+    group: warsztaty
+    items:
+      - time: ''
+        title: Drugi dzień Main Event
+        description: 'The Loom Hotel. Program ogłosimy wkrótce.'
+        speakers: []
+        host: ''
+  - day: '2027-03-20'
+    label: ''
+    group: festiwal
+    items:
       - time: '10:00'
-        title: Piercing Festival Łódź
-        description: 'Manufaktura, do 22:00: Maria Twarowska Piercing Beauty Zone, Brazil Zone i Happy Piercing Zone, a także strefa biżuterii i wystawców oraz głosowanie w konkursie Piercing Artist Łódź.'
+        title: Strefy festiwalu i wystawa
+        description: 'Do 22:00: Maria Twarowska Piercing Beauty Zone, Brazil Zone i Happy Piercing Zone, a także strefa biżuterii i wystawców oraz wystawa i głosowanie w konkursie Piercing Artist Łódź.'
         speakers: []
         host: ''
       - time: '10:00'
@@ -122,34 +173,13 @@ program:
         speakers:
           - igor-platek.md
         host: ''
-      - time: '12:00'
-        title: Wykład – temat ogłosimy wkrótce
-        description: 'Main Event, The Loom Hotel.'
-        speakers: []
-        host: ''
-      - time: '14:00'
-        title: Wykład – temat ogłosimy wkrótce
-        description: 'Main Event, The Loom Hotel.'
-        speakers: []
-        host: ''
-      - time: '16:00'
-        title: 'Open Piercing Q&A'
-        description: 'Około 16:00. Wy pytacie, oni odpowiadają: chrząstki, technika, gojenie, problemy i codzienna praktyka. Wieczorem, po zakończeniu warsztatów, przejazd zabytkowym tramwajem z przewodnikiem dla uczestników Main Event.'
-        speakers:
-          - jane-absinth.md
-          - andre-berg.md
-        host: ''
   - day: '2027-03-21'
-    label: Niedziela – Main Event i Piercing Festival Łódź
+    label: ''
+    group: festiwal
     items:
-      - time: ''
-        title: Main Event – drugi dzień
-        description: 'The Loom Hotel. Program ogłosimy wkrótce.'
-        speakers: []
-        host: ''
       - time: '10:00'
-        title: Piercing Festival Łódź
-        description: 'Manufaktura, do 21:00: strefy piercingu, strefa biżuterii i wystawców oraz ostatni dzień wystawy.'
+        title: Strefy festiwalu i ostatni dzień wystawy
+        description: 'Do 21:00: strefy piercingu, strefa biżuterii i wystawców oraz wystawa prac.'
         speakers: []
         host: ''
       - time: '10:00'
@@ -164,7 +194,7 @@ program:
         speakers: []
         host: ''
       - time: '17:00'
-        title: Suspension Zipline
+        title: Body Suspension Zipline
         description: 'Kulminacyjny moment weekendu.'
         speakers:
           - max-alves.md
