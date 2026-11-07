@@ -11,10 +11,6 @@
     "pl": "prelegentów",
     "text": "speakers"
   },
-  "0313c3d55f143905": {
-    "pl": "Sobota – Main Event i Piercing Festival Łódź",
-    "text": "Saturday – Main Event and Piercing Festival Łódź"
-  },
   "0380e22e4c65d1b1": {
     "pl": "Właścicielka studia Jane Absinth Piercing w Düsseldorfie. Od 2017 roku wykłada na konferencji BMXnet, prowadziła też wykłady dla RuAPP. Laureatka Al D. Scholarship na APP Conference w Las Vegas i była członkini zarządu Verband Professioneller Piercer (VPP).\n\nRazem z Andre Bergiem od lat szkoli piercerów z przekłuć chrząstek, freehandu, needle blades, bevel theory i rozwiązywania problemów z przekłuciami.",
     "text": "Owner of the Jane Absinth Piercing studio in Düsseldorf. She has been a speaker at the BMXnet conference since 2017 and has also given lectures for RuAPP. She is a recipient of the Al D. Scholarship at the APP Conference in Las Vegas and a former board member of the Verband Professioneller Piercer (VPP).\n\nTogether with Andre Berg, she has been training piercers for years in cartilage piercing, freehand techniques, needle blades, bevel theory and troubleshooting piercing issues."
@@ -47,10 +43,6 @@
     "pl": "Dwa dni wykładów brazylijskich piercerów w Hotelu PURO: septum i biosafety, kamienie szlachetne, microdermale, przekłucia intymne i tongue splitting.",
     "text": "Two days of lectures by Brazilian piercers at Hotel PURO: septum and biosafety, gemstones, microdermals, intimate piercings and tongue splitting."
   },
-  "0e417ef03494a837": {
-    "pl": "Pierwsza edycja Łódzkich Warsztatów Piercingu, od której wszystko się zaczęło. Wykład o przekłuwaniu języka poprowadziła Marcelina Szejko.",
-    "text": "The first edition of Łódzkie Warsztaty Piercingu – where it all began. Marcelina Szejko gave a lecture on tongue piercing."
-  },
   "1530ab2fc1dd97bf": {
     "pl": "Łódzkie Warsztaty Piercingu to cykliczne wydarzenie edukacyjne dla piercerów, organizowane w Łodzi przez studio Maria Twarowska Piercing Beauty. Projekt wyrósł z naszej własnej potrzeby szkolenia się i wymiany doświadczeń: chcemy wysłuchać i pokazać wszystkich, którzy mają w branży coś ciekawego do powiedzenia.\n\nZapraszamy prelegentów z Polski i z zagranicy, zwłaszcza z Brazylii, którzy dzielą się praktyczną wiedzą: od bezpieczeństwa pracy i biosafety, przez techniki przekłuć, po zaawansowane modyfikacje ciała. Uczestnicy przyjeżdżają nie tylko z Polski, ale też między innymi z Niemiec, Szwecji i Norwegii.",
     "text": "The Łódź Piercing Workshops are a regular educational event for piercers, organised in Łódź by the Maria Twarowska Piercing Beauty studio. The project grew out of our own need for training and the exchange of experiences: we want to listen to and showcase everyone in the industry who has something interesting to say.\n\nWe invite speakers from Poland and abroad, particularly from Brazil, who share practical knowledge: from workplace safety and biosafety, through piercing techniques, to advanced body modifications. Participants come not only from Poland, but also from countries including Germany, Sweden and Norway."
@@ -58,10 +50,6 @@
   "17de1fac0b3e801a": {
     "pl": "Czy mogę dostać fakturę?",
     "text": "Can I get an invoice?"
-  },
-  "17f2b2bbfbb3b6f0": {
-    "pl": "Main Event – drugi dzień",
-    "text": "Main Event – Day Two"
   },
   "18dc6831fbdbef6b": {
     "pl": "Dla kogo są warsztaty?",
@@ -75,6 +63,10 @@
     "pl": "prelegent z Brazylii",
     "text": "speaker from Brazil"
   },
+  "1a9460d30973ace3": {
+    "pl": "Uczestnik programu „Gogglebox. Przed telewizorem” w TTV, właściciel jednej z największych hodowli gadów w Polsce. Kieruje spółką Xclusive Ball Pythons i prowadzi studio tatuażu Gorilla Ink Studio. Pochodzi z Grodziska Mazowieckiego.\n\nOd lat zajmuje się terrarystyką i zwierzętami egzotycznymi – wężami i waranami. Na Piercing Festival Łódź 2027 jest gościem specjalnym i twarzą Snake Bites Zone, a także odpowiada za bezpieczeństwo zwierząt w strefie: węże będą na miejscu w terrariach i pod stałą opieką.",
+    "text": "A participant in the TTV programme ‘Gogglebox. In front of the telly’, and owner of one of the largest reptile breeding facilities in Poland. He runs the company Xclusive Ball Pythons and operates the Gorilla Ink Studio tattoo parlour. He comes from Grodzisk Mazowiecki.\n\nHe has been involved in terrarium keeping and exotic animals – snakes and monitor lizards – for many years. At the Piercing Festival Łódź 2027, he is a special guest and the face of the Snake Bites Zone, and is also responsible for the animals’ safety in the zone: the snakes will be on site in terrariums and under constant supervision."
+  },
   "1bc10df9c985b6e6": {
     "pl": "wykłady w piątek",
     "text": "lectures on Friday"
@@ -82,6 +74,14 @@
   "1f4ba24335d32abd": {
     "pl": "Piątek, 19 marca, 16:30 · The Loom Hotel. Prowadzi XHULES. Wstęp bezpłatny, otwarty dla wszystkich.",
     "text": "Friday, 19 March, 4.30 pm · The Loom Hotel. Hosted by XHULES. Free entry, open to all."
+  },
+  "204e913d2eacd101": {
+    "pl": "Piercing Q&A: Questions, Problem-Solving & Discussion",
+    "text": "Piercing Q&A: Questions, Problem-Solving & Discussion"
+  },
+  "21064edb9bbca025": {
+    "pl": "Strefy festiwalu i ostatni dzień wystawy",
+    "text": "Festival zones and the final day of the exhibition"
   },
   "21307d30832601bc": {
     "pl": "Trzy dni w Łodzi: New Generation Day, Main Event z Jane Absinth i Andre Bergiem, przejazd zabytkowym tramwajem i publiczny Piercing Festival Łódź w Manufakturze.",
@@ -115,17 +115,25 @@
     "pl": "Zarezerwuj",
     "text": "Book now"
   },
-  "2a4baf2bb51b012a": {
-    "pl": "Main Event, The Loom Hotel.",
-    "text": "Main Event, The Loom Hotel."
-  },
   "2c5657c72c007cac": {
     "pl": "Partner techniczny · Train to the Future",
     "text": "Technical partner · Train to the Future"
   },
+  "2d00127d2d305a73": {
+    "pl": "Body Suspension Zipline",
+    "text": "Body Suspension Zipline"
+  },
   "2fd9b58f80f3ccdf": {
     "pl": "Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.",
     "text": "Friday, 19 March · The Loom Hotel. A ticket for one chosen talk, including coffee, tea and a personalised certificate. 100 places available for each talk."
+  },
+  "3062a00106c3e05d": {
+    "pl": "The Loom Hotel, ul. Ogrodowa 21. Przekłucia chrząstek od podstaw.",
+    "text": "The Loom Hotel, 21 Ogrodowa Street. Cartilage piercings from scratch."
+  },
+  "308cfbf669bd86cf": {
+    "pl": "Body suspension połączone ze zjazdem na tyrolce nad Manufakturą – główne widowisko weekendu. Poprowadzi je Max Alves, brazylijski pionier body suspension, znany między innymi ze zjazdów na tyrolce w podwieszeniu na hakach.",
+    "text": "Body suspension combined with a zip-line descent over Manufaktura – the main attraction of the weekend. It will be led by Max Alves, a Brazilian pioneer of body suspension, known, amongst other things, for his zip-line descents whilst suspended from hooks."
   },
   "32eb0ad24139d9f3": {
     "pl": "Infekcjologia i gojenie ran",
@@ -155,6 +163,10 @@
     "pl": "Zapisz się",
     "text": "Sign up"
   },
+  "3889ea15725030db": {
+    "pl": "Drugi dzień Main Event",
+    "text": "Day two of the Main Event"
+  },
   "3a7a5474613ab3cc": {
     "pl": "Niemcy",
     "text": "Germany"
@@ -171,17 +183,17 @@
     "pl": "Tongue splitting i zaawansowane modyfikacje",
     "text": "Tongue splitting and advanced modifications"
   },
-  "3f495f401d0074bb": {
-    "pl": "Manufaktura, do 21:00: strefy piercingu, strefa biżuterii i wystawców oraz ostatni dzień wystawy.",
-    "text": "Manufaktura, until 9.00 pm: piercing zones, jewellery and exhibitors’ area, and the final day of the exhibition."
-  },
   "4137c1eebe84a684": {
     "pl": "III edycja Łódzkich Warsztatów Piercingu",
     "text": "The third edition of Łódzkie Warsztaty Piercingu"
   },
-  "4208171250d85ed3": {
-    "pl": "Wykłady specjalistów z Polski i zagranicy: od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.",
-    "text": "Talks by specialists from Poland and abroad: covering everything from workplace safety and wound healing to needlework techniques."
+  "417cbf38c84c2aaf": {
+    "pl": "Łódzkie Warsztaty Piercingu",
+    "text": "Łódź Piercing Workshops"
+  },
+  "41b27286de1df313": {
+    "pl": "Sobota – Main Event",
+    "text": "Saturday – Main Event"
   },
   "420f2776ad17f203": {
     "pl": "Tak. Przy zakupie biletu zaznacz, że potrzebujesz faktury VAT, i podaj dane firmy.",
@@ -191,9 +203,9 @@
     "pl": "Sobota 10:00–17:00, niedziela 10:00–16:00. W cenie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego i 2 bezpłatne konsultacje po przekłuciu. Około 50 minut na osobę: zapisujesz się na konkretną godzinę, a dostępność terminu potwierdzamy mailowo.",
     "text": "Saturday 10:00–17:00, Sunday 10:00–16:00. The price includes snake bites, a photo shoot, the recording of promotional material and two free post-piercing consultations. Approximately 50 minutes per person: you book a specific time slot, and we’ll confirm availability by email."
   },
-  "42e2aaa8df726ceb": {
-    "pl": "uczestników",
-    "text": "participants"
+  "435986c799e6d479": {
+    "pl": "Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek, hodowca gadów, który dba o bezpieczeństwo zwierząt w strefie.",
+    "text": "A zone where snakes reign supreme, and we perform just one type of piercing: snake bites. Its figurehead is Igor Płatek, a reptile breeder who ensures the animals’ safety in the zone."
   },
   "437dc181804b24f2": {
     "pl": "Bilety na piątkowe wykłady i na Main Event kupisz w sekcji Bilety – sprzedaż online uruchomimy wkrótce i ogłosimy ją także na Instagramie. Na Snake Bites Zone zapisujesz się mailowo, wybierając konkretną godzinę.",
@@ -202,6 +214,10 @@
   "43fe7cd3630b7f13": {
     "pl": "Idealne septum i techniki biosafety",
     "text": "The perfect septum and biosafety techniques"
+  },
+  "446b39ee2378ea40": {
+    "pl": "19–21 marca 2027 · The Loom Hotel · dla piercerów",
+    "text": "19–21 March 2027 · The Loom Hotel · for piercers"
   },
   "44cb5aea18ec43d8": {
     "pl": "Brazylijska Przygoda",
@@ -214,10 +230,6 @@
   "45f9e7e9fc2aeb30": {
     "pl": "Finał wystawy i losowanie nagród",
     "text": "Exhibition closing ceremony and prize draw"
-  },
-  "465024a99c781383": {
-    "pl": "Niedziela – Main Event i Piercing Festival Łódź",
-    "text": "Sunday – Main Event and Piercing Festival Łódź"
   },
   "46839f6b1144cf12": {
     "pl": "Bezpieczeństwo w piercingu",
@@ -238,10 +250,6 @@
   "4dfa337ed5136754": {
     "pl": "Łódzkie Warsztaty Piercingu 2027",
     "text": "Łódź Piercing Workshops 2027"
-  },
-  "4eaed002f3316d66": {
-    "pl": "Znany też jako Max do Gancho. Body piercingiem interesuje się od końca lat 90., a jako piercer pracuje od 2005 roku – zaczynał od kolczyków za 8 reali. Pierwszą suspension wykonał 19 marca 2005 roku w São Paulo i od lat zajmuje się techniczną stroną podwieszeń: hakami, linami, karabinkami, bloczkami, węzłami i mechaniką całego systemu. Zorganizował pierwszy warsztat body suspension w Brazylii, jako pierwszy w Brazylii zjechał na tyrolce zawieszony na hakach i jako pierwsza osoba w Brazylii (druga na świecie) zawisł podwieszony pod helikopterem.\n\nUczestniczył w setkach warsztatów, a dziesiątki z nich poprowadził. Wyszkolił ponad 2000 uczniów na całym świecie i jest jednym z pionierów nauczania piercingu online w Brazylii: stworzył kurs WOEP (Workshop Online Estudando Piercing) z setkami uczniów, kurs biobezpieczeństwa z tysiącami uczestników, platformę edukacyjną Clube do Piercing i Monstro – największy kongres piercingu online w Brazylii.\n\nOrganizuje seminaria piercingu w Cuiabá, Florianópolis i Canoas, seminarium BRAVO i warsztaty body suspension Conap w Recife. Jest inicjatorem Suspension Attack Brasil 2012 i jednym z pomysłodawców Seminário Colab Piercing w São Paulo – ogólnokrajowego wydarzenia, na którym piercerzy uczą się także od lekarzy, biologów, pracowników sanepidu, prawników i pielęgniarek. Uczy również marketingu, sprzedaży, wyceny usług i obsługi klienta. W 2024 roku był prelegentem na spotkaniu APP-PT w Portugalii.\n\nNa co dzień wykonuje tradycyjne przekłucia w swoim studiu w głębi Brazylii. Współorganizuje Łódzkie Warsztaty Piercingu: poprowadził II edycję, poświęconą bezpieczeństwu pracy i przekłuciom sutków, a na III edycji mówił o idealnym septum i technikach biosafety.",
-    "text": "Also known as Max do Gancho. He has been interested in body piercing since the late 1990s and has been working as a piercer since 2005 – he started out with jewellery costing 8 reais. He performed his first suspension on 19 March 2005 in São Paulo and has been involved in the technical aspects of suspensions for years: hooks, ropes, carabiners, pulleys, knots and the mechanics of the entire system. He organised the first body suspension workshop in Brazil, was the first person in Brazil to zip-line whilst suspended from hooks, and was the first person in Brazil (and the second in the world) to be suspended from a helicopter.\n\nHe has taken part in hundreds of workshops and led dozens of them. He has trained over 2,000 students worldwide and is one of the pioneers of online piercing training in Brazil: he created the WOEP (Workshop Online Estudando Piercing) course with hundreds of students, a biosafety course with thousands of participants, the Clube do Piercing educational platform, and Monstro – Brazil’s largest online piercing congress.\n\nHe organises piercing seminars in Cuiabá, Florianópolis and Canoas, the BRAVO seminar and Conap body suspension workshops in Recife. He is the founder of Suspension Attack Brasil 2012 and one of the initiators of the Seminário Colab Piercing in São Paulo – a nationwide event where piercers also learn from doctors, biologists, public health officials, lawyers and nurses. He also teaches marketing, sales, service pricing and customer service. In 2024, he was a speaker at the APP-PT conference in Portugal.\n\nOn a day-to-day basis, he performs traditional piercings at his studio in the Brazilian countryside. He co-organises the Łódź Piercing Workshops: he led the second edition, which focused on workplace safety and nipple piercings, and at the third edition he spoke about the ideal septum and biosafety techniques."
   },
   "4eaf118d99704339": {
     "pl": "Specjalista od przekłuć podstawowych i zaawansowanych, w całej Brazylii znany z przekłuć intymnych. Od 2008 roku prowadzi warsztaty i seminaria w całej Brazylii.\n\nJego techniczne filary to pierwsza pomoc, kontrola infekcji, biosafety, fizjologia skóry i błon śluzowych, infekcjologia i leczenie ran oraz kąt, ułożenie i oznaczanie miejsca przekłucia.\n\nNa III edycji poprowadził wykład o przekłuciach intymnych, męskich i damskich.",
@@ -287,13 +295,17 @@
     "pl": "W jakim języku są wykłady?",
     "text": "What language are the talks in?"
   },
-  "5efa838afb9dac40": {
-    "pl": "Manufaktura, do 22:00: Maria Twarowska Piercing Beauty Zone, Brazil Zone i Happy Piercing Zone, a także strefa biżuterii i wystawców oraz głosowanie w konkursie Piercing Artist Łódź.",
-    "text": "Manufaktura, until 10.00 pm: Maria Twarowska Piercing Beauty Zone, Brazil Zone and Happy Piercing Zone, as well as a jewellery and exhibitors’ area and voting in the Piercing Artist Łódź competition."
-  },
   "5f4f4c613c0ada66": {
     "pl": "Gość specjalny",
     "text": "Special guest"
+  },
+  "5fa9793d094fab4a": {
+    "pl": "Piercing – ryzyko biologiczne",
+    "text": "Piercing – biological risks"
+  },
+  "5fe8ed077aa68a96": {
+    "pl": "Pierwsza edycja Łódzkich Warsztatów Piercingu, od której wszystko się zaczęło. Wykład poprowadziła Marcelina Szejko, autorka pracy magisterskiej o profesjonalnym piercingu języka i jego uwarunkowaniach anatomiczno-czynnościowych.",
+    "text": "The first edition of the Łódź Piercing Workshops, where it all began. The lecture was given by Marcelina Szejko, author of a master’s thesis on professional tongue piercing and its anatomical and functional aspects."
   },
   "60960e311205948a": {
     "pl": "Main Event",
@@ -339,6 +351,10 @@
     "pl": "Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.",
     "text": "Piercings carried out by our team of piercers and guest artists from Poland and abroad."
   },
+  "6fb68bd10cbb4078": {
+    "pl": "Cartilage Piercings 101 · Piercing Q&A",
+    "text": "Cartilage Piercings 101 · Piercing Q&A"
+  },
   "70d8aca2c4cea1d1": {
     "pl": "19–21 marca 2027 roku w Łodzi. W piątek New Generation Day: przejazd zabytkowym tramwajem (start około 8:30 spod Manufaktury) i wykłady w The Loom Hotel przy ul. Ogrodowej 21. W sobotę i niedzielę Main Event w The Loom Hotel oraz Piercing Festival Łódź w Manufakturze.",
     "text": "19–21 March 2027 in Łódź. On Friday, New Generation Day: a ride on a vintage tram (departing at around 8.30 am from Manufaktura) and talks at The Loom Hotel, 21 Ogrodowa Street. On Saturday and Sunday: the Main Event at The Loom Hotel and Piercing Festival Łódź at Manufaktura."
@@ -362,6 +378,10 @@
   "77d1ba282fcaa1f9": {
     "pl": "The Loom Hotel, ul. Ogrodowa 21. Bezpieczeństwo jako system, a nie pojedyncza czynność: procedury, odpowiedzialność, przewidywanie błędów, organizacja bezpiecznego stanowiska i biobezpieczeństwo. Krótszy i bardziej skondensowany wykład niż na II edycji – szczególnie ważny dla osób, które dopiero zaczynają.",
     "text": "The Loom Hotel, 21 Ogrodowa Street. Safety as a system, not a single action: procedures, responsibility, anticipating errors, organising a safe workspace and biosafety. A shorter and more condensed lecture than at the second edition – particularly important for those who are just starting out."
+  },
+  "7928587e3d20dbf8": {
+    "pl": "Znany też jako Max do Gancho. Body piercingiem interesuje się od końca lat 90., a jako piercer pracuje od 2005 roku – zaczynał od kolczyków za 8 reali. Pierwszą suspension wykonał 19 marca 2005 roku w São Paulo i od lat zajmuje się techniczną stroną podwieszeń: hakami, linami, karabinkami, bloczkami, węzłami i mechaniką całego systemu. To brazylijski pionier body suspension: prowadzi warsztaty podwieszeń, jest znany między innymi ze zjazdów na tyrolce w podwieszeniu na hakach, a zawisł też podwieszony pod helikopterem.\n\nUczestniczył w setkach warsztatów, a dziesiątki z nich poprowadził. Wyszkolił ponad 2000 uczniów na całym świecie i jest jednym z pionierów nauczania piercingu online w Brazylii: stworzył kurs WOEP (Workshop Online Estudando Piercing) z setkami uczniów, kurs biobezpieczeństwa z tysiącami uczestników, platformę edukacyjną Clube do Piercing i Monstro – największy kongres piercingu online w Brazylii.\n\nOrganizuje seminaria piercingu w Cuiabá, Florianópolis i Canoas, seminarium BRAVO i warsztaty body suspension Conap w Recife. Jest inicjatorem Suspension Attack Brasil 2012 i jednym z pomysłodawców Seminário Colab Piercing w São Paulo – ogólnokrajowego wydarzenia, na którym piercerzy uczą się także od lekarzy, biologów, pracowników sanepidu, prawników i pielęgniarek. Uczy również marketingu, sprzedaży, wyceny usług i obsługi klienta. W 2024 roku był prelegentem na spotkaniu APP-PT w Portugalii.\n\nNa co dzień wykonuje tradycyjne przekłucia w swoim studiu w głębi Brazylii. Współorganizuje Łódzkie Warsztaty Piercingu: poprowadził II edycję, poświęconą bezpieczeństwu pracy i przekłuciom sutków, a na III edycji mówił o idealnym septum i technikach biosafety.",
+    "text": "Also known as Max do Gancho. He has been interested in body piercing since the late 1990s and has been working as a piercer since 2005 – he started out by offering piercings for 8 reais. He performed his first suspension on 19 March 2005 in São Paulo and has been involved in the technical aspects of suspensions for years: hooks, ropes, carabiners, pulleys, knots and the mechanics of the entire system. He is a Brazilian pioneer of body suspension: he runs suspension workshops, is known, amongst other things, for zip-lining whilst suspended from hooks, and has also been suspended from a helicopter.\n\nHe has taken part in hundreds of workshops and led dozens of them. He has trained over 2,000 students worldwide and is one of the pioneers of online piercing tuition in Brazil: he created the WOEP (Workshop Online Estudando Piercing) course with hundreds of students, a biosafety course with thousands of participants, the Clube do Piercing educational platform, and Monstro – Brazil’s largest online piercing congress.\n\nHe organises piercing seminars in Cuiabá, Florianópolis and Canoas, the BRAVO seminar and Conap body suspension workshops in Recife. He is the founder of Suspension Attack Brasil 2012 and one of the initiators of the Seminário Colab Piercing in São Paulo – a nationwide event where piercers also learn from doctors, biologists, public health officials, lawyers and nurses. He also teaches marketing, sales, service pricing and customer service. In 2024, he was a speaker at the APP-PT meeting in Portugal.\n\nOn a day-to-day basis, he performs traditional piercings at his studio in the heart of Brazil. He co-organises the Łódź Piercing Workshops: he led the second edition, which focused on workplace safety and nipple piercings, and at the third edition he spoke about the ideal septum and biosafety techniques."
   },
   "794a2aaa6bf6ab02": {
     "pl": "## Kto jest administratorem danych\n\nAdministratorem danych osobowych jest **Piercing Beauty Sp. z o.o.**, ul. Prezydenta Gabriela Narutowicza 40/1, 90-135 Łódź, NIP 726 266 10 31, KRS 0000624606, REGON 364774930, organizator Łódzkich Warsztatów Piercingu. We wszystkich sprawach dotyczących danych osobowych możesz napisać na adres [lodzkiewarsztatypiercingu@gmail.com](mailto:lodzkiewarsztatypiercingu@gmail.com).\n\n## Jakie dane przetwarzamy i w jakim celu\n\n- **Kontakt e-mailowy i telefoniczny.** Jeśli do nas piszesz lub dzwonisz, przetwarzamy dane, które nam przekażesz (na przykład imię, adres e-mail, numer telefonu, treść wiadomości), aby odpowiedzieć na Twoje pytanie. Podstawą jest nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).\n- **Zakup biletu.** Bilety sprzedajemy przez zewnętrzną platformę biletową. Dane podane przy zakupie przetwarzamy w celu realizacji udziału w wydarzeniu (art. 6 ust. 1 lit. b RODO) oraz wystawienia faktury i rozliczeń podatkowych (art. 6 ust. 1 lit. c RODO). Zasady przetwarzania danych przez platformę biletową opisuje jej regulamin i polityka prywatności.\n- **Newsletter.** Jeśli zapiszesz się do newslettera, przetwarzamy Twój adres e-mail, aby wysyłać informacje o wydarzeniu: nowych prelegentach, programie i sprzedaży biletów. Podstawą jest Twoja zgoda (art. 6 ust. 1 lit. a RODO), którą możesz w każdej chwili wycofać, klikając link rezygnacji w wiadomości albo pisząc do nas. Do wysyłki korzystamy z zewnętrznego dostawcy usług mailingowych, który przetwarza dane na nasze zlecenie.\n- **Zgłoszenia do konkursu artystów.** Dane i materiały przesłane w zgłoszeniu przetwarzamy w celu przeprowadzenia naboru i konkursu (art. 6 ust. 1 lit. b i f RODO).\n\n## Pliki cookies i statystyki\n\nStrona nie używa plików cookies do celów analitycznych ani marketingowych. Serwer, na którym działa strona, może zapisywać podstawowe dane techniczne (na przykład adres IP) w celu zapewnienia bezpieczeństwa i poprawnego działania serwisu.\n\nNa stronie wyświetlamy zdjęcia z naszego profilu na Instagramie oraz linki do serwisów zewnętrznych (Instagram, Google Maps, platforma biletowa). Po kliknięciu linku obowiązują zasady prywatności danego serwisu.\n\n## Jak długo przechowujemy dane\n\nDane z korespondencji przechowujemy przez czas potrzebny do jej obsługi, adres e-mail z newslettera – do czasu wypisania się, a dane związane z zakupem biletów przez okres wymagany przepisami podatkowymi i rachunkowymi.\n\n## Twoje prawa\n\nMasz prawo do dostępu do swoich danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu. Przysługuje Ci także prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.",
@@ -390,6 +410,10 @@
   "816961e774bfa22f": {
     "pl": "wykładów",
     "text": "lectures"
+  },
+  "8188882ac775702b": {
+    "pl": "Do 21:00: strefy piercingu, strefa biżuterii i wystawców oraz wystawa prac.",
+    "text": "Until 9.00 pm: piercing zones, a jewellery and exhibitors’ zone, and an exhibition of works."
   },
   "841dbd4cad08e514": {
     "pl": "Piercer z Indaiatuby w stanie São Paulo, pracuje od 2015 roku. Specjalizuje się w microdermalach – w portfolio ma tysiące zabiegów, w tym setki microdermali. Pracuje wyłącznie na biżuterii z tytanu implantologicznego, z naciskiem na estetykę i bezpieczeństwo. Tytułu „Króla Microdermali” nie nadał sobie sam – tak mówią o nim ludzie z branży.\n\nJego prace zdobyły ponad 40 nagród na konwencjach tatuażu i piercingu, w kategoriach takich jak najlepszy zabieg, najlepszy projekt piercingu i najlepiej wygojony piercing. Prowadził zajęcia z microdermali, septum oraz pracy z igłami i kaniulami na Intensivo Piercing Profissional (IPP), wykładał na Colab Seminário para Piercers, był jurorem na kongresie Monstro, na Londrina Tattoo Convention 2025 i na Expo Piercing Brasil 2025 w São Paulo.\n\nJedna z jego najbardziej znanych historii: Mariana przyszła do niego po jeden microdermal, który miał podkreślić tatuaż. Dziś ma ponad 600 microdermali jego autorstwa.\n\nNa III edycji po raz pierwszy przyjechał do Polski i opowiadał o microdermalach i przekłuciach powierzchniowych.",
@@ -426,10 +450,6 @@
   "8bf416282f147a1d": {
     "pl": "Sobota i niedziela, 20–21 marca · The Loom Hotel. Jeden bilet na oba dni głównych warsztatów, w tym wykłady Jane Absinth i Andre Berga oraz sobotni przejazd zabytkowym tramwajem. Maksymalnie 120 uczestników.",
     "text": "Saturday and Sunday, 20–21 March · The Loom Hotel. One ticket covers both days of the main workshops, including talks by Jane Absinth and Andre Berg, as well as a ride on a vintage tram on Saturday. Maximum 120 participants."
-  },
-  "8e90699b1e284d74": {
-    "pl": "Main Event, The Loom Hotel, ul. Ogrodowa 21. Przekłucia chrząstek od podstaw.",
-    "text": "Main Event, The Loom Hotel, 21 Ogrodowa Street. Cartilage piercings from scratch."
   },
   "90da8eb94b4c68ad": {
     "pl": "New Generation",
@@ -471,6 +491,22 @@
     "pl": "Szukamy piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom. Pełne zasady konkursu ogłosimy wkrótce.",
     "text": "We are looking for piercers from Poland and around the world whose work we will showcase at a large, public exhibition at Manufaktura. We’re not interested in your reach; we’re interested in your work. We want to showcase piercing not just as a service, but as a design, precision, craftsmanship and art created on the human body. You create – we showcase your work to the public. We will announce the full competition rules shortly."
   },
+  "a6e0c55a081c43ce": {
+    "pl": "20–21 marca 2027 · Manufaktura · wstęp wolny",
+    "text": "20–21 March 2027 · Manufaktura · free entry"
+  },
+  "a794945ce9710ac2": {
+    "pl": "Niedziela – Main Event",
+    "text": "Sunday – Main Event"
+  },
+  "a85d95ed248dc8f1": {
+    "pl": "Oczywiście! Łódzkie Warsztaty Piercingu to międzynarodowe wydarzenie, na które zapraszamy profesjonalistów z całego świata. Właśnie dlatego przygotowaliśmy też bilet na Main Event z noclegiem: nie musisz szukać hotelu ani martwić się dojazdami. Przyjeżdżasz do Łodzi, meldujesz się w hotelu i masz wszystko na miejscu – nocleg, wykłady i spotkania ze specjalistami z branży piercingu.",
+    "text": "Of course! The Łódź Piercing Workshops are an international event to which we invite professionals from all over the world. That’s precisely why we’ve also put together a Main Event ticket that includes accommodation: you don’t need to look for a hotel or worry about getting there. You arrive in Łódź, check into the hotel and have everything you need right there – accommodation, lectures and meetings with specialists from the piercing industry."
+  },
+  "a938f7d9d61a20d9": {
+    "pl": "Do 22:00: Maria Twarowska Piercing Beauty Zone, Brazil Zone i Happy Piercing Zone, a także strefa biżuterii i wystawców oraz wystawa i głosowanie w konkursie Piercing Artist Łódź.",
+    "text": "Until 10.00 pm: Maria Twarowska Piercing Beauty Zone, Brazil Zone and Happy Piercing Zone, as well as a jewellery and exhibitors’ area, and an exhibition and voting for the Piercing Artist Łódź competition."
+  },
   "a9e718d2407eb4c0": {
     "pl": "Kulminacyjny moment weekendu.",
     "text": "The highlight of the weekend."
@@ -487,10 +523,6 @@
     "pl": "Piercing Festival Łódź",
     "text": "Piercing Festival Łódź"
   },
-  "ac2e47c1e08dd95f": {
-    "pl": "Body suspension połączone ze zjazdem na tyrolce nad Manufakturą – główne widowisko weekendu. Poprowadzi je Max Alves, pierwszy w Brazylii, który zjechał na tyrolce zawieszony na hakach.",
-    "text": "Body suspension combined with a zip-line ride over Manufaktura – the main attraction of the weekend. It will be led by Max Alves, the first person in Brazil to have descended a zip-line whilst suspended from hooks."
-  },
   "ad08a9724706471c": {
     "pl": "Czy mogę przepisać bilet na inną osobę?",
     "text": "Can I transfer my ticket to someone else?"
@@ -502,6 +534,10 @@
   "b2d7bb0fb30816b6": {
     "pl": "Warsztaty i festiwal piercingu w sercu Łodzi",
     "text": "Piercing workshops and festival in the heart of Łódź"
+  },
+  "b2f0ae9744a31c51": {
+    "pl": "Piątek w The Loom Hotel: wykłady specjalistów z Polski i zagranicy – od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.",
+    "text": "Friday at The Loom Hotel: talks by specialists from Poland and abroad – covering everything from workplace safety and wound healing to needlework techniques."
   },
   "b8b047f7b5cd6f1b": {
     "pl": "Happy Piercing Zone",
@@ -522,14 +558,6 @@
   "bd34ddc0468fbc50": {
     "pl": "Piercerki i edukatorki",
     "text": "Piercers and educators"
-  },
-  "bfa43fc774df9286": {
-    "pl": "Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek.",
-    "text": "An area where snakes reign supreme, and we perform just one type of piercing: snake bites. Igor Płatek is the face of the zone."
-  },
-  "c4b02c02fda18a61": {
-    "pl": "Suspension Zipline",
-    "text": "Suspension Zipline"
   },
   "c8c07c40a72d198d": {
     "pl": "Partner branżowy · aftercare z HOCl",
@@ -558,10 +586,6 @@
   "d4793b0420f228d5": {
     "pl": "Brazil Zone",
     "text": "Brazil Zone"
-  },
-  "d4cbd51637166ec3": {
-    "pl": "Piercing × Ryzyko Biologiczne",
-    "text": "Piercing × Biological Risk"
   },
   "d5daace67fdf3f08": {
     "pl": "Sobota i niedziela w The Loom Hotel: główne warsztaty z gwiazdami światowej sceny piercingu, otwarte Q&A z Jane Absinth i Andre Bergiem, a w sobotę wieczorem przejazd zabytkowym tramwajem.",
@@ -619,6 +643,10 @@
     "pl": "Rozszczepienie języka i zaawansowane modyfikacje",
     "text": "Tongue splitting and advanced modifications"
   },
+  "eb1f1494aacad295": {
+    "pl": "Strefy festiwalu i wystawa",
+    "text": "Festival zones and exhibition"
+  },
   "ef3d9fe7705de43c": {
     "pl": "**Ania (Anna Cielecka)** zaczynała ponad dekadę temu we Wrocławiu, a dziś pracuje w Berlinie jako senior piercer. Należy do Association of Professional Piercers (APP) i Verband Professioneller Piercer (VPP), występowała na konferencji BMXnet w Berlinie i pracuje nad własną książką, której premierę planuje na 2027 rok. Współorganizuje Łódzkie Warsztaty Piercingu 2027.\n\n**Nina Falci** ma 18 lat doświadczenia zdobytego w ośmiu miastach Brazylii, Holandii i Niemiec: São Paulo, Belo Horizonte, Salvador, Sabará, Florianópolis, Rotterdam, Amsterdam i Berlin. Współpracowała ze studiami i markami Maria Black, Glassic Ink & Mods, Dare2Wear, Classic Glamour, Ao Cubo i Tattoei. Dziś jest w zespole Maria Black – międzynarodowej marki biżuterii łączącej modę i fine jewelry – gdzie współtworzy projekty z recyklingowanego złota i srebra oraz diamentów laboratoryjnych. Na Maria Black Day w Kopenhadze opowiadała o swojej wizji historii piercingu.\n\nPoznały się kilka lat temu w jednym z berlińskich studiów piercingu. Łączy je przyjaźń i pasja do biżuterii, kamieni szlachetnych i edukacji. Na II edycję przyjechały poznać Maxa, a Nina pomagała przy warsztatach. Na III edycji wróciły z własnym wykładem o kamieniach szlachetnych w piercingu, który zadebiutował na konferencji BMXnet w Berlinie.",
     "text": "**Ania (Anna Cielecka)** started out over a decade ago in Wrocław, and now works in Berlin as a senior piercer. She is a member of the Association of Professional Piercers (APP) and the Verband Professioneller Piercer (VPP), has spoken at the BMXnet conference in Berlin, and is working on her own book, which she plans to publish in 2027. She is co-organising the Łódź Piercing Workshops 2027.\n\n**Nina Falci** has 18 years’ experience gained in eight cities across Brazil, the Netherlands and Germany: São Paulo, Belo Horizonte, Salvador, Sabará, Florianópolis, Rotterdam, Amsterdam and Berlin. She has collaborated with studios and brands including Maria Black, Glassic Ink & Mods, Dare2Wear, Classic Glamour, Ao Cubo and Tattoei. Today she is part of the Maria Black team – an international jewellery brand combining fashion and fine jewellery – where she co-creates designs using recycled gold and silver, as well as lab-grown diamonds. At Maria Black Day in Copenhagen, she spoke about her vision of the history of piercing.\n\nThey met a few years ago at one of Berlin’s piercing studios. They are united by their friendship and a passion for jewellery, gemstones and education. They came to the second edition to meet Max, whilst Nina helped out with the workshops. At the third edition, they returned with their own talk on gemstones in piercing, which made its debut at the BMXnet conference in Berlin."
@@ -634,10 +662,6 @@
   "f1c08992912220c6": {
     "pl": "Brazylijscy piercerzy, piercing na miejscu, historia brazylijskiej sceny body piercingu i body modification oraz kultura Brazylii.",
     "text": "Brazilian piercers, on-site piercing, the history of the Brazilian body piercing and body modification scene, and Brazilian culture."
-  },
-  "f32dbc51695d4056": {
-    "pl": "Uczestnik programu „Gogglebox. Przed telewizorem” w TTV, miłośnik węży i waranów, właściciel jednej z największych hodowli gadów w Polsce. Kieruje spółką Xclusive Ball Pythons i prowadzi Gorilla Ink Studio. Pochodzi z Grodziska Mazowieckiego, interesuje się tatuażem i kulturą alternatywną.\n\nNa Piercing Festival Łódź 2027 jest gościem specjalnym i twarzą Snake Bites Zone – węże będą na miejscu bezpiecznie, w terrariach i pod opieką.",
-    "text": "A cast member of the TTV show “Gogglebox. Przed telewizorem”, a lover of snakes and monitor lizards, and the owner of one of the largest reptile breeding centres in Poland. He runs Xclusive Ball Pythons and operates Gorilla Ink Studio. He comes from Grodzisk Mazowiecki and is interested in tattooing and alternative culture.\n\nAt the Piercing Festival Łódź 2027, he is a special guest and the face of the Snake Bites Zone – the snakes will be on site, safely housed in terrariums and under supervision."
   },
   "f3640659c3437a3c": {
     "pl": "Ruszyły rezerwacje na piątkowe wykłady New Generation Day. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.",
@@ -658,14 +682,6 @@
   "f7dea3a25216463e": {
     "pl": "dni wydarzenia",
     "text": "days of the event"
-  },
-  "fb1da7fdca24d3e4": {
-    "pl": "Tak. Datę ogłaszamy z dużym wyprzedzeniem, żeby gościom z zagranicy łatwiej było zaplanować przyjazd.",
-    "text": "Yes. We announce the date well in advance to make it easier for visitors from abroad to plan their trip."
-  },
-  "fb847e1879e36adf": {
-    "pl": "Open Piercing Q&A",
-    "text": "Open Piercing Q&A"
   },
   "fd04f81acb58141b": {
     "pl": "Wykład – temat ogłosimy wkrótce",
