@@ -36,6 +36,7 @@ attractions:
   - title: Train to the Future
     description: 'Konferencja, która zaczyna się w tramwaju: zanim usiądziemy na wykładach, zwiedzamy Łódź z przewodnikiem. Przejazd jest bezpłatny i nie wymaga zapisów.'
     icon: tram
+    image: /media/partnerzy/kmst-lodz.png
     group: warsztaty
   - title: New Generation Day
     description: 'Piątek w The Loom Hotel: wykłady specjalistów z Polski i zagranicy – od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
@@ -216,7 +217,7 @@ tickets:
       buttonLabel: ''
     - name: Main Event – z noclegiem
       price: 2000 zł
-      description: 'Wszystko, co w bilecie bez noclegu, oraz nocleg ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel.'
+      description: 'Wszystko, co w bilecie bez noclegu, oraz nocleg z soboty na niedzielę ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel. Tylko 15 miejsc.'
       url: ''
       buttonLabel: ''
     - name: Otwarty wykład „Jak rozmawiać z drugim człowiekiem”
@@ -295,6 +296,6 @@ To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tyc
 
 **Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 
-Wydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.
+Wykłady prowadzimy po polsku i po angielsku – zapewniamy tłumaczenie na oba języki. Zapraszamy piercerów z całej Europy, a nawet świata.
 
 **Wiedza nie musi kosztować milionów.**
