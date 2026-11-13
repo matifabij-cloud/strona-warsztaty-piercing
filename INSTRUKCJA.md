@@ -36,26 +36,34 @@ Wyślij mu plik [INSTRUKCJA-DLA-KLIENTA.md](INSTRUKCJA-DLA-KLIENTA.md).
 
 ## 2. Sprzedaż biletów – Evenea
 
-Konto zakłada Rafał (na dane firmy i z jego kontem bankowym), a Tobie daje dostęp.
+**Stan (13.11.2026):** wydarzenie „Łódzkie Warsztaty Piercingu 2027 – New Generation” jest
+opublikowane, ale **ukryte za kodem dostępu `test2027`**. Bilety (VAT 23%, ceny brutto):
+- 3 wykłady New Generation Day – 150 zł, po 100 miejsc,
+- Main Event bez noclegu – 1500 zł, 105 miejsc,
+- Main Event z noclegiem (noc z soboty na niedzielę) – 2000 zł, 15 miejsc,
+- sprzedaż do 18.03.2027, 23:59; w formularzu obowiązkowe pole „Napis na certyfikacie”.
 
-**Bilety do ustawienia w Evenea:**
-- wykład New Generation Day: osobny bilet na każdy z 3 wykładów, 150 zł, limit 100 miejsc,
-- otwarty wykład: bilet 0 zł albo wolne wejście (do ustalenia z Rafałem),
-- Snake Bites Zone: 400 zł, liczba miejsc od Rafała,
-- główne wydarzenie dla piercerów w The Loom Hotel (wcześniej Rafał podawał około 2000 zł,
-  w wariancie z noclegiem i bez) – jeśli zostaje, cenę i program poda Rafał,
-- w formularzu obowiązkowe pole **„Imię i nazwisko lub pseudonim na certyfikat”**,
-- włączone faktury, formularz także po angielsku,
-- prowizję Evenea Rafał wlicza w cenę.
+Snake Bites Zone (zapisy mailowe) i bezpłatny wykład XHULES nie są w Evenea.
+Zakup testowy (bilet 0 zł) działa: bilet przychodzi mailem, napis na certyfikat zapisuje się
+w zamówieniu. Testowe zamówienie nr 6656888 zostało na liście – nie da się go anulować.
 
-**Gdy wydarzenie jest opublikowane**, w panelu: **Edycje → IV edycja → Bilety**:
-1. **Status sprzedaży:** „Sprzedaż trwa” – na stronie pojawi się żółty przycisk „Kup bilet”.
-2. **Link do sprzedaży biletów:** adres wydarzenia na Evenea.
-3. W **Rodzaje biletów** przy każdym bilecie zamień **Link do zakupu lub zapisów**
-   (teraz jest tam adres e-mail) na link do tego biletu w Evenea, a **Napis na przycisku**
-   na „Kup bilet”.
-4. Popraw **Informację o biletach** (teraz jest o rezerwacjach mailowych).
-5. W **Ustawienia strony → FAQ** popraw odpowiedź „Jak kupić bilet?”.
+### Lista kontrolna przed startem sprzedaży
+
+- [ ] Rafał potwierdził numer konta w danych organizatora (wpisany 13.11).
+- [ ] Rafał zdecydował o e-mailu i telefonie kontaktowym w Evenea
+      (teraz: twarowska.beauty@gmail.com i 796 396 300 – profil całej firmy).
+- [ ] W każdym bilecie „nie więcej niż” = 1 (jeden napis na certyfikat na zamówienie).
+- [ ] Domena działa – w opisie wydarzenia jest link https://lodzkiewarsztatypiercingu.pl.
+- [ ] Rafał przejrzał wydarzenie i dał zielone światło.
+- [ ] **Usuń kod dostępu:** Edytuj stronę wydarzenia → Ustawienia → Dostęp do strony →
+      **„wszyscy”** → Zapisz.
+- [ ] Na stronie (panel → **Edycje → IV edycja → Bilety**):
+  1. **Status sprzedaży:** „Sprzedaż trwa” – na stronie pojawi się przycisk „Kup bilet”.
+  2. **Link do sprzedaży biletów:** adres wydarzenia na Evenea.
+  3. W **Rodzaje biletów** przy wykładach i Main Event zamień link (teraz e-mail) na adres
+     wydarzenia w Evenea, a **Napis na przycisku** na „Kup bilet”. Snake Bites Zone zostaje mailowo.
+  4. Popraw **Informację o biletach** (teraz jest o rezerwacjach mailowych).
+  5. W **Ustawienia strony → FAQ** popraw odpowiedź „Jak kupić bilet?”.
 
 ## 3. Newsletter – MailerLite
 
