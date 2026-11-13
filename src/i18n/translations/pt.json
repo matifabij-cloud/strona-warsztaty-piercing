@@ -1,8 +1,4 @@
 {
-  "003b2e5ab75b0fe6": {
-    "pl": "Po polsku, po angielsku i w językach ojczystych prelegentów. Zapewniamy tłumaczenie.",
-    "text": "Polonês, inglês e as línguas nativas dos palestrantes. Oferecemos tradução."
-  },
   "00ae56ab6308cdc7": {
     "pl": "Snake Bites Zone",
     "text": "Snake Bites Zone"
@@ -114,6 +110,10 @@
   "297e0c9202d503f1": {
     "pl": "Zarezerwuj",
     "text": "Faça sua reserva"
+  },
+  "29e3b56f3d059dfe": {
+    "pl": "Wszystko, co w bilecie bez noclegu, oraz nocleg z soboty na niedzielę ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel. Tylko 15 miejsc.",
+    "text": "Tudo o que está incluído no ingresso sem hospedagem, além de hospedagem de sábado para domingo com café da manhã e acesso ao spa no The Loom Hotel, de quatro estrelas. Apenas 15 vagas."
   },
   "2c5657c72c007cac": {
     "pl": "Partner techniczny · Train to the Future",
@@ -271,9 +271,9 @@
     "pl": "Wykłady są przeznaczone dla piercerów – zarówno tych, którzy dopiero zaczynają, jak i tych z wieloletnim stażem.",
     "text": "As palestras são destinadas a piercers – tanto aqueles que estão começando quanto aqueles com muitos anos de experiência."
   },
-  "531ba4ca213502b4": {
-    "pl": "**Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.\n\n**Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.\n\nTo dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.\n\n**Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101, a około 16:00 otwarte Q&A. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.\n\n**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.\n\nWydarzenie prowadzimy po polsku, po angielsku i w językach ojczystych prelegentów – zapewniamy tłumaczenie. Zapraszamy piercerów z całej Europy, a nawet świata.\n\n**Wiedza nie musi kosztować milionów.**",
-    "text": "**Łódź Piercing Workshops 2027 – New Generation**: três dias em Łódź, de 19 a 21 de março de 2027.\n\n**Sexta-feira, 19 de março – New Generation Day.** Começamos em um bonde histórico, que nos levará da Manufaktura para um passeio pela cidade. O “Train to the Future” foi organizado em parceria com o Clube dos Amantes de Bondes Antigos de Łódź. Em seguida, seguiremos para as palestras no The Loom Hotel, na Rua Ogrodowa, 21.\n\nEste é um dia preparado principalmente para piercers em início de carreira: para aqueles que estão apenas começando e para aqueles que querem se aperfeiçoar, mas não têm condições de pagar por treinamentos que custam vários mil zlotys. Por isso, as palestras são vendidas individualmente, e seu preço foi reduzido pelos patrocinadores: o estúdio Maria Twarowska Piercing Beauty, a Brzeski Holding e a Bursztynowo. Também convidamos piercers experientes – qualquer pessoa pode comprar o ingresso.\n\n**Sábado e domingo, 20 e 21 de março – Main Event.** As principais oficinas no The Loom Hotel, para as quais você compra um único ingresso válido para os dois dias. Começamos com tudo: Jane Absinth e Andre Berg, que há anos treinam piercers em todo o mundo, ministrarão a palestra “Cartilage Piercings 101”, seguida de uma sessão aberta de perguntas e respostas por volta das 16h. Encerraremos o sábado com um passeio em um bonde histórico com guia.\n\n**Sábado e domingo, 20 e 21 de março – Piercing Festival Łódź.** Parte do evento aberta ao público na Manufaktura: piercing, joias, arte corporal, educação e cultura internacional do setor. Aqui você encontrará piercers, educadores, artistas e marcas da Polônia e do exterior, entre os quais nossos parceiros do setor: a distribuidora de joias Piercing69 e a AquaTouch, fabricantes de produtos de cuidados pós-piercing à base de HOCl. Você pode contar com brindes.\n\nO evento será conduzido em polonês, inglês e nas línguas nativas dos palestrantes – garantimos tradução. Convidamos piercers de toda a Europa e até mesmo do mundo todo.\n\n**O conhecimento não precisa custar milhões.**"
+  "55c0b91201e70a22": {
+    "pl": "Po polsku i po angielsku. Zapewniamy tłumaczenie na oba języki.",
+    "text": "Em polonês e em inglês. Oferecemos tradução para ambas as línguas."
   },
   "567fd0ec27b548ff": {
     "pl": "Trzecia edycja Łódzkich Warsztatów Piercingu odbyła się pod hasłem **Brazylijska Przygoda**. Przez dwa dni w Hotelu PURO w sercu Łodzi gościliśmy piercerów z Brazylii, którzy podzielili się wiedzą i technikami ze swojej codziennej pracy.\n\nProgram objął pięć wykładów: od idealnego septum i zasad biosafety, przez kamienie szlachetne w biżuterii, microdermale i przekłucia powierzchniowe, po przekłucia intymne i tongue splitting.\n\nWarsztaty były przeznaczone dla piercerów po ukończonym kursie podstawowym.",
@@ -290,6 +290,10 @@
   "5e58367dfd2380c4": {
     "pl": "30 artystów, 30 prac, jedna wystawa w Manufakturze",
     "text": "30 artistas, 30 trabalhos, uma exposição na Manufaktura"
+  },
+  "5e8d4993be3c821c": {
+    "pl": "Tak. Bilety są imienne, ale do 7 dni przed wydarzeniem możesz bezpłatnie przepisać lub odsprzedać bilet innej osobie – napisz do nas, a zmienimy dane uczestnika. Jeśli wydarzenie się nie odbędzie, zwracamy pełną kwotę.",
+    "text": "Sim. Os ingressos são nominativos, mas até 7 dias antes do evento você pode transferir ou revender o ingresso para outra pessoa sem custo adicional – entre em contato conosco e alteraremos os dados do participante. Caso o evento seja cancelado, reembolsaremos o valor total."
   },
   "5ebd6399e0f19c01": {
     "pl": "W jakim języku są wykłady?",
@@ -342,10 +346,6 @@
   "6db9c7287c0bd3ef": {
     "pl": "Jak zgłosić się do konkursu Piercing Artist Łódź?",
     "text": "Como me inscrever no concurso Piercing Artist Łódź?"
-  },
-  "6e4e7e3a4bf44028": {
-    "pl": "Wszystko, co w bilecie bez noclegu, oraz nocleg ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel.",
-    "text": "Tudo o que está incluído no ingresso sem hospedagem, além de hospedagem com café da manhã e acesso ao spa no The Loom Hotel, de quatro estrelas."
   },
   "6f0b0fbfc3076cdc": {
     "pl": "Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.",
@@ -451,6 +451,10 @@
     "pl": "Sobota i niedziela, 20–21 marca · The Loom Hotel. Jeden bilet na oba dni głównych warsztatów, w tym wykłady Jane Absinth i Andre Berga oraz sobotni przejazd zabytkowym tramwajem. Maksymalnie 120 uczestników.",
     "text": "Sábado e domingo, 20 e 21 de março · The Loom Hotel. Um único ingresso para os dois dias das oficinas principais, incluindo palestras de Jane Absinth e Andre Berg, além do passeio de bonde histórico no sábado. Capacidade máxima de 120 participantes."
   },
+  "8e2e3a66e04b81c8": {
+    "pl": "**Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.\n\n**Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.\n\nTo dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.\n\n**Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101, a około 16:00 otwarte Q&A. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.\n\n**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.\n\nWykłady prowadzimy po polsku i po angielsku – zapewniamy tłumaczenie na oba języki. Zapraszamy piercerów z całej Europy, a nawet świata.\n\n**Wiedza nie musi kosztować milionów.**",
+    "text": "**Łódź Piercing Workshops 2027 – New Generation**: três dias em Łódź, de 19 a 21 de março de 2027.\n\n**Sexta-feira, 19 de março – New Generation Day.** Começamos em um bonde histórico, que nos levará da Manufaktura para um passeio pela cidade. O “Train to the Future” foi organizado em parceria com o Clube dos Amantes de Bondes Antigos de Łódź. Em seguida, seguiremos para as palestras no The Loom Hotel, na Rua Ogrodowa, 21.\n\nEste é um dia preparado principalmente para piercers em início de carreira: para aqueles que estão apenas começando e para aqueles que querem se aperfeiçoar, mas não têm condições de pagar por treinamentos que custam vários mil zlotys. Por isso, as palestras são vendidas individualmente, e seu preço foi reduzido pelos patrocinadores: o estúdio Maria Twarowska Piercing Beauty, a Brzeski Holding e a Bursztynowo. Também convidamos piercers experientes – qualquer pessoa pode comprar o ingresso.\n\n**Sábado e domingo, 20 e 21 de março – Main Event.** As principais oficinas no The Loom Hotel, para as quais você compra um único ingresso válido para os dois dias. Começamos com tudo: Jane Absinth e Andre Berg, que há anos treinam piercers em todo o mundo, ministrarão a palestra “Cartilage Piercings 101”, seguida de uma sessão aberta de perguntas e respostas por volta das 16h. Encerraremos o sábado com um passeio em um bonde histórico com guia.\n\n**Sábado e domingo, 20 e 21 de março – Piercing Festival Łódź.** Parte do evento aberta ao público na Manufaktura: piercing, joias, arte corporal, educação e cultura internacional do setor. Aqui você encontrará piercers, educadores, artistas e marcas da Polônia e do exterior, entre os quais nossos parceiros do setor: a distribuidora de joias Piercing69 e a AquaTouch, fabricantes de produtos de aftercare à base de HOCl. Você pode contar com brindes.\n\nAs palestras serão ministradas em polonês e em inglês – garantimos tradução para ambas as línguas. Convidamos piercers de toda a Europa e até mesmo do mundo todo.\n\n**O conhecimento não precisa custar milhões.**"
+  },
   "90da8eb94b4c68ad": {
     "pl": "New Generation",
     "text": "New Generation"
@@ -474,10 +478,6 @@
   "9fe3c099af094740": {
     "pl": "Otwarty wykład, wstęp bezpłatny dla wszystkich. The Loom Hotel. Terminologia queer, inkluzywność i komunikacja.",
     "text": "Palestra aberta ao público, com entrada gratuita para todos. The Loom Hotel. Terminologia queer, inclusão e comunicação."
-  },
-  "a07431eb2b8fc03c": {
-    "pl": "Tak. Bilety są imienne, ale do określonego terminu przed wydarzeniem możesz bezpłatnie przepisać bilet na inną osobę. Szczegóły znajdą się w regulaminie.",
-    "text": "Sim. Os ingressos são nominativos, mas, até uma data determinada antes do evento, você pode transferir o ingresso para outra pessoa sem custo adicional. Os detalhes constam no regulamento."
   },
   "a0d74820df8bbb8b": {
     "pl": "Brazylia",
