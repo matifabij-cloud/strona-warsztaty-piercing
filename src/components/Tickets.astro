@@ -13,6 +13,8 @@ const { locale, edition } = Astro.props;
 const t = useUI(locale);
 const tickets = edition.data.tickets ?? { status: 'wkrotce' as const, url: undefined, info: undefined, options: [] };
 const onSale = tickets.status === 'sprzedaz' && Boolean(tickets.url);
+// Bezpłatna pozycja (np. otwarty wykład bez zapisów) nie dostaje automatycznie przycisku zakupu.
+const isFree = (price?: string) => /^\s*0([,.]0+)?\s*(zł|pln)?\s*$/i.test(price ?? '');
 const statusLabel = t(`tickets.status.${tickets.status}` as const);
 
 // „Zakup online” pokazujemy dopiero, gdy sprzedaż naprawdę trwa.
@@ -43,7 +45,7 @@ const features = [
                 </div>
                 <div class="ticket__option-side">
                   {o.price && <p class="ticket__price">{o.price}</p>}
-                  {(o.url || (tickets.status === 'sprzedaz' && tickets.url)) && (
+                  {(o.url || (tickets.status === 'sprzedaz' && tickets.url && !isFree(o.price))) && (
                     <a
                       class="btn btn--small btn--primary"
                       href={o.url || tickets.url}

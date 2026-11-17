@@ -201,15 +201,15 @@ program:
           - max-alves.md
         host: ''
 tickets:
-  status: wkrotce
-  url: ''
-  info: 'Ruszyły rezerwacje na piątkowe wykłady New Generation Day. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.'
+  status: sprzedaz
+  url: 'https://app.evenea.pl/event/lodzkie-warsztaty-piercingu-2027/'
+  info: 'Ruszyła sprzedaż biletów na piątkowe wykłady New Generation Day i na Main Event. Bilety kupisz online przez Evenea, faktura VAT na życzenie. Wstęp na festiwal w Manufakturze jest bezpłatny, a na Snake Bites Zone zapisujesz się mailowo.'
   options:
     - name: Wykład New Generation Day
       price: 150 zł
       description: 'Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.'
-      url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Rezerwacja%20%E2%80%93%20New%20Generation%20Day'
-      buttonLabel: Zarezerwuj
+      url: 'https://app.evenea.pl/event/lodzkie-warsztaty-piercingu-2027/'
+      buttonLabel: Kup bilet
     - name: Main Event – bez noclegu
       price: 1500 zł
       description: 'Sobota i niedziela, 20–21 marca · The Loom Hotel. Jeden bilet na oba dni głównych warsztatów, w tym wykłady Jane Absinth i Andre Berga oraz sobotni przejazd zabytkowym tramwajem. Maksymalnie 120 uczestników.'
