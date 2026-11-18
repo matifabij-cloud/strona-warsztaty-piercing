@@ -21,7 +21,7 @@ Kod: GitHub, repozytorium `matifabij-cloud/strona-warsztaty-piercing`, gałąź 
 - [ ] Zaproszenie Rafała do panelu
 - [ ] Sprzedaż biletów – Evenea
 - [ ] Newsletter – MailerLite
-- [ ] Własna domena
+- [ ] Własna domena – kupiona 18.11.2026, do podpięcia w Cloudflare
 - [ ] Posty z Instagrama na stronie – Behold
 - [ ] Wizytówka Google i Google Search Console
 - [ ] Odpowiedzi Rafała z ostatniego maila (wpisujesz w panelu)
@@ -79,17 +79,27 @@ Sekcja „Bądź na bieżąco” pojawi się na stronie głównej nad FAQ.
 
 ## 4. Własna domena
 
-1. Kup domenę (proponowana: `lodzkiewarsztatypiercingu.pl`) w dowolnym rejestratorze,
-   najlepiej na dane firmy organizatora.
-2. Cloudflare → **Add a domain** → wpisz domenę → plan **Free**. Cloudflare poda dwa adresy
-   serwerów DNS – wpisz je w panelu rejestratora. Zmiana działa od kilku minut do 24 godzin.
-3. Cloudflare → projekt strony → **Custom domains → Set up a custom domain** → dodaj domenę
+**Domena `lodzkiewarsztatypiercingu.pl` jest kupiona** (18.11.2026) w **cyber_Folks**,
+na dane Piercing Beauty Sp. z o.o., na 12 miesięcy, za 12,18 zł brutto.
+Konto w cyber_Folks jest osobne, tylko dla tej domeny (logowanie na e-mail Mateusza).
+
+> **Ważne – odnowienie (przed 18.11.2027):** w cyber_Folks odnowienie kosztuje około
+> 199 zł netto rocznie. We wrześniu lub październiku 2027 przenieś domenę do tańszego
+> rejestratora (na przykład OVH albo Hostido – odnowienie około 50–60 zł netto).
+> Przeniesienie: w panelu cyber_Folks pobierz **kod AuthInfo** domeny, u nowego rejestratora
+> wybierz **Transfer domeny** i wpisz ten kod. Strona działa bez przerwy, bo serwery DNS
+> (Cloudflare) się nie zmieniają. Ustal z Rafałem, kto płaci za kolejne lata.
+
+1. Cloudflare → **Add a domain** → wpisz domenę → plan **Free**. Cloudflare poda dwa adresy
+   serwerów DNS – wpisz je w panelu cyber_Folks (domena → **Serwery DNS**).
+   Zmiana działa od kilku minut do 24 godzin.
+2. Cloudflare → projekt strony → **Custom domains → Set up a custom domain** → dodaj domenę
    z `www` i bez.
-4. Cloudflare → projekt strony → **Settings → Variables and Secrets** → dodaj zmienną
+3. Cloudflare → projekt strony → **Settings → Variables and Secrets** → dodaj zmienną
    **SITE_URL** = `https://lodzkiewarsztatypiercingu.pl` (bez ukośnika na końcu).
    Potem w **Deployments** kliknij **Retry deployment** przy ostatniej wersji.
    Dzięki temu linki dla Google i podglądy w social media będą pokazywać nowy adres.
-5. **Podmień stary adres `strona-warsztaty-piercing.pages.dev` na nowy wszędzie, gdzie go wpisaliśmy:**
+4. **Podmień stary adres `strona-warsztaty-piercing.pages.dev` na nowy wszędzie, gdzie go wpisaliśmy:**
    - Evenea → wydarzenie → **Opis wydarzenia** → linijka „Pełny program: …”,
    - bio na Instagramie @lodzkiewarsztatypiercingu,
    - materiały i plakaty przygotowywane od tej pory.
