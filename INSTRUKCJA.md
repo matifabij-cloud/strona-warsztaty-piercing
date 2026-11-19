@@ -3,7 +3,7 @@
 Wszystko poniżej zrobisz **bez programowania i bez Claude**. Strona, panel, tłumaczenia
 i codzienne odświeżanie działają same i są darmowe.
 
-Adres strony: https://strona-warsztaty-piercing.pages.dev
+Adres strony: https://lodzkiewarsztatypiercingu.pl (stary adres https://strona-warsztaty-piercing.pages.dev też działa)
 Panel do edycji: https://app.pagescms.org
 Kod: GitHub, repozytorium `matifabij-cloud/strona-warsztaty-piercing`, gałąź `main`.
 
@@ -21,7 +21,7 @@ Kod: GitHub, repozytorium `matifabij-cloud/strona-warsztaty-piercing`, gałąź 
 - [ ] Zaproszenie Rafała do panelu
 - [ ] Sprzedaż biletów – Evenea
 - [ ] Newsletter – MailerLite
-- [ ] Własna domena – kupiona 18.11.2026, do podpięcia w Cloudflare
+- [x] Własna domena – kupiona 18.11.2026, podpięta w Cloudflare 19.11.2026
 - [ ] Posty z Instagrama na stronie – Behold
 - [ ] Wizytówka Google i Google Search Console
 - [ ] Odpowiedzi Rafała z ostatniego maila (wpisujesz w panelu)
@@ -95,10 +95,8 @@ Konto w cyber_Folks jest osobne, tylko dla tej domeny (logowanie na e-mail Mateu
    Zmiana działa od kilku minut do 24 godzin.
 2. Cloudflare → projekt strony → **Custom domains → Set up a custom domain** → dodaj domenę
    z `www` i bez.
-3. Cloudflare → projekt strony → **Settings → Variables and Secrets** → dodaj zmienną
-   **SITE_URL** = `https://lodzkiewarsztatypiercingu.pl` (bez ukośnika na końcu).
-   Potem w **Deployments** kliknij **Retry deployment** przy ostatniej wersji.
-   Dzięki temu linki dla Google i podglądy w social media będą pokazywać nowy adres.
+3. Adres strony dla Google i podglądów w social media jest już wpisany w kodzie
+   (`astro.config.mjs`), nic nie trzeba ustawiać.
 4. **Podmień stary adres `strona-warsztaty-piercing.pages.dev` na nowy wszędzie, gdzie go wpisaliśmy:**
    - Evenea → wydarzenie → **Opis wydarzenia** → linijka „Pełny program: …”,
    - bio na Instagramie @lodzkiewarsztatypiercingu,
