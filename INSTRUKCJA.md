@@ -47,12 +47,27 @@ Snake Bites Zone (zapisy mailowe) i bezpłatny wykład XHULES nie są w Evenea.
 Zakup testowy (bilet 0 zł) działa: bilet przychodzi mailem, napis na certyfikat zapisuje się
 w zamówieniu. Testowe zamówienie nr 6656888 zostało na liście – nie da się go anulować.
 
+**Test z prawdziwą płatnością (19.11.2026):** bilet „TEST – nie kupować” za 6,15 zł kupiony BLIK-iem –
+status „Opłacony”, bilet PDF z kodem QR przychodzi mailem, kod QR otwiera w Evenea stronę
+„Kasuj bilet”. Bilet testowy trzeba wyłączyć przed startem sprzedaży.
+
+**Pieniądze:** wpłaty zbiera Evenea i przelewa je (minus prowizja) na konto organizatora
+**do 7 dni po zakończeniu wydarzenia**, czyli około 28.03.2027 – nie na bieżąco.
+
+**Wejście na wydarzenie:** obsługa skanuje kod QR z biletu (z ekranu albo wydruku) zwykłym
+aparatem w telefonie – otwiera się strona Evenea, gdzie kasuje się bilet. Skanowanie włącza
+się samo 19.03.2027 o 4:30. Zapasowo: panel **Monitoruj → Kasuj bilety** (numer biletu)
+albo lista uczestników. **Bilet Main Event jest na dwa dni** – po sobotnim skanowaniu
+w niedzielę pokaże „bilet już użyty”, więc skanujemy go tylko w sobotę, a w niedzielę
+wpuszczamy po opasce lub identyfikatorze.
+
 ### Lista kontrolna przed startem sprzedaży
 
 - [ ] Rafał potwierdził numer konta w danych organizatora (wpisany 13.11).
 - [ ] Rafał zdecydował o e-mailu i telefonie kontaktowym w Evenea
       (teraz: twarowska.beauty@gmail.com i 796 396 300 – profil całej firmy).
 - [ ] W każdym bilecie „nie więcej niż” = 1 (jeden napis na certyfikat na zamówienie).
+- [ ] Bilet testowy wyłączony albo usunięty.
 - [ ] Domena działa – w opisie wydarzenia jest link https://lodzkiewarsztatypiercingu.pl.
 - [ ] Rafał przejrzał wydarzenie i dał zielone światło.
 - [ ] **Usuń kod dostępu:** Edytuj stronę wydarzenia → Ustawienia → Dostęp do strony →
