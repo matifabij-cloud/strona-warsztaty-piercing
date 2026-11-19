@@ -99,13 +99,13 @@
     "pl": "Od kaniuli do igły",
     "text": "From cannula to needle"
   },
-  "23ee3597aaf5d7d6": {
-    "pl": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na ulubioną pracę z wystawy. W niedzielę 21 marca o 13:00 ogłosimy 10 najlepszych prac i wylosujemy 10 zwycięzców spośród głosujących – nagrodą jest stylizacja ucha wykonana przez autora pracy. Szczegółowe zasady ogłosimy wkrótce.",
-    "text": "From 13 March 2027, every visitor to Manufaktura can vote for their favourite piece from the exhibition. On Sunday 21 March at 1.00 pm, we will announce the top 10 entries and draw 10 winners from among those who voted – the prize is an ear styling by the artist behind the piece. We will announce the detailed rules shortly."
-  },
   "28029a443adf8b5c": {
     "pl": "Deklarację udziału zostaw w komentarzu pod postem Piercing Artists na naszym Instagramie albo napisz do nas mailowo",
     "text": "Please leave your declaration of participation in the comments under the ‘Piercing Artists’ post on our Instagram, or email us"
+  },
+  "297e0c9202d503f1": {
+    "pl": "Zarezerwuj",
+    "text": "Book now"
   },
   "29e3b56f3d059dfe": {
     "pl": "Wszystko, co w bilecie bez noclegu, oraz nocleg z soboty na niedzielę ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel. Tylko 15 miejsc.",
@@ -199,6 +199,10 @@
     "pl": "Sobota – Main Event",
     "text": "Saturday – Main Event"
   },
+  "420f2776ad17f203": {
+    "pl": "Tak. Przy zakupie biletu zaznacz, że potrzebujesz faktury VAT, i podaj dane firmy.",
+    "text": "Yes. When purchasing a ticket, please indicate that you require a VAT invoice and provide your company details."
+  },
   "427395f7cc4ca2c8": {
     "pl": "Sobota 10:00–17:00, niedziela 10:00–16:00. W cenie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego i 2 bezpłatne konsultacje po przekłuciu. Około 50 minut na osobę: zapisujesz się na konkretną godzinę, a dostępność terminu potwierdzamy mailowo.",
     "text": "Saturday 10:00–17:00, Sunday 10:00–16:00. The price includes snake bites, a photo shoot, the recording of promotional material and two free post-piercing consultations. Approximately 50 minutes per person: you book a specific time slot, and we’ll confirm availability by email."
@@ -206,6 +210,10 @@
   "435986c799e6d479": {
     "pl": "Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek, hodowca gadów, który dba o bezpieczeństwo zwierząt w strefie.",
     "text": "A zone where snakes reign supreme, and we perform just one type of piercing: snake bites. The face of the zone is Igor Płatek, a reptile breeder who looks after the animals’ safety there."
+  },
+  "437dc181804b24f2": {
+    "pl": "Bilety na piątkowe wykłady i na Main Event kupisz w sekcji Bilety – sprzedaż online uruchomimy wkrótce i ogłosimy ją także na Instagramie. Na Snake Bites Zone zapisujesz się mailowo, wybierając konkretną godzinę.",
+    "text": "You can buy tickets for Friday’s talks and the Main Event in the Tickets section – online sales will start soon and we’ll also announce this on Instagram. To book a slot at the Snake Bites Zone, please register by email, selecting a specific time."
   },
   "43fe7cd3630b7f13": {
     "pl": "Idealne septum i techniki biosafety",
@@ -659,6 +667,10 @@
     "pl": "Biosafety i szkolenie z przekłuć sutków",
     "text": "Biosafety and a nipple piercing training"
   },
+  "f0b643f5b82ed779": {
+    "pl": "Od 13 marca 2027 każdy odwiedzający Manufakturę może zagłosować na miejscu: wystarczy zeskanować telefonem kod QR przy wystawie i wybrać 3 ulubione prace. Z jednego telefonu można zagłosować raz. W niedzielę 21 marca o 13:00 ogłosimy 10 najlepszych prac i wylosujemy 10 zwycięzców spośród głosujących – nagrodą jest stylizacja ucha wykonana przez autora pracy. Szczegółowe zasady ogłosimy wkrótce.",
+    "text": "From 13 March 2027, anyone visiting Manufaktura can vote on the spot: simply scan the QR code next to the exhibition with your mobile phone and select your 3 favourite pieces. You can vote once per mobile phone. On Sunday 21 March at 1.00 pm, we will announce the top 10 entries and draw 10 winners from among the voters – the prize is an ear piercing design created by the artist behind the winning entry. We will announce the detailed rules shortly."
+  },
   "f17c1ba8e10962ce": {
     "pl": "Microdermale i przekłucia powierzchniowe",
     "text": "Microdermals and surface piercings"
@@ -666,6 +678,10 @@
   "f1c08992912220c6": {
     "pl": "Brazylijscy piercerzy, piercing na miejscu, historia brazylijskiej sceny body piercingu i body modification oraz kultura Brazylii.",
     "text": "Brazilian piercers, on-site piercing, the history of the Brazilian body piercing and body modification scene, and Brazilian culture."
+  },
+  "f3640659c3437a3c": {
+    "pl": "Ruszyły rezerwacje na piątkowe wykłady New Generation Day. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.",
+    "text": "Bookings are now open for Friday’s New Generation Day talks. Entry to the festival at Manufaktura is free, and registration for the Snake Bites Zone is already underway."
   },
   "f3bd473f33feb2be": {
     "pl": "Piątek – New Generation Day",
