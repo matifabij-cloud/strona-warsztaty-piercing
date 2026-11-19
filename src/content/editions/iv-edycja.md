@@ -3,7 +3,7 @@ number: IV
 title: Łódzkie Warsztaty Piercingu 2027
 theme: New Generation
 tagline: 'Piątek: New Generation Day. Weekend: Main Event w The Loom Hotel i Piercing Festival Łódź w Manufakturze.'
-summary: 'Trzy dni w Łodzi: New Generation Day, Main Event z Jane Absinth i Andre Bergiem, przejazd zabytkowym tramwajem i publiczny Piercing Festival Łódź w Manufakturze.'
+summary: 'Trzy dni w Łodzi: New Generation Day, Main Event z Jane Absinth, Andre Bergiem i Luną Duran, przejazd zabytkowym tramwajem i publiczny Piercing Festival Łódź w Manufakturze.'
 startDate: '2027-03-19'
 endDate: '2027-03-21'
 startTime: '08:30'
@@ -87,6 +87,8 @@ speakers:
     note: Cartilage Piercings 101 · Piercing Q&A
   - speaker: andre-berg.md
     note: Cartilage Piercings 101 · Piercing Q&A
+  - speaker: luna-duran.md
+    note: The Principles of Tongue Piercing
   - speaker: igor-platek.md
     note: Gość specjalny
 program:
@@ -138,10 +140,11 @@ program:
         description: ''
         speakers: []
         host: ''
-      - time: '14:00'
-        title: Wykład – temat ogłosimy wkrótce
-        description: ''
-        speakers: []
+      - time: '14:15'
+        title: The Principles of Tongue Piercing
+        description: 'Język wygląda niewinnie – do momentu, kiedy zaczynamy mówić o anatomii, przeciwwskazaniach, doborze biżuterii, narzędziach, technice i wszystkim, co decyduje, czy przekłucie będzie naprawdę dobre. Temat prezentowany trzykrotnie na BMXnet.'
+        speakers:
+          - luna-duran.md
         host: ''
       - time: '16:00'
         title: 'Piercing Q&A: Questions, Problem-Solving & Discussion'
@@ -212,7 +215,7 @@ tickets:
       buttonLabel: Kup bilet
     - name: Main Event – bez noclegu
       price: 1500 zł
-      description: 'Sobota i niedziela, 20–21 marca · The Loom Hotel. Jeden bilet na oba dni głównych warsztatów, w tym wykłady Jane Absinth i Andre Berga oraz sobotni przejazd zabytkowym tramwajem. Maksymalnie 120 uczestników.'
+      description: 'Sobota i niedziela, 20–21 marca · The Loom Hotel. Jeden bilet na oba dni głównych warsztatów, w tym wykłady Jane Absinth, Andre Berga i Luny Duran oraz sobotni przejazd zabytkowym tramwajem. Maksymalnie 120 uczestników.'
       url: ''
       buttonLabel: ''
     - name: Main Event – z noclegiem
@@ -283,6 +286,7 @@ posters:
   - /media/plakaty/iv-edycja-silas.jpg
   - /media/plakaty/iv-edycja-ania-i-nina.jpg
   - /media/plakaty/iv-edycja-main-event-jane-andre.jpg
+  - /media/plakaty/iv-edycja-main-event-luna-duran.jpg
   - /media/plakaty/iv-edycja-nabor-artystow.jpg
 hidden: false
 ---
@@ -292,7 +296,7 @@ hidden: false
 
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
 
-**Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101, a około 16:00 otwarte Q&A. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
+**Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101. O 14:15 Luna Duran przedstawi The Principles of Tongue Piercing – temat, z którym trzykrotnie wystąpiła na BMXnet. Około 16:00 zapraszamy na otwarte Q&A z Jane i Andre. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
 
 **Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 
