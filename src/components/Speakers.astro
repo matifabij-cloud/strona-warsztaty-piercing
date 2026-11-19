@@ -40,6 +40,8 @@ const n = items.length;
 const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
 // Tablet: 4 osoby → 2 × 2, inaczej 3 kolumny; niepełny ostatni rząd jest wyśrodkowany.
 const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
+// Szerszy tablet: gdy przy 3 kolumnach ktoś zostałby sam w rzędzie (7, 10 osób), dajemy 4.
+const colsTab = n > 4 && n % 3 === 1 ? 4 : colsMd;
 
 // Karty w siatce o podwójnej liczbie kolumn: każda zajmuje 2, więc niepełny ostatni rząd
 // można przesunąć o pół karty i wyśrodkować. Dla każdej szerokości ekranu osobno.
@@ -51,6 +53,7 @@ const placement = (i: number) =>
   [
     ['--gs', lastRowStart(2, i)],
     ['--gs-md', lastRowStart(colsMd, i)],
+    ['--gs-tab', lastRowStart(colsTab, i)],
     ['--gs-lg', lastRowStart(cols, i)],
   ]
     .filter(([, v]) => v)
@@ -71,7 +74,7 @@ const rowNames = [
 const rowVars = rowNames.map((r, i) => `--r-${r}:${i + 1}`).join(';');
 ---
 
-<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1, 'speakers--three': items.length === 3, 'speakers--four': items.length === 4 }]} style={`--c2:4;--c2-md:${Math.max(colsMd, 1) * 2};--c2-lg:${Math.max(cols, 1) * 2};--rows:${rowNames.length};${rowVars}`}>
+<ul role="list" class:list={['speakers', { 'speakers--feature': feature, 'speakers--solo': items.length === 1, 'speakers--three': items.length === 3, 'speakers--four': items.length === 4, 'speakers--tab4': colsTab === 4 && colsMd !== 4 }]} style={`--c2:4;--c2-md:${Math.max(colsMd, 1) * 2};--c2-tab:${Math.max(colsTab, 1) * 2};--c2-lg:${Math.max(cols, 1) * 2};--rows:${rowNames.length};${rowVars}`}>
   {
     items.map(({ speaker, note }, i) => {
       const s = speaker.data;
@@ -189,6 +192,23 @@ const rowVars = rowNames.map((r, i) => `--r-${r}:${i + 1}`).join(';');
 
     .speakers:not(.speakers--feature) > .speaker {
       grid-column: var(--gs-md, auto) / span 2;
+    }
+  }
+
+  @media (min-width: 52rem) {
+    .speakers:not(.speakers--feature) {
+      grid-template-columns: repeat(var(--c2-tab), minmax(0, 1fr));
+    }
+
+    .speakers:not(.speakers--feature) > .speaker {
+      grid-column: var(--gs-tab, auto) / span 2;
+    }
+  }
+
+  /* Wąskie karty w 4 kolumnach na tablecie: mniejsze linki, żeby nazwa konta nie łamała się */
+  @media (min-width: 52rem) and (max-width: 63.99rem) {
+    .speakers--tab4 .speaker__links {
+      font-size: 0.78rem;
     }
   }
 
