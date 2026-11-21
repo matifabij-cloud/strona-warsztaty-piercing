@@ -206,30 +206,53 @@ program:
 tickets:
   status: wkrotce
   url: ''
-  info: 'Ruszyły rezerwacje na piątkowe wykłady New Generation Day. Wstęp na festiwal w Manufakturze jest bezpłatny, a zapisy do Snake Bites Zone już trwają.'
+  info: 'Trzy ścieżki udziału: pojedyncze wykłady New Generation Day, dwudniowy Main Event albo trzydniowy pakiet New Generation + Main Event z możliwością dofinansowania z Bazy Usług Rozwojowych. Ceny warsztatów podajemy netto, do kwoty netto doliczamy 23% VAT. Wstęp na festiwal w Manufakturze jest bezpłatny.'
   options:
-    - name: Wykład New Generation Day
-      price: 150 zł
-      description: 'Piątek, 19 marca · The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata i imienny certyfikat. 100 miejsc na każdy wykład.'
+    - group: New Generation Day · 19 marca
+      name: Wykład New Generation Day
+      price: 150 zł netto
+      priceNote: 184,50 zł brutto
+      planned: false
+      description: 'The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata, ciastka i imienny certyfikat. 100 miejsc na każdy wykład.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Rezerwacja%20%E2%80%93%20New%20Generation%20Day'
       buttonLabel: Zarezerwuj
-    - name: Main Event – bez noclegu
-      price: 1500 zł
-      description: 'Sobota i niedziela, 20–21 marca · The Loom Hotel. Jeden bilet na oba dni głównych warsztatów, w tym wykłady Jane Absinth, Andre Berga i Luny Duran oraz sobotni przejazd zabytkowym tramwajem. Maksymalnie 120 uczestników.'
-      url: ''
-      buttonLabel: ''
-    - name: Main Event – z noclegiem
-      price: 2000 zł
-      description: 'Wszystko, co w bilecie bez noclegu, oraz nocleg z soboty na niedzielę ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel. Tylko 15 miejsc.'
-      url: ''
-      buttonLabel: ''
-    - name: Otwarty wykład „Jak rozmawiać z drugim człowiekiem”
+    - group: New Generation Day · 19 marca
+      name: Otwarty wykład „Jak rozmawiać z drugim człowiekiem”
       price: 0 zł
-      description: 'Piątek, 19 marca, 16:30 · The Loom Hotel. Prowadzi XHULES. Wstęp bezpłatny, otwarty dla wszystkich.'
+      priceNote: ''
+      planned: false
+      description: '16:30 · The Loom Hotel. XHULES o komunikacji i inkluzywności. Wstęp bezpłatny, otwarty dla wszystkich.'
       url: ''
       buttonLabel: ''
-    - name: Snake Bites Zone
+    - group: Main Event · 20–21 marca
+      name: Main Event – bez noclegu
+      price: 1500 zł netto
+      priceNote: 1845 zł brutto
+      planned: false
+      description: 'The Loom Hotel. Dwa dni wykładów międzynarodowych ekspertów, w tym Jane Absinth, Andre Berga i Luny Duran, oraz sobotni przejazd zabytkowym tramwajem. W cenie kawa, herbata, ciastka i imienny certyfikat. Maksymalnie 120 uczestników.'
+      url: ''
+      buttonLabel: ''
+    - group: Main Event · 20–21 marca
+      name: Main Event – z noclegiem
+      price: 2000 zł netto
+      priceNote: 2460 zł brutto
+      planned: false
+      description: 'Wszystko, co w bilecie bez noclegu, oraz jeden nocleg z soboty na niedzielę w pokoju dwuosobowym, ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel. Tylko 15 miejsc.'
+      url: ''
+      buttonLabel: ''
+    - group: New Generation + Main Event · 19–21 marca
+      name: Pakiet z dofinansowaniem BUR
+      price: 2350 zł netto
+      priceNote: cena planowana
+      planned: true
+      description: 'Szkolenie „Łódzkie Warsztaty Piercingu 2027 – Międzynarodowe Szkolenie Specjalistyczne dla Piercerów” z możliwością dofinansowania przez Bazę Usług Rozwojowych (BUR). W wybranych projektach dofinansowanie sięga nawet 93% – wtedy wkład własny wynosi 164,50 zł. Wysokość wsparcia zależy od operatora i zasad projektu. Zapisy przez BUR i operatora dofinansowania – publikację usługi planujemy w grudniu 2026. Numer usługi BUR: 2026/11/20/2020619/3962765. Pakiet nie obejmuje noclegu.'
+      url: ''
+      buttonLabel: ''
+    - group: Piercing Festival Łódź · 20–21 marca
+      name: Snake Bites Zone
       price: 400 zł
+      priceNote: ''
+      planned: false
       description: 'Sobota 10:00–17:00, niedziela 10:00–16:00. W cenie snake bites, sesja zdjęciowa, nagranie materiału promocyjnego i 2 bezpłatne konsultacje po przekłuciu. Około 50 minut na osobę: zapisujesz się na konkretną godzinę, a dostępność terminu potwierdzamy mailowo.'
       url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=SNAKE%20BITES%20ZONE'
       buttonLabel: Zapisz się
@@ -297,6 +320,8 @@ hidden: false
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
 
 **Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101. O 14:15 Luna Duran przedstawi The Principles of Tongue Piercing – temat, z którym trzykrotnie wystąpiła na BMXnet. Około 16:00 zapraszamy na otwarte Q&A z Jane i Andre. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
+
+**Trzy dni w pakiecie.** New Generation Day i Main Event można połączyć w trzydniowe szkolenie z możliwością dofinansowania przez Bazę Usług Rozwojowych (BUR) – szczegóły w sekcji Bilety.
 
 **Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 

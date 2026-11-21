@@ -13,7 +13,22 @@ const { locale, edition } = Astro.props;
 const t = useUI(locale);
 const tickets = edition.data.tickets ?? { status: 'wkrotce' as const, url: undefined, info: undefined, options: [] };
 const onSale = tickets.status === 'sprzedaz' && Boolean(tickets.url);
+// Bezpłatna pozycja (np. otwarty wykład bez zapisów) nie dostaje automatycznie przycisku zakupu.
+const isFree = (price?: string) => /^\s*0([,.]0+)?\s*(zł|pln)?\s*$/i.test(price ?? '');
 const statusLabel = t(`tickets.status.${tickets.status}` as const);
+
+// Bilety z tym samym polem „Grupa” (kolejne na liście) trafiają pod jeden nagłówek.
+type Option = (typeof tickets.options)[number];
+const groups = tickets.options.reduce<{ title?: string; items: Option[] }[]>((acc, o) => {
+  const last = acc[acc.length - 1];
+  if (last && (last.title ?? '') === (o.group ?? '')) last.items.push(o);
+  else acc.push({ title: o.group, items: [o] });
+  return acc;
+}, []);
+// Przycisk: własny link biletu albo – gdy sprzedaż trwa – link do sprzedaży. Bez przycisku dla
+// pozycji bezpłatnych i planowanych.
+const buyUrl = (o: Option) =>
+  o.url || (tickets.status === 'sprzedaz' && !o.planned && !isFree(o.price) ? tickets.url : undefined);
 
 // „Zakup online” pokazujemy dopiero, gdy sprzedaż naprawdę trwa.
 const features = [
@@ -31,38 +46,6 @@ const features = [
         {statusLabel}
       </p>
       {tickets.info && <p class="ticket__info">{tr(tickets.info, locale)}</p>}
-
-      {
-        tickets.options.length > 0 && (
-          <ul role="list" class="ticket__options">
-            {tickets.options.map((o) => (
-              <li class="ticket__option">
-                <div>
-                  <p class="ticket__option-name">{tr(o.name, locale)}</p>
-                  {o.description && <p class="ticket__option-desc">{tr(o.description, locale)}</p>}
-                </div>
-                <div class="ticket__option-side">
-                  {o.price && <p class="ticket__price">{o.price}</p>}
-                  {(o.url || (tickets.status === 'sprzedaz' && tickets.url)) && (
-                    <a
-                      class="btn btn--small btn--primary"
-                      href={o.url || tickets.url}
-                      target={(o.url || tickets.url)?.startsWith('mailto:') ? undefined : '_blank'}
-                      rel="noopener noreferrer"
-                    >
-                      {tr(o.buttonLabel, locale) || t('tickets.buy')}
-                      <span class="visually-hidden">
-                        {' '}
-                        {tr(o.name, locale)} {t('misc.newTab')}
-                      </span>
-                    </a>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ul>
-        )
-      }
 
       <div class="ticket__cta">
         {
@@ -98,10 +81,66 @@ const features = [
       </ul>
       <p class="ticket__questions">
         {t('tickets.questions')}{' '}
-        <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+        <a href={`mailto:${site.contact.email}`}>
+          {site.contact.email.split('@')[0]}<wbr />@{site.contact.email.split('@')[1]}
+        </a>
       </p>
     </div>
   </div>
+
+  {
+    groups.length > 0 && (
+      <div class:list={['paths', { 'paths--odd': groups.length % 2 === 1 }]}>
+      {
+          groups.map((g) => (
+            <section class="path">
+              {g.title && (
+                <p class="path__title">
+                  {/* Data po „·” nie rozdziela się na dwie linie */}
+                  {tr(g.title, locale)
+                    .split(' · ')
+                    .map((part, i) => (i === 0 ? part : <>{'\u00a0· '}<span class="nowrap">{part}</span></>))}
+                </p>
+              )}
+              <ul role="list" class="ticket__options">
+                {g.items.map((o) => (
+                  <li class="ticket__option">
+                    <div>
+                      {o.planned && <p class="ticket__badge">{t('tickets.planned')}</p>}
+                      <p class="ticket__option-name">{tr(o.name, locale)}</p>
+                      {o.description && <p class="ticket__option-desc">{tr(o.description, locale)}</p>}
+                    </div>
+                    <div class="ticket__option-side">
+                      {o.price && (
+                        <p class="ticket__price">
+                          {isFree(o.price) ? t('tickets.free') : tr(o.price, locale)}
+                          {o.priceNote && <span class="ticket__price-note">{tr(o.priceNote, locale)}</span>}
+                        </p>
+                      )}
+                      {buyUrl(o) && (
+                        <a
+                          class="btn btn--small btn--primary"
+                          href={buyUrl(o)}
+                          target={buyUrl(o)?.startsWith('mailto:') ? undefined : '_blank'}
+                          rel="noopener noreferrer"
+                        >
+                          {tr(o.buttonLabel, locale) || t('tickets.buy')}
+                          <span class="visually-hidden">
+                            {' '}
+                            {tr(o.name, locale)} {t('misc.newTab')}
+                          </span>
+                        </a>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
+      </div>
+    )
+  }
 </div>
 
 <style>
@@ -141,10 +180,77 @@ const features = [
     max-width: 36rem;
   }
 
+  .tickets {
+    display: grid;
+    gap: var(--gap, 1.25rem);
+  }
+
+  /* Ścieżki udziału: kafelki 2 w rzędzie, przy nieparzystej liczbie ostatni na całą szerokość */
+  .paths {
+    display: grid;
+    gap: var(--gap, 1.25rem);
+  }
+
+  @media (min-width: 56rem) {
+    .paths {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .paths--odd > .path:last-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .path {
+    display: grid;
+    align-content: start;
+    gap: 0.75rem;
+    padding: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+    background: var(--c-paper);
+    color: var(--c-paper-text);
+    border-radius: var(--radius-l);
+    box-shadow: var(--shadow);
+  }
+
+  .path .nowrap {
+    white-space: nowrap;
+  }
+
+  .path__title {
+    font-size: var(--step--1);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-red);
+  }
+
+  .path .ticket__options {
+    border-top: 0;
+  }
+
+  .path .ticket__option:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .ticket__options {
     width: 100%;
     display: grid;
     border-top: 1px solid #d6cfbf;
+  }
+
+  .ticket__badge {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: var(--c-paper-2);
+    border: 1px solid #cfc6b3;
+    font-size: var(--step--2);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    vertical-align: middle;
+    white-space: nowrap;
   }
 
   .ticket__option {
@@ -174,9 +280,17 @@ const features = [
   }
 
   .ticket__price {
+    display: grid;
     font-family: var(--font-display);
     font-size: var(--step-2);
+    line-height: 1.1;
     white-space: nowrap;
+  }
+
+  .ticket__price-note {
+    font-family: var(--font-body);
+    font-size: var(--step--1);
+    color: var(--c-paper-muted);
   }
 
   .ticket__cta:empty {
@@ -230,6 +344,5 @@ const features = [
     display: inline-block;
     color: var(--c-paper-text);
     font-weight: 700;
-    overflow-wrap: anywhere;
   }
 </style>
