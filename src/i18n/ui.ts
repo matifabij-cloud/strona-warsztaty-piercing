@@ -68,6 +68,8 @@ const pl = {
   'tickets.questions': 'Pytania o bilety lub faktury? Napisz:',
   'tickets.buy': 'Kup bilet',
   'tickets.from': 'od',
+  'tickets.planned': 'Planowane',
+  'tickets.free': 'Bezpłatnie',
 
   'openCall.deadline': 'Zgłoszenia do {date}',
   'openCall.closed': 'Nabór zakończony',
@@ -202,6 +204,8 @@ const en: Dict = {
   'tickets.questions': 'Questions about tickets or invoices? Email us:',
   'tickets.buy': 'Buy a ticket',
   'tickets.from': 'from',
+  'tickets.planned': 'Planned',
+  'tickets.free': 'Free',
 
   'openCall.deadline': 'Applications until {date}',
   'openCall.closed': 'Applications closed',
@@ -333,6 +337,8 @@ const pt: Dict = {
   'tickets.questions': 'Dúvidas sobre ingressos ou faturas? Escreva para:',
   'tickets.buy': 'Comprar ingresso',
   'tickets.from': 'a partir de',
+  'tickets.planned': 'Planejado',
+  'tickets.free': 'Gratuito',
 
   'openCall.deadline': 'Inscrições até {date}',
   'openCall.closed': 'Inscrições encerradas',

@@ -449,13 +449,22 @@ content:
                 collapsed: true
                 summary: '{fields.name} {fields.price}'
             fields:
+              - name: group
+                label: Grupa (nagłówek nad biletami, na przykład „Main Event · 20–21 marca”; kolejne bilety z tą samą grupą trafiają pod jeden nagłówek)
+                type: string
               - name: name
                 label: Nazwa biletu
                 type: string
                 required: true
               - name: price
-                label: Cena (na przykład 450 zł)
+                label: Cena (na przykład 450 zł netto)
                 type: string
+              - name: priceNote
+                label: Dopisek pod ceną (na przykład 553,50 zł brutto)
+                type: string
+              - name: planned
+                label: Planowane (znaczek „Planowane”, bez przycisku zakupu)
+                type: boolean
               - name: description
                 label: Opis
                 type: text

@@ -105,8 +105,11 @@ const editions = defineCollection({
         info: text,
         options: list(
           z.object({
+            group: text, // nagłówek grupy, na przykład „Main Event · 20–21 marca”
             name: z.string(),
             price: text,
+            priceNote: text, // drobny dopisek pod ceną, na przykład cena brutto
+            planned: z.boolean().catch(false), // planowane – znaczek, bez przycisku zakupu
             description: text,
             url: text,
             buttonLabel: text,
