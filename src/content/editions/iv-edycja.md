@@ -3,7 +3,7 @@ number: IV
 title: Łódzkie Warsztaty Piercingu 2027
 theme: New Generation
 tagline: 'Piątek: New Generation Day. Weekend: Main Event w The Loom Hotel i Piercing Festival Łódź w Manufakturze.'
-summary: 'Trzy dni w Łodzi: New Generation Day, Main Event z Jane Absinth, Andre Bergiem i Luną Duran, przejazd zabytkowym tramwajem i publiczny Piercing Festival Łódź w Manufakturze.'
+summary: 'Trzy dni w Łodzi: New Generation Day, Main Event z gwiazdami światowej sceny piercingu, przejazd zabytkowym tramwajem i publiczny Piercing Festival Łódź w Manufakturze.'
 startDate: '2027-03-19'
 endDate: '2027-03-21'
 startTime: '08:30'
@@ -87,6 +87,8 @@ speakers:
     note: Cartilage Piercings 101 · Piercing Q&A
   - speaker: andre-berg.md
     note: Cartilage Piercings 101 · Piercing Q&A
+  - speaker: fernando-silva.md
+    note: Microdermal Removal
   - speaker: luna-duran.md
     note: The Principles of Tongue Piercing
   - speaker: igor-platek.md
@@ -136,9 +138,10 @@ program:
           - andre-berg.md
         host: ''
       - time: '12:00'
-        title: Wykład – temat ogłosimy wkrótce
-        description: ''
-        speakers: []
+        title: 'Microdermal Removal: Techniques and Troubleshooting'
+        description: 'Usuwanie microdermali: techniki i rozwiązywanie problemów. Prowadzi piercer nazywany w branży Królem Microdermali.'
+        speakers:
+          - fernando-silva.md
         host: ''
       - time: '14:15'
         title: The Principles of Tongue Piercing
@@ -229,7 +232,7 @@ tickets:
       price: 1500 zł netto
       priceNote: 1845 zł brutto
       planned: false
-      description: 'The Loom Hotel. Dwa dni wykładów międzynarodowych ekspertów, w tym Jane Absinth, Andre Berga i Luny Duran, oraz sobotni przejazd zabytkowym tramwajem. W cenie kawa, herbata, ciastka i imienny certyfikat. Maksymalnie 120 uczestników.'
+      description: 'The Loom Hotel. Dwa dni wykładów międzynarodowych ekspertów – prowadzą między innymi Jane Absinth, Andre Berg, Fernando Silva i Luna Duran – oraz sobotni przejazd zabytkowym tramwajem. W cenie kawa, herbata, ciastka i imienny certyfikat. Maksymalnie 120 uczestników.'
       url: ''
       buttonLabel: ''
     - group: Main Event · 20–21 marca
@@ -308,7 +311,9 @@ posters:
   - /media/plakaty/iv-edycja-max-alves.jpg
   - /media/plakaty/iv-edycja-silas.jpg
   - /media/plakaty/iv-edycja-ania-i-nina.jpg
+  - /media/plakaty/iv-edycja-xhules.jpg
   - /media/plakaty/iv-edycja-main-event-jane-andre.jpg
+  - /media/plakaty/iv-edycja-main-event-fernando-silva.jpg
   - /media/plakaty/iv-edycja-main-event-luna-duran.jpg
   - /media/plakaty/iv-edycja-nabor-artystow.jpg
 hidden: false
@@ -319,7 +324,7 @@ hidden: false
 
 To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tych, którzy dopiero zaczynają, i dla tych, którzy chcą się rozwijać, ale nie mogą sobie pozwolić na szkolenia za kilka tysięcy złotych. Dlatego wykłady sprzedajemy pojedynczo, a ich cenę obniżyli sponsorzy: studio Maria Twarowska Piercing Beauty, Brzeski Holding i Bursztynowo. Doświadczonych piercerów też zapraszamy – bilet może kupić każdy.
 
-**Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101. O 14:15 Luna Duran przedstawi The Principles of Tongue Piercing – temat, z którym trzykrotnie wystąpiła na BMXnet. Około 16:00 zapraszamy na otwarte Q&A z Jane i Andre. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
+**Sobota i niedziela, 20–21 marca – Main Event.** Główne warsztaty w The Loom Hotel, na które kupujesz jeden bilet na oba dni. Zaczynamy mocno: Jane Absinth i Andre Berg, którzy od lat szkolą piercerów na całym świecie, poprowadzą wykład Cartilage Piercings 101. O 12:00 Fernando Silva, nazywany Królem Microdermali, opowie o usuwaniu microdermali. O 14:15 Luna Duran przedstawi The Principles of Tongue Piercing – temat, z którym trzykrotnie wystąpiła na BMXnet. Około 16:00 zapraszamy na otwarte Q&A z Jane i Andre. Sobotę zakończymy przejazdem zabytkowym tramwajem z przewodnikiem.
 
 **Trzy dni w pakiecie.** New Generation Day i Main Event można połączyć w trzydniowe szkolenie z możliwością dofinansowania przez Bazę Usług Rozwojowych (BUR) – szczegóły w sekcji Bilety.
 
