@@ -204,9 +204,9 @@ program:
           - max-alves.md
         host: ''
 tickets:
-  status: wkrotce
-  url: ''
-  info: 'Trzy ścieżki udziału: pojedyncze wykłady New Generation Day, dwudniowy Main Event albo trzydniowy pakiet New Generation + Main Event z możliwością dofinansowania z Bazy Usług Rozwojowych. Ceny warsztatów podajemy netto, do kwoty netto doliczamy 23% VAT. Wstęp na festiwal w Manufakturze jest bezpłatny.'
+  status: sprzedaz
+  url: 'https://app.evenea.pl/event/lodzkie-warsztaty-piercingu-2027/'
+  info: 'Ruszyła sprzedaż biletów na piątkowe wykłady New Generation Day i na Main Event – kupisz je online przez Evenea, faktura VAT na życzenie. Trzecia ścieżka to trzydniowy pakiet New Generation + Main Event z możliwością dofinansowania z Bazy Usług Rozwojowych. Ceny warsztatów podajemy netto, do kwoty netto doliczamy 23% VAT. Wstęp na festiwal w Manufakturze jest bezpłatny.'
   options:
     - group: New Generation Day · 19 marca
       name: Wykład New Generation Day
@@ -214,8 +214,8 @@ tickets:
       priceNote: 184,50 zł brutto
       planned: false
       description: 'The Loom Hotel. Bilet na jeden wybrany wykład, w cenie kawa, herbata, ciastka i imienny certyfikat. 100 miejsc na każdy wykład.'
-      url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Rezerwacja%20%E2%80%93%20New%20Generation%20Day'
-      buttonLabel: Zarezerwuj
+      url: 'https://app.evenea.pl/event/lodzkie-warsztaty-piercingu-2027/'
+      buttonLabel: Kup bilet
     - group: New Generation Day · 19 marca
       name: Otwarty wykład „Jak rozmawiać z drugim człowiekiem”
       price: 0 zł
