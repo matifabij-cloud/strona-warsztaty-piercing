@@ -40,8 +40,8 @@ const n = items.length;
 const cols = n <= 5 ? n : n % 4 === 0 ? 4 : n % 3 === 0 ? 3 : n % 5 === 0 ? 5 : 4;
 // Tablet: 4 osoby → 2 × 2, inaczej 3 kolumny; niepełny ostatni rząd jest wyśrodkowany.
 const colsMd = n <= 3 ? n : n === 4 ? 2 : 3;
-// Szerszy tablet: gdy przy 3 kolumnach ktoś zostałby sam w rzędzie (7, 10 osób), dajemy 4.
-const colsTab = n > 4 && n % 3 === 1 ? 4 : colsMd;
+// Szerszy tablet: 4 kolumny, gdy przy 3 ktoś zostałby sam w rzędzie (7, 10 osób) albo 4 dają pełne rzędy (8, 12).
+const colsTab = n > 4 && (n % 3 === 1 || n % 4 === 0) ? 4 : colsMd;
 
 // Karty w siatce o podwójnej liczbie kolumn: każda zajmuje 2, więc niepełny ostatni rząd
 // można przesunąć o pół karty i wyśrodkować. Dla każdej szerokości ekranu osobno.

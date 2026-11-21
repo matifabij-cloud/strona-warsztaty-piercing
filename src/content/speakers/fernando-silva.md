@@ -12,4 +12,4 @@ Jego prace zdobyły ponad 40 nagród na konwencjach tatuażu i piercingu, w kate
 
 Jedna z jego najbardziej znanych historii: Mariana przyszła do niego po jeden microdermal, który miał podkreślić tatuaż. Dziś ma ponad 600 microdermali jego autorstwa.
 
-Na III edycji po raz pierwszy przyjechał do Polski i opowiadał o microdermalach i przekłuciach powierzchniowych.
+Na III edycji po raz pierwszy przyjechał do Polski i opowiadał o microdermalach i przekłuciach powierzchniowych. Na IV edycję wraca z wykładem o usuwaniu microdermali.
