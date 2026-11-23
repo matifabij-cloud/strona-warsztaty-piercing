@@ -73,6 +73,7 @@ const editions = defineCollection({
         description: text,
         icon: optional(z.string()),
         image: text, // logo lub grafika zamiast ikony
+        imageRound: z.boolean().catch(false), // okrągłe logo, na przykład studia
         group: text,
       }),
     ),

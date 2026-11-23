@@ -18,20 +18,22 @@ cover: /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg
 poster: /media/plakaty/iv-edycja-piercing-festival-lodz-2027.jpg
 stats:
   - value: '3'
-    label: dni wydarzenia
+    label: dni warsztatów
   - value: '4'
     label: wykłady w piątek
   - value: '100'
     label: miejsc na każdym wykładzie
+  - value: '13–21'
+    label: marca – Piercing Festival Łódź w Manufakturze
   - value: 0 zł
-    label: wstęp na festiwal w Manufakturze
+    label: wstęp na festiwal
 parts:
   - key: warsztaty
     title: Łódzkie Warsztaty Piercingu
     subtitle: '19–21 marca 2027 · The Loom Hotel · dla piercerów'
   - key: festiwal
     title: Piercing Festival Łódź
-    subtitle: '20–21 marca 2027 · Manufaktura · wstęp wolny'
+    subtitle: '13–21 marca 2027 · Manufaktura · wstęp wolny'
 attractions:
   - title: Train to the Future
     description: 'Konferencja, która zaczyna się w tramwaju: zanim usiądziemy na wykładach, zwiedzamy Łódź z przewodnikiem. Przejazd jest bezpłatny i nie wymaga zapisów.'
@@ -39,7 +41,7 @@ attractions:
     image: /media/partnerzy/kmst-lodz.png
     group: warsztaty
   - title: New Generation Day
-    description: 'Piątek w The Loom Hotel: wykłady specjalistów z Polski i zagranicy – od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą.'
+    description: 'Piątek w The Loom Hotel: wykłady specjalistów z Polski i zagranicy – od bezpieczeństwa pracy, przez gojenie ran, po techniki pracy igłą. New Generation Day to dzień stworzony specjalnie z myślą o osobach rozpoczynających pracę w branży piercingu. Dzięki sponsorom, którzy pokrywają znaczną część kosztów organizacji, możemy zaoferować bilety w przystępnych cenach.'
     icon: graduation
     group: warsztaty
   - title: Main Event
@@ -49,6 +51,8 @@ attractions:
   - title: Maria Twarowska Piercing Beauty Zone
     description: 'Przekłucia wykonywane przez piercerów naszego zespołu oraz zaproszonych artystów z Polski i zagranicy.'
     icon: ring
+    image: /media/atrakcje/maria-twarowska-piercing-beauty.png
+    imageRound: true
     group: festiwal
   - title: Brazil Zone
     description: 'Brazylijscy piercerzy, piercing na miejscu, historia brazylijskiej sceny body piercingu i body modification oraz kultura Brazylii.'
@@ -60,16 +64,19 @@ attractions:
     image: /media/atrakcje/happy-piercing.jpg
     group: festiwal
   - title: Snake Bites Zone
-    description: 'Strefa, w której królują węże, a my wykonujemy tylko jedno przekłucie: snake bites. Jej twarzą jest Igor Płatek, hodowca gadów, który dba o bezpieczeństwo zwierząt w strefie.'
+    description: 'Niepowtarzalna okazja, aby wykonać przekłucie snake bites w otoczeniu egzotycznych węży. W cenę zabiegu wliczona jest profesjonalna sesja zdjęciowa. Jeśli interesuje Cię wyłącznie sesja zdjęciowa, bez przekłucia, skontaktuj się z nami – możliwość takiej sesji rozpatrzymy indywidualnie. O bezpieczeństwo zwierząt dba Igor Płatek, hodowca gadów.'
     icon: snake
+    image: /media/atrakcje/snake-bites-zone.jpg
     group: festiwal
   - title: Strefa biżuterii i wystawców
-    description: 'Sprzedaż biżuterii, prezentacja marek i produktów oraz specjalne ceny festiwalowe.'
+    description: 'Biżuteria od Piercing69 – jedynego wystawcy festiwalu. Sprzedaż biżuterii i specjalne ceny festiwalowe.'
     icon: bag
+    image: /media/partnerzy/piercing69.png
     group: festiwal
-  - title: Wystawa i konkurs artystów
-    description: 'Od 13 marca w Manufakturze stanie wystawa 30 prac piercerów z Polski i ze świata. O zwycięzcach zdecydują głosy odwiedzających.'
+  - title: Wystawa Piercing Artists
+    description: 'Od 13 marca 2027 roku w łódzkiej Manufakturze będzie można oglądać wystawę prac piercerów i artystów związanych ze światem piercingu z Polski i całego świata. O zwycięzcach konkursu zdecydują głosy odwiedzających wystawę. Wystawa potrwa do 21 marca. Regulamin konkursu już wkrótce.'
     icon: trophy
+    image: /media/plakaty/iv-edycja-nabor-artystow.jpg
     group: festiwal
   - title: Body Suspension Zipline
     description: 'Body suspension połączone ze zjazdem na tyrolce nad Manufakturą – główne widowisko weekendu. Poprowadzi je Max Alves, brazylijski pionier body suspension, znany między innymi ze zjazdów na tyrolce w podwieszeniu na hakach.'
@@ -165,6 +172,15 @@ program:
         description: 'The Loom Hotel. Program ogłosimy wkrótce.'
         speakers: []
         host: ''
+  - day: '2027-03-13'
+    label: ''
+    group: festiwal
+    items:
+      - time: ''
+        title: Start wystawy Piercing Artists
+        description: 'Manufaktura. Wystawa prac piercerów i artystów z Polski i całego świata potrwa do 21 marca – głosować można na miejscu przez cały czas trwania wystawy.'
+        speakers: []
+        host: ''
   - day: '2027-03-20'
     label: ''
     group: festiwal
@@ -195,16 +211,16 @@ program:
         speakers:
           - igor-platek.md
         host: ''
-      - time: '13:00'
-        title: Finał wystawy i losowanie nagród
-        description: 'Finał głosowania publiczności: ogłosimy 10 najlepszych prac i wylosujemy 10 zwycięzców.'
-        speakers: []
-        host: ''
-      - time: '17:00'
+      - time: '18:00'
         title: Body Suspension Zipline
         description: 'Kulminacyjny moment weekendu.'
         speakers:
           - max-alves.md
+        host: ''
+      - time: '19:00'
+        title: Finał Piercing Artists
+        description: 'Ogłoszenie wyników głosowania publiczności i losowanie nagród dla głosujących.'
+        speakers: []
         host: ''
 tickets:
   status: sprzedaz
@@ -237,10 +253,10 @@ tickets:
       buttonLabel: ''
     - group: Main Event · 20–21 marca
       name: Main Event – z noclegiem
-      price: 2000 zł netto
-      priceNote: 2460 zł brutto
+      price: 1800 zł netto
+      priceNote: 2214 zł brutto
       planned: false
-      description: 'Wszystko, co w bilecie bez noclegu, oraz jeden nocleg z soboty na niedzielę w pokoju dwuosobowym, ze śniadaniem i dostępem do spa w czterogwiazdkowym The Loom Hotel. Tylko 15 miejsc.'
+      description: 'Bilet dla jednej osoby na Main Event oraz jeden nocleg z soboty na niedzielę (20/21 marca) ze śniadaniem i dostępem do spa – w całym pokoju dwuosobowym w czterogwiazdkowym The Loom Hotel. Pokój jest do Twojej dyspozycji, więc możesz zabrać na nocleg osobę towarzyszącą. Osoba towarzysząca nie ma wstępu na warsztaty na podstawie tego biletu. Tylko 15 miejsc.'
       url: ''
       buttonLabel: ''
     - group: New Generation + Main Event · 19–21 marca
@@ -264,7 +280,6 @@ openCall:
   title: Piercing Artist Łódź Needs You
   description: 'Szukamy piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom. Pełne zasady konkursu ogłosimy wkrótce.'
   points:
-    - 30 artystów, 30 prac, jedna wystawa w Manufakturze
     - 'Od 13 marca 2027, przez 9 dni, 24 godziny na dobę, Twoją pracę zobaczą tysiące ludzi'
     - 'Nie liczy się, czy obserwuje Cię 500, 5 000 czy 500 000 osób'
     - 'Na prace głosują odwiedzający Manufakturę – nie Instagram, nie algorytm, nie komisja'
@@ -318,7 +333,7 @@ posters:
   - /media/plakaty/iv-edycja-nabor-artystow.jpg
 hidden: false
 ---
-**Łódzkie Warsztaty Piercingu 2027 – New Generation** to trzy dni w Łodzi: 19–21 marca 2027.
+**Łódzkie Warsztaty Piercingu 2027** – 3 dni w Łodzi, 19–21 marca 2027.
 
 **Piątek, 19 marca – New Generation Day.** Zaczynamy w zabytkowym tramwaju, który zabierze nas spod Manufaktury na rundę po mieście. Train to the Future przygotowaliśmy razem z Klubem Miłośników Starych Tramwajów w Łodzi. Potem przechodzimy na wykłady do The Loom Hotel przy ul. Ogrodowej 21.
 
@@ -328,7 +343,7 @@ To dzień przygotowany przede wszystkim dla młodych stażem piercerów: dla tyc
 
 **Trzy dni w pakiecie.** New Generation Day i Main Event można połączyć w trzydniowe szkolenie z możliwością dofinansowania przez Bazę Usług Rozwojowych (BUR) – szczegóły w sekcji Bilety.
 
-**Sobota i niedziela, 20–21 marca – Piercing Festival Łódź.** Otwarta dla publiczności część wydarzenia w Manufakturze: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
+**13–21 marca – Piercing Festival Łódź.** Festiwal rozpoczyna się 13 marca wystawą Piercing Artists w Manufakturze, a główne atrakcje festiwalowe czekają 20–21 marca. To otwarta dla publiczności część wydarzenia: piercing, biżuteria, body art, edukacja i międzynarodowa kultura branżowa. Spotkasz tu piercerów, edukatorów, artystów i marki z Polski oraz zagranicy, a wśród nich naszych partnerów branżowych: hurtownię biżuterii Piercing69 i AquaTouch, twórców aftercare na bazie HOCl. Możesz spodziewać się prezentów.
 
 Wykłady prowadzimy po polsku i po angielsku – zapewniamy tłumaczenie na oba języki. Zapraszamy piercerów z całej Europy, a nawet świata.
 
