@@ -90,6 +90,8 @@ speakers:
     note: Infekcjologia i gojenie ran
   - speaker: anja-i-nina.md
     note: Od kaniuli do igły
+  - speaker: xhules.md
+    note: Jak rozmawiać z drugim człowiekiem?
   - speaker: jane-absinth.md
     note: Cartilage Piercings 101 · Piercing Q&A
   - speaker: andre-berg.md
@@ -129,10 +131,11 @@ program:
           - anja-i-nina.md
         host: ''
       - time: '16:30'
-        title: Jak rozmawiać z drugim człowiekiem
-        description: 'Otwarty wykład, wstęp bezpłatny dla wszystkich. The Loom Hotel. Terminologia queer, inkluzywność i komunikacja.'
-        speakers: []
-        host: XHULES
+        title: Jak rozmawiać z drugim człowiekiem?
+        description: 'The Loom Hotel. Komunikacja, terminologia queer, inkluzywność oraz tworzenie bezpiecznej i przyjaznej przestrzeni dla różnych osób. Wykład jest otwarty dla wszystkich – nie tylko dla piercerów. Zapraszamy również całą społeczność LGBT+ oraz osoby pracujące w usługach. Wstęp bezpłatny.'
+        speakers:
+          - xhules.md
+        host: ''
   - day: '2027-03-20'
     label: Sobota – Main Event
     group: warsztaty
@@ -236,11 +239,11 @@ tickets:
       url: 'https://app.evenea.pl/event/lodzkie-warsztaty-piercingu-2027/'
       buttonLabel: Kup bilet
     - group: New Generation Day · 19 marca
-      name: Otwarty wykład „Jak rozmawiać z drugim człowiekiem”
+      name: Otwarty wykład „Jak rozmawiać z drugim człowiekiem?”
       price: 0 zł
       priceNote: ''
       planned: false
-      description: '16:30 · The Loom Hotel. XHULES o komunikacji i inkluzywności. Wstęp bezpłatny, otwarty dla wszystkich.'
+      description: '16:30 · The Loom Hotel. Prowadzi XHULES. Komunikacja, terminologia queer i inkluzywność. Wykład otwarty dla wszystkich – nie tylko dla piercerów.'
       url: ''
       buttonLabel: ''
     - group: Main Event · 20–21 marca
