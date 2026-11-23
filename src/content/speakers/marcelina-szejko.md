@@ -1,7 +1,7 @@
 ---
 name: Marcelina Szejko
-photo: ''
-role: Przekłuwanie języka
+photo: /media/prelegenci/marcelina-szejko.jpg
+role: Przekłucie języka
 country: ''
 instagram: ''
 website: ''
