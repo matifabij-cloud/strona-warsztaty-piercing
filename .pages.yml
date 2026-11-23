@@ -415,6 +415,9 @@ content:
           - name: image
             label: Logo lub grafika zamiast ikony (opcjonalnie)
             type: image
+          - name: imageRound
+            label: Logo w kółku (okrągłe przycięcie, na przykład logo studia)
+            type: boolean
           - name: group
             label: Część (klucz, na przykład warsztaty albo festiwal)
             type: string

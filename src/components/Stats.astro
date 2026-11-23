@@ -41,6 +41,13 @@ const { locale, stats, variant = 'band' } = Astro.props;
     margin-inline: auto;
   }
 
+  /* Telefon: przy nieparzystej liczbie ostatnia pozycja na całą szerokość */
+  @media (max-width: 47.99rem) {
+    .stats__item:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+  }
+
   @media (min-width: 48rem) {
     .stats__list {
       grid-template-columns: none;

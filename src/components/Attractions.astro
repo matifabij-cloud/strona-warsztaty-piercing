@@ -61,8 +61,17 @@ const layout = (n: number) => {
           {list.map((a, i) => (
             <li class="attraction" style={`--i:${i};${l.place(i)}`}>
               {a.image ? (
-                <span class="attraction__image">
+                <span class:list={['attraction__image', { 'attraction__image--round': a.imageRound }]}>
                   <Img src={a.image} alt="" widths={[160, 320]} sizes="10rem" />
+                </span>
+              ) : a.icon === 'brazil' ? (
+                // Strefa brazylijska: ikona w barwach Brazylii (zieleń, żółty romb, niebieskie koło)
+                <span class="attraction__icon attraction__icon--brazil">
+                  <svg viewBox="0 0 52 52" width="52" height="52" aria-hidden="true">
+                    <path d="M26 10 44 26 26 42 8 26z" fill="#fedd00" />
+                    <circle cx="26" cy="26" r="8.5" fill="#012169" />
+                    <path d="M18.2 24.6c5-1.4 10.4-.9 15.4 1.6" fill="none" stroke="#fff" stroke-width="1.6" />
+                  </svg>
                 </span>
               ) : (
                 <span class="attraction__icon">
@@ -192,12 +201,33 @@ const layout = (n: number) => {
     background: var(--c-paper);
   }
 
+  .attraction__image--round :global(img) {
+    width: 5.5rem;
+    height: 5.5rem;
+    max-width: none;
+    padding: 0;
+    border-radius: 50%;
+    background: none;
+    object-fit: cover;
+  }
+
+  .attraction__icon--brazil svg {
+    width: 100%;
+    height: 100%;
+  }
+
   .attraction:nth-child(3n + 2) .attraction__icon {
     background: var(--c-yellow);
   }
 
   .attraction:nth-child(3n) .attraction__icon {
     background: var(--c-pink);
+  }
+
+  /* Po regułach z :nth-child, żeby zieleń Brazylii zawsze wygrywała */
+  .attraction:nth-child(n) .attraction__icon--brazil {
+    background: #009c3b;
+    overflow: hidden;
   }
 
   .attraction__title {

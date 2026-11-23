@@ -3,7 +3,7 @@ name: Fernando Silva
 photo: /media/prelegenci/fernando-silva.jpg
 role: Król Microdermali
 country: Brazylia
-instagram: ''
+instagram: fernando_silva_piercer
 website: ''
 ---
 Piercer z Indaiatuby w stanie São Paulo, pracuje od 2015 roku. Specjalizuje się w microdermalach – w portfolio ma tysiące zabiegów, w tym setki microdermali. Pracuje wyłącznie na biżuterii z tytanu implantologicznego, z naciskiem na estetykę i bezpieczeństwo. Tytułu „Króla Microdermali” nie nadał sobie sam – tak mówią o nim ludzie z branży.
