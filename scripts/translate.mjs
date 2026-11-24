@@ -100,6 +100,7 @@ const termFixes = [
   [/(?:Oficinas|Workshops?) de Piercing de Łódź/g, 'Łódź Piercing Workshops'],
   [/(?:o |O )?Festival de Piercing de Łódź/g, 'Piercing Festival Łódź'],
   [/\bBursztyn(?!owo)\b/g, 'Bursztynowo'],
+  [/1 phone number = 1 vote/g, '1 phone = 1 vote'],
   [/[„“"‘']?teoria do chanfro[”"’']?/g, 'bevel theory'],
   [/\b(?:o |O )?Evento [Pp]rincipal\b/g, 'Main Event'],
   [/Festival Público de Piercing de Łódź/g, 'Piercing Festival Łódź'],
