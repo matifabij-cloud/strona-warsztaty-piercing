@@ -74,7 +74,7 @@ attractions:
     image: /media/partnerzy/piercing69.png
     group: festiwal
   - title: Wystawa Piercing Artists
-    description: 'Od 13 marca 2027 roku w łódzkiej Manufakturze będzie można oglądać wystawę prac piercerów i artystów związanych ze światem piercingu z Polski i całego świata. O zwycięzcach konkursu zdecydują głosy odwiedzających wystawę. Wystawa potrwa do 21 marca. Regulamin konkursu już wkrótce.'
+    description: 'Od 13 marca 2027 roku w łódzkiej Manufakturze będzie można oglądać wystawę prac piercerów i artystów związanych ze światem piercingu z Polski i całego świata. O zwycięzcach konkursu zdecydują głosy odwiedzających wystawę: przy każdej pracy jest kod QR, przez który można zagłosować. Wystawa potrwa do 21 marca.'
     icon: trophy
     image: /media/plakaty/iv-edycja-nabor-artystow.jpg
     group: festiwal
@@ -181,7 +181,7 @@ program:
     items:
       - time: ''
         title: Start wystawy Piercing Artists
-        description: 'Manufaktura. Wystawa prac piercerów i artystów z Polski i całego świata potrwa do 21 marca – głosować można na miejscu przez cały czas trwania wystawy.'
+        description: 'Galeria Manufaktura. Wystawa prac piercerów i artystów z Polski i całego świata potrwa do 21 marca. Przy każdej pracy jest kod QR, przez który można oddać głos.'
         speakers: []
         host: ''
   - day: '2027-03-20'
@@ -190,7 +190,7 @@ program:
     items:
       - time: '10:00'
         title: Strefy festiwalu i wystawa
-        description: 'Do 22:00: Maria Twarowska Piercing Beauty Zone, Brazil Zone i Happy Piercing Zone, a także strefa biżuterii i wystawców oraz wystawa i głosowanie w konkursie Piercing Artist Łódź.'
+        description: 'Do 22:00: Maria Twarowska Piercing Beauty Zone, Brazil Zone i Happy Piercing Zone, a także strefa biżuterii i wystawców oraz wystawa i głosowanie w konkursie Piercing Artists.'
         speakers: []
         host: ''
       - time: '10:00'
@@ -222,7 +222,7 @@ program:
         host: ''
       - time: '19:00'
         title: Finał Piercing Artists
-        description: 'Ogłoszenie wyników głosowania publiczności i losowanie nagród dla głosujących.'
+        description: 'Zakończenie wystawy prac. Głosowanie trwa do 21:00, a oficjalne wyniki ogłosimy 22 marca po południu.'
         speakers: []
         host: ''
 tickets:
@@ -280,17 +280,18 @@ tickets:
       buttonLabel: Zapisz się
 openCall:
   enabled: true
-  title: Piercing Artist Łódź Needs You
-  description: 'Szukamy piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Manufakturze. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom. Pełne zasady konkursu ogłosimy wkrótce.'
+  title: Piercing Artists – Łódź Needs You 2027
+  description: 'Szukamy piercerów z Polski i ze świata, których prace pokażemy na dużej, publicznej wystawie w Galerii Manufaktura. Nie interesują nas zasięgi, interesuje nas Twoja praca. Chcemy pokazać piercing nie tylko jako usługę, ale jako projekt, precyzję, rzemiosło i sztukę tworzoną na ludzkim ciele. Ty tworzysz – my pokazujemy Twoją pracę ludziom.'
   points:
+    - 'Maksymalnie 80 prac na wystawie – zgłoszenia przyjmujemy do 28 lutego 2027 albo do wyczerpania miejsc'
+    - 'Jedna osoba zgłasza jedną pracę; minimum 80% widocznych przekłuć wykonujesz osobiście, a biżuteria na zdjęciu jest warta najwyżej 1000 zł'
     - 'Od 13 marca 2027, przez 9 dni, 24 godziny na dobę, Twoją pracę zobaczą tysiące ludzi'
     - 'Nie liczy się, czy obserwuje Cię 500, 5 000 czy 500 000 osób'
-    - 'Na prace głosują odwiedzający Manufakturę – nie Instagram, nie algorytm, nie komisja'
+    - 'Na prace głosują odwiedzający wystawę – nie Instagram, nie algorytm, nie komisja. Każda praca ma swój kod QR i swoją stronę'
     - 'Nagrody: I miejsce – tygodniowy pobyt w Bursztynowie, II i III miejsce – weekendowy pobyt w Bursztynowie'
-    - 'New Generation – Łódź: 3 miejsca dla młodych piercerów z Łodzi, do 2 lat od ukończenia kursu podstawowego'
-    - 'Deklarację udziału zostaw w komentarzu pod postem Piercing Artists na naszym Instagramie albo napisz do nas mailowo'
-  deadline: '2027-01-31'
-  url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Zg%C5%82oszenie%20%E2%80%93%20Piercing%20Artist%20%C5%81%C3%B3d%C5%BA%202027'
+    - 'W zgłoszeniu wyślij mailem: zdjęcie pracy, swój portret, imię i nazwisko lub nazwę artystyczną, nazwę studia, miasto i kraj, staż w piercingu, krótkie bio, opis pracy i dane kontaktowe'
+  deadline: '2027-02-28'
+  url: 'mailto:lodzkiewarsztatypiercingu@gmail.com?subject=Zg%C5%82oszenie%20%E2%80%93%20Piercing%20Artists%202027'
   buttonLabel: Wyślij zgłoszenie
   image: /media/plakaty/iv-edycja-nabor-artystow.jpg
 partners:

@@ -6,7 +6,7 @@ import { md } from '../lib/markdown';
 
 interface Props {
   locale: Locale;
-  id: 'polityka-prywatnosci';
+  id: 'polityka-prywatnosci' | 'regulamin-konkursu';
 }
 
 const { locale, id } = Astro.props;
@@ -17,7 +17,7 @@ const title = tr(entry.data.title, locale);
 const html = md(tr(entry.body ?? '', locale));
 ---
 
-<Base locale={locale} title={title} description={title} alternates={alternatesFor(paths.privacy)}>
+<Base locale={locale} title={title} description={title} alternates={alternatesFor(id === 'regulamin-konkursu' ? paths.contestRules : paths.privacy)}>
   <article class="section legal">
     <div class="container--narrow">
       <h1 class="display legal__title">{title}</h1>

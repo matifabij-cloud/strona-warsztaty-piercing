@@ -96,7 +96,10 @@ const socials = [
 
   <div class="container site-footer__bottom">
     <p>© {year} {site.name}. {t('footer.rights')}</p>
-    <a href={paths.privacy(locale)}>{t('footer.privacy')}</a>
+    <span class="site-footer__legal">
+      <a href={paths.contestRules(locale)}>{t('footer.contestRules')}</a>
+      <a href={paths.privacy(locale)}>{t('footer.privacy')}</a>
+    </span>
   </div>
 </footer>
 
@@ -190,6 +193,12 @@ const socials = [
 
   .site-footer__label:not(:first-child) {
     margin-top: 0.9rem;
+  }
+
+  .site-footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
   }
 
   .site-footer__bottom {
