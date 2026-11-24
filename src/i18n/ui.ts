@@ -112,6 +112,7 @@ const pl = {
   'footer.rights': 'Wszelkie prawa zastrzeżone.',
   'footer.privacy': 'Polityka prywatności',
   'footer.contestRules': 'Regulamin konkursu',
+  'footer.votingRules': 'Zasady głosowania',
   'footer.organizer': 'Organizator',
 
   'legal.updated': 'Ostatnia aktualizacja: {date}',
@@ -250,6 +251,7 @@ const en: Dict = {
   'footer.rights': 'All rights reserved.',
   'footer.privacy': 'Privacy policy',
   'footer.contestRules': 'Contest rules',
+  'footer.votingRules': 'Voting rules',
   'footer.organizer': 'Organiser',
 
   'legal.updated': 'Last updated: {date}',
@@ -385,6 +387,7 @@ const pt: Dict = {
   'footer.rights': 'Todos os direitos reservados.',
   'footer.privacy': 'Política de privacidade',
   'footer.contestRules': 'Regulamento do concurso',
+  'footer.votingRules': 'Regras de votação',
   'footer.organizer': 'Organização',
 
   'legal.updated': 'Última atualização: {date}',
