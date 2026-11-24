@@ -6,7 +6,7 @@ import { md } from '../lib/markdown';
 
 interface Props {
   locale: Locale;
-  id: 'polityka-prywatnosci' | 'regulamin-konkursu';
+  id: 'polityka-prywatnosci' | 'regulamin-konkursu' | 'zasady-glosowania';
 }
 
 const { locale, id } = Astro.props;
@@ -15,14 +15,29 @@ const entry = await getEntry('pages', id);
 if (!entry) throw new Error(`Brak strony src/content/pages/${id}.md`);
 const title = tr(entry.data.title, locale);
 const html = md(tr(entry.body ?? '', locale));
+const pagePath = { 'polityka-prywatnosci': paths.privacy, 'regulamin-konkursu': paths.contestRules, 'zasady-glosowania': paths.votingRules };
+// Regulamin dla artystów i zasady głosowania dla publiczności odsyłają do siebie nawzajem.
+const related =
+  id === 'regulamin-konkursu'
+    ? { href: paths.votingRules(locale), label: t('footer.votingRules') }
+    : id === 'zasady-glosowania'
+      ? { href: paths.contestRules(locale), label: t('footer.contestRules') }
+      : undefined;
 ---
 
-<Base locale={locale} title={title} description={title} alternates={alternatesFor(id === 'regulamin-konkursu' ? paths.contestRules : paths.privacy)}>
+<Base locale={locale} title={title} description={title} alternates={alternatesFor(pagePath[id])}>
   <article class="section legal">
     <div class="container--narrow">
       <h1 class="display legal__title">{title}</h1>
       {entry.data.updated && <p class="legal__meta">{t('legal.updated', { date: formatDate(entry.data.updated, locale) })}</p>}
       {locale !== 'pl' && t('legal.binding') && <p class="legal__note">{t('legal.binding')}</p>}
+      {
+        related && (
+          <p class="legal__related">
+            <a href={related.href}>{related.label} →</a>
+          </p>
+        )
+      }
       <div class="prose" set:html={html} />
     </div>
   </article>
@@ -50,6 +65,15 @@ const html = md(tr(entry.body ?? '', locale));
     background: var(--c-bg-2);
     margin-bottom: 2rem;
     font-size: var(--step--1);
+  }
+
+  .legal__related {
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+
+  .legal__related a {
+    color: var(--c-yellow);
   }
 
   .legal .prose {

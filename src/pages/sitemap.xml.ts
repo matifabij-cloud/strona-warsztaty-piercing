@@ -12,6 +12,7 @@ export const GET: APIRoute = async ({ site }) => {
     ...editions.map((e) => alternatesFor((l) => paths.edition(l, e.id))),
     alternatesFor(paths.privacy),
     alternatesFor(paths.contestRules),
+    alternatesFor(paths.votingRules),
   ];
 
   const urls = groups.flatMap((group) =>

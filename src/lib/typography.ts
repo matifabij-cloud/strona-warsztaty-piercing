@@ -19,6 +19,8 @@ const rules: [RegExp, string][] = [
   [/\b(ul\.|nr) +(?=\S)/g, `$1${NBSP}`],
   // kod pocztowy 90-135 nie rozdziela się na dwie linie (łącznik niełamliwy)
   [/\b(\d{2})-(\d{3})\b/g, '$1\u2011$2'],
+  // zakres liczb 13–21 nie rozdziela się po półpauzie
+  [/(\d)–(?=\d)/g, '$1–\u2060'],
 ];
 
 export function typo<T extends string | undefined | null>(text: T): T {
