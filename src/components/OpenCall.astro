@@ -1,7 +1,7 @@
 ---
 import Img from './Img.astro';
 import Icon from './Icon.astro';
-import { formatDate, tr, useUI, type Locale } from '../i18n';
+import { formatDate, paths, tr, useUI, type Locale } from '../i18n';
 import { todayInPoland, type Edition } from '../lib/content';
 import { md } from '../lib/markdown';
 
@@ -49,18 +49,30 @@ const external = Boolean(call.url && /^https?:/i.test(call.url));
         </p>
       )
     }
-    {
-      !closed && call.url && (
-        <a class="btn btn--red" href={call.url} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
-          <Icon name="brush" size={18} />
-          {tr(call.buttonLabel, locale) || t('cta.write')}
-        </a>
-      )
-    }
+    <div class="call__ctas">
+      {
+        !closed && call.url && (
+          <a class="btn btn--red" href={call.url} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+            <Icon name="brush" size={18} />
+            {tr(call.buttonLabel, locale) || t('cta.write')}
+          </a>
+        )
+      }
+      <a class="btn" href={paths.contestRules(locale)}>
+        <Icon name="file" size={18} />
+        {t('openCall.rules')}
+      </a>
+    </div>
   </div>
 </div>
 
 <style>
+  .call__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
   .call {
     display: grid;
     gap: clamp(2rem, 1.5rem + 3vw, 4rem);

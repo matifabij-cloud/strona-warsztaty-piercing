@@ -73,6 +73,7 @@ const pl = {
 
   'openCall.deadline': 'Zgłoszenia do {date}',
   'openCall.closed': 'Nabór zakończony',
+  'openCall.rules': 'Regulamin konkursu',
   'openCall.daysLeft': 'Zostało {n} dni',
   'openCall.lastDay': 'Ostatni dzień zgłoszeń!',
 
@@ -110,6 +111,7 @@ const pl = {
 
   'footer.rights': 'Wszelkie prawa zastrzeżone.',
   'footer.privacy': 'Polityka prywatności',
+  'footer.contestRules': 'Regulamin konkursu',
   'footer.organizer': 'Organizator',
 
   'legal.updated': 'Ostatnia aktualizacja: {date}',
@@ -209,6 +211,7 @@ const en: Dict = {
 
   'openCall.deadline': 'Applications until {date}',
   'openCall.closed': 'Applications closed',
+  'openCall.rules': 'Contest rules',
   'openCall.daysLeft': '{n} days left',
   'openCall.lastDay': 'Last day to apply!',
 
@@ -246,6 +249,7 @@ const en: Dict = {
 
   'footer.rights': 'All rights reserved.',
   'footer.privacy': 'Privacy policy',
+  'footer.contestRules': 'Contest rules',
   'footer.organizer': 'Organiser',
 
   'legal.updated': 'Last updated: {date}',
@@ -342,6 +346,7 @@ const pt: Dict = {
 
   'openCall.deadline': 'Inscrições até {date}',
   'openCall.closed': 'Inscrições encerradas',
+  'openCall.rules': 'Regulamento do concurso',
   'openCall.daysLeft': 'Faltam {n} dias',
   'openCall.lastDay': 'Último dia de inscrições!',
 
@@ -379,6 +384,7 @@ const pt: Dict = {
 
   'footer.rights': 'Todos os direitos reservados.',
   'footer.privacy': 'Política de privacidade',
+  'footer.contestRules': 'Regulamento do concurso',
   'footer.organizer': 'Organização',
 
   'legal.updated': 'Última atualização: {date}',

@@ -17,6 +17,8 @@ const rules: [RegExp, string][] = [
   [new RegExp(`(\\d) +(zł|${months})(?![\\p{L}])`, 'gu'), `$1${NBSP}$2`],
   // ul. Ogrodowa
   [/\b(ul\.|nr) +(?=\S)/g, `$1${NBSP}`],
+  // kod pocztowy 90-135 nie rozdziela się na dwie linie (łącznik niełamliwy)
+  [/\b(\d{2})-(\d{3})\b/g, '$1\u2011$2'],
 ];
 
 export function typo<T extends string | undefined | null>(text: T): T {

@@ -19,6 +19,7 @@ export const localeMeta: Record<Locale, { lang: string; hreflang: string; label:
 const segments = {
   editions: { pl: 'edycje', en: 'editions', pt: 'edicoes' },
   privacy: { pl: 'polityka-prywatnosci', en: 'privacy-policy', pt: 'politica-de-privacidade' },
+  contestRules: { pl: 'regulamin-konkursu', en: 'contest-rules', pt: 'regulamento-do-concurso' },
 } satisfies Record<string, Record<Locale, string>>;
 
 const prefix = (locale: Locale) => (locale === defaultLocale ? '' : `/${locale}`);
@@ -28,6 +29,7 @@ export const paths = {
   editions: (l: Locale) => `${prefix(l)}/${segments.editions[l]}/`,
   edition: (l: Locale, slug: string) => `${prefix(l)}/${segments.editions[l]}/${slug}/`,
   privacy: (l: Locale) => `${prefix(l)}/${segments.privacy[l]}/`,
+  contestRules: (l: Locale) => `${prefix(l)}/${segments.contestRules[l]}/`,
 };
 
 /** Adresy tej samej podstrony we wszystkich językach (do przełącznika języka i hreflang). */
