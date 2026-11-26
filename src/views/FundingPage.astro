@@ -38,6 +38,8 @@ const serviceNumber = '2026/11/20/2020619/3962765';
             {t('funding.copy')}
           </button>
         </div>
+        {/* Usuń tę notkę (i klucz funding.pending), gdy karta szkolenia będzie opublikowana w BUR */}
+        <p class="funding__pending">{t('funding.pending')}</p>
       </div>
 
       <div class="prose funding__content" set:html={html} />
@@ -116,6 +118,11 @@ const serviceNumber = '2026/11/20/2020619/3962765';
     color: var(--c-text);
     user-select: all;
     overflow-wrap: anywhere;
+  }
+
+  .funding__pending {
+    font-size: var(--step--1);
+    color: var(--c-muted);
   }
 
   .funding .prose {

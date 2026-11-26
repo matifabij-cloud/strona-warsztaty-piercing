@@ -76,6 +76,7 @@ const pl = {
   'funding.number': 'Numer usługi w BUR',
   'funding.copy': 'Kopiuj',
   'funding.copied': 'Skopiowano',
+  'funding.pending': 'Karta szkolenia jest jeszcze przygotowywana – wyszukiwarka BUR pokaże ją dopiero po publikacji (planujemy w grudniu 2026). Do tego czasu wynik wyszukiwania będzie pusty.',
   'tickets.funding': 'Jak dostać dofinansowanie',
   'tickets.free': 'Bezpłatnie',
 
@@ -223,6 +224,7 @@ const en: Dict = {
   'funding.number': 'BUR service number',
   'funding.copy': 'Copy',
   'funding.copied': 'Copied',
+  'funding.pending': 'The course listing is still being prepared – the BUR search will only show it once it is published (planned for December 2026). Until then, the search will return no results.',
   'tickets.funding': 'How to get funding',
   'tickets.free': 'Free',
 
@@ -367,6 +369,7 @@ const pt: Dict = {
   'funding.number': 'Número do serviço na BUR',
   'funding.copy': 'Copiar',
   'funding.copied': 'Copiado',
+  'funding.pending': 'A ficha do curso ainda está sendo preparada – a busca da BUR só a mostrará após a publicação (prevista para dezembro de 2026). Até lá, a busca não retornará resultados.',
   'tickets.funding': 'Como obter financiamento',
   'tickets.free': 'Gratuito',
 
