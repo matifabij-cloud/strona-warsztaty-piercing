@@ -21,6 +21,7 @@ const segments = {
   privacy: { pl: 'polityka-prywatnosci', en: 'privacy-policy', pt: 'politica-de-privacidade' },
   contestRules: { pl: 'regulamin-konkursu', en: 'contest-rules', pt: 'regulamento-do-concurso' },
   votingRules: { pl: 'zasady-glosowania', en: 'voting-rules', pt: 'regras-de-votacao' },
+  funding: { pl: 'dofinansowanie', en: 'funding', pt: 'financiamento' },
 } satisfies Record<string, Record<Locale, string>>;
 
 const prefix = (locale: Locale) => (locale === defaultLocale ? '' : `/${locale}`);
@@ -32,6 +33,7 @@ export const paths = {
   privacy: (l: Locale) => `${prefix(l)}/${segments.privacy[l]}/`,
   contestRules: (l: Locale) => `${prefix(l)}/${segments.contestRules[l]}/`,
   votingRules: (l: Locale) => `${prefix(l)}/${segments.votingRules[l]}/`,
+  funding: (l: Locale) => `${prefix(l)}/${segments.funding[l]}/`,
 };
 
 /** Adresy tej samej podstrony we wszystkich językach (do przełącznika języka i hreflang). */
