@@ -267,7 +267,7 @@ tickets:
       price: 2350 zł netto
       priceNote: cena planowana
       planned: true
-      description: 'Szkolenie „Łódzkie Warsztaty Piercingu 2027 – Międzynarodowe Szkolenie Specjalistyczne dla Piercerów” z możliwością dofinansowania przez Bazę Usług Rozwojowych (BUR). W wybranych projektach dofinansowanie sięga nawet 93% – wtedy wkład własny wynosi 164,50 zł. Wysokość wsparcia zależy od operatora i zasad projektu. Zapisy przez BUR i operatora dofinansowania – publikację usługi planujemy w grudniu 2026. Numer usługi BUR: 2026/11/20/2020619/3962765. Pakiet nie obejmuje noclegu.'
+      description: 'Szkolenie „Łódzkie Warsztaty Piercingu 2027 – Międzynarodowe Szkolenie Specjalistyczne dla Piercerów” z możliwością dofinansowania przez Bazę Usług Rozwojowych (BUR). Przykładowo, przy dofinansowaniu 93% i objęciu wsparciem całej kwoty wkład własny wyniósłby 164,50 zł – to tylko przykład, nie gwarancja. Wysokość wsparcia zależy od operatora i zasad projektu. Zapisy przez BUR i operatora dofinansowania – publikację usługi planujemy w grudniu 2026. Numer usługi BUR: 2026/11/20/2020619/3962765. Pakiet nie obejmuje noclegu.'
       url: ''
       buttonLabel: ''
     - group: Piercing Festival Łódź · 20–21 marca

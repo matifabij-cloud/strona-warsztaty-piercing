@@ -13,6 +13,7 @@ export const GET: APIRoute = async ({ site }) => {
     alternatesFor(paths.privacy),
     alternatesFor(paths.contestRules),
     alternatesFor(paths.votingRules),
+    alternatesFor(paths.funding),
   ];
 
   const urls = groups.flatMap((group) =>

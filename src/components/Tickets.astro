@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import { tr, useUI, type Locale } from '../i18n';
+import { paths, tr, useUI, type Locale } from '../i18n';
 import type { Edition } from '../lib/content';
 import { site } from '../lib/site';
 
@@ -112,6 +112,12 @@ const features = [
                       {o.planned && <p class="ticket__badge">{t('tickets.planned')}</p>}
                       <p class="ticket__option-name">{tr(o.name, locale)}</p>
                       {o.description && <p class="ticket__option-desc">{tr(o.description, locale)}</p>}
+                    {/* Pakiet planowany (z dofinansowaniem BUR) odsyła do instrukcji krok po kroku */}
+                    {o.planned && (
+                      <a class="ticket__funding-link" href={paths.funding(locale)}>
+                        {t('tickets.funding')} →
+                      </a>
+                    )}
                     </div>
                     <div class="ticket__option-side">
                       {o.price && (
@@ -323,6 +329,13 @@ const features = [
     font-size: var(--step-2);
     line-height: 1.1;
     white-space: nowrap;
+  }
+
+  .ticket__funding-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 800;
+    color: var(--c-red);
   }
 
   .ticket__price-note {

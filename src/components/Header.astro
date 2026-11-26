@@ -19,6 +19,8 @@ const nav = [
   { href: `${home}#speakers`, label: t('nav.speakers') },
   { href: `${home}#program`, label: t('nav.program') },
   { href: `${home}#tickets`, label: t('nav.tickets') },
+  // W wąskim pasku menu krótka nazwa, w menu mobilnym pełna
+  { href: paths.funding(locale), label: t('nav.funding'), full: t('nav.fundingFull') },
   { href: paths.editions(locale), label: t('nav.editions') },
   { href: `${home}#contact`, label: t('nav.contact') },
 ];
@@ -86,7 +88,7 @@ const ctaLabel = ticketsOnSale ? t('cta.buyTicket') : t('cta.ticketsSoon');
         nav.map((item, i) => (
           <li style={`--i:${i}`}>
             <a href={item.href} data-close-menu>
-              {item.label}
+              {item.full ?? item.label}
             </a>
           </li>
         ))
